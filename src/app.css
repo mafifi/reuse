@@ -4,6 +4,80 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme inline {
+	--color-midnight-blue-50: oklch(97.17% 0.01 244.71);
+	--color-midnight-blue-100: oklch(94.29% 0.03 243.41);
+	--color-midnight-blue-200: oklch(88.68% 0.06 236.45);
+	--color-midnight-blue-300: oklch(80.22% 0.12 235.72);
+	--color-midnight-blue-400: oklch(72.1% 0.16 241.02);
+	--color-midnight-blue-500: oklch(65.8% 0.19 250.51);
+	--color-midnight-blue-600: oklch(56.86% 0.18 254.44);
+	--color-midnight-blue-700: oklch(48.17% 0.16 254.88);
+	--color-midnight-blue-800: oklch(42.6% 0.13 253.59);
+	--color-midnight-blue-900: oklch(37.16% 0.11 252.89);
+	--color-midnight-blue-950: oklch(31.16% 0.1 254.02); /* Blue */
+
+	--color-silver-50: oklch(97.49% 0 228.78);
+	--color-silver-100: oklch(95.34% 0 236.5);
+	--color-silver-200: oklch(91.52% 0.01 228.86);
+	--color-silver-300: oklch(86.07% 0.01 228.95);
+	--color-silver-400: oklch(79.33% 0.02 245.14);
+	--color-silver-500: oklch(73.24% 0.02 248.13);
+	--color-silver-600: oklch(65.75% 0.03 261.11);
+	--color-silver-700: oklch(59.42% 0.03 260.69);
+	--color-silver-800: oklch(51.43% 0.02 256.34);
+	--color-silver-900: oklch(45.39% 0.01 252.22);
+	--color-silver-950: oklch(31.62% 0.01 260.71);
+
+	--color-purple-heart-50: oklch(97.08% 0.01 290.75);
+	--color-purple-heart-100: oklch(94.5% 0.03 293.16);
+	--color-purple-heart-200: oklch(89.9% 0.05 290.83);
+	--color-purple-heart-300: oklch(81.78% 0.09 291);
+	--color-purple-heart-400: oklch(71.82% 0.14 291.78);
+	--color-purple-heart-500: oklch(61.19% 0.19 291.23);
+	--color-purple-heart-600: oklch(53.98% 0.22 291.42);
+	--color-purple-heart-700: oklch(48.24% 0.22 291.13); /* Purple */
+	--color-purple-heart-800: oklch(42.81% 0.19 291.48);
+	--color-purple-heart-900: oklch(37.75% 0.16 292.4);
+	--color-purple-heart-950: oklch(28.19% 0.12 290.23);
+
+	--color-mariner-50: rgb(241, 246, 254);
+	--color-mariner-100: rgb(227, 236, 251);
+	--color-mariner-200: rgb(192, 217, 247);
+	--color-mariner-300: rgb(136, 186, 241);
+	--color-mariner-400: rgb(73, 151, 231);
+	--color-mariner-500: rgb(32, 117, 204); /* Sky Blue */
+	--color-mariner-600: rgb(20, 95, 181);
+	--color-mariner-700: rgb(17, 76, 147);
+	--color-mariner-800: rgb(18, 66, 122);
+	--color-mariner-900: rgb(21, 56, 101);
+	--color-mariner-950: rgb(14, 36, 67);
+
+	--color-golf-50: oklch(98.11% 0.01 189.07);
+	--color-golf-100: oklch(94.41% 0.04 188.14);
+	--color-golf-200: oklch(89.13% 0.07 188.25);
+	--color-golf-300: oklch(82.03% 0.1 189.73);
+	--color-golf-400: oklch(73.64% 0.11 192.77);
+	--color-golf-500: oklch(65.44% 0.1 193.28);
+	--color-golf-600: oklch(55.94% 0.09 195.95); /* Teal */
+	--color-golf-700: oklch(47.06% 0.07 197.65);
+	--color-golf-800: oklch(40.68% 0.06 198.44);
+	--color-golf-900: oklch(36.42% 0.05 197.31);
+	--color-golf-950: oklch(25.53% 0.04 201.18);
+
+	--color-watercourse-50: oklch(97.55% 0.01 167.18);
+	--color-watercourse-100: oklch(94.2% 0.04 163.23);
+	--color-watercourse-200: oklch(88.68% 0.07 164.91);
+	--color-watercourse-300: oklch(80.94% 0.1 166.5);
+	--color-watercourse-400: oklch(71.93% 0.12 165.98);
+	--color-watercourse-500: oklch(63.16% 0.12 166.08);
+	--color-watercourse-600: oklch(53.88% 0.1 166.58);
+	--color-watercourse-700: oklch(48.82% 0.09 169.01); /* Green */
+	--color-watercourse-800: oklch(39.42% 0.07 169.55);
+	--color-watercourse-900: oklch(34.58% 0.06 172.1);
+	--color-watercourse-950: oklch(24.38% 0.04 174.79);
+}
+
 :root {
 	--radius: 0.625rem;
 	--background: oklch(from var(--color-white) l c h);
@@ -24,11 +98,11 @@
 	--border: oklch(from var(--color-slate-200) l c h);
 	--input: oklch(from var(--color-slate-200) l c h);
 	--ring: oklch(from var(--color-slate-400) l c h);
-	--chart-1: oklch(0.646 0.222 41.116);
-	--chart-2: oklch(0.6 0.118 184.704);
-	--chart-3: oklch(0.398 0.07 227.392);
-	--chart-4: oklch(0.828 0.189 84.429);
-	--chart-5: oklch(0.769 0.188 70.08);
+	--chart-1: oklch(from var(--color-midnight-blue-950) l c h);
+	--chart-2: oklch(from var(--color-purple-heart-700) l c h);
+	--chart-3: oklch(from var(--color-mariner-500) l c h);
+	--chart-4: oklch(from var(--color-watercourse-600) l c h);
+	--chart-5: oklch(from var(--color-teal-700) l c h);
 	--sidebar: oklch(from var(--color-slate-50) l c h);
 	--sidebar-foreground: oklch(from var(--color-slate-950) l c h);
 	--sidebar-primary: oklch(from var(--color-slate-900) l c h);

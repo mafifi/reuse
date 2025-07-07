@@ -64,8 +64,8 @@
 	>
 		<Card.Root class="mx-auto max-w-md p-8 text-center">
 			<Card.Content>
-				<h2 class="mb-4 text-2xl font-bold text-slate-900">Capability Not Found</h2>
-				<p class="mb-6 text-slate-600">The requested capability could not be found.</p>
+				<h2 class="text-primary mb-4 text-2xl font-bold">Capability Not Found</h2>
+				<p class="text-muted-foreground mb-6">The requested capability could not be found.</p>
 				<Button href="/">
 					<ArrowLeft className="mr-2 h-4 w-4" />
 					Back to Architecture Overview
@@ -92,8 +92,8 @@
 							{capability.layer}
 						</Badge>
 					</div>
-					<h1 class="mb-4 text-4xl font-bold text-slate-900">{capability.name}</h1>
-					<p class="max-w-4xl text-xl text-slate-600">{capability.definition}</p>
+					<h1 class="text-primary mb-4 text-4xl font-bold">{capability.name}</h1>
+					<p class="text-muted-foreground max-w-4xl text-xl">{capability.definition}</p>
 				</div>
 
 				<div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
@@ -108,7 +108,7 @@
 								</Card.Title>
 							</Card.Header>
 							<Card.Content>
-								<p class="leading-relaxed text-slate-700">{capability.description}</p>
+								<p class="text-primary leading-relaxed">{capability.description}</p>
 							</Card.Content>
 						</Card.Root>
 
@@ -127,8 +127,8 @@
 											id={index.toString()}
 											class="flex items-center gap-2 rounded-lg bg-slate-50 p-3"
 										>
-											<CheckCircle class="h-4 w-4 flex-shrink-0 text-green-600" />
-											<span class="text-slate-700">{example}</span>
+											<CheckCircle class="text-watercourse-600 h-4 w-4 flex-shrink-0" />
+											<span class="text-primary">{example}</span>
 										</div>
 									{/each}
 								</div>
@@ -148,10 +148,10 @@
 									{#each capability.benefits as benefit, index}
 										<div
 											id={index.toString()}
-											class="flex items-start gap-3 rounded-lg border border-green-200 bg-green-50 p-4"
+											class="border-watercourse-200 bg-watercourse-50 flex items-start gap-3 rounded-lg border p-4"
 										>
-											<div class="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-green-600"></div>
-											<span class="text-slate-700">{benefit}</span>
+											<div class="bg-watercourse-600 mt-2 h-2 w-2 flex-shrink-0 rounded-full"></div>
+											<span class="text-primary">{benefit}</span>
 										</div>
 									{/each}
 								</div>
@@ -171,13 +171,13 @@
 									{#each capability.maturityLevels as level, index}
 										<div id={index.toString()} class="flex items-start gap-4 rounded-lg border p-4">
 											<div
-												class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 text-sm font-semibold text-blue-700"
+												class="bg-midnight-blue-100 text-midnight-blue-700 flex h-8 w-8 items-center justify-center rounded-full text-sm font-semibold"
 											>
 												{index + 1}
 											</div>
 											<div>
-												<h4 class="mb-1 font-semibold text-slate-900">{level.level}</h4>
-												<p class="text-sm text-slate-600">{level.description}</p>
+												<h4 class="text-primary mb-1 font-semibold">{level.level}</h4>
+												<p class="text-muted-foreground text-sm">{level.description}</p>
 											</div>
 										</div>
 									{/each}
@@ -214,7 +214,7 @@
 									{#each capability.technologies as tech, index}
 										<div
 											id={index.toString()}
-											class="rounded bg-slate-50 p-2 text-center text-sm text-slate-700"
+											class="text-primary rounded bg-slate-50 p-2 text-center text-sm"
 										>
 											{tech}
 										</div>

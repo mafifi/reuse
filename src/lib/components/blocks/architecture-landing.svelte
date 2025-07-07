@@ -11,7 +11,7 @@
 			name: 'Business Capabilities',
 			description: 'Business capabilities, processes, and organizational structures',
 			icon: Building2,
-			color: 'bg-blue-50 border-blue-200 hover:bg-blue-100',
+			color: 'bg-midnight-blue-50 border-midnight-blue-200 hover:bg-midnight-blue-100',
 			capabilities: [
 				{
 					id: 'customer-management',
@@ -65,7 +65,7 @@
 			name: 'Application Capabilities',
 			description: 'Software applications and their interactions within the enterprise',
 			icon: Layers,
-			color: 'bg-green-50 border-green-200 hover:bg-green-100',
+			color: 'bg-watercourse-50 border-watercourse-200 hover:bg-watercourse-100',
 			capabilities: [
 				{
 					id: 'enterprise-resource-planning',
@@ -116,7 +116,7 @@
 			name: 'Data Capabilities',
 			description: 'Data assets, storage, and management across the organization',
 			icon: Database,
-			color: 'bg-purple-50 border-purple-200 hover:bg-purple-100',
+			color: 'bg-purple-heart-50 border-purple-heart-200 hover:bg-purple-heart-100',
 			capabilities: [
 				{
 					id: 'data-warehousing',
@@ -167,7 +167,7 @@
 			name: 'Infrastructure Capabilities',
 			description: 'Physical and virtual infrastructure supporting business operations',
 			icon: Server,
-			color: 'bg-orange-50 border-orange-200 hover:bg-orange-100',
+			color: 'bg-mariner-50 border-mariner-200 hover:bg-mariner-100',
 			capabilities: [
 				{
 					id: 'cloud-computing',
@@ -218,7 +218,7 @@
 			name: 'Security Capabilities',
 			description: 'Security controls, policies, and technologies protecting the enterprise',
 			icon: Shield,
-			color: 'bg-red-50 border-red-200 hover:bg-red-100',
+			color: 'bg-golf-50 border-golf-200 hover:bg-golf-100',
 			capabilities: [
 				{
 					id: 'identity-access-management',
