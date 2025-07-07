@@ -3,59 +3,22 @@
 	import { Badge } from '$lib/components/ui/badge';
 	import { Button } from '$lib/components/ui/button';
 	import { ArrowLeft, CheckCircle, Target, Lightbulb } from '@lucide/svelte';
-
-	// This would typically come from a database or API
-	const capabilityData = {
-		'customer-management': {
-			name: 'Customer Management',
-			layer: 'Business Architecture',
-			definition:
-				'Capability to acquire, retain, and manage customer relationships throughout their lifecycle, ensuring optimal customer experience and business value creation.',
-			description:
-				'Customer Management encompasses all processes, technologies, and strategies used to interact with customers across all touchpoints. This capability enables organizations to understand customer needs, deliver personalized experiences, and build long-term relationships that drive business growth.',
-			examples: [
-				'Customer Relationship Management (CRM) systems',
-				'Customer onboarding processes',
-				'Loyalty and rewards programs',
-				'Customer service and support',
-				'Customer segmentation and targeting',
-				'Customer feedback management'
-			],
-			benefits: [
-				'Improved customer satisfaction and loyalty',
-				'Increased customer lifetime value',
-				'Better customer insights and analytics',
-				'Enhanced customer experience',
-				'Reduced customer acquisition costs',
-				'Improved customer retention rates'
-			],
-			keyComponents: [
-				'Customer data management',
-				'Interaction tracking',
-				'Service delivery',
-				'Feedback collection',
-				'Relationship analytics'
-			],
-			technologies: [
-				'Salesforce CRM',
-				'Microsoft Dynamics 365',
-				'HubSpot',
-				'Oracle CX Cloud',
-				'SAP Customer Experience'
-			],
-			maturityLevels: [
-				{ level: 'Basic', description: 'Manual customer tracking, limited integration' },
-				{ level: 'Developing', description: 'CRM system in place, some automation' },
-				{ level: 'Defined', description: 'Integrated customer processes, analytics' },
-				{ level: 'Managed', description: 'Advanced analytics, personalization' },
-				{ level: 'Optimized', description: 'AI-driven insights, predictive analytics' }
-			]
-		}
-	};
+	import capabilities from '$lib/data/capabilities.json';
 
 	let { capabilityId } = $props();
 
-	const capability = capabilityData[capabilityId as keyof typeof capabilityData];
+	// Find the capability and its layer in the nested structure
+	let capability: any = $state(undefined);
+	let layer: any = $state(undefined);
+
+	for (const archLayer of capabilities) {
+		const found = archLayer.capabilities.find((cap: any) => cap.id === capabilityId);
+		if (found) {
+			capability = found;
+			layer = archLayer;
+			break;
+		}
+	}
 </script>
 
 {#if !capability}
@@ -89,7 +52,7 @@
 				<div class="mb-8">
 					<div class="mb-4 flex items-center gap-3">
 						<Badge variant="outline" class="text-sm">
-							{capability.layer}
+							{layer?.name || 'Unknown Layer'}
 						</Badge>
 					</div>
 					<h1 class="text-primary mb-4 text-4xl font-bold">{capability.name}</h1>
@@ -122,7 +85,7 @@
 							</Card.Header>
 							<Card.Content>
 								<div class="grid grid-cols-1 gap-3 md:grid-cols-2">
-									{#each capability.examples as example, index}
+									{#each capability.examples || [] as example, index}
 										<div
 											id={index.toString()}
 											class="flex items-center gap-2 rounded-lg bg-slate-50 p-3"
@@ -145,7 +108,7 @@
 							</Card.Header>
 							<Card.Content>
 								<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-									{#each capability.benefits as benefit, index}
+									{#each capability.benefits || [] as benefit, index}
 										<div
 											id={index.toString()}
 											class="border-watercourse-200 bg-watercourse-50 flex items-start gap-3 rounded-lg border p-4"
@@ -168,7 +131,7 @@
 							</Card.Header>
 							<Card.Content>
 								<div class="space-y-4">
-									{#each capability.maturityLevels as level, index}
+									{#each capability.maturityLevels || [] as level, index}
 										<div id={index.toString()} class="flex items-start gap-4 rounded-lg border p-4">
 											<div
 												class="bg-midnight-blue-100 text-midnight-blue-700 flex h-8 w-8 items-center justify-center rounded-full text-sm font-semibold"
@@ -195,7 +158,7 @@
 							</Card.Header>
 							<Card.Content>
 								<div class="space-y-2">
-									{#each capability.keyComponents as component, index}
+									{#each capability.keyComponents || [] as component, index}
 										<Badge id={index.toString()} variant="secondary" class="block py-2 text-center">
 											{component}
 										</Badge>
@@ -211,7 +174,7 @@
 							</Card.Header>
 							<Card.Content>
 								<div class="space-y-2">
-									{#each capability.technologies as tech, index}
+									{#each capability.technologies || [] as tech, index}
 										<div
 											id={index.toString()}
 											class="text-primary rounded bg-slate-50 p-2 text-center text-sm"
