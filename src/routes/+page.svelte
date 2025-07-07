@@ -1,1 +1,5 @@
-<h1 class="text-3xl font-bold underline">Hello world!</h1>
+<script lang="ts">
+	import ArchitectureLanding from '$lib/components/blocks/architecture-landing.svelte';
+</script>
+
+<ArchitectureLanding />
