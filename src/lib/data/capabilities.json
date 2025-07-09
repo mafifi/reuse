@@ -420,199 +420,172 @@
 		"color": "bg-mariner-50 border-mariner-200 hover:bg-mariner-100",
 		"capabilities": [
 			{
-				"id": "cloud-computing",
-				"name": "Cloud Computing",
-				"definition": "On-demand delivery of computing services over the internet",
-				"examples": ["AWS", "Microsoft Azure", "Google Cloud"],
-				"benefits": ["Scalability", "Cost efficiency", "Global reach"]
+				"id": "development-tools",
+				"name": "Development Tools",
+				"definition": "Environments and platforms used to write, build, and test code",
+				"description": "Development tools support the creation and maintenance of software by providing code editing, debugging, and build environments. These tools enhance developer productivity and ensure code quality throughout the development lifecycle.",
+				"examples": ["Visual Studio Code", "IntelliJ IDEA", "Jenkins", "GitLab CI"],
+				"benefits": ["Accelerated development", "Improved code quality", "Streamlined testing", "Consistent build processes"]
 			},
 			{
-				"id": "virtualization",
-				"name": "Virtualization",
-				"definition": "Creation of virtual versions of computing resources",
-				"examples": ["VMware vSphere", "Hyper-V", "KVM"],
-				"benefits": ["Resource optimization", "Cost reduction", "Flexibility"]
-			},
-			{
-				"id": "network-infrastructure",
-				"name": "Network Infrastructure",
-				"definition": "Hardware and software resources enabling network connectivity",
-				"examples": ["Cisco networking", "SD-WAN", "Load balancers"],
-				"benefits": ["Connectivity", "Performance", "Reliability"]
-			},
-			{
-				"id": "storage-systems",
-				"name": "Storage Systems",
-				"definition": "Hardware and software for storing and managing data",
-				"examples": ["SAN", "NAS", "Object storage"],
-				"benefits": ["Data availability", "Performance", "Scalability"]
-			},
-			{
-				"id": "monitoring-management",
-				"name": "Monitoring & Management",
-				"definition": "Tools and processes for monitoring infrastructure health",
-				"examples": ["Nagios", "SCOM", "Datadog"],
-				"benefits": ["Proactive monitoring", "Issue resolution", "Performance optimization"]
-			},
-			{
-				"id": "disaster-recovery",
-				"name": "Disaster Recovery",
-				"definition": "Strategies and tools for recovering from infrastructure failures",
-				"examples": ["Site replication", "Backup systems", "Failover clusters"],
-				"benefits": ["Business continuity", "Risk mitigation", "Recovery assurance"]
+				"id": "code-analysis",
+				"name": "Code Analysis",
+				"definition": "Automated tools for evaluating code quality, security, and compliance",
+				"description": "Code analysis tools perform static and dynamic assessments of source code to identify bugs, vulnerabilities, or policy violations early in the development lifecycle. This enhances software maintainability and security.",
+				"examples": ["SonarQube", "Prisma Cloud", "ESLint", "Checkmarx"],
+				"benefits": ["Early detection of defects", "Improved code quality", "Enforced coding standards", "Security vulnerability identification"]
 			},
 			{
 				"id": "infrastructure-as-code",
 				"name": "Infrastructure as Code",
-				"definition": "Provisioning and managing infrastructure using machine-readable configuration files",
-				"description": "Infrastructure as Code (IaC) enables automated, repeatable, and scalable provisioning of infrastructure resources. By treating infrastructure definitions as code, organizations can apply software engineering practices such as version control, testing, and continuous delivery to infrastructure.",
-				"examples": [
-					"Terraform scripts to provision cloud resources",
-					"Pulumi for managing Kubernetes clusters",
-					"AWS CloudFormation templates",
-					"Azure Bicep deployments"
-				],
-				"benefits": [
-					"Automated provisioning",
-					"Improved consistency and reproducibility",
-					"Version control of infrastructure",
-					"Faster time to deploy environments",
-					"Reduced configuration drift"
-				]
+				"definition": "Automated infrastructure provisioning using declarative or scripted configuration",
+				"description": "Infrastructure as Code enables teams to manage and provision infrastructure using code, promoting repeatability, scalability, and integration with CI/CD pipelines.",
+				"examples": ["Terraform", "Ansible Tower", "Chef", "Pulumi"],
+				"benefits": ["Faster provisioning", "Reduced configuration drift", "Version control of infrastructure", "Improved consistency and reusability"]
 			},
 			{
-				"id": "container-orchestration",
-				"name": "Container Orchestration",
-				"definition": "Automated management of containerized workloads and services",
-				"description": "Container orchestration simplifies the deployment, scaling, and operation of application containers. It automates key tasks such as service discovery, scheduling, scaling, and self-healing of containers across clusters.",
-				"examples": [
-					"Kubernetes workload scheduling",
-					"Helm chart deployments",
-					"Docker Swarm cluster orchestration",
-					"Managed Kubernetes (EKS, AKS, GKE)"
-				],
-				"benefits": [
-					"Automated workload management",
-					"High availability and resilience",
-					"Improved scalability",
-					"Standardized container deployment",
-					"Efficient resource utilization"
-				]
+				"id": "packaging-distribution",
+				"name": "Packaging & Distribution",
+				"definition": "Storage and distribution of build artifacts and packages",
+				"description": "This capability supports artifact management by storing, versioning, and distributing compiled software, libraries, and container images across environments.",
+				"examples": ["JFrog Artifactory", "Nexus Repository", "Docker Registry"],
+				"benefits": ["Improved build consistency", "Secure artifact storage", "Faster deployments", "Dependency versioning"]
 			},
 			{
-				"id": "service-mesh",
-				"name": "Service Mesh",
-				"definition": "Dedicated infrastructure layer for managing service-to-service communication",
-				"description": "A service mesh provides observability, traffic management, and security for microservices communication without changing application code. It supports consistent policies across distributed systems.",
-				"examples": [
-					"Istio managing east-west traffic",
-					"Linkerd for zero-trust service communication",
-					"mTLS encryption between services",
-					"Traffic shaping via Envoy"
-				],
-				"benefits": [
-					"Secure and reliable service communication",
-					"Traffic control and resiliency",
-					"Improved observability",
-					"Consistent enforcement of policies",
-					"Decoupling of networking logic from code"
-				]
+				"id": "release-automation",
+				"name": "Release Automation",
+				"definition": "Tools that automate application deployment and release management",
+				"description": "Release automation enables teams to reliably and repeatedly deploy applications across environments using GitOps or similar pipelines.",
+				"examples": ["ArgoCD", "Flux", "Spinnaker", "Octopus Deploy"],
+				"benefits": ["Accelerated release cycles", "Reduced manual intervention", "Higher deployment reliability", "Rollback and version control"]
 			},
 			{
-				"id": "api-gateway",
-				"name": "API Gateway",
-				"definition": "Centralized entry point for managing and routing API requests",
-				"description": "API Gateways act as the front door for applications and services, handling tasks such as request routing, authentication, throttling, and logging. They simplify client interactions with backend services.",
-				"examples": [
-					"Kong for rate-limiting APIs",
-					"AWS API Gateway exposing microservices",
-					"Apigee as an enterprise API proxy",
-					"NGINX ingress controller in Kubernetes"
-				],
-				"benefits": [
-					"Centralized control of APIs",
-					"Improved security and authentication",
-					"Simplified client integration",
-					"Monitoring and analytics",
-					"Rate limiting and protection from abuse"
-				]
+				"id": "monitoring-observability",
+				"name": "Monitoring & Observability",
+				"definition": "Tools and processes for measuring, analyzing, and visualizing system performance and health",
+				"description": "This capability allows organizations to detect, diagnose, and resolve issues using telemetry data such as logs, metrics, and traces.",
+				"examples": ["PagerDuty", "Grafana", "New Relic", "Dynatrace"],
+				"benefits": ["Faster incident response", "Increased system reliability", "Root cause analysis", "Operational transparency"]
 			},
 			{
-				"id": "observability",
-				"name": "Observability",
-				"definition": "Ability to understand system behavior through logs, metrics, and traces",
-				"description": "Observability enables teams to diagnose issues, optimize performance, and understand system behavior in real time. It integrates logging, monitoring, and distributed tracing to provide a complete picture of system health and user experience.",
-				"examples": [
-					"Prometheus metrics collection",
-					"Grafana dashboards",
-					"Jaeger distributed tracing",
-					"ELK stack for log aggregation",
-					"OpenTelemetry for instrumentation"
-				],
-				"benefits": [
-					"Faster incident resolution",
-					"Improved system reliability",
-					"Better understanding of application behavior",
-					"Support for proactive performance tuning",
-					"Traceability across services"
-				]
+				"id": "ai-ml-automation",
+				"name": "AI, ML & Automation",
+				"definition": "Technologies that enable intelligent decision-making and process automation",
+				"description": "This capability supports automation of tasks and insights generation using artificial intelligence and machine learning technologies.",
+				"examples": ["Azure OpenAI", "SageMaker", "DataRobot", "ChatGPT", "AutoML"],
+				"benefits": ["Faster insight generation", "Improved productivity", "Automated repetitive tasks", "Enhanced user experience"]
 			},
 			{
-				"id": "secrets-management",
-				"name": "Secrets Management",
-				"definition": "Secure storage and access control for sensitive credentials and secrets",
-				"description": "Secrets management ensures that credentials, tokens, keys, and other sensitive configuration data are handled securely across environments. It provides access control, auditing, and integration with deployment workflows.",
-				"examples": [
-					"HashiCorp Vault for dynamic secrets",
-					"AWS Secrets Manager for storing API keys",
-					"Kubernetes secrets encrypted at rest",
-					"Sealed Secrets for GitOps workflows"
-				],
-				"benefits": [
-					"Reduced risk of credential leaks",
-					"Centralized control of sensitive data",
-					"Automated secret rotation",
-					"Integration with CI/CD pipelines",
-					"Auditability and compliance"
-				]
+				"id": "document-store",
+				"name": "Document Store",
+				"definition": "Non-relational databases optimized for semi-structured document storage",
+				"description": "Document stores are designed to store, retrieve, and manage data in document-oriented formats such as JSON or BSON, enabling flexibility in schema and performance for content-heavy applications.",
+				"examples": ["MongoDB", "CouchDB", "RavenDB"],
+				"benefits": ["Schema flexibility", "High scalability", "Optimized for content-rich apps", "Efficient query of nested data"]
 			},
 			{
-				"id": "ci-cd-pipeline",
-				"name": "CI/CD Pipeline",
-				"definition": "Automated build, test, and deployment of application changes",
-				"description": "CI/CD pipelines streamline the software delivery process by automating code integration, testing, and deployment. They enable faster feedback cycles, reduce human error, and support DevOps practices.",
-				"examples": [
-					"GitHub Actions for build/test",
-					"ArgoCD for GitOps deployments",
-					"Jenkins pipelines for multi-stage deployment",
-					"Spinnaker for canary releases"
-				],
-				"benefits": [
-					"Faster software delivery",
-					"Improved code quality",
-					"Reduced manual effort",
-					"Continuous feedback loop",
-					"Reliable, repeatable deployments"
-				]
+				"id": "oltp-capture",
+				"name": "OLTP & Capture",
+				"definition": "Databases and systems optimized for online transaction processing",
+				"description": "OLTP systems support high-throughput transactional workloads with rapid reads and writes, ensuring data integrity and fast response times for business-critical applications.",
+				"examples": ["Microsoft SQL Server", "IBM DB2", "Sybase ASE", "Oracle Database"],
+				"benefits": ["High availability", "Transactional consistency", "Low-latency performance", "Supports core business operations"]
 			},
 			{
-				"id": "edge-infrastructure",
-				"name": "Edge Infrastructure",
-				"definition": "Compute, storage, and network resources located closer to the end user",
-				"description": "Edge infrastructure supports low-latency, high-performance workloads by deploying infrastructure components geographically close to users or devices. It’s essential for use cases like IoT, AR/VR, and real-time analytics.",
-				"examples": [
-					"CDN edge servers for content delivery",
-					"5G-enabled compute at the edge",
-					"Retail store edge nodes",
-					"Smart factory control systems"
-				],
-				"benefits": [
-					"Reduced latency",
-					"Improved user experience",
-					"Decentralized data processing",
-					"Enhanced scalability",
-					"Supports modern edge-native applications"
-				]
+				"id": "process-automation",
+				"name": "Process Automation",
+				"definition": "Digital automation of business workflows and repetitive tasks",
+				"description": "Process automation tools streamline operations by enabling users to define and execute workflows, reducing manual errors and improving scalability.",
+				"examples": ["Power Automate", "UIPath", "Appian", "Automation Anywhere"],
+				"benefits": ["Increased productivity", "Reduced manual effort", "Improved accuracy", "Scalable operations"]
+			},
+			{
+				"id": "data-caching",
+				"name": "Data Caching",
+				"definition": "Temporary storage for frequently accessed data to improve performance",
+				"description": "Data caching enables faster data retrieval by storing frequently used data closer to the application layer, reducing latency and load on primary databases.",
+				"examples": ["Redis", "Memcached", "Gemfire", "etcd"],
+				"benefits": ["Faster response times", "Reduced backend load", "Enhanced user experience", "Scalable read performance"]
+			},
+			{
+				"id": "data-integration",
+				"name": "Data Integration",
+				"definition": "Combining data from disparate sources into a unified view",
+				"description": "Data integration tools extract, transform, and load data from multiple sources to ensure data consistency, synchronization, and holistic analytics across systems.",
+				"examples": ["Talend", "Informatica", "Apache Nifi", "Azure Data Factory"],
+				"benefits": ["Unified data access", "Improved data quality", "Efficient ETL pipelines", "Cross-system interoperability"]
+			},
+			{
+				"id": "messaging",
+				"name": "Messaging",
+				"definition": "Asynchronous communication between distributed systems",
+				"description": "Messaging platforms support decoupled service communication through message brokers and queues, enabling scalability, fault tolerance, and event-driven architecture.",
+				"examples": ["Apache Kafka", "RabbitMQ", "IBM MQ", "Amazon SQS"],
+				"benefits": ["Resilient communication", "Loose coupling", "Scalable system integration", "Supports asynchronous workflows"]
+			},
+			{
+				"id": "web-hosting",
+				"name": "Web Hosting",
+				"definition": "Serving web applications and content over the internet",
+				"description": "Web hosting platforms enable the deployment and operation of web-based applications, APIs, and static content to end users.",
+				"examples": ["Apache HTTP Server", "Nginx", "Tomcat", "IIS"],
+				"benefits": ["Reliable web service delivery", "Scalability", "Flexible deployment options", "Supports diverse workloads"]
+			},
+			{
+				"id": "workload-scheduling",
+				"name": "Workload Scheduling",
+				"definition": "Scheduling and automation of batch jobs and background processes",
+				"description": "Workload schedulers coordinate and manage the execution of jobs based on dependencies and timing rules, ensuring resource efficiency and job completion.",
+				"examples": ["Autosys", "Control-M", "Apache Airflow", "Tivoli Workload Scheduler"],
+				"benefits": ["Reliable batch processing", "Optimized resource usage", "Job dependency handling", "Reduced manual intervention"]
+			},
+			{
+				"id": "it-management",
+				"name": "IT Management",
+				"definition": "Tools and practices for managing IT assets, incidents, and services",
+				"description": "IT management tools support ITSM practices such as service requests, change management, and incident resolution, enhancing operational efficiency and user support.",
+				"examples": ["ServiceNow", "BMC Remedy", "Freshservice", "Ivanti"],
+				"benefits": ["Improved IT operations", "Enhanced service quality", "Faster issue resolution", "Governed change processes"]
+			},
+			{
+				"id": "archive",
+				"name": "Archive",
+				"definition": "Long-term storage of data for compliance and retrieval",
+				"description": "Archiving solutions preserve historical data that must be retained for legal, regulatory, or business purposes while ensuring secure and efficient retrieval.",
+				"examples": ["IBM Content Manager OnDemand", "Archive360", "Commvault Archive"],
+				"benefits": ["Regulatory compliance", "Long-term data retention", "Reduced storage costs", "Secure access to historical data"]
+			},
+			{
+				"id": "backup",
+				"name": "Backup",
+				"definition": "Replication of data for recovery and protection",
+				"description": "Backup systems safeguard critical data by creating copies stored separately to enable recovery in the event of failure, corruption, or disaster.",
+				"examples": ["Veeam", "Cohesity", "Virtual Tape Libraries", "Immutable Backup Solutions"],
+				"benefits": ["Business continuity", "Data protection", "Disaster recovery", "Operational resilience"]
+			},
+			{
+				"id": "logical-compute",
+				"name": "Logical Compute",
+				"definition": "Abstracted compute environments for running applications without managing servers",
+				"description": "Logical compute refers to serverless or function-based compute environments that abstract infrastructure management, allowing developers to focus on application logic.",
+				"examples": ["AWS Lambda", "Azure Functions", "Google Cloud Functions"],
+				"benefits": ["Simplified operations", "Scalable compute on demand", "Cost efficiency", "Faster deployment cycles"]
+			},
+			{
+				"id": "mainframe",
+				"name": "Mainframe",
+				"definition": "Large-scale computing platforms supporting critical enterprise applications",
+				"description": "Mainframes run batch and transaction processing workloads with high reliability, scalability, and security. They are essential for industries like banking and insurance.",
+				"examples": ["IBM z/OS", "CICS", "COBOL Batch Jobs"],
+				"benefits": ["Extreme reliability", "High-throughput processing", "Secure data handling", "Support for legacy systems"]
+			},
+			{
+				"id": "servers",
+				"name": "Servers",
+				"definition": "Physical and virtual machines hosting applications and services",
+				"description": "Servers provide the compute resources required to run enterprise workloads. They may be physical machines, virtualized environments, or part of hybrid infrastructure.",
+				"examples": ["Dell PowerEdge servers", "VMware vSphere", "Hyper-V", "Bare metal provisioning"],
+				"benefits": ["Scalable compute infrastructure", "Support for diverse workloads", "Dedicated hosting environments", "High availability options"]
 			}
 		]
 	},

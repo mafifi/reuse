@@ -122,84 +122,103 @@
 						</Card.Root>
 
 						<!-- Maturity Levels -->
-						<Card.Root>
-							<Card.Header>
-								<Card.Title>Maturity Assessment</Card.Title>
-								<Card.Description>
-									Evaluate your organization's current maturity level for this capability
-								</Card.Description>
-							</Card.Header>
-							<Card.Content>
-								<div class="space-y-4">
-									{#each capability.maturityLevels || [] as level, index}
-										<div id={index.toString()} class="flex items-start gap-4 rounded-lg border p-4">
+						{#if capability.maturityLevels}
+							<Card.Root>
+								<Card.Header>
+									<Card.Title>Maturity Assessment</Card.Title>
+									<Card.Description>
+										Evaluate your organization's current maturity level for this capability
+									</Card.Description>
+								</Card.Header>
+								<Card.Content>
+									<div class="space-y-4">
+										{#each capability.maturityLevels || [] as level, index}
 											<div
-												class="bg-midnight-blue-100 text-midnight-blue-700 flex h-8 w-8 items-center justify-center rounded-full text-sm font-semibold"
+												id={index.toString()}
+												class="flex items-start gap-4 rounded-lg border p-4"
 											>
-												{index + 1}
+												<div
+													class="bg-midnight-blue-100 text-midnight-blue-700 flex h-8 w-8 items-center justify-center rounded-full text-sm font-semibold"
+												>
+													{index + 1}
+												</div>
+												<div>
+													<h4 class="text-primary mb-1 font-semibold">{level.level}</h4>
+													<p class="text-muted-foreground text-sm">{level.description}</p>
+												</div>
 											</div>
-											<div>
-												<h4 class="text-primary mb-1 font-semibold">{level.level}</h4>
-												<p class="text-muted-foreground text-sm">{level.description}</p>
-											</div>
-										</div>
-									{/each}
-								</div>
-							</Card.Content>
-						</Card.Root>
+										{/each}
+									</div>
+								</Card.Content>
+							</Card.Root>
+						{/if}
 					</div>
 
 					<!-- Sidebar -->
-					<div class="space-y-6">
-						<!-- Key Components -->
-						<Card.Root>
-							<Card.Header>
-								<Card.Title class="text-lg">Key Components</Card.Title>
-							</Card.Header>
-							<Card.Content>
-								<div class="space-y-2">
-									{#each capability.keyComponents || [] as component, index}
-										<Badge id={index.toString()} variant="secondary" class="block py-2 text-center">
-											{component}
-										</Badge>
-									{/each}
-								</div>
-							</Card.Content>
-						</Card.Root>
-
-						<!-- Technologies -->
-						<Card.Root>
-							<Card.Header>
-								<Card.Title class="text-lg">Common Technologies</Card.Title>
-							</Card.Header>
-							<Card.Content>
-								<div class="space-y-2">
-									{#each capability.technologies || [] as tech, index}
-										<div
-											id={index.toString()}
-											class="text-primary rounded bg-slate-50 p-2 text-center text-sm"
-										>
-											{tech}
+					{#if capability.keyComponents || capability.technologies}
+						<div class="space-y-6">
+							<!-- Key Components -->
+							{#if capability.keyComponents}
+								<Card.Root>
+									<Card.Header>
+										<Card.Title class="text-lg">Key Components</Card.Title>
+									</Card.Header>
+									<Card.Content>
+										<div class="space-y-2">
+											{#each capability.keyComponents || [] as component, index}
+												<Badge
+													id={index.toString()}
+													variant="secondary"
+													class="block py-2 text-center"
+												>
+													{component}
+												</Badge>
+											{/each}
 										</div>
-									{/each}
-								</div>
-							</Card.Content>
-						</Card.Root>
+									</Card.Content>
+								</Card.Root>
+							{/if}
 
-						<!-- Actions -->
-						<Card.Root>
-							<Card.Header>
-								<Card.Title class="text-lg">Actions</Card.Title>
-							</Card.Header>
-							<Card.Content class="space-y-3">
-								<Button class="w-full bg-transparent" variant="outline">Compare Solutions</Button>
-								<Button class="w-full bg-transparent" variant="outline">
-									View Related Capabilities
-								</Button>
-								<Button class="w-full bg-transparent" variant="outline">Export Details</Button>
-							</Card.Content>
-						</Card.Root>
-					</div>
+							<!-- Technologies -->
+							{#if capability.technologies}
+								<Card.Root>
+									<Card.Header>
+										<Card.Title class="text-lg">Common Technologies</Card.Title>
+									</Card.Header>
+									<Card.Content>
+										<div class="space-y-2">
+											{#each capability.technologies || [] as tech, index}
+												<div
+													id={index.toString()}
+													class="text-primary rounded bg-slate-50 p-2 text-center text-sm"
+												>
+													{tech}
+												</div>
+											{/each}
+										</div>
+									</Card.Content>
+								</Card.Root>
+							{/if}
+
+							{#if capability.actions}
+								<!-- Actions -->
+								<Card.Root>
+									<Card.Header>
+										<Card.Title class="text-lg">Actions</Card.Title>
+									</Card.Header>
+									<Card.Content class="space-y-3">
+										<Button class="w-full bg-transparent" variant="outline"
+											>Compare Solutions</Button
+										>
+										<Button class="w-full bg-transparent" variant="outline">
+											View Related Capabilities
+										</Button>
+										<Button class="w-full bg-transparent" variant="outline">Export Details</Button>
+									</Card.Content>
+								</Card.Root>
+							{/if}
+						</div>
+					{/if}
 				</div>
 			</div>
 		</div>
