@@ -460,6 +460,159 @@
 				"definition": "Strategies and tools for recovering from infrastructure failures",
 				"examples": ["Site replication", "Backup systems", "Failover clusters"],
 				"benefits": ["Business continuity", "Risk mitigation", "Recovery assurance"]
+			},
+			{
+				"id": "infrastructure-as-code",
+				"name": "Infrastructure as Code",
+				"definition": "Provisioning and managing infrastructure using machine-readable configuration files",
+				"description": "Infrastructure as Code (IaC) enables automated, repeatable, and scalable provisioning of infrastructure resources. By treating infrastructure definitions as code, organizations can apply software engineering practices such as version control, testing, and continuous delivery to infrastructure.",
+				"examples": [
+					"Terraform scripts to provision cloud resources",
+					"Pulumi for managing Kubernetes clusters",
+					"AWS CloudFormation templates",
+					"Azure Bicep deployments"
+				],
+				"benefits": [
+					"Automated provisioning",
+					"Improved consistency and reproducibility",
+					"Version control of infrastructure",
+					"Faster time to deploy environments",
+					"Reduced configuration drift"
+				]
+			},
+			{
+				"id": "container-orchestration",
+				"name": "Container Orchestration",
+				"definition": "Automated management of containerized workloads and services",
+				"description": "Container orchestration simplifies the deployment, scaling, and operation of application containers. It automates key tasks such as service discovery, scheduling, scaling, and self-healing of containers across clusters.",
+				"examples": [
+					"Kubernetes workload scheduling",
+					"Helm chart deployments",
+					"Docker Swarm cluster orchestration",
+					"Managed Kubernetes (EKS, AKS, GKE)"
+				],
+				"benefits": [
+					"Automated workload management",
+					"High availability and resilience",
+					"Improved scalability",
+					"Standardized container deployment",
+					"Efficient resource utilization"
+				]
+			},
+			{
+				"id": "service-mesh",
+				"name": "Service Mesh",
+				"definition": "Dedicated infrastructure layer for managing service-to-service communication",
+				"description": "A service mesh provides observability, traffic management, and security for microservices communication without changing application code. It supports consistent policies across distributed systems.",
+				"examples": [
+					"Istio managing east-west traffic",
+					"Linkerd for zero-trust service communication",
+					"mTLS encryption between services",
+					"Traffic shaping via Envoy"
+				],
+				"benefits": [
+					"Secure and reliable service communication",
+					"Traffic control and resiliency",
+					"Improved observability",
+					"Consistent enforcement of policies",
+					"Decoupling of networking logic from code"
+				]
+			},
+			{
+				"id": "api-gateway",
+				"name": "API Gateway",
+				"definition": "Centralized entry point for managing and routing API requests",
+				"description": "API Gateways act as the front door for applications and services, handling tasks such as request routing, authentication, throttling, and logging. They simplify client interactions with backend services.",
+				"examples": [
+					"Kong for rate-limiting APIs",
+					"AWS API Gateway exposing microservices",
+					"Apigee as an enterprise API proxy",
+					"NGINX ingress controller in Kubernetes"
+				],
+				"benefits": [
+					"Centralized control of APIs",
+					"Improved security and authentication",
+					"Simplified client integration",
+					"Monitoring and analytics",
+					"Rate limiting and protection from abuse"
+				]
+			},
+			{
+				"id": "observability",
+				"name": "Observability",
+				"definition": "Ability to understand system behavior through logs, metrics, and traces",
+				"description": "Observability enables teams to diagnose issues, optimize performance, and understand system behavior in real time. It integrates logging, monitoring, and distributed tracing to provide a complete picture of system health and user experience.",
+				"examples": [
+					"Prometheus metrics collection",
+					"Grafana dashboards",
+					"Jaeger distributed tracing",
+					"ELK stack for log aggregation",
+					"OpenTelemetry for instrumentation"
+				],
+				"benefits": [
+					"Faster incident resolution",
+					"Improved system reliability",
+					"Better understanding of application behavior",
+					"Support for proactive performance tuning",
+					"Traceability across services"
+				]
+			},
+			{
+				"id": "secrets-management",
+				"name": "Secrets Management",
+				"definition": "Secure storage and access control for sensitive credentials and secrets",
+				"description": "Secrets management ensures that credentials, tokens, keys, and other sensitive configuration data are handled securely across environments. It provides access control, auditing, and integration with deployment workflows.",
+				"examples": [
+					"HashiCorp Vault for dynamic secrets",
+					"AWS Secrets Manager for storing API keys",
+					"Kubernetes secrets encrypted at rest",
+					"Sealed Secrets for GitOps workflows"
+				],
+				"benefits": [
+					"Reduced risk of credential leaks",
+					"Centralized control of sensitive data",
+					"Automated secret rotation",
+					"Integration with CI/CD pipelines",
+					"Auditability and compliance"
+				]
+			},
+			{
+				"id": "ci-cd-pipeline",
+				"name": "CI/CD Pipeline",
+				"definition": "Automated build, test, and deployment of application changes",
+				"description": "CI/CD pipelines streamline the software delivery process by automating code integration, testing, and deployment. They enable faster feedback cycles, reduce human error, and support DevOps practices.",
+				"examples": [
+					"GitHub Actions for build/test",
+					"ArgoCD for GitOps deployments",
+					"Jenkins pipelines for multi-stage deployment",
+					"Spinnaker for canary releases"
+				],
+				"benefits": [
+					"Faster software delivery",
+					"Improved code quality",
+					"Reduced manual effort",
+					"Continuous feedback loop",
+					"Reliable, repeatable deployments"
+				]
+			},
+			{
+				"id": "edge-infrastructure",
+				"name": "Edge Infrastructure",
+				"definition": "Compute, storage, and network resources located closer to the end user",
+				"description": "Edge infrastructure supports low-latency, high-performance workloads by deploying infrastructure components geographically close to users or devices. It’s essential for use cases like IoT, AR/VR, and real-time analytics.",
+				"examples": [
+					"CDN edge servers for content delivery",
+					"5G-enabled compute at the edge",
+					"Retail store edge nodes",
+					"Smart factory control systems"
+				],
+				"benefits": [
+					"Reduced latency",
+					"Improved user experience",
+					"Decentralized data processing",
+					"Enhanced scalability",
+					"Supports modern edge-native applications"
+				]
 			}
 		]
 	},
