@@ -2,8 +2,8 @@
 	"offerings": [
 		{
 			"id": "offering-1",
-			"name": "Offering 1",
-			"description": "Offering 1 description",
+			"name": "Some Cool Offering",
+			"description": "The best thing since sliced bread that you should adopt, look at all the cool things it does.",
 			"capabilities": [
 				{
 					"id": "enterprise-resource-planning",

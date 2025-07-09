@@ -74,7 +74,7 @@
 {:else}
 	<Card.Root>
 		<Card.Header>
-			<Card.Title>{offering.name}</Card.Title>
+			<Card.Title class="text-primary text-2xl font-bold">{offering.name}</Card.Title>
 			<Card.Description>{offering.description}</Card.Description>
 		</Card.Header>
 		<Card.Content>

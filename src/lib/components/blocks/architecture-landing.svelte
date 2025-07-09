@@ -54,18 +54,20 @@
 										<!-- Second level category card -->
 										<Card.Root class="bg-background/60 border-dashed">
 											<Card.Header class="pb-3">
-												<Card.Title class="text-lg text-primary">{category.name}</Card.Title>
-												<Card.Description class="text-sm text-muted-foreground">
+												<Card.Title class="text-primary text-lg">{category.name}</Card.Title>
+												<Card.Description class="text-muted-foreground text-sm">
 													{category.description}
 												</Card.Description>
 											</Card.Header>
 											<Card.Content>
 												<!-- Bento grid layout for subcategories -->
-												<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+												<div class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
 													{#each category.subcategories as subcategory}
 														<div class="space-y-2">
 															<div class="flex items-center gap-2">
-																<h4 class="text-sm font-medium text-muted-foreground uppercase tracking-wide">
+																<h4
+																	class="text-muted-foreground text-sm font-medium tracking-wide uppercase"
+																>
 																	{subcategory.name}
 																</h4>
 																<Separator class="flex-1" />
@@ -85,12 +87,14 @@
 									<!-- Regular 2-level hierarchy for other layers -->
 									<div class="space-y-2">
 										<div class="flex items-center gap-2">
-											<h4 class="text-sm font-medium text-muted-foreground">
+											<h4 class="text-muted-foreground text-sm font-medium">
 												{category.name}
 											</h4>
 											<Separator class="flex-1" />
 										</div>
-										<div class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+										<div
+											class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+										>
 											{#each category.capabilities as capability}
 												<CapabilityCard {capability} />
 											{/each}
@@ -109,7 +113,13 @@
 			{#each architectureLayers as layer}
 				{@const totalCapabilities = layer.categories.reduce((sum, category) => {
 					if (category.subcategories) {
-						return sum + category.subcategories.reduce((subSum, subcategory) => subSum + subcategory.capabilities.length, 0);
+						return (
+							sum +
+							category.subcategories.reduce(
+								(subSum, subcategory) => subSum + subcategory.capabilities.length,
+								0
+							)
+						);
 					}
 					return sum + category.capabilities.length;
 				}, 0)}
