@@ -164,250 +164,511 @@
 		"color": "bg-watercourse-50 border-watercourse-200 hover:bg-watercourse-100",
 		"categories": [
 			{
-				"id": "enterprise-applications",
-				"name": "Enterprise Applications",
-				"description": "Core business applications and systems",
-				"capabilities": [
+				"id": "application-engineering",
+				"name": "Application Engineering",
+				"description": "Core business applications and engineering tools for application functionality and logic",
+				"subcategories": [
 					{
-						"id": "enterprise-resource-planning",
-						"name": "Enterprise Resource Planning",
-						"definition": "Integrated software platform managing core business processes",
-						"description": "Enterprise Resource Planning (ERP) provides a unified suite of applications that streamline and automate critical business processes such as finance, procurement, supply chain, and human resources. ERP enables consistent data sharing, process efficiency, and real-time insights across the enterprise.",
-						"examples": [
-							"Finance and accounting management",
-							"Procurement and supplier management",
-							"Inventory and warehouse management",
-							"Order processing and fulfillment",
-							"Human resources management",
-							"Project and resource planning"
-						],
-						"benefits": [
-							"End-to-end process integration",
-							"Improved operational efficiency",
-							"Real-time business insights",
-							"Data consistency across departments",
-							"Scalability for growth",
-							"Regulatory compliance support"
-						],
-						"keyComponents": [
-							"Core business process modules",
-							"Data integration layer",
-							"Reporting and analytics tools",
-							"Security and access controls",
-							"Workflow automation"
-						],
-						"technologies": [
-							"SAP S/4HANA",
-							"Oracle ERP Cloud",
-							"Microsoft Dynamics 365 Finance & Operations",
-							"Infor CloudSuite",
-							"Workday",
-							"Netsuite ERP"
-						],
-						"maturityLevels": [
-							{ "level": "Basic", "description": "Isolated systems, manual processes" },
-							{ "level": "Developing", "description": "Basic ERP in place for core functions" },
+						"id": "enterprise-applications",
+						"name": "Enterprise Applications",
+						"description": "Core business applications and systems",
+						"capabilities": [
 							{
-								"level": "Defined",
-								"description": "Integrated ERP with cross-functional processes"
+								"id": "enterprise-resource-planning",
+								"name": "Enterprise Resource Planning",
+								"definition": "Integrated software platform managing core business processes",
+								"description": "Enterprise Resource Planning (ERP) provides a unified suite of applications that streamline and automate critical business processes such as finance, procurement, supply chain, and human resources. ERP enables consistent data sharing, process efficiency, and real-time insights across the enterprise.",
+								"examples": [
+									"Finance and accounting management",
+									"Procurement and supplier management",
+									"Inventory and warehouse management",
+									"Order processing and fulfillment",
+									"Human resources management",
+									"Project and resource planning"
+								],
+								"benefits": [
+									"End-to-end process integration",
+									"Improved operational efficiency",
+									"Real-time business insights",
+									"Data consistency across departments",
+									"Scalability for growth",
+									"Regulatory compliance support"
+								],
+								"keyComponents": [
+									"Core business process modules",
+									"Data integration layer",
+									"Reporting and analytics tools",
+									"Security and access controls",
+									"Workflow automation"
+								],
+								"technologies": [
+									"SAP S/4HANA",
+									"Oracle ERP Cloud",
+									"Microsoft Dynamics 365 Finance & Operations",
+									"Infor CloudSuite",
+									"Workday",
+									"Netsuite ERP"
+								],
+								"maturityLevels": [
+									{ "level": "Basic", "description": "Isolated systems, manual processes" },
+									{ "level": "Developing", "description": "Basic ERP in place for core functions" },
+									{
+										"level": "Defined",
+										"description": "Integrated ERP with cross-functional processes"
+									},
+									{ "level": "Managed", "description": "Advanced reporting and analytics" },
+									{ "level": "Optimized", "description": "Real-time data, AI-driven automation" }
+								]
 							},
-							{ "level": "Managed", "description": "Advanced reporting and analytics" },
-							{ "level": "Optimized", "description": "Real-time data, AI-driven automation" }
+							{
+								"id": "customer-relationship-management",
+								"name": "Customer Relationship Management",
+								"definition": "Technology for managing customer interactions and relationships",
+								"examples": ["Salesforce", "HubSpot", "Microsoft CRM"],
+								"benefits": ["Customer insights", "Sales automation", "Service improvement"]
+							},
+							{
+								"id": "business-intelligence",
+								"name": "Business Intelligence",
+								"definition": "Analytics and reporting capabilities for data-driven decision making",
+								"description": "Business Intelligence (BI) enables organizations to transform raw data into actionable insights through reporting, dashboards, and interactive analytics. BI helps stakeholders monitor performance, identify trends, and make informed strategic decisions.",
+								"examples": [
+									"Executive dashboards",
+									"Self-service reporting",
+									"Ad-hoc data analysis",
+									"Performance scorecards",
+									"Predictive analytics",
+									"Data visualization"
+								],
+								"benefits": [
+									"Improved decision making",
+									"Data-driven culture",
+									"Faster insight generation",
+									"Enhanced operational visibility",
+									"Early risk identification",
+									"Competitive advantage"
+								],
+								"keyComponents": [
+									"Data extraction and transformation",
+									"Data warehouse or data marts",
+									"Visualization tools",
+									"Self-service analytics",
+									"Governance and security controls"
+								],
+								"technologies": [
+									"Tableau",
+									"Microsoft Power BI",
+									"Qlik Sense",
+									"Looker",
+									"SAP BusinessObjects",
+									"Domo"
+								],
+								"maturityLevels": [
+									{ "level": "Basic", "description": "Manual reports, limited insights" },
+									{ "level": "Developing", "description": "Standard dashboards and reporting" },
+									{
+										"level": "Defined",
+										"description": "Interactive BI with self-service capabilities"
+									},
+									{ "level": "Managed", "description": "Predictive and advanced analytics" },
+									{ "level": "Optimized", "description": "Real-time BI, AI-enhanced insights" }
+								]
+							}
 						]
 					},
 					{
-						"id": "customer-relationship-management",
-						"name": "Customer Relationship Management",
-						"definition": "Technology for managing customer interactions and relationships",
-						"examples": ["Salesforce", "HubSpot", "Microsoft CRM"],
-						"benefits": ["Customer insights", "Sales automation", "Service improvement"]
+						"id": "collaboration-content",
+						"name": "Collaboration & Content",
+						"description": "Tools for team collaboration and content management",
+						"capabilities": [
+							{
+								"id": "collaboration-tools",
+								"name": "Collaboration Tools",
+								"definition": "Platforms enabling team communication and collaboration",
+								"description": "Collaboration Tools facilitate effective communication, information sharing, and teamwork within and across organizations. These tools enhance productivity, especially in distributed or hybrid work environments.",
+								"examples": [
+									"Team messaging platforms",
+									"Video conferencing",
+									"Document collaboration",
+									"Project management boards",
+									"Knowledge sharing portals",
+									"Virtual whiteboards"
+								],
+								"benefits": [
+									"Improved team productivity",
+									"Enhanced communication",
+									"Seamless remote collaboration",
+									"Knowledge retention",
+									"Faster decision making",
+									"Cross-functional alignment"
+								],
+								"keyComponents": [
+									"Messaging and chat",
+									"File sharing",
+									"Video and voice conferencing",
+									"Project tracking",
+									"Integration with business tools"
+								],
+								"technologies": [
+									"Microsoft Teams",
+									"Slack",
+									"Zoom",
+									"Google Workspace",
+									"SharePoint",
+									"Asana"
+								],
+								"maturityLevels": [
+									{ "level": "Basic", "description": "Ad-hoc tools, limited integration" },
+									{ "level": "Developing", "description": "Standardized collaboration platform" },
+									{
+										"level": "Defined",
+										"description": "Integrated collaboration with other systems"
+									},
+									{ "level": "Managed", "description": "Advanced features and automation" },
+									{ "level": "Optimized", "description": "Seamless, enterprise-wide collaboration" }
+								]
+							},
+							{
+								"id": "content-management",
+								"name": "Content Management",
+								"definition": "Systems for creating, managing, and publishing digital content",
+								"description": "Content Management enables organizations to efficiently create, organize, store, and distribute digital content across channels. It ensures content consistency, brand integrity, and supports marketing and operational needs.",
+								"examples": [
+									"Website content management",
+									"Document repositories",
+									"Digital asset management",
+									"Knowledge bases",
+									"Intranet portals",
+									"Multilingual content management"
+								],
+								"benefits": [
+									"Streamlined content creation",
+									"Consistent branding",
+									"Improved content discoverability",
+									"Faster content updates",
+									"Enhanced collaboration",
+									"Regulatory compliance"
+								],
+								"keyComponents": [
+									"Content repository",
+									"Authoring and editing tools",
+									"Publishing workflows",
+									"Search and retrieval",
+									"Access control"
+								],
+								"technologies": [
+									"SharePoint",
+									"Drupal",
+									"WordPress",
+									"Sitecore",
+									"Adobe Experience Manager",
+									"Confluence"
+								],
+								"maturityLevels": [
+									{
+										"level": "Basic",
+										"description": "Isolated content management, manual processes"
+									},
+									{ "level": "Developing", "description": "Standardized content platform" },
+									{ "level": "Defined", "description": "Integrated content workflows" },
+									{ "level": "Managed", "description": "Advanced content governance" },
+									{
+										"level": "Optimized",
+										"description": "Omnichannel, personalized content delivery"
+									}
+								]
+							},
+							{
+								"id": "integration-platform",
+								"name": "Integration Platform",
+								"definition": "Middleware connecting disparate systems and applications",
+								"description": "An Integration Platform enables seamless data and process flow between different applications, systems, and services. It reduces complexity, improves agility, and supports both real-time and batch integrations across the enterprise.",
+								"examples": [
+									"API-based integrations",
+									"Data synchronization between systems",
+									"Event-driven architectures",
+									"Legacy system integration",
+									"Third-party service connectors",
+									"B2B partner integrations"
+								],
+								"benefits": [
+									"System interoperability",
+									"Faster time-to-market",
+									"Data consistency",
+									"Reduced integration complexity",
+									"Improved scalability",
+									"Enhanced business agility"
+								],
+								"keyComponents": [
+									"API Gateway",
+									"Integration workflows",
+									"Data mapping and transformation",
+									"Monitoring and error handling",
+									"Security and access control"
+								],
+								"technologies": [
+									"MuleSoft Anypoint",
+									"Dell Boomi",
+									"Azure Logic Apps",
+									"Apache Camel",
+									"SnapLogic",
+									"WSO2"
+								],
+								"maturityLevels": [
+									{ "level": "Basic", "description": "Point-to-point, manual integrations" },
+									{ "level": "Developing", "description": "Basic integration platform in place" },
+									{ "level": "Defined", "description": "Standardized, reusable integrations" },
+									{ "level": "Managed", "description": "Real-time, scalable integrations" },
+									{
+										"level": "Optimized",
+										"description": "API-led, event-driven, AI-assisted integrations"
+									}
+								]
+							}
+						]
 					},
 					{
-						"id": "business-intelligence",
-						"name": "Business Intelligence",
-						"definition": "Analytics and reporting capabilities for data-driven decision making",
-						"description": "Business Intelligence (BI) enables organizations to transform raw data into actionable insights through reporting, dashboards, and interactive analytics. BI helps stakeholders monitor performance, identify trends, and make informed strategic decisions.",
-						"examples": [
-							"Executive dashboards",
-							"Self-service reporting",
-							"Ad-hoc data analysis",
-							"Performance scorecards",
-							"Predictive analytics",
-							"Data visualization"
-						],
-						"benefits": [
-							"Improved decision making",
-							"Data-driven culture",
-							"Faster insight generation",
-							"Enhanced operational visibility",
-							"Early risk identification",
-							"Competitive advantage"
-						],
-						"keyComponents": [
-							"Data extraction and transformation",
-							"Data warehouse or data marts",
-							"Visualization tools",
-							"Self-service analytics",
-							"Governance and security controls"
-						],
-						"technologies": [
-							"Tableau",
-							"Microsoft Power BI",
-							"Qlik Sense",
-							"Looker",
-							"SAP BusinessObjects",
-							"Domo"
-						],
-						"maturityLevels": [
-							{ "level": "Basic", "description": "Manual reports, limited insights" },
-							{ "level": "Developing", "description": "Standard dashboards and reporting" },
+						"id": "orchestration-logic",
+						"name": "Orchestration & Logic",
+						"description": "Tools for modeling, executing, and monitoring business processes",
+						"capabilities": [
 							{
-								"level": "Defined",
-								"description": "Interactive BI with self-service capabilities"
+								"id": "workflow-orchestration",
+								"name": "Workflow Orchestration",
+								"definition": "The ability to model, execute, and monitor multi-step business processes in an automated and maintainable way.",
+								"description": "Workflow orchestration tools allow developers and operations teams to encode business logic as a sequence of tasks or state machines. These tools support retry logic, timeouts, parallelism, and integration across APIs or microservices.",
+								"examples": ["Camunda", "Temporal", "Apache Airflow", "AWS Step Functions"],
+								"benefits": [
+									"Improved maintainability",
+									"Separation of business logic",
+									"Observable state transitions",
+									"Simplified long-running processes"
+								]
 							},
-							{ "level": "Managed", "description": "Predictive and advanced analytics" },
-							{ "level": "Optimized", "description": "Real-time BI, AI-enhanced insights" }
+							{
+								"id": "business-rules-engine",
+								"name": "Business Rules Engine",
+								"definition": "The ability to manage and execute rule-based logic separately from application code.",
+								"description": "Business rules engines allow non-developers or analysts to define policies, thresholds, or conditional behaviors through declarative logic. These rules are maintained outside the application codebase and can be updated independently.",
+								"examples": ["Drools", "Red Hat Decision Manager", "FICO Blaze Advisor"],
+								"benefits": [
+									"Faster time-to-change",
+									"Separation of concerns",
+									"Better auditability",
+									"Business-user ownership of logic"
+								]
+							}
 						]
 					}
 				]
 			},
 			{
-				"id": "collaboration-content",
-				"name": "Collaboration & Content",
-				"description": "Tools for team collaboration and content management",
-				"capabilities": [
+				"id": "application-interaction",
+				"name": "Application Interaction",
+				"description": "Tools for user interaction, UI behavior, user session handling, and presentation orchestration",
+				"subcategories": [
 					{
-						"id": "collaboration-tools",
-						"name": "Collaboration Tools",
-						"definition": "Platforms enabling team communication and collaboration",
-						"description": "Collaboration Tools facilitate effective communication, information sharing, and teamwork within and across organizations. These tools enhance productivity, especially in distributed or hybrid work environments.",
-						"examples": [
-							"Team messaging platforms",
-							"Video conferencing",
-							"Document collaboration",
-							"Project management boards",
-							"Knowledge sharing portals",
-							"Virtual whiteboards"
-						],
-						"benefits": [
-							"Improved team productivity",
-							"Enhanced communication",
-							"Seamless remote collaboration",
-							"Knowledge retention",
-							"Faster decision making",
-							"Cross-functional alignment"
-						],
-						"keyComponents": [
-							"Messaging and chat",
-							"File sharing",
-							"Video and voice conferencing",
-							"Project tracking",
-							"Integration with business tools"
-						],
-						"technologies": [
-							"Microsoft Teams",
-							"Slack",
-							"Zoom",
-							"Google Workspace",
-							"SharePoint",
-							"Asana"
-						],
-						"maturityLevels": [
-							{ "level": "Basic", "description": "Ad-hoc tools, limited integration" },
-							{ "level": "Developing", "description": "Standardized collaboration platform" },
-							{ "level": "Defined", "description": "Integrated collaboration with other systems" },
-							{ "level": "Managed", "description": "Advanced features and automation" },
-							{ "level": "Optimized", "description": "Seamless, enterprise-wide collaboration" }
-						]
-					},
-					{
-						"id": "content-management",
-						"name": "Content Management",
-						"definition": "Systems for creating, managing, and publishing digital content",
-						"description": "Content Management enables organizations to efficiently create, organize, store, and distribute digital content across channels. It ensures content consistency, brand integrity, and supports marketing and operational needs.",
-						"examples": [
-							"Website content management",
-							"Document repositories",
-							"Digital asset management",
-							"Knowledge bases",
-							"Intranet portals",
-							"Multilingual content management"
-						],
-						"benefits": [
-							"Streamlined content creation",
-							"Consistent branding",
-							"Improved content discoverability",
-							"Faster content updates",
-							"Enhanced collaboration",
-							"Regulatory compliance"
-						],
-						"keyComponents": [
-							"Content repository",
-							"Authoring and editing tools",
-							"Publishing workflows",
-							"Search and retrieval",
-							"Access control"
-						],
-						"technologies": [
-							"SharePoint",
-							"Drupal",
-							"WordPress",
-							"Sitecore",
-							"Adobe Experience Manager",
-							"Confluence"
-						],
-						"maturityLevels": [
-							{ "level": "Basic", "description": "Isolated content management, manual processes" },
-							{ "level": "Developing", "description": "Standardized content platform" },
-							{ "level": "Defined", "description": "Integrated content workflows" },
-							{ "level": "Managed", "description": "Advanced content governance" },
-							{ "level": "Optimized", "description": "Omnichannel, personalized content delivery" }
-						]
-					},
-					{
-						"id": "integration-platform",
-						"name": "Integration Platform",
-						"definition": "Middleware connecting disparate systems and applications",
-						"description": "An Integration Platform enables seamless data and process flow between different applications, systems, and services. It reduces complexity, improves agility, and supports both real-time and batch integrations across the enterprise.",
-						"examples": [
-							"API-based integrations",
-							"Data synchronization between systems",
-							"Event-driven architectures",
-							"Legacy system integration",
-							"Third-party service connectors",
-							"B2B partner integrations"
-						],
-						"benefits": [
-							"System interoperability",
-							"Faster time-to-market",
-							"Data consistency",
-							"Reduced integration complexity",
-							"Improved scalability",
-							"Enhanced business agility"
-						],
-						"keyComponents": [
-							"API Gateway",
-							"Integration workflows",
-							"Data mapping and transformation",
-							"Monitoring and error handling",
-							"Security and access control"
-						],
-						"technologies": [
-							"MuleSoft Anypoint",
-							"Dell Boomi",
-							"Azure Logic Apps",
-							"Apache Camel",
-							"SnapLogic",
-							"WSO2"
-						],
-						"maturityLevels": [
-							{ "level": "Basic", "description": "Point-to-point, manual integrations" },
-							{ "level": "Developing", "description": "Basic integration platform in place" },
-							{ "level": "Defined", "description": "Standardized, reusable integrations" },
-							{ "level": "Managed", "description": "Real-time, scalable integrations" },
+						"id": "application-composition",
+						"name": "Application Composition",
+						"description": "Tools for building and composing applications from independent components",
+						"capabilities": [
 							{
-								"level": "Optimized",
-								"description": "API-led, event-driven, AI-assisted integrations"
+								"id": "modular-frontend-frameworks",
+								"name": "Modular Frontend Frameworks",
+								"definition": "The ability to compose frontends from independently developed and deployable micro frontends or components.",
+								"description": "Modular frontend frameworks allow teams to build applications that are split across multiple domains or teams, while maintaining a cohesive user experience. Each module can be deployed independently and upgraded without affecting the entire frontend.",
+								"examples": ["Module Federation", "Single-SPA", "Bit"],
+								"benefits": [
+									"Improved scalability",
+									"Team autonomy",
+									"Simplified upgrades",
+									"Better ownership boundaries"
+								]
+							},
+							{
+								"id": "plugin-frameworks",
+								"name": "Plugin Frameworks",
+								"definition": "The capability to dynamically extend an application’s features through independently developed modules or plugins.",
+								"description": "Plugin frameworks provide an interface through which third parties or internal developers can add new functionality without modifying the core codebase. Common in extensible apps such as editors, platforms, and developer tools.",
+								"examples": ["VS Code Extensions", "Grafana Plugins", "Jenkins Plugins"],
+								"benefits": [
+									"Rapid extensibility",
+									"Community contribution",
+									"Ecosystem growth",
+									"Reduced core complexity"
+								]
+							}
+						]
+					},
+					{
+						"id": "state-navigation",
+						"name": "State & Navigation",
+						"description": "Tools for managing and navigating application state",
+						"capabilities": [
+							{
+								"id": "state-management",
+								"name": "State Management",
+								"definition": "The capability to manage, share, and persist application state across components, views, or services.",
+								"description": "State management libraries provide centralized or scoped approaches to handle dynamic data such as user inputs, responses, or derived values. These are especially important in reactive and SPAs where data must flow between UI layers and services.",
+								"examples": ["Redux", "Zustand", "RxJS", "Svelte Stores"],
+								"benefits": [
+									"Predictable behavior",
+									"Debuggability",
+									"Improved consistency",
+									"Scalable frontend architecture"
+								]
+							}
+						]
+					},
+					{
+						"id": "form-content-systems",
+						"name": "Form & Content Systems",
+						"description": "Tools for building and managing forms and content systems",
+						"capabilities": [
+							{
+								"id": "form-builders",
+								"name": "Form Builders",
+								"definition": "The capability to build and render dynamic, schema-driven forms at runtime.",
+								"description": "Form builders enable developers or non-technical users to create and manage forms for data entry, validation, and submission. They support dynamic schemas, conditional logic, and integrations with backend APIs.",
+								"examples": ["Form.io", "React Hook Form", "Superforms"],
+								"benefits": [
+									"Faster form creation",
+									"Lower maintenance",
+									"Reusability",
+									"Better UX for complex input flows"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": "application-integration",
+				"name": "Application Integration",
+				"description": "Integration and collaboration tools for applications",
+				"subcategories": [
+					{
+						"id": "messaging-patterns",
+						"name": "Messaging Patterns",
+						"description": "Tools for managing and orchestrating integration flows",
+						"capabilities": [
+							{
+								"id": "message-routing",
+								"name": "Message Routing",
+								"definition": "The capability to direct messages to the correct processing component or service based on content or metadata.",
+								"description": "This includes routing patterns such as Content-Based Router, Routing Slip, and Recipient List that guide message delivery dynamically based on message properties.",
+								"examples": [
+									"Apache Camel Routing Slip",
+									"Spring Integration Routers",
+									"MuleSoft Flow Routers"
+								],
+								"benefits": [
+									"Improved decoupling",
+									"Dynamic workflows",
+									"Supports complex process flows"
+								]
+							},
+							{
+								"id": "message-transformation",
+								"name": "Message Transformation",
+								"definition": "The capability to modify or translate messages between formats, protocols, or structures as they move between systems.",
+								"description": "This includes Content Enricher, Message Translator, and Canonical Data Model patterns used to harmonize data between services.",
+								"examples": [
+									"Apache Camel Transformer",
+									"MuleSoft DataWeave",
+									"Spring Integration Transformers"
+								],
+								"benefits": ["Interoperability", "Improved data consistency", "Reduced coupling"]
+							},
+							{
+								"id": "messaging-endpoints",
+								"name": "Messaging Endpoints",
+								"definition": "The capability to connect services or applications via reusable, reliable messaging interfaces.",
+								"description": "Includes endpoint patterns such as Inbound/Outbound Channel Adapters and Durable Subscribers that abstract communication protocols.",
+								"examples": ["Kafka Consumers", "RabbitMQ Adapters", "JMS Queues"],
+								"benefits": ["Reliable delivery", "Protocol abstraction", "Scalability"]
+							}
+						]
+					},
+					{
+						"id": "integration-control-flow",
+						"name": "Integration Control Flow",
+						"description": "Tools for managing and orchestrating integration flows",
+						"capabilities": [
+							{
+								"id": "aggregator-pattern",
+								"name": "Aggregator Pattern",
+								"definition": "The capability to combine messages or events from multiple sources into a single, unified message.",
+								"description": "Used when multiple sources contribute partial data that needs to be correlated and emitted as a complete message.",
+								"examples": [
+									"Apache Camel Aggregator",
+									"AWS Step Functions Join",
+									"Spring Integration Aggregator"
+								],
+								"benefits": ["Data completeness", "Flexible timing", "Improved coordination"]
+							},
+							{
+								"id": "splitter-pattern",
+								"name": "Splitter Pattern",
+								"definition": "The ability to break a single composite message into multiple sub-messages for parallel or independent processing.",
+								"description": "Useful for breaking down payloads into units of work that can be handled individually, e.g., batch records.",
+								"examples": [
+									"Apache Camel Splitter",
+									"Spring Integration Splitter",
+									"AWS Lambda Event Processing"
+								],
+								"benefits": ["Parallelism", "Granular control", "Simplified processing logic"]
+							},
+							{
+								"id": "resequencer-pattern",
+								"name": "Resequencer Pattern",
+								"definition": "The capability to reorder messages into a defined sequence before forwarding to the next component.",
+								"description": "Critical for maintaining order when messages arrive out of sequence due to retries, async processing, or distributed systems.",
+								"examples": [
+									"Apache Camel Resequencer",
+									"Custom Kafka Consumers",
+									"JMS Ordering Filters"
+								],
+								"benefits": ["Data integrity", "Order preservation", "Predictable outcomes"]
+							}
+						]
+					},
+					{
+						"id": "event-driven-architecture",
+						"name": "Event-Driven Architecture",
+						"description": "Tools for building event-driven architectures",
+						"capabilities": [
+							{
+								"id": "event-stream-processing",
+								"name": "Event Stream Processing",
+								"definition": "The capability to continuously capture, analyze, and respond to events as they occur in real time.",
+								"description": "Supports near real-time applications by enabling transformation, filtering, enrichment, and routing of event data as it flows through the system. Often implemented using stream processing engines.",
+								"examples": ["Apache Flink", "Kafka Streams", "Kinesis Data Analytics"],
+								"benefits": ["Real-time responsiveness", "Operational agility", "Reduced latency"]
+							},
+							{
+								"id": "event-replay-retention",
+								"name": "Event Replay & Retention",
+								"definition": "The capability to store and replay historical events to reprocess, debug, or audit application behavior.",
+								"description": "Useful in event-sourced systems or for restoring state by replaying a durable log of past events. Enables recovery, compliance, and new service onboarding with historical data.",
+								"examples": ["Kafka Log Compaction", "EventStoreDB", "AWS EventBridge Archive"],
+								"benefits": [
+									"Improved auditability",
+									"Failure recovery",
+									"Support for late consumers"
+								]
+							},
+							{
+								"id": "event-contracts-schemas",
+								"name": "Event Contracts & Schemas",
+								"definition": "The capability to define, manage, and evolve structured formats and agreements for event payloads.",
+								"description": "Supports safe evolution and interoperability in distributed systems by providing versioned schemas and validation. Encourages reuse and reduces tight coupling between publishers and consumers.",
+								"examples": ["AsyncAPI", "Apache Avro", "Confluent Schema Registry"],
+								"benefits": [
+									"Loose coupling",
+									"Backward/forward compatibility",
+									"Improved developer coordination"
+								]
 							}
 						]
 					}
@@ -672,14 +933,38 @@
 							{
 								"id": "data-integration",
 								"name": "Data Integration",
-								"definition": "Combining data from disparate sources into a unified view",
-								"description": "Data integration tools extract, transform, and load data from multiple sources to ensure data consistency, synchronization, and holistic analytics across systems.",
-								"examples": ["Talend", "Informatica", "Apache Nifi", "Azure Data Factory"],
+								"definition": "The ability to combine data from different sources, formats, or systems into a unified view or pipeline",
+								"description": "Data Integration capabilities allow systems to connect, transform, and synchronize information across a wide variety of platforms. This includes both batch ETL and real-time data flows, and supports use cases ranging from business intelligence to cross-platform orchestration.",
+								"examples": [
+									"Talend",
+									"Informatica",
+									"Apache Nifi",
+									"Fivetran",
+									"dbt",
+									"Kafka Connect"
+								],
 								"benefits": [
-									"Unified data access",
+									"Reduced data silos",
 									"Improved data quality",
-									"Efficient ETL pipelines",
-									"Cross-system interoperability"
+									"Centralized data processing",
+									"Enhanced analytics capabilities"
+								]
+							},
+							{
+								"id": "reactive-queries",
+								"name": "Reactive Queries",
+								"definition": "Automatically re-running queries or data-fetching logic in response to changes in application or external state",
+								"description": "Reactive query systems allow applications to respond in real-time to changes in inputs, filters, cache state, or user interactions. This is increasingly used in frontend and fullstack development for performance-sensitive and UX-optimized applications.",
+								"examples": [
+									"TanStack Query (React Query, Svelte Query)",
+									"Apollo Client",
+									"RxJS with Observable Queries"
+								],
+								"benefits": [
+									"Automatic cache invalidation",
+									"Improved user experience",
+									"Simplified async data loading",
+									"Less boilerplate code"
 								]
 							}
 						]

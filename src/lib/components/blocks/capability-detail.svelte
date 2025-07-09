@@ -13,33 +13,36 @@
 	let subcategory: any = $state(undefined);
 	let layer: any = $state(undefined);
 
+	let found = false;
 	for (const archLayer of capabilities) {
 		for (const archCategory of archLayer.categories) {
 			if (archCategory.subcategories) {
 				// 3-level hierarchy (Infrastructure)
 				for (const archSubcategory of archCategory.subcategories) {
-					const found = archSubcategory.capabilities.find((cap: any) => cap.id === capabilityId);
-					if (found) {
-						capability = found;
+					const cap = archSubcategory.capabilities.find((cap: any) => cap.id === capabilityId);
+					if (cap) {
+						capability = cap;
 						category = archCategory;
 						subcategory = archSubcategory;
 						layer = archLayer;
+						found = true;
 						break;
 					}
 				}
 			} else {
 				// 2-level hierarchy (other layers)
-				const found = archCategory.capabilities.find((cap: any) => cap.id === capabilityId);
-				if (found) {
-					capability = found;
+				const cap = archCategory.capabilities.find((cap: any) => cap.id === capabilityId);
+				if (cap) {
+					capability = cap;
 					category = archCategory;
 					layer = archLayer;
+					found = true;
 					break;
 				}
 			}
-			if (capability) break;
+			if (found) break;
 		}
-		if (capability) break;
+		if (found) break;
 	}
 </script>
 
