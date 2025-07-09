@@ -1,0 +1,15 @@
+{
+	"offerings": [
+		{
+			"id": "offering-1",
+			"name": "Offering 1",
+			"description": "Offering 1 description",
+			"capabilities": [
+				{
+					"id": "enterprise-resource-planning",
+					"level": 1
+				}
+			]
+		}
+	]
+}
