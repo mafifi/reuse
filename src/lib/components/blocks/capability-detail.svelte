@@ -7,17 +7,39 @@
 
 	let { capabilityId } = $props();
 
-	// Find the capability and its layer in the nested structure
+	// Find the capability, its category/subcategory, and layer in the nested structure
 	let capability: any = $state(undefined);
+	let category: any = $state(undefined);
+	let subcategory: any = $state(undefined);
 	let layer: any = $state(undefined);
 
 	for (const archLayer of capabilities) {
-		const found = archLayer.capabilities.find((cap: any) => cap.id === capabilityId);
-		if (found) {
-			capability = found;
-			layer = archLayer;
-			break;
+		for (const archCategory of archLayer.categories) {
+			if (archCategory.subcategories) {
+				// 3-level hierarchy (Infrastructure)
+				for (const archSubcategory of archCategory.subcategories) {
+					const found = archSubcategory.capabilities.find((cap: any) => cap.id === capabilityId);
+					if (found) {
+						capability = found;
+						category = archCategory;
+						subcategory = archSubcategory;
+						layer = archLayer;
+						break;
+					}
+				}
+			} else {
+				// 2-level hierarchy (other layers)
+				const found = archCategory.capabilities.find((cap: any) => cap.id === capabilityId);
+				if (found) {
+					capability = found;
+					category = archCategory;
+					layer = archLayer;
+					break;
+				}
+			}
+			if (capability) break;
 		}
+		if (capability) break;
 	}
 </script>
 
@@ -54,6 +76,16 @@
 						<Badge variant="outline" class="text-sm">
 							{layer?.name || 'Unknown Layer'}
 						</Badge>
+						<span class="text-muted-foreground">→</span>
+						<Badge variant="outline" class="text-sm">
+							{category?.name || 'Unknown Category'}
+						</Badge>
+						{#if subcategory}
+							<span class="text-muted-foreground">→</span>
+							<Badge variant="outline" class="text-sm">
+								{subcategory?.name || 'Unknown Subcategory'}
+							</Badge>
+						{/if}
 					</div>
 					<h1 class="text-primary mb-4 text-4xl font-bold">{capability.name}</h1>
 					<p class="text-muted-foreground max-w-4xl text-xl">{capability.definition}</p>

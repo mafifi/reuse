@@ -5,123 +5,154 @@
 		"description": "Business capabilities, processes, and organizational structures",
 		"icon": "Building2",
 		"color": "bg-midnight-blue-50 border-midnight-blue-200 hover:bg-midnight-blue-100",
-		"capabilities": [
+		"categories": [
 			{
-				"id": "customer-management",
-				"name": "Customer Management",
-				"definition": "Capability to acquire, retain, and manage customer relationships throughout their lifecycle, ensuring optimal customer experience and business value creation.",
-				"description": "Customer Management encompasses all processes, technologies, and strategies used to interact with customers across all touchpoints. This capability enables organizations to understand customer needs, deliver personalized experiences, and build long-term relationships that drive business growth.",
-				"examples": [
-					"Customer Relationship Management (CRM) systems",
-					"Customer onboarding processes",
-					"Loyalty and rewards programs",
-					"Customer service and support",
-					"Customer segmentation and targeting",
-					"Customer feedback management"
-				],
-				"benefits": [
-					"Improved customer satisfaction and loyalty",
-					"Increased customer lifetime value",
-					"Better customer insights and analytics",
-					"Enhanced customer experience",
-					"Reduced customer acquisition costs",
-					"Improved customer retention rates"
-				],
-				"keyComponents": [
-					"Customer data management",
-					"Interaction tracking",
-					"Service delivery",
-					"Feedback collection",
-					"Relationship analytics"
-				],
-				"technologies": [
-					"Salesforce CRM",
-					"Microsoft Dynamics 365",
-					"HubSpot",
-					"Oracle CX Cloud",
-					"SAP Customer Experience"
-				],
-				"maturityLevels": [
-					{ "level": "Basic", "description": "Manual customer tracking, limited integration" },
-					{ "level": "Developing", "description": "CRM system in place, some automation" },
-					{ "level": "Defined", "description": "Integrated customer processes, analytics" },
-					{ "level": "Managed", "description": "Advanced analytics, personalization" },
-					{ "level": "Optimized", "description": "AI-driven insights, predictive analytics" }
+				"id": "customer-market",
+				"name": "Customer & Market",
+				"description": "Customer-facing capabilities and market engagement",
+				"capabilities": [
+					{
+						"id": "customer-management",
+						"name": "Customer Management",
+						"definition": "Capability to acquire, retain, and manage customer relationships throughout their lifecycle, ensuring optimal customer experience and business value creation.",
+						"description": "Customer Management encompasses all processes, technologies, and strategies used to interact with customers across all touchpoints. This capability enables organizations to understand customer needs, deliver personalized experiences, and build long-term relationships that drive business growth.",
+						"examples": [
+							"Customer Relationship Management (CRM) systems",
+							"Customer onboarding processes",
+							"Loyalty and rewards programs",
+							"Customer service and support",
+							"Customer segmentation and targeting",
+							"Customer feedback management"
+						],
+						"benefits": [
+							"Improved customer satisfaction and loyalty",
+							"Increased customer lifetime value",
+							"Better customer insights and analytics",
+							"Enhanced customer experience",
+							"Reduced customer acquisition costs",
+							"Improved customer retention rates"
+						],
+						"keyComponents": [
+							"Customer data management",
+							"Interaction tracking",
+							"Service delivery",
+							"Feedback collection",
+							"Relationship analytics"
+						],
+						"technologies": [
+							"Salesforce CRM",
+							"Microsoft Dynamics 365",
+							"HubSpot",
+							"Oracle CX Cloud",
+							"SAP Customer Experience"
+						],
+						"maturityLevels": [
+							{ "level": "Basic", "description": "Manual customer tracking, limited integration" },
+							{ "level": "Developing", "description": "CRM system in place, some automation" },
+							{ "level": "Defined", "description": "Integrated customer processes, analytics" },
+							{ "level": "Managed", "description": "Advanced analytics, personalization" },
+							{ "level": "Optimized", "description": "AI-driven insights, predictive analytics" }
+						]
+					}
 				]
 			},
 			{
 				"id": "financial-management",
 				"name": "Financial Management",
-				"definition": "Capability to manage financial planning, budgeting, and reporting across the organization",
-				"description": "Financial Management encompasses the processes, tools, and strategies used to plan, manage, and report on an organization's financial resources. This capability ensures financial transparency, regulatory compliance, and supports strategic decision-making through accurate financial insights.",
-				"examples": [
-					"Budget planning and forecasting",
-					"Financial reporting and analysis",
-					"Cost management and control",
-					"Accounts payable and receivable",
-					"Asset and investment management",
-					"Regulatory financial compliance"
-				],
-				"benefits": [
-					"Improved financial transparency",
-					"Accurate financial reporting",
-					"Enhanced cost control",
-					"Regulatory compliance",
-					"Informed strategic decisions",
-					"Optimized resource allocation"
-				],
-				"keyComponents": [
-					"General ledger and accounting systems",
-					"Budgeting and forecasting tools",
-					"Financial reporting platforms",
-					"Cost management processes",
-					"Audit and compliance mechanisms"
-				],
-				"technologies": [
-					"SAP S/4HANA Finance",
-					"Oracle Financials Cloud",
-					"Microsoft Dynamics 365 Finance",
-					"Workday Financial Management",
-					"Adaptive Insights"
-				],
-				"maturityLevels": [
-					{ "level": "Basic", "description": "Manual financial processes, spreadsheets" },
-					{ "level": "Developing", "description": "Core financial systems in place" },
-					{ "level": "Defined", "description": "Integrated financial management and reporting" },
-					{ "level": "Managed", "description": "Advanced analytics and cost optimization" },
+				"description": "Financial planning, budgeting, and reporting capabilities",
+				"capabilities": [
 					{
-						"level": "Optimized",
-						"description": "Real-time financial insights, predictive planning"
+						"id": "financial-management",
+						"name": "Financial Management",
+						"definition": "Capability to manage financial planning, budgeting, and reporting across the organization",
+						"description": "Financial Management encompasses the processes, tools, and strategies used to plan, manage, and report on an organization's financial resources. This capability ensures financial transparency, regulatory compliance, and supports strategic decision-making through accurate financial insights.",
+						"examples": [
+							"Budget planning and forecasting",
+							"Financial reporting and analysis",
+							"Cost management and control",
+							"Accounts payable and receivable",
+							"Asset and investment management",
+							"Regulatory financial compliance"
+						],
+						"benefits": [
+							"Improved financial transparency",
+							"Accurate financial reporting",
+							"Enhanced cost control",
+							"Regulatory compliance",
+							"Informed strategic decisions",
+							"Optimized resource allocation"
+						],
+						"keyComponents": [
+							"General ledger and accounting systems",
+							"Budgeting and forecasting tools",
+							"Financial reporting platforms",
+							"Cost management processes",
+							"Audit and compliance mechanisms"
+						],
+						"technologies": [
+							"SAP S/4HANA Finance",
+							"Oracle Financials Cloud",
+							"Microsoft Dynamics 365 Finance",
+							"Workday Financial Management",
+							"Adaptive Insights"
+						],
+						"maturityLevels": [
+							{ "level": "Basic", "description": "Manual financial processes, spreadsheets" },
+							{ "level": "Developing", "description": "Core financial systems in place" },
+							{
+								"level": "Defined",
+								"description": "Integrated financial management and reporting"
+							},
+							{ "level": "Managed", "description": "Advanced analytics and cost optimization" },
+							{
+								"level": "Optimized",
+								"description": "Real-time financial insights, predictive planning"
+							}
+						]
 					}
 				]
 			},
 			{
-				"id": "supply-chain",
-				"name": "Supply Chain Management",
-				"definition": "End-to-end management of goods and services from suppliers to customers",
-				"examples": ["Procurement", "Inventory management", "Logistics"],
-				"benefits": ["Cost reduction", "Efficiency", "Risk mitigation"]
+				"id": "operations",
+				"name": "Operations",
+				"description": "Core operational capabilities and resource management",
+				"capabilities": [
+					{
+						"id": "supply-chain",
+						"name": "Supply Chain Management",
+						"definition": "End-to-end management of goods and services from suppliers to customers",
+						"examples": ["Procurement", "Inventory management", "Logistics"],
+						"benefits": ["Cost reduction", "Efficiency", "Risk mitigation"]
+					},
+					{
+						"id": "human-resources",
+						"name": "Human Resources",
+						"definition": "Management of workforce planning, talent acquisition, and employee development",
+						"examples": ["Recruitment", "Performance management", "Training"],
+						"benefits": ["Talent retention", "Productivity", "Compliance"]
+					},
+					{
+						"id": "risk-management",
+						"name": "Risk Management",
+						"definition": "Identification, assessment, and mitigation of business risks",
+						"examples": ["Risk assessment", "Compliance monitoring", "Business continuity"],
+						"benefits": ["Risk reduction", "Regulatory compliance", "Business resilience"]
+					}
+				]
 			},
 			{
-				"id": "human-resources",
-				"name": "Human Resources",
-				"definition": "Management of workforce planning, talent acquisition, and employee development",
-				"examples": ["Recruitment", "Performance management", "Training"],
-				"benefits": ["Talent retention", "Productivity", "Compliance"]
-			},
-			{
-				"id": "risk-management",
-				"name": "Risk Management",
-				"definition": "Identification, assessment, and mitigation of business risks",
-				"examples": ["Risk assessment", "Compliance monitoring", "Business continuity"],
-				"benefits": ["Risk reduction", "Regulatory compliance", "Business resilience"]
-			},
-			{
-				"id": "product-development",
-				"name": "Product Development",
-				"definition": "Innovation and development of new products and services",
-				"examples": ["R&D processes", "Product lifecycle", "Innovation labs"],
-				"benefits": ["Market competitiveness", "Revenue growth", "Innovation"]
+				"id": "innovation",
+				"name": "Innovation",
+				"description": "Product development and innovation capabilities",
+				"capabilities": [
+					{
+						"id": "product-development",
+						"name": "Product Development",
+						"definition": "Innovation and development of new products and services",
+						"examples": ["R&D processes", "Product lifecycle", "Innovation labs"],
+						"benefits": ["Market competitiveness", "Revenue growth", "Innovation"]
+					}
+				]
 			}
 		]
 	},
@@ -131,232 +162,255 @@
 		"description": "Software applications and their interactions within the enterprise",
 		"icon": "Layers",
 		"color": "bg-watercourse-50 border-watercourse-200 hover:bg-watercourse-100",
-		"capabilities": [
+		"categories": [
 			{
-				"id": "enterprise-resource-planning",
-				"name": "Enterprise Resource Planning",
-				"definition": "Integrated software platform managing core business processes",
-				"description": "Enterprise Resource Planning (ERP) provides a unified suite of applications that streamline and automate critical business processes such as finance, procurement, supply chain, and human resources. ERP enables consistent data sharing, process efficiency, and real-time insights across the enterprise.",
-				"examples": [
-					"Finance and accounting management",
-					"Procurement and supplier management",
-					"Inventory and warehouse management",
-					"Order processing and fulfillment",
-					"Human resources management",
-					"Project and resource planning"
-				],
-				"benefits": [
-					"End-to-end process integration",
-					"Improved operational efficiency",
-					"Real-time business insights",
-					"Data consistency across departments",
-					"Scalability for growth",
-					"Regulatory compliance support"
-				],
-				"keyComponents": [
-					"Core business process modules",
-					"Data integration layer",
-					"Reporting and analytics tools",
-					"Security and access controls",
-					"Workflow automation"
-				],
-				"technologies": [
-					"SAP S/4HANA",
-					"Oracle ERP Cloud",
-					"Microsoft Dynamics 365 Finance & Operations",
-					"Infor CloudSuite",
-					"Workday",
-					"Netsuite ERP"
-				],
-				"maturityLevels": [
-					{ "level": "Basic", "description": "Isolated systems, manual processes" },
-					{ "level": "Developing", "description": "Basic ERP in place for core functions" },
-					{ "level": "Defined", "description": "Integrated ERP with cross-functional processes" },
-					{ "level": "Managed", "description": "Advanced reporting and analytics" },
-					{ "level": "Optimized", "description": "Real-time data, AI-driven automation" }
+				"id": "enterprise-applications",
+				"name": "Enterprise Applications",
+				"description": "Core business applications and systems",
+				"capabilities": [
+					{
+						"id": "enterprise-resource-planning",
+						"name": "Enterprise Resource Planning",
+						"definition": "Integrated software platform managing core business processes",
+						"description": "Enterprise Resource Planning (ERP) provides a unified suite of applications that streamline and automate critical business processes such as finance, procurement, supply chain, and human resources. ERP enables consistent data sharing, process efficiency, and real-time insights across the enterprise.",
+						"examples": [
+							"Finance and accounting management",
+							"Procurement and supplier management",
+							"Inventory and warehouse management",
+							"Order processing and fulfillment",
+							"Human resources management",
+							"Project and resource planning"
+						],
+						"benefits": [
+							"End-to-end process integration",
+							"Improved operational efficiency",
+							"Real-time business insights",
+							"Data consistency across departments",
+							"Scalability for growth",
+							"Regulatory compliance support"
+						],
+						"keyComponents": [
+							"Core business process modules",
+							"Data integration layer",
+							"Reporting and analytics tools",
+							"Security and access controls",
+							"Workflow automation"
+						],
+						"technologies": [
+							"SAP S/4HANA",
+							"Oracle ERP Cloud",
+							"Microsoft Dynamics 365 Finance & Operations",
+							"Infor CloudSuite",
+							"Workday",
+							"Netsuite ERP"
+						],
+						"maturityLevels": [
+							{ "level": "Basic", "description": "Isolated systems, manual processes" },
+							{ "level": "Developing", "description": "Basic ERP in place for core functions" },
+							{
+								"level": "Defined",
+								"description": "Integrated ERP with cross-functional processes"
+							},
+							{ "level": "Managed", "description": "Advanced reporting and analytics" },
+							{ "level": "Optimized", "description": "Real-time data, AI-driven automation" }
+						]
+					},
+					{
+						"id": "customer-relationship-management",
+						"name": "Customer Relationship Management",
+						"definition": "Technology for managing customer interactions and relationships",
+						"examples": ["Salesforce", "HubSpot", "Microsoft CRM"],
+						"benefits": ["Customer insights", "Sales automation", "Service improvement"]
+					},
+					{
+						"id": "business-intelligence",
+						"name": "Business Intelligence",
+						"definition": "Analytics and reporting capabilities for data-driven decision making",
+						"description": "Business Intelligence (BI) enables organizations to transform raw data into actionable insights through reporting, dashboards, and interactive analytics. BI helps stakeholders monitor performance, identify trends, and make informed strategic decisions.",
+						"examples": [
+							"Executive dashboards",
+							"Self-service reporting",
+							"Ad-hoc data analysis",
+							"Performance scorecards",
+							"Predictive analytics",
+							"Data visualization"
+						],
+						"benefits": [
+							"Improved decision making",
+							"Data-driven culture",
+							"Faster insight generation",
+							"Enhanced operational visibility",
+							"Early risk identification",
+							"Competitive advantage"
+						],
+						"keyComponents": [
+							"Data extraction and transformation",
+							"Data warehouse or data marts",
+							"Visualization tools",
+							"Self-service analytics",
+							"Governance and security controls"
+						],
+						"technologies": [
+							"Tableau",
+							"Microsoft Power BI",
+							"Qlik Sense",
+							"Looker",
+							"SAP BusinessObjects",
+							"Domo"
+						],
+						"maturityLevels": [
+							{ "level": "Basic", "description": "Manual reports, limited insights" },
+							{ "level": "Developing", "description": "Standard dashboards and reporting" },
+							{
+								"level": "Defined",
+								"description": "Interactive BI with self-service capabilities"
+							},
+							{ "level": "Managed", "description": "Predictive and advanced analytics" },
+							{ "level": "Optimized", "description": "Real-time BI, AI-enhanced insights" }
+						]
+					}
 				]
 			},
 			{
-				"id": "customer-relationship-management",
-				"name": "Customer Relationship Management",
-				"definition": "Technology for managing customer interactions and relationships",
-				"examples": ["Salesforce", "HubSpot", "Microsoft CRM"],
-				"benefits": ["Customer insights", "Sales automation", "Service improvement"]
-			},
-			{
-				"id": "business-intelligence",
-				"name": "Business Intelligence",
-				"definition": "Analytics and reporting capabilities for data-driven decision making",
-				"description": "Business Intelligence (BI) enables organizations to transform raw data into actionable insights through reporting, dashboards, and interactive analytics. BI helps stakeholders monitor performance, identify trends, and make informed strategic decisions.",
-				"examples": [
-					"Executive dashboards",
-					"Self-service reporting",
-					"Ad-hoc data analysis",
-					"Performance scorecards",
-					"Predictive analytics",
-					"Data visualization"
-				],
-				"benefits": [
-					"Improved decision making",
-					"Data-driven culture",
-					"Faster insight generation",
-					"Enhanced operational visibility",
-					"Early risk identification",
-					"Competitive advantage"
-				],
-				"keyComponents": [
-					"Data extraction and transformation",
-					"Data warehouse or data marts",
-					"Visualization tools",
-					"Self-service analytics",
-					"Governance and security controls"
-				],
-				"technologies": [
-					"Tableau",
-					"Microsoft Power BI",
-					"Qlik Sense",
-					"Looker",
-					"SAP BusinessObjects",
-					"Domo"
-				],
-				"maturityLevels": [
-					{ "level": "Basic", "description": "Manual reports, limited insights" },
-					{ "level": "Developing", "description": "Standard dashboards and reporting" },
-					{ "level": "Defined", "description": "Interactive BI with self-service capabilities" },
-					{ "level": "Managed", "description": "Predictive and advanced analytics" },
-					{ "level": "Optimized", "description": "Real-time BI, AI-enhanced insights" }
-				]
-			},
-			{
-				"id": "collaboration-tools",
-				"name": "Collaboration Tools",
-				"definition": "Platforms enabling team communication and collaboration",
-				"description": "Collaboration Tools facilitate effective communication, information sharing, and teamwork within and across organizations. These tools enhance productivity, especially in distributed or hybrid work environments.",
-				"examples": [
-					"Team messaging platforms",
-					"Video conferencing",
-					"Document collaboration",
-					"Project management boards",
-					"Knowledge sharing portals",
-					"Virtual whiteboards"
-				],
-				"benefits": [
-					"Improved team productivity",
-					"Enhanced communication",
-					"Seamless remote collaboration",
-					"Knowledge retention",
-					"Faster decision making",
-					"Cross-functional alignment"
-				],
-				"keyComponents": [
-					"Messaging and chat",
-					"File sharing",
-					"Video and voice conferencing",
-					"Project tracking",
-					"Integration with business tools"
-				],
-				"technologies": [
-					"Microsoft Teams",
-					"Slack",
-					"Zoom",
-					"Google Workspace",
-					"SharePoint",
-					"Asana"
-				],
-				"maturityLevels": [
-					{ "level": "Basic", "description": "Ad-hoc tools, limited integration" },
-					{ "level": "Developing", "description": "Standardized collaboration platform" },
-					{ "level": "Defined", "description": "Integrated collaboration with other systems" },
-					{ "level": "Managed", "description": "Advanced features and automation" },
-					{ "level": "Optimized", "description": "Seamless, enterprise-wide collaboration" }
-				]
-			},
-			{
-				"id": "content-management",
-				"name": "Content Management",
-				"definition": "Systems for creating, managing, and publishing digital content",
-				"description": "Content Management enables organizations to efficiently create, organize, store, and distribute digital content across channels. It ensures content consistency, brand integrity, and supports marketing and operational needs.",
-				"examples": [
-					"Website content management",
-					"Document repositories",
-					"Digital asset management",
-					"Knowledge bases",
-					"Intranet portals",
-					"Multilingual content management"
-				],
-				"benefits": [
-					"Streamlined content creation",
-					"Consistent branding",
-					"Improved content discoverability",
-					"Faster content updates",
-					"Enhanced collaboration",
-					"Regulatory compliance"
-				],
-				"keyComponents": [
-					"Content repository",
-					"Authoring and editing tools",
-					"Publishing workflows",
-					"Search and retrieval",
-					"Access control"
-				],
-				"technologies": [
-					"SharePoint",
-					"Drupal",
-					"WordPress",
-					"Sitecore",
-					"Adobe Experience Manager",
-					"Confluence"
-				],
-				"maturityLevels": [
-					{ "level": "Basic", "description": "Isolated content management, manual processes" },
-					{ "level": "Developing", "description": "Standardized content platform" },
-					{ "level": "Defined", "description": "Integrated content workflows" },
-					{ "level": "Managed", "description": "Advanced content governance" },
-					{ "level": "Optimized", "description": "Omnichannel, personalized content delivery" }
-				]
-			},
-			{
-				"id": "integration-platform",
-				"name": "Integration Platform",
-				"definition": "Middleware connecting disparate systems and applications",
-				"description": "An Integration Platform enables seamless data and process flow between different applications, systems, and services. It reduces complexity, improves agility, and supports both real-time and batch integrations across the enterprise.",
-				"examples": [
-					"API-based integrations",
-					"Data synchronization between systems",
-					"Event-driven architectures",
-					"Legacy system integration",
-					"Third-party service connectors",
-					"B2B partner integrations"
-				],
-				"benefits": [
-					"System interoperability",
-					"Faster time-to-market",
-					"Data consistency",
-					"Reduced integration complexity",
-					"Improved scalability",
-					"Enhanced business agility"
-				],
-				"keyComponents": [
-					"API Gateway",
-					"Integration workflows",
-					"Data mapping and transformation",
-					"Monitoring and error handling",
-					"Security and access control"
-				],
-				"technologies": [
-					"MuleSoft Anypoint",
-					"Dell Boomi",
-					"Azure Logic Apps",
-					"Apache Camel",
-					"SnapLogic",
-					"WSO2"
-				],
-				"maturityLevels": [
-					{ "level": "Basic", "description": "Point-to-point, manual integrations" },
-					{ "level": "Developing", "description": "Basic integration platform in place" },
-					{ "level": "Defined", "description": "Standardized, reusable integrations" },
-					{ "level": "Managed", "description": "Real-time, scalable integrations" },
-					{ "level": "Optimized", "description": "API-led, event-driven, AI-assisted integrations" }
+				"id": "collaboration-content",
+				"name": "Collaboration & Content",
+				"description": "Tools for team collaboration and content management",
+				"capabilities": [
+					{
+						"id": "collaboration-tools",
+						"name": "Collaboration Tools",
+						"definition": "Platforms enabling team communication and collaboration",
+						"description": "Collaboration Tools facilitate effective communication, information sharing, and teamwork within and across organizations. These tools enhance productivity, especially in distributed or hybrid work environments.",
+						"examples": [
+							"Team messaging platforms",
+							"Video conferencing",
+							"Document collaboration",
+							"Project management boards",
+							"Knowledge sharing portals",
+							"Virtual whiteboards"
+						],
+						"benefits": [
+							"Improved team productivity",
+							"Enhanced communication",
+							"Seamless remote collaboration",
+							"Knowledge retention",
+							"Faster decision making",
+							"Cross-functional alignment"
+						],
+						"keyComponents": [
+							"Messaging and chat",
+							"File sharing",
+							"Video and voice conferencing",
+							"Project tracking",
+							"Integration with business tools"
+						],
+						"technologies": [
+							"Microsoft Teams",
+							"Slack",
+							"Zoom",
+							"Google Workspace",
+							"SharePoint",
+							"Asana"
+						],
+						"maturityLevels": [
+							{ "level": "Basic", "description": "Ad-hoc tools, limited integration" },
+							{ "level": "Developing", "description": "Standardized collaboration platform" },
+							{ "level": "Defined", "description": "Integrated collaboration with other systems" },
+							{ "level": "Managed", "description": "Advanced features and automation" },
+							{ "level": "Optimized", "description": "Seamless, enterprise-wide collaboration" }
+						]
+					},
+					{
+						"id": "content-management",
+						"name": "Content Management",
+						"definition": "Systems for creating, managing, and publishing digital content",
+						"description": "Content Management enables organizations to efficiently create, organize, store, and distribute digital content across channels. It ensures content consistency, brand integrity, and supports marketing and operational needs.",
+						"examples": [
+							"Website content management",
+							"Document repositories",
+							"Digital asset management",
+							"Knowledge bases",
+							"Intranet portals",
+							"Multilingual content management"
+						],
+						"benefits": [
+							"Streamlined content creation",
+							"Consistent branding",
+							"Improved content discoverability",
+							"Faster content updates",
+							"Enhanced collaboration",
+							"Regulatory compliance"
+						],
+						"keyComponents": [
+							"Content repository",
+							"Authoring and editing tools",
+							"Publishing workflows",
+							"Search and retrieval",
+							"Access control"
+						],
+						"technologies": [
+							"SharePoint",
+							"Drupal",
+							"WordPress",
+							"Sitecore",
+							"Adobe Experience Manager",
+							"Confluence"
+						],
+						"maturityLevels": [
+							{ "level": "Basic", "description": "Isolated content management, manual processes" },
+							{ "level": "Developing", "description": "Standardized content platform" },
+							{ "level": "Defined", "description": "Integrated content workflows" },
+							{ "level": "Managed", "description": "Advanced content governance" },
+							{ "level": "Optimized", "description": "Omnichannel, personalized content delivery" }
+						]
+					},
+					{
+						"id": "integration-platform",
+						"name": "Integration Platform",
+						"definition": "Middleware connecting disparate systems and applications",
+						"description": "An Integration Platform enables seamless data and process flow between different applications, systems, and services. It reduces complexity, improves agility, and supports both real-time and batch integrations across the enterprise.",
+						"examples": [
+							"API-based integrations",
+							"Data synchronization between systems",
+							"Event-driven architectures",
+							"Legacy system integration",
+							"Third-party service connectors",
+							"B2B partner integrations"
+						],
+						"benefits": [
+							"System interoperability",
+							"Faster time-to-market",
+							"Data consistency",
+							"Reduced integration complexity",
+							"Improved scalability",
+							"Enhanced business agility"
+						],
+						"keyComponents": [
+							"API Gateway",
+							"Integration workflows",
+							"Data mapping and transformation",
+							"Monitoring and error handling",
+							"Security and access control"
+						],
+						"technologies": [
+							"MuleSoft Anypoint",
+							"Dell Boomi",
+							"Azure Logic Apps",
+							"Apache Camel",
+							"SnapLogic",
+							"WSO2"
+						],
+						"maturityLevels": [
+							{ "level": "Basic", "description": "Point-to-point, manual integrations" },
+							{ "level": "Developing", "description": "Basic integration platform in place" },
+							{ "level": "Defined", "description": "Standardized, reusable integrations" },
+							{ "level": "Managed", "description": "Real-time, scalable integrations" },
+							{
+								"level": "Optimized",
+								"description": "API-led, event-driven, AI-assisted integrations"
+							}
+						]
+					}
 				]
 			}
 		]
@@ -367,48 +421,69 @@
 		"description": "Data assets, storage, and management across the organization",
 		"icon": "Database",
 		"color": "bg-purple-heart-50 border-purple-heart-200 hover:bg-purple-heart-100",
-		"capabilities": [
+		"categories": [
 			{
-				"id": "data-warehousing",
-				"name": "Data Warehousing",
-				"definition": "Centralized repository for storing and analyzing large volumes of data",
-				"examples": ["Snowflake", "Amazon Redshift", "Azure Synapse"],
-				"benefits": ["Centralized data", "Analytics performance", "Historical analysis"]
+				"id": "analytics-warehousing",
+				"name": "Analytics & Warehousing",
+				"description": "Data warehousing and analytics capabilities",
+				"capabilities": [
+					{
+						"id": "data-warehousing",
+						"name": "Data Warehousing",
+						"definition": "Centralized repository for storing and analyzing large volumes of data",
+						"examples": ["Snowflake", "Amazon Redshift", "Azure Synapse"],
+						"benefits": ["Centralized data", "Analytics performance", "Historical analysis"]
+					},
+					{
+						"id": "real-time-analytics",
+						"name": "Real-time Analytics",
+						"definition": "Processing and analyzing data as it arrives for immediate insights",
+						"examples": ["Apache Kafka", "Azure Stream Analytics", "Amazon Kinesis"],
+						"benefits": ["Immediate insights", "Faster decisions", "Operational efficiency"]
+					}
+				]
 			},
 			{
-				"id": "master-data-management",
-				"name": "Master Data Management",
-				"definition": "Unified, consistent view of critical business data across systems",
-				"examples": ["Informatica MDM", "IBM InfoSphere", "Talend"],
-				"benefits": ["Data consistency", "Single source of truth", "Data quality"]
+				"id": "data-management",
+				"name": "Data Management",
+				"description": "Core data management and governance capabilities",
+				"capabilities": [
+					{
+						"id": "master-data-management",
+						"name": "Master Data Management",
+						"definition": "Unified, consistent view of critical business data across systems",
+						"examples": ["Informatica MDM", "IBM InfoSphere", "Talend"],
+						"benefits": ["Data consistency", "Single source of truth", "Data quality"]
+					},
+					{
+						"id": "data-governance",
+						"name": "Data Governance",
+						"definition": "Framework for managing data availability, usability, and security",
+						"examples": ["Collibra", "Alation", "Apache Atlas"],
+						"benefits": ["Data quality", "Compliance", "Risk management"]
+					}
+				]
 			},
 			{
-				"id": "data-lake",
-				"name": "Data Lake",
-				"definition": "Storage repository for raw data in native format until needed",
-				"examples": ["Azure Data Lake", "Amazon S3", "Hadoop HDFS"],
-				"benefits": ["Flexible storage", "Cost efficiency", "Big data analytics"]
-			},
-			{
-				"id": "real-time-analytics",
-				"name": "Real-time Analytics",
-				"definition": "Processing and analyzing data as it arrives for immediate insights",
-				"examples": ["Apache Kafka", "Azure Stream Analytics", "Amazon Kinesis"],
-				"benefits": ["Immediate insights", "Faster decisions", "Operational efficiency"]
-			},
-			{
-				"id": "data-governance",
-				"name": "Data Governance",
-				"definition": "Framework for managing data availability, usability, and security",
-				"examples": ["Collibra", "Alation", "Apache Atlas"],
-				"benefits": ["Data quality", "Compliance", "Risk management"]
-			},
-			{
-				"id": "backup-recovery",
-				"name": "Backup & Recovery",
-				"definition": "Protection and restoration of critical business data",
-				"examples": ["Veeam", "Commvault", "Azure Backup"],
-				"benefits": ["Data protection", "Business continuity", "Disaster recovery"]
+				"id": "storage-recovery",
+				"name": "Storage & Recovery",
+				"description": "Data storage and recovery capabilities",
+				"capabilities": [
+					{
+						"id": "data-lake",
+						"name": "Data Lake",
+						"definition": "Storage repository for raw data in native format until needed",
+						"examples": ["Azure Data Lake", "Amazon S3", "Hadoop HDFS"],
+						"benefits": ["Flexible storage", "Cost efficiency", "Big data analytics"]
+					},
+					{
+						"id": "backup-recovery",
+						"name": "Backup & Recovery",
+						"definition": "Protection and restoration of critical business data",
+						"examples": ["Veeam", "Commvault", "Azure Backup"],
+						"benefits": ["Data protection", "Business continuity", "Disaster recovery"]
+					}
+				]
 			}
 		]
 	},
@@ -418,174 +493,408 @@
 		"description": "Physical and virtual infrastructure supporting business operations",
 		"icon": "Server",
 		"color": "bg-mariner-50 border-mariner-200 hover:bg-mariner-100",
-		"capabilities": [
+		"categories": [
 			{
-				"id": "development-tools",
-				"name": "Development Tools",
-				"definition": "Environments and platforms used to write, build, and test code",
-				"description": "Development tools support the creation and maintenance of software by providing code editing, debugging, and build environments. These tools enhance developer productivity and ensure code quality throughout the development lifecycle.",
-				"examples": ["Visual Studio Code", "IntelliJ IDEA", "Jenkins", "GitLab CI"],
-				"benefits": ["Accelerated development", "Improved code quality", "Streamlined testing", "Consistent build processes"]
+				"id": "application",
+				"name": "Application",
+				"description": "Application development and operations infrastructure",
+				"subcategories": [
+					{
+						"id": "application-development",
+						"name": "Application Development",
+						"description": "Tools and processes for developing applications",
+						"capabilities": [
+							{
+								"id": "development-tools",
+								"name": "Development Tools",
+								"definition": "Environments and platforms used to write, build, and test code",
+								"description": "Development tools support the creation and maintenance of software by providing code editing, debugging, and build environments. These tools enhance developer productivity and ensure code quality throughout the development lifecycle.",
+								"examples": ["Visual Studio Code", "IntelliJ IDEA", "Jenkins", "GitLab CI"],
+								"benefits": [
+									"Accelerated development",
+									"Improved code quality",
+									"Streamlined testing",
+									"Consistent build processes"
+								]
+							},
+							{
+								"id": "code-analysis",
+								"name": "Code Analysis",
+								"definition": "Automated tools for evaluating code quality, security, and compliance",
+								"description": "Code analysis tools perform static and dynamic assessments of source code to identify bugs, vulnerabilities, or policy violations early in the development lifecycle. This enhances software maintainability and security.",
+								"examples": ["SonarQube", "Prisma Cloud", "ESLint", "Checkmarx"],
+								"benefits": [
+									"Early detection of defects",
+									"Improved code quality",
+									"Enforced coding standards",
+									"Security vulnerability identification"
+								]
+							},
+							{
+								"id": "infrastructure-as-code",
+								"name": "Infrastructure as Code",
+								"definition": "Automated infrastructure provisioning using declarative or scripted configuration",
+								"description": "Infrastructure as Code enables teams to manage and provision infrastructure using code, promoting repeatability, scalability, and integration with CI/CD pipelines.",
+								"examples": ["Terraform", "Ansible Tower", "Chef", "Pulumi"],
+								"benefits": [
+									"Faster provisioning",
+									"Reduced configuration drift",
+									"Version control of infrastructure",
+									"Improved consistency and reusability"
+								]
+							}
+						]
+					},
+					{
+						"id": "application-support-operations",
+						"name": "Application Support & Operations",
+						"description": "Tools for deploying, monitoring, and operating applications",
+						"capabilities": [
+							{
+								"id": "packaging-distribution",
+								"name": "Packaging & Distribution",
+								"definition": "Storage and distribution of build artifacts and packages",
+								"description": "This capability supports artifact management by storing, versioning, and distributing compiled software, libraries, and container images across environments.",
+								"examples": ["JFrog Artifactory", "Nexus Repository", "Docker Registry"],
+								"benefits": [
+									"Improved build consistency",
+									"Secure artifact storage",
+									"Faster deployments",
+									"Dependency versioning"
+								]
+							},
+							{
+								"id": "release-automation",
+								"name": "Release Automation",
+								"definition": "Tools that automate application deployment and release management",
+								"description": "Release automation enables teams to reliably and repeatedly deploy applications across environments using GitOps or similar pipelines.",
+								"examples": ["ArgoCD", "Flux", "Spinnaker", "Octopus Deploy"],
+								"benefits": [
+									"Accelerated release cycles",
+									"Reduced manual intervention",
+									"Higher deployment reliability",
+									"Rollback and version control"
+								]
+							},
+							{
+								"id": "monitoring-observability",
+								"name": "Monitoring & Observability",
+								"definition": "Tools and processes for measuring, analyzing, and visualizing system performance and health",
+								"description": "This capability allows organizations to detect, diagnose, and resolve issues using telemetry data such as logs, metrics, and traces.",
+								"examples": ["PagerDuty", "Grafana", "New Relic", "Dynatrace"],
+								"benefits": [
+									"Faster incident response",
+									"Increased system reliability",
+									"Root cause analysis",
+									"Operational transparency"
+								]
+							}
+						]
+					}
+				]
 			},
 			{
-				"id": "code-analysis",
-				"name": "Code Analysis",
-				"definition": "Automated tools for evaluating code quality, security, and compliance",
-				"description": "Code analysis tools perform static and dynamic assessments of source code to identify bugs, vulnerabilities, or policy violations early in the development lifecycle. This enhances software maintainability and security.",
-				"examples": ["SonarQube", "Prisma Cloud", "ESLint", "Checkmarx"],
-				"benefits": ["Early detection of defects", "Improved code quality", "Enforced coding standards", "Security vulnerability identification"]
+				"id": "platforms",
+				"name": "Platforms",
+				"description": "Foundational platforms and services",
+				"subcategories": [
+					{
+						"id": "ai-ml-automation",
+						"name": "AI, ML & Automation",
+						"description": "Artificial intelligence and machine learning platforms",
+						"capabilities": [
+							{
+								"id": "ai-ml-automation",
+								"name": "AI, ML & Automation",
+								"definition": "Technologies that enable intelligent decision-making and process automation",
+								"description": "This capability supports automation of tasks and insights generation using artificial intelligence and machine learning technologies.",
+								"examples": ["Azure OpenAI", "SageMaker", "DataRobot", "ChatGPT", "AutoML"],
+								"benefits": [
+									"Faster insight generation",
+									"Improved productivity",
+									"Automated repetitive tasks",
+									"Enhanced user experience"
+								]
+							}
+						]
+					},
+					{
+						"id": "database",
+						"name": "Database",
+						"description": "Database platforms and services",
+						"capabilities": [
+							{
+								"id": "document-store",
+								"name": "Document Store",
+								"definition": "Non-relational databases optimized for semi-structured document storage",
+								"description": "Document stores are designed to store, retrieve, and manage data in document-oriented formats such as JSON or BSON, enabling flexibility in schema and performance for content-heavy applications.",
+								"examples": ["MongoDB", "CouchDB", "RavenDB"],
+								"benefits": [
+									"Schema flexibility",
+									"High scalability",
+									"Optimized for content-rich apps",
+									"Efficient query of nested data"
+								]
+							},
+							{
+								"id": "oltp-capture",
+								"name": "OLTP & Capture",
+								"definition": "Databases and systems optimized for online transaction processing",
+								"description": "OLTP systems support high-throughput transactional workloads with rapid reads and writes, ensuring data integrity and fast response times for business-critical applications.",
+								"examples": ["Microsoft SQL Server", "IBM DB2", "Sybase ASE", "Oracle Database"],
+								"benefits": [
+									"High availability",
+									"Transactional consistency",
+									"Low-latency performance",
+									"Supports core business operations"
+								]
+							}
+						]
+					},
+					{
+						"id": "data-platform",
+						"name": "Data Platform",
+						"description": "Data processing and analytics platforms",
+						"capabilities": [
+							{
+								"id": "data-caching",
+								"name": "Data Caching",
+								"definition": "Temporary storage for frequently accessed data to improve performance",
+								"description": "Data caching enables faster data retrieval by storing frequently used data closer to the application layer, reducing latency and load on primary databases.",
+								"examples": ["Redis", "Memcached", "Gemfire", "etcd"],
+								"benefits": [
+									"Faster response times",
+									"Reduced backend load",
+									"Enhanced user experience",
+									"Scalable read performance"
+								]
+							},
+							{
+								"id": "data-integration",
+								"name": "Data Integration",
+								"definition": "Combining data from disparate sources into a unified view",
+								"description": "Data integration tools extract, transform, and load data from multiple sources to ensure data consistency, synchronization, and holistic analytics across systems.",
+								"examples": ["Talend", "Informatica", "Apache Nifi", "Azure Data Factory"],
+								"benefits": [
+									"Unified data access",
+									"Improved data quality",
+									"Efficient ETL pipelines",
+									"Cross-system interoperability"
+								]
+							}
+						]
+					},
+					{
+						"id": "business-process-management",
+						"name": "Business Process Management",
+						"description": "Business process automation and management",
+						"capabilities": [
+							{
+								"id": "process-automation",
+								"name": "Process Automation",
+								"definition": "Digital automation of business workflows and repetitive tasks",
+								"description": "Process automation tools streamline operations by enabling users to define and execute workflows, reducing manual errors and improving scalability.",
+								"examples": ["Power Automate", "UIPath", "Appian", "Automation Anywhere"],
+								"benefits": [
+									"Increased productivity",
+									"Reduced manual effort",
+									"Improved accuracy",
+									"Scalable operations"
+								]
+							}
+						]
+					},
+					{
+						"id": "middleware",
+						"name": "Middleware",
+						"description": "Integration and communication middleware",
+						"capabilities": [
+							{
+								"id": "messaging",
+								"name": "Messaging",
+								"definition": "Asynchronous communication between distributed systems",
+								"description": "Messaging platforms support decoupled service communication through message brokers and queues, enabling scalability, fault tolerance, and event-driven architecture.",
+								"examples": ["Apache Kafka", "RabbitMQ", "IBM MQ", "Amazon SQS"],
+								"benefits": [
+									"Resilient communication",
+									"Loose coupling",
+									"Scalable system integration",
+									"Supports asynchronous workflows"
+								]
+							},
+							{
+								"id": "web-hosting",
+								"name": "Web Hosting",
+								"definition": "Serving web applications and content over the internet",
+								"description": "Web hosting platforms enable the deployment and operation of web-based applications, APIs, and static content to end users.",
+								"examples": ["Apache HTTP Server", "Nginx", "Tomcat", "IIS"],
+								"benefits": [
+									"Reliable web service delivery",
+									"Scalability",
+									"Flexible deployment options",
+									"Supports diverse workloads"
+								]
+							},
+							{
+								"id": "workload-scheduling",
+								"name": "Workload Scheduling",
+								"definition": "Scheduling and automation of batch jobs and background processes",
+								"description": "Workload schedulers coordinate and manage the execution of jobs based on dependencies and timing rules, ensuring resource efficiency and job completion.",
+								"examples": ["Autosys", "Control-M", "Apache Airflow", "Tivoli Workload Scheduler"],
+								"benefits": [
+									"Reliable batch processing",
+									"Optimized resource usage",
+									"Job dependency handling",
+									"Reduced manual intervention"
+								]
+							}
+						]
+					}
+				]
 			},
 			{
-				"id": "infrastructure-as-code",
-				"name": "Infrastructure as Code",
-				"definition": "Automated infrastructure provisioning using declarative or scripted configuration",
-				"description": "Infrastructure as Code enables teams to manage and provision infrastructure using code, promoting repeatability, scalability, and integration with CI/CD pipelines.",
-				"examples": ["Terraform", "Ansible Tower", "Chef", "Pulumi"],
-				"benefits": ["Faster provisioning", "Reduced configuration drift", "Version control of infrastructure", "Improved consistency and reusability"]
+				"id": "storage",
+				"name": "Storage",
+				"description": "Storage systems and data persistence solutions",
+				"subcategories": [
+					{
+						"id": "offline-storage",
+						"name": "Offline Storage",
+						"description": "Long-term storage and archival solutions",
+						"capabilities": [
+							{
+								"id": "archive",
+								"name": "Archive",
+								"definition": "Long-term storage of data for compliance and retrieval",
+								"description": "Archiving solutions preserve historical data that must be retained for legal, regulatory, or business purposes while ensuring secure and efficient retrieval.",
+								"examples": ["IBM Content Manager OnDemand", "Archive360", "Commvault Archive"],
+								"benefits": [
+									"Regulatory compliance",
+									"Long-term data retention",
+									"Reduced storage costs",
+									"Secure access to historical data"
+								]
+							},
+							{
+								"id": "backup",
+								"name": "Backup",
+								"definition": "Replication of data for recovery and protection",
+								"description": "Backup systems safeguard critical data by creating copies stored separately to enable recovery in the event of failure, corruption, or disaster.",
+								"examples": [
+									"Veeam",
+									"Cohesity",
+									"Virtual Tape Libraries",
+									"Immutable Backup Solutions"
+								],
+								"benefits": [
+									"Business continuity",
+									"Data protection",
+									"Disaster recovery",
+									"Operational resilience"
+								]
+							}
+						]
+					}
+				]
 			},
 			{
-				"id": "packaging-distribution",
-				"name": "Packaging & Distribution",
-				"definition": "Storage and distribution of build artifacts and packages",
-				"description": "This capability supports artifact management by storing, versioning, and distributing compiled software, libraries, and container images across environments.",
-				"examples": ["JFrog Artifactory", "Nexus Repository", "Docker Registry"],
-				"benefits": ["Improved build consistency", "Secure artifact storage", "Faster deployments", "Dependency versioning"]
-			},
-			{
-				"id": "release-automation",
-				"name": "Release Automation",
-				"definition": "Tools that automate application deployment and release management",
-				"description": "Release automation enables teams to reliably and repeatedly deploy applications across environments using GitOps or similar pipelines.",
-				"examples": ["ArgoCD", "Flux", "Spinnaker", "Octopus Deploy"],
-				"benefits": ["Accelerated release cycles", "Reduced manual intervention", "Higher deployment reliability", "Rollback and version control"]
-			},
-			{
-				"id": "monitoring-observability",
-				"name": "Monitoring & Observability",
-				"definition": "Tools and processes for measuring, analyzing, and visualizing system performance and health",
-				"description": "This capability allows organizations to detect, diagnose, and resolve issues using telemetry data such as logs, metrics, and traces.",
-				"examples": ["PagerDuty", "Grafana", "New Relic", "Dynatrace"],
-				"benefits": ["Faster incident response", "Increased system reliability", "Root cause analysis", "Operational transparency"]
-			},
-			{
-				"id": "ai-ml-automation",
-				"name": "AI, ML & Automation",
-				"definition": "Technologies that enable intelligent decision-making and process automation",
-				"description": "This capability supports automation of tasks and insights generation using artificial intelligence and machine learning technologies.",
-				"examples": ["Azure OpenAI", "SageMaker", "DataRobot", "ChatGPT", "AutoML"],
-				"benefits": ["Faster insight generation", "Improved productivity", "Automated repetitive tasks", "Enhanced user experience"]
-			},
-			{
-				"id": "document-store",
-				"name": "Document Store",
-				"definition": "Non-relational databases optimized for semi-structured document storage",
-				"description": "Document stores are designed to store, retrieve, and manage data in document-oriented formats such as JSON or BSON, enabling flexibility in schema and performance for content-heavy applications.",
-				"examples": ["MongoDB", "CouchDB", "RavenDB"],
-				"benefits": ["Schema flexibility", "High scalability", "Optimized for content-rich apps", "Efficient query of nested data"]
-			},
-			{
-				"id": "oltp-capture",
-				"name": "OLTP & Capture",
-				"definition": "Databases and systems optimized for online transaction processing",
-				"description": "OLTP systems support high-throughput transactional workloads with rapid reads and writes, ensuring data integrity and fast response times for business-critical applications.",
-				"examples": ["Microsoft SQL Server", "IBM DB2", "Sybase ASE", "Oracle Database"],
-				"benefits": ["High availability", "Transactional consistency", "Low-latency performance", "Supports core business operations"]
-			},
-			{
-				"id": "process-automation",
-				"name": "Process Automation",
-				"definition": "Digital automation of business workflows and repetitive tasks",
-				"description": "Process automation tools streamline operations by enabling users to define and execute workflows, reducing manual errors and improving scalability.",
-				"examples": ["Power Automate", "UIPath", "Appian", "Automation Anywhere"],
-				"benefits": ["Increased productivity", "Reduced manual effort", "Improved accuracy", "Scalable operations"]
-			},
-			{
-				"id": "data-caching",
-				"name": "Data Caching",
-				"definition": "Temporary storage for frequently accessed data to improve performance",
-				"description": "Data caching enables faster data retrieval by storing frequently used data closer to the application layer, reducing latency and load on primary databases.",
-				"examples": ["Redis", "Memcached", "Gemfire", "etcd"],
-				"benefits": ["Faster response times", "Reduced backend load", "Enhanced user experience", "Scalable read performance"]
-			},
-			{
-				"id": "data-integration",
-				"name": "Data Integration",
-				"definition": "Combining data from disparate sources into a unified view",
-				"description": "Data integration tools extract, transform, and load data from multiple sources to ensure data consistency, synchronization, and holistic analytics across systems.",
-				"examples": ["Talend", "Informatica", "Apache Nifi", "Azure Data Factory"],
-				"benefits": ["Unified data access", "Improved data quality", "Efficient ETL pipelines", "Cross-system interoperability"]
-			},
-			{
-				"id": "messaging",
-				"name": "Messaging",
-				"definition": "Asynchronous communication between distributed systems",
-				"description": "Messaging platforms support decoupled service communication through message brokers and queues, enabling scalability, fault tolerance, and event-driven architecture.",
-				"examples": ["Apache Kafka", "RabbitMQ", "IBM MQ", "Amazon SQS"],
-				"benefits": ["Resilient communication", "Loose coupling", "Scalable system integration", "Supports asynchronous workflows"]
-			},
-			{
-				"id": "web-hosting",
-				"name": "Web Hosting",
-				"definition": "Serving web applications and content over the internet",
-				"description": "Web hosting platforms enable the deployment and operation of web-based applications, APIs, and static content to end users.",
-				"examples": ["Apache HTTP Server", "Nginx", "Tomcat", "IIS"],
-				"benefits": ["Reliable web service delivery", "Scalability", "Flexible deployment options", "Supports diverse workloads"]
-			},
-			{
-				"id": "workload-scheduling",
-				"name": "Workload Scheduling",
-				"definition": "Scheduling and automation of batch jobs and background processes",
-				"description": "Workload schedulers coordinate and manage the execution of jobs based on dependencies and timing rules, ensuring resource efficiency and job completion.",
-				"examples": ["Autosys", "Control-M", "Apache Airflow", "Tivoli Workload Scheduler"],
-				"benefits": ["Reliable batch processing", "Optimized resource usage", "Job dependency handling", "Reduced manual intervention"]
+				"id": "compute",
+				"name": "Compute",
+				"description": "Computing resources and platforms",
+				"subcategories": [
+					{
+						"id": "logical-compute",
+						"name": "Logical Compute",
+						"description": "Serverless and function-based computing",
+						"capabilities": [
+							{
+								"id": "logical-compute",
+								"name": "Logical Compute",
+								"definition": "Abstracted compute environments for running applications without managing servers",
+								"description": "Logical compute refers to serverless or function-based compute environments that abstract infrastructure management, allowing developers to focus on application logic.",
+								"examples": ["AWS Lambda", "Azure Functions", "Google Cloud Functions"],
+								"benefits": [
+									"Simplified operations",
+									"Scalable compute on demand",
+									"Cost efficiency",
+									"Faster deployment cycles"
+								]
+							}
+						]
+					},
+					{
+						"id": "mainframe",
+						"name": "Mainframe",
+						"description": "Enterprise mainframe computing platforms",
+						"capabilities": [
+							{
+								"id": "mainframe",
+								"name": "Mainframe",
+								"definition": "Large-scale computing platforms supporting critical enterprise applications",
+								"description": "Mainframes run batch and transaction processing workloads with high reliability, scalability, and security. They are essential for industries like banking and insurance.",
+								"examples": ["IBM z/OS", "CICS", "COBOL Batch Jobs"],
+								"benefits": [
+									"Extreme reliability",
+									"High-throughput processing",
+									"Secure data handling",
+									"Support for legacy systems"
+								]
+							}
+						]
+					},
+					{
+						"id": "servers",
+						"name": "Servers",
+						"description": "Physical and virtual server infrastructure",
+						"capabilities": [
+							{
+								"id": "servers",
+								"name": "Servers",
+								"definition": "Physical and virtual machines hosting applications and services",
+								"description": "Servers provide the compute resources required to run enterprise workloads. They may be physical machines, virtualized environments, or part of hybrid infrastructure.",
+								"examples": [
+									"Dell PowerEdge servers",
+									"VMware vSphere",
+									"Hyper-V",
+									"Bare metal provisioning"
+								],
+								"benefits": [
+									"Scalable compute infrastructure",
+									"Support for diverse workloads",
+									"Dedicated hosting environments",
+									"High availability options"
+								]
+							}
+						]
+					}
+				]
 			},
 			{
 				"id": "it-management",
 				"name": "IT Management",
-				"definition": "Tools and practices for managing IT assets, incidents, and services",
-				"description": "IT management tools support ITSM practices such as service requests, change management, and incident resolution, enhancing operational efficiency and user support.",
-				"examples": ["ServiceNow", "BMC Remedy", "Freshservice", "Ivanti"],
-				"benefits": ["Improved IT operations", "Enhanced service quality", "Faster issue resolution", "Governed change processes"]
-			},
-			{
-				"id": "archive",
-				"name": "Archive",
-				"definition": "Long-term storage of data for compliance and retrieval",
-				"description": "Archiving solutions preserve historical data that must be retained for legal, regulatory, or business purposes while ensuring secure and efficient retrieval.",
-				"examples": ["IBM Content Manager OnDemand", "Archive360", "Commvault Archive"],
-				"benefits": ["Regulatory compliance", "Long-term data retention", "Reduced storage costs", "Secure access to historical data"]
-			},
-			{
-				"id": "backup",
-				"name": "Backup",
-				"definition": "Replication of data for recovery and protection",
-				"description": "Backup systems safeguard critical data by creating copies stored separately to enable recovery in the event of failure, corruption, or disaster.",
-				"examples": ["Veeam", "Cohesity", "Virtual Tape Libraries", "Immutable Backup Solutions"],
-				"benefits": ["Business continuity", "Data protection", "Disaster recovery", "Operational resilience"]
-			},
-			{
-				"id": "logical-compute",
-				"name": "Logical Compute",
-				"definition": "Abstracted compute environments for running applications without managing servers",
-				"description": "Logical compute refers to serverless or function-based compute environments that abstract infrastructure management, allowing developers to focus on application logic.",
-				"examples": ["AWS Lambda", "Azure Functions", "Google Cloud Functions"],
-				"benefits": ["Simplified operations", "Scalable compute on demand", "Cost efficiency", "Faster deployment cycles"]
-			},
-			{
-				"id": "mainframe",
-				"name": "Mainframe",
-				"definition": "Large-scale computing platforms supporting critical enterprise applications",
-				"description": "Mainframes run batch and transaction processing workloads with high reliability, scalability, and security. They are essential for industries like banking and insurance.",
-				"examples": ["IBM z/OS", "CICS", "COBOL Batch Jobs"],
-				"benefits": ["Extreme reliability", "High-throughput processing", "Secure data handling", "Support for legacy systems"]
-			},
-			{
-				"id": "servers",
-				"name": "Servers",
-				"definition": "Physical and virtual machines hosting applications and services",
-				"description": "Servers provide the compute resources required to run enterprise workloads. They may be physical machines, virtualized environments, or part of hybrid infrastructure.",
-				"examples": ["Dell PowerEdge servers", "VMware vSphere", "Hyper-V", "Bare metal provisioning"],
-				"benefits": ["Scalable compute infrastructure", "Support for diverse workloads", "Dedicated hosting environments", "High availability options"]
+				"description": "IT service management and operations",
+				"subcategories": [
+					{
+						"id": "it-management",
+						"name": "IT Management",
+						"description": "IT service management and operations",
+						"capabilities": [
+							{
+								"id": "it-management",
+								"name": "IT Management",
+								"definition": "Tools and practices for managing IT assets, incidents, and services",
+								"description": "IT management tools support ITSM practices such as service requests, change management, and incident resolution, enhancing operational efficiency and user support.",
+								"examples": ["ServiceNow", "BMC Remedy", "Freshservice", "Ivanti"],
+								"benefits": [
+									"Improved IT operations",
+									"Enhanced service quality",
+									"Faster issue resolution",
+									"Governed change processes"
+								]
+							}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -595,48 +904,69 @@
 		"description": "Security controls, policies, and technologies protecting the enterprise",
 		"icon": "Shield",
 		"color": "bg-golf-50 border-golf-200 hover:bg-golf-100",
-		"capabilities": [
+		"categories": [
 			{
-				"id": "identity-access-management",
-				"name": "Identity & Access Management",
-				"definition": "Framework for managing digital identities and access permissions",
-				"examples": ["Active Directory", "Okta", "Azure AD"],
-				"benefits": ["Access control", "Security compliance", "User management"]
+				"id": "identity-access",
+				"name": "Identity & Access",
+				"description": "Identity and access management solutions",
+				"capabilities": [
+					{
+						"id": "identity-access-management",
+						"name": "Identity & Access Management",
+						"definition": "Framework for managing digital identities and access permissions",
+						"examples": ["Active Directory", "Okta", "Azure AD"],
+						"benefits": ["Access control", "Security compliance", "User management"]
+					}
+				]
 			},
 			{
-				"id": "endpoint-protection",
-				"name": "Endpoint Protection",
-				"definition": "Security solutions protecting end-user devices and endpoints",
-				"examples": ["CrowdStrike", "Symantec", "Microsoft Defender"],
-				"benefits": ["Malware protection", "Threat detection", "Device security"]
+				"id": "threat-protection",
+				"name": "Threat Protection",
+				"description": "Threat detection and prevention capabilities",
+				"capabilities": [
+					{
+						"id": "endpoint-protection",
+						"name": "Endpoint Protection",
+						"definition": "Security solutions protecting end-user devices and endpoints",
+						"examples": ["CrowdStrike", "Symantec", "Microsoft Defender"],
+						"benefits": ["Malware protection", "Threat detection", "Device security"]
+					},
+					{
+						"id": "network-security",
+						"name": "Network Security",
+						"definition": "Technologies protecting network infrastructure from threats",
+						"examples": ["Firewalls", "IPS/IDS", "VPN"],
+						"benefits": ["Network protection", "Threat prevention", "Secure connectivity"]
+					},
+					{
+						"id": "security-monitoring",
+						"name": "Security Monitoring",
+						"definition": "Continuous monitoring and analysis of security events",
+						"examples": ["SIEM", "SOC", "Security analytics"],
+						"benefits": ["Threat detection", "Incident response", "Compliance monitoring"]
+					}
+				]
 			},
 			{
-				"id": "network-security",
-				"name": "Network Security",
-				"definition": "Technologies protecting network infrastructure from threats",
-				"examples": ["Firewalls", "IPS/IDS", "VPN"],
-				"benefits": ["Network protection", "Threat prevention", "Secure connectivity"]
-			},
-			{
-				"id": "security-monitoring",
-				"name": "Security Monitoring",
-				"definition": "Continuous monitoring and analysis of security events",
-				"examples": ["SIEM", "SOC", "Security analytics"],
-				"benefits": ["Threat detection", "Incident response", "Compliance monitoring"]
-			},
-			{
-				"id": "data-protection",
-				"name": "Data Protection",
-				"definition": "Technologies and processes protecting sensitive data",
-				"examples": ["Encryption", "DLP", "Data masking"],
-				"benefits": ["Data confidentiality", "Privacy compliance", "Risk reduction"]
-			},
-			{
-				"id": "vulnerability-management",
-				"name": "Vulnerability Management",
-				"definition": "Process of identifying and remediating security vulnerabilities",
-				"examples": ["Nessus", "Qualys", "Rapid7"],
-				"benefits": ["Risk reduction", "Proactive security", "Compliance"]
+				"id": "data-security",
+				"name": "Data Security",
+				"description": "Data protection and vulnerability management",
+				"capabilities": [
+					{
+						"id": "data-protection",
+						"name": "Data Protection",
+						"definition": "Technologies and processes protecting sensitive data",
+						"examples": ["Encryption", "DLP", "Data masking"],
+						"benefits": ["Data confidentiality", "Privacy compliance", "Risk reduction"]
+					},
+					{
+						"id": "vulnerability-management",
+						"name": "Vulnerability Management",
+						"definition": "Process of identifying and remediating security vulnerabilities",
+						"examples": ["Nessus", "Qualys", "Rapid7"],
+						"benefits": ["Risk reduction", "Proactive security", "Compliance"]
+					}
+				]
 			}
 		]
 	}

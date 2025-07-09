@@ -1,38 +1,42 @@
-# sv
+# 🔁 Reuse Capability Catalog
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+This project defines a structured catalog of reusable capabilities available across our firm, helping developers identify and adopt existing architecture patterns, libraries, and platforms instead of reinventing the wheel.
 
-## Creating a project
+## 🧭 Purpose
 
-If you're seeing this, you've probably already done this step. Congrats!
+The catalog allows teams to:
 
-```bash
-# create a new project in the current directory
-npx sv create
+- Explore existing technology assets based on the **functionality** and **capabilities** they offer
+- Compare tools across standardized capability layers
+- Encourage reuse by improving discoverability and consistency
 
-# create a new project in my-app
-npx sv create my-app
-```
+## 🧱 Capability Layers
 
-## Developing
+The project is organized around five key layers:
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+1. **Business** – e.g. Customer Management, Financial Management
+2. **Application** – e.g. Workflow Orchestration, Business Rules Engines
+3. **Data** – e.g. Master Data, Analytics, OLTP
+4. **Infrastructure** – e.g. CI/CD, Hosting, Compute, Caching
+5. **Security** – e.g. IAM, Data Protection, Vulnerability Management
 
-```bash
-npm run dev
+Each capability includes examples, definitions, benefits, and related technologies.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## ⚙️ Tech Stack
 
-## Building
+This is a SvelteKit application hosted on Cloudflare Workers and built with:
 
-To create a production version of your app:
+- 🧩 **TailwindCSS** – for styling
+- 🧪 **Vitest** – for testing
+- 🧱 **shadcn-svelte** – for UI components
 
-```bash
-npm run build
-```
+## 📁 Structure
 
-You can preview the production build with `npm run preview`.
+- `lib/data/` – all capability definitions and metadata
+- `lib/components/` – reusable UI blocks
+- `routes/` – SvelteKit routes for browsing the catalog
+- `docs/` – documentation for maintainers and AI assistants
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## 🚀 Goal
+
+To provide a single reference point for teams to **assess**, **compare**, and **adopt** reusable capabilities across our technology landscape.
