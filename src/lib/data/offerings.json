@@ -1,13 +1,179 @@
 {
 	"offerings": [
 		{
-			"id": "offering-1",
-			"name": "Some Cool Offering",
-			"description": "The best thing since sliced bread that you should adopt, look at all the cool things it does.",
+			"id": "cloud-platform",
+			"name": "Enterprise Cloud Platform",
+			"description": "A comprehensive cloud infrastructure platform providing scalable computing, storage, and networking services with enterprise-grade security and compliance features.",
 			"capabilities": [
 				{
 					"id": "enterprise-resource-planning",
+					"level": 2
+				},
+				{
+					"id": "customer-relationship-management",
+					"level": 3
+				},
+				{
+					"id": "business-intelligence",
+					"level": 2
+				},
+				{
+					"id": "user-interface",
+					"level": 3
+				},
+				{
+					"id": "api-management",
+					"level": 3
+				},
+				{
+					"id": "microservices",
+					"level": 2
+				},
+				{
+					"id": "data-warehousing",
+					"level": 2
+				},
+				{
+					"id": "data-lakes",
+					"level": 3
+				},
+				{
+					"id": "real-time-processing",
 					"level": 1
+				},
+				{
+					"id": "cloud-computing",
+					"level": 3
+				},
+				{
+					"id": "virtualization",
+					"level": 3
+				},
+				{
+					"id": "container-orchestration",
+					"level": 2
+				},
+				{
+					"id": "identity-access-management",
+					"level": 3
+				},
+				{
+					"id": "security-monitoring",
+					"level": 2
+				},
+				{
+					"id": "compliance-governance",
+					"level": 2
+				}
+			]
+		},
+		{
+			"id": "ai-ml-platform",
+			"name": "AI/ML Analytics Platform",
+			"description": "Advanced artificial intelligence and machine learning platform for data scientists and analysts, featuring automated model training, deployment, and monitoring capabilities.",
+			"capabilities": [
+				{
+					"id": "business-intelligence",
+					"level": 3
+				},
+				{
+					"id": "predictive-analytics",
+					"level": 3
+				},
+				{
+					"id": "api-management",
+					"level": 2
+				},
+				{
+					"id": "microservices",
+					"level": 2
+				},
+				{
+					"id": "data-warehousing",
+					"level": 3
+				},
+				{
+					"id": "data-lakes",
+					"level": 3
+				},
+				{
+					"id": "real-time-processing",
+					"level": 3
+				},
+				{
+					"id": "machine-learning",
+					"level": 3
+				},
+				{
+					"id": "cloud-computing",
+					"level": 2
+				},
+				{
+					"id": "container-orchestration",
+					"level": 3
+				},
+				{
+					"id": "identity-access-management",
+					"level": 2
+				},
+				{
+					"id": "security-monitoring",
+					"level": 1
+				}
+			]
+		},
+		{
+			"id": "legacy-modernization",
+			"name": "Legacy System Modernization",
+			"description": "Comprehensive modernization solution for legacy enterprise systems, including migration strategies, API integration, and gradual transformation approaches.",
+			"capabilities": [
+				{
+					"id": "enterprise-resource-planning",
+					"level": 3
+				},
+				{
+					"id": "customer-relationship-management",
+					"level": 2
+				},
+				{
+					"id": "user-interface",
+					"level": 2
+				},
+				{
+					"id": "api-management",
+					"level": 3
+				},
+				{
+					"id": "microservices",
+					"level": 1
+				},
+				{
+					"id": "integration-middleware",
+					"level": 3
+				},
+				{
+					"id": "data-warehousing",
+					"level": 2
+				},
+				{
+					"id": "data-migration",
+					"level": 3
+				},
+				{
+					"id": "cloud-computing",
+					"level": 1
+				},
+				{
+					"id": "virtualization",
+					"level": 2
+				},
+				{
+					"id": "identity-access-management",
+					"level": 2
+				},
+				{
+					"id": "compliance-governance",
+					"level": 3
 				}
 			]
 		}

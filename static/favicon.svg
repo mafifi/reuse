@@ -5,7 +5,7 @@
         fill: #275c90;
       }
 	  .cls-2 {
-		fill: #ffffff;
+		fill: #000000;
 	  }
     </style>
   </defs>
