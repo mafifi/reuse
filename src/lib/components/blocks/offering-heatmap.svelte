@@ -160,7 +160,7 @@
 														<div class="flex items-center gap-2 border-t pt-1">
 															<div class={cn('h-3 w-3 rounded-full border', fillColor)}></div>
 															<span class="text-xs font-medium">
-																{assessmentLevel ? `Level ${assessmentLevel}` : 'Not Assessed'}
+																{assessmentLevel ? `Level ${assessmentLevel}` : 'Not Capable'}
 															</span>
 														</div>
 													</div>
@@ -194,7 +194,7 @@
 													<div class="flex items-center gap-2 border-t pt-1">
 														<div class={cn('h-3 w-3 rounded-full border', fillColor)}></div>
 														<span class="text-xs font-medium">
-															{assessmentLevel ? `Level ${assessmentLevel}` : 'Not Assessed'}
+															{assessmentLevel ? `Level ${assessmentLevel}` : 'Not Capable'}
 														</span>
 													</div>
 												</div>

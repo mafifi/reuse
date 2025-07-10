@@ -1,0 +1,378 @@
+# Data Warehousing Implementation Guide
+
+## Overview
+
+This guide provides practical examples for implementing data warehousing capabilities with modern cloud platforms and tools.
+
+## Cloud Data Warehouse Setup
+
+### Snowflake Implementation
+
+```sql
+-- Create warehouse for compute resources
+CREATE WAREHOUSE analytics_wh 
+WITH WAREHOUSE_SIZE = 'MEDIUM'
+     AUTO_SUSPEND = 300
+     AUTO_RESUME = TRUE
+     INITIALLY_SUSPENDED = TRUE;
+
+-- Create database and schema structure
+CREATE DATABASE sales_analytics;
+CREATE SCHEMA sales_analytics.staging;
+CREATE SCHEMA sales_analytics.dim;
+CREATE SCHEMA sales_analytics.fact;
+
+-- Create staging table for raw data
+CREATE TABLE sales_analytics.staging.raw_sales (
+    transaction_id STRING,
+    customer_id STRING,
+    product_id STRING,
+    sale_date STRING,
+    amount STRING,
+    quantity STRING,
+    loaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP()
+);
+
+-- Create dimension tables
+CREATE TABLE sales_analytics.dim.customers (
+    customer_key NUMBER IDENTITY,
+    customer_id STRING UNIQUE,
+    customer_name STRING,
+    email STRING,
+    city STRING,
+    country STRING,
+    created_date DATE,
+    updated_date DATE
+);
+
+CREATE TABLE sales_analytics.dim.products (
+    product_key NUMBER IDENTITY,
+    product_id STRING UNIQUE,
+    product_name STRING,
+    category STRING,
+    price DECIMAL(10,2),
+    created_date DATE,
+    updated_date DATE
+);
+
+-- Create fact table
+CREATE TABLE sales_analytics.fact.sales (
+    sale_key NUMBER IDENTITY,
+    customer_key NUMBER,
+    product_key NUMBER,
+    sale_date DATE,
+    amount DECIMAL(10,2),
+    quantity NUMBER,
+    FOREIGN KEY (customer_key) REFERENCES sales_analytics.dim.customers(customer_key),
+    FOREIGN KEY (product_key) REFERENCES sales_analytics.dim.products(product_key)
+);
+```
+
+### ETL Process with dbt
+
+```sql
+-- models/staging/stg_sales.sql
+{{ config(materialized='view') }}
+
+WITH source_data AS (
+    SELECT 
+        transaction_id,
+        customer_id,
+        product_id,
+        TRY_TO_DATE(sale_date, 'YYYY-MM-DD') AS sale_date,
+        TRY_TO_NUMBER(amount, 10, 2) AS amount,
+        TRY_TO_NUMBER(quantity) AS quantity,
+        loaded_at
+    FROM {{ source('staging', 'raw_sales') }}
+    WHERE TRY_TO_DATE(sale_date, 'YYYY-MM-DD') IS NOT NULL
+      AND TRY_TO_NUMBER(amount, 10, 2) IS NOT NULL
+)
+
+SELECT * FROM source_data
+```
+
+```sql
+-- models/dimensions/dim_customers.sql
+{{ config(
+    materialized='slowly_changing_dimension',
+    unique_key='customer_id',
+    strategy='timestamp',
+    updated_at='updated_date'
+) }}
+
+WITH source AS (
+    SELECT DISTINCT
+        customer_id,
+        customer_name,
+        email,
+        city,
+        country,
+        CURRENT_DATE() AS created_date,
+        CURRENT_DATE() AS updated_date
+    FROM {{ ref('stg_sales') }} s
+    JOIN {{ source('crm', 'customers') }} c 
+      ON s.customer_id = c.id
+)
+
+SELECT * FROM source
+```
+
+```sql
+-- models/marts/fact_sales.sql
+{{ config(materialized='incremental') }}
+
+SELECT 
+    s.transaction_id,
+    c.customer_key,
+    p.product_key,
+    s.sale_date,
+    s.amount,
+    s.quantity
+FROM {{ ref('stg_sales') }} s
+JOIN {{ ref('dim_customers') }} c ON s.customer_id = c.customer_id
+JOIN {{ ref('dim_products') }} p ON s.product_id = p.product_id
+
+{% if is_incremental() %}
+    WHERE s.loaded_at > (SELECT MAX(loaded_at) FROM {{ this }})
+{% endif %}
+```
+
+## Data Pipeline Automation
+
+### Apache Airflow DAG
+
+```python
+from datetime import datetime, timedelta
+from airflow import DAG
+from airflow.providers.snowflake.operators.snowflake import SnowflakeOperator
+from airflow.providers.amazon.aws.sensors.s3_key import S3KeySensor
+from airflow.providers.dbt.cloud.operators.dbt import DbtCloudRunJobOperator
+
+default_args = {
+    'owner': 'data-team',
+    'depends_on_past': False,
+    'start_date': datetime(2024, 1, 1),
+    'email_on_failure': True,
+    'email_on_retry': False,
+    'retries': 3,
+    'retry_delay': timedelta(minutes=5)
+}
+
+dag = DAG(
+    'sales_data_warehouse_etl',
+    default_args=default_args,
+    description='Daily ETL pipeline for sales data warehouse',
+    schedule_interval='0 2 * * *',  # Daily at 2 AM
+    catchup=False,
+    tags=['data-warehouse', 'sales', 'etl']
+)
+
+# Wait for new data files
+wait_for_data = S3KeySensor(
+    task_id='wait_for_sales_data',
+    bucket_name='sales-data-lake',
+    bucket_key='raw/sales/{{ ds }}/sales_data.csv',
+    wildcard_match=True,
+    timeout=3600,
+    poke_interval=300,
+    dag=dag
+)
+
+# Load raw data into staging
+load_staging = SnowflakeOperator(
+    task_id='load_staging_data',
+    snowflake_conn_id='snowflake_default',
+    sql="""
+        COPY INTO sales_analytics.staging.raw_sales
+        FROM @sales_stage/{{ ds }}/
+        FILE_FORMAT = (TYPE = CSV SKIP_HEADER = 1)
+        ON_ERROR = CONTINUE;
+    """,
+    dag=dag
+)
+
+# Run dbt transformations
+run_dbt = DbtCloudRunJobOperator(
+    task_id='run_dbt_transformations',
+    job_id=12345,  # Your dbt Cloud job ID
+    check_interval=60,
+    timeout=1800,
+    dag=dag
+)
+
+# Data quality checks
+data_quality_check = SnowflakeOperator(
+    task_id='data_quality_check',
+    snowflake_conn_id='snowflake_default',
+    sql="""
+        SELECT 
+            COUNT(*) as row_count,
+            COUNT(DISTINCT customer_key) as unique_customers,
+            SUM(amount) as total_sales,
+            MAX(sale_date) as latest_sale_date
+        FROM sales_analytics.fact.sales
+        WHERE sale_date = '{{ ds }}';
+        
+        -- Fail if no data for today
+        SELECT CASE 
+            WHEN COUNT(*) = 0 THEN RAISE_ERROR('No sales data for {{ ds }}')
+            ELSE 'Data quality check passed'
+        END as result
+        FROM sales_analytics.fact.sales
+        WHERE sale_date = '{{ ds }}';
+    """,
+    dag=dag
+)
+
+# Set dependencies
+wait_for_data >> load_staging >> run_dbt >> data_quality_check
+```
+
+## Real-time Analytics with Stream Processing
+
+### Kafka Streams for Real-time Aggregation
+
+```java
+@Component
+public class SalesStreamProcessor {
+    
+    @Autowired
+    private KafkaStreams kafkaStreams;
+    
+    @PostConstruct
+    public void buildTopology() {
+        StreamsBuilder builder = new StreamsBuilder();
+        
+        // Input stream of sales events
+        KStream<String, SalesEvent> salesStream = builder
+            .stream("sales-events", 
+                Consumed.with(Serdes.String(), salesEventSerde()));
+        
+        // Real-time sales aggregation by hour
+        KTable<Windowed<String>, SalesMetrics> hourlySales = salesStream
+            .groupByKey(Grouped.with(Serdes.String(), salesEventSerde()))
+            .windowedBy(TimeWindows.of(Duration.ofHours(1)))
+            .aggregate(
+                SalesMetrics::new,
+                (key, value, aggregate) -> {
+                    aggregate.addSale(value.getAmount(), value.getQuantity());
+                    return aggregate;
+                },
+                Materialized.with(Serdes.String(), salesMetricsSerde())
+            );
+        
+        // Send aggregated data to warehouse
+        hourlySales.toStream()
+            .map((windowedKey, metrics) -> {
+                String key = windowedKey.key() + "_" + 
+                    windowedKey.window().start();
+                return KeyValue.pair(key, metrics);
+            })
+            .to("warehouse-updates", 
+                Produced.with(Serdes.String(), salesMetricsSerde()));
+                
+        kafkaStreams = new KafkaStreams(builder.build(), streamsConfig());
+        kafkaStreams.start();
+    }
+}
+
+// Sales event model
+public class SalesEvent {
+    private String customerId;
+    private String productId;
+    private BigDecimal amount;
+    private Integer quantity;
+    private LocalDateTime timestamp;
+    
+    // getters and setters
+}
+
+// Aggregated metrics model
+public class SalesMetrics {
+    private BigDecimal totalAmount = BigDecimal.ZERO;
+    private Integer totalQuantity = 0;
+    private Integer transactionCount = 0;
+    
+    public void addSale(BigDecimal amount, Integer quantity) {
+        this.totalAmount = this.totalAmount.add(amount);
+        this.totalQuantity += quantity;
+        this.transactionCount++;
+    }
+}
+```
+
+## Performance Optimization
+
+### Snowflake Query Optimization
+
+```sql
+-- Create clustered table for better performance
+CREATE TABLE sales_analytics.fact.sales_clustered (
+    sale_key NUMBER IDENTITY,
+    customer_key NUMBER,
+    product_key NUMBER,
+    sale_date DATE,
+    amount DECIMAL(10,2),
+    quantity NUMBER
+) CLUSTER BY (sale_date, customer_key);
+
+-- Create materialized view for common aggregations
+CREATE MATERIALIZED VIEW sales_analytics.marts.daily_sales_summary AS
+SELECT 
+    sale_date,
+    COUNT(*) as transaction_count,
+    SUM(amount) as total_sales,
+    AVG(amount) as avg_transaction_value,
+    COUNT(DISTINCT customer_key) as unique_customers
+FROM sales_analytics.fact.sales
+GROUP BY sale_date;
+
+-- Query optimization with result caching
+ALTER SESSION SET USE_CACHED_RESULT = TRUE;
+
+-- Efficient date range queries
+SELECT 
+    c.customer_name,
+    p.product_name,
+    s.amount,
+    s.sale_date
+FROM sales_analytics.fact.sales s
+JOIN sales_analytics.dim.customers c ON s.customer_key = c.customer_key
+JOIN sales_analytics.dim.products p ON s.product_key = p.product_key
+WHERE s.sale_date BETWEEN '2024-01-01' AND '2024-12-31'
+  AND s.amount > 1000
+ORDER BY s.sale_date DESC, s.amount DESC
+LIMIT 1000;
+```
+
+## Data Governance and Security
+
+### Row-Level Security Implementation
+
+```sql
+-- Create security policy for customer data
+CREATE ROW ACCESS POLICY customer_access_policy AS (customer_region) RETURNS BOOLEAN ->
+    CASE 
+        WHEN CURRENT_ROLE() = 'ADMIN' THEN TRUE
+        WHEN CURRENT_ROLE() = 'ANALYST_NA' AND customer_region = 'North America' THEN TRUE
+        WHEN CURRENT_ROLE() = 'ANALYST_EU' AND customer_region = 'Europe' THEN TRUE
+        ELSE FALSE
+    END;
+
+-- Apply policy to customer dimension
+ALTER TABLE sales_analytics.dim.customers 
+ADD ROW ACCESS POLICY customer_access_policy ON (region);
+
+-- Column-level security for sensitive data
+CREATE MASKING POLICY email_mask AS (val STRING) RETURNS STRING ->
+    CASE 
+        WHEN CURRENT_ROLE() IN ('ADMIN', 'DATA_PROTECTION_OFFICER') THEN val
+        ELSE REGEXP_REPLACE(val, '.+\@', '*****@') 
+    END;
+
+-- Apply masking policy
+ALTER TABLE sales_analytics.dim.customers 
+MODIFY COLUMN email SET MASKING POLICY email_mask;
+```
+
+This implementation guide provides a comprehensive approach to building and operating modern data warehouses with cloud-native tools, real-time processing capabilities, and enterprise-grade governance.

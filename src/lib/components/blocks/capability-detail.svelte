@@ -4,6 +4,7 @@
 	import { Button } from '$lib/components/ui/button';
 	import { ArrowLeft, CheckCircle, Target, Lightbulb } from '@lucide/svelte';
 	import capabilities from '$lib/data/capabilities.json';
+	import CapabilityMarkdown from '$lib/components/ui/capability-markdown.svelte';
 
 	let { capabilityId } = $props();
 
@@ -187,6 +188,9 @@
 								</Card.Content>
 							</Card.Root>
 						{/if}
+
+						<!-- Implementation Guide (Markdown Content) -->
+						<CapabilityMarkdown {capabilityId} />
 					</div>
 
 					<!-- Sidebar -->
