@@ -1,0 +1,412 @@
+# Reactive Queries Implementation Guide
+
+## Overview
+
+Reactive queries transform how we handle data fetching in modern applications by automatically managing cache, loading states, and data synchronization. Instead of manually orchestrating API calls, loading states, and cache invalidation, reactive queries provide a declarative approach where data automatically updates when dependencies change.
+
+## Traditional vs Reactive Approach
+
+### Traditional Data Fetching (Current Pattern)
+
+```svelte
+<!-- Traditional approach with manual state management -->
+<script lang="ts">
+	import { onMount } from 'svelte';
+	
+	let capabilities = $state([]);
+	let loading = $state(true);
+	let error = $state(null);
+	
+	onMount(async () => {
+		try {
+			loading = true;
+			const response = await fetch('/api/capabilities');
+			capabilities = await response.json();
+		} catch (err) {
+			error = err.message;
+		} finally {
+			loading = false;
+		}
+	});
+	
+	async function refresh() {
+		loading = true;
+		error = null;
+		// Repeat the entire fetch logic...
+	}
+</script>
+
+{#if loading}
+	<div>Loading capabilities...</div>
+{:else if error}
+	<div class="error">Error: {error}</div>
+{:else}
+	<div class="capabilities">
+		{#each capabilities as capability}
+			<div class="capability-card">
+				<h3>{capability.name}</h3>
+				<p>{capability.description}</p>
+			</div>
+		{/each}
+	</div>
+	<button onclick={refresh}>Refresh</button>
+{/if}
+```
+
+### Reactive Query Approach
+
+```svelte
+<!-- Reactive approach with automatic state management -->
+<script lang="ts">
+	import { createQuery } from '@tanstack/svelte-query';
+	
+	const capabilitiesQuery = createQuery({
+		queryKey: ['capabilities'],
+		queryFn: async () => {
+			const response = await fetch('/api/capabilities');
+			if (!response.ok) throw new Error('Failed to fetch capabilities');
+			return response.json();
+		},
+		staleTime: 5 * 60 * 1000, // 5 minutes
+		refetchOnWindowFocus: true
+	});
+	
+	// All state is automatically managed!
+	$: ({ data: capabilities, isLoading, error, refetch } = $capabilitiesQuery);
+</script>
+
+{#if isLoading}
+	<div>Loading capabilities...</div>
+{:else if error}
+	<div class="error">Error: {error.message}</div>
+{:else}
+	<div class="capabilities">
+		{#each capabilities as capability}
+			<div class="capability-card">
+				<h3>{capability.name}</h3>
+				<p>{capability.description}</p>
+			</div>
+		{/each}
+	</div>
+	<button onclick={() => refetch()}>Refresh</button>
+{/if}
+```
+
+## Advanced Reactive Query Patterns
+
+### Real-time Search with Debouncing
+
+```svelte
+<script lang="ts">
+	import { createQuery } from '@tanstack/svelte-query';
+	import { debounce } from 'lodash-es';
+	
+	let searchTerm = $state('');
+	let debouncedSearchTerm = $state('');
+	
+	// Debounce search input
+	const updateSearch = debounce((term) => {
+		debouncedSearchTerm = term;
+	}, 300);
+	
+	$effect(() => {
+		updateSearch(searchTerm);
+	});
+	
+	const searchQuery = createQuery({
+		queryKey: ['capabilities', 'search', debouncedSearchTerm],
+		queryFn: async () => {
+			if (!debouncedSearchTerm) return [];
+			const response = await fetch(`/api/capabilities/search?q=${debouncedSearchTerm}`);
+			return response.json();
+		},
+		enabled: debouncedSearchTerm.length > 0
+	});
+</script>
+
+<input 
+	bind:value={searchTerm} 
+	placeholder="Search capabilities..." 
+	type="text"
+/>
+
+{#if $searchQuery.isLoading}
+	<div>Searching...</div>
+{:else if $searchQuery.data}
+	<div class="search-results">
+		{#each $searchQuery.data as result}
+			<div class="result-item">{result.name}</div>
+		{/each}
+	</div>
+{/if}
+```
+
+### Optimistic Updates with Mutations
+
+```svelte
+<script lang="ts">
+	import { createQuery, createMutation, useQueryClient } from '@tanstack/svelte-query';
+	
+	const queryClient = useQueryClient();
+	
+	const capabilitiesQuery = createQuery({
+		queryKey: ['capabilities'],
+		queryFn: () => fetch('/api/capabilities').then(res => res.json())
+	});
+	
+	const addCapabilityMutation = createMutation({
+		mutationFn: async (newCapability) => {
+			const response = await fetch('/api/capabilities', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(newCapability)
+			});
+			return response.json();
+		},
+		onMutate: async (newCapability) => {
+			// Cancel outgoing refetches
+			await queryClient.cancelQueries({ queryKey: ['capabilities'] });
+			
+			// Snapshot previous value
+			const previousCapabilities = queryClient.getQueryData(['capabilities']);
+			
+			// Optimistically update cache
+			queryClient.setQueryData(['capabilities'], (old) => [
+				...old,
+				{ ...newCapability, id: Date.now() } // Temporary ID
+			]);
+			
+			return { previousCapabilities };
+		},
+		onError: (err, newCapability, context) => {
+			// Rollback on error
+			queryClient.setQueryData(['capabilities'], context.previousCapabilities);
+		},
+		onSettled: () => {
+			// Refetch to ensure consistency
+			queryClient.invalidateQueries({ queryKey: ['capabilities'] });
+		}
+	});
+	
+	async function addCapability(capabilityData) {
+		$addCapabilityMutation.mutate(capabilityData);
+	}
+</script>
+
+<form onsubmit={(e) => {
+	e.preventDefault();
+	const formData = new FormData(e.target);
+	addCapability(Object.fromEntries(formData));
+}}>
+	<input name="name" placeholder="Capability name" required />
+	<textarea name="description" placeholder="Description"></textarea>
+	<button type="submit" disabled={$addCapabilityMutation.isPending}>
+		{$addCapabilityMutation.isPending ? 'Adding...' : 'Add Capability'}
+	</button>
+</form>
+```
+
+## Benefits: What Complexity Disappears
+
+### 1. Manual Loading States
+**Before:** Manual boolean flags, complex state management
+```svelte
+let loading = $state(true);
+let error = $state(null);
+let data = $state(null);
+
+// Complex state orchestration throughout component
+```
+
+**After:** Automatic state derivation
+```svelte
+$: ({ data, isLoading, error } = $query);
+// All states automatically managed and synchronized
+```
+
+### 2. Cache Invalidation Hell
+**Before:** Manual cache management
+```svelte
+// Scattered throughout components
+function onFormSubmit() {
+	// Submit form
+	await submitForm();
+	// Manually refresh all related data
+	await refreshCapabilities();
+	await refreshCategories();
+	await refreshStats();
+}
+
+// In child components
+import { invalidate } from '$app/navigation';
+invalidate('/api/capabilities');
+```
+
+**After:** Declarative cache management
+```svelte
+// Automatic invalidation based on relationships
+const mutation = createMutation({
+	mutationFn: submitForm,
+	onSuccess: () => {
+		// Automatically invalidates related queries
+		queryClient.invalidateQueries({ queryKey: ['capabilities'] });
+	}
+});
+```
+
+### 3. Background Refetching
+**Before:** No automatic updates
+```svelte
+// Data becomes stale, users see outdated information
+// Manual refresh buttons everywhere
+```
+
+**After:** Intelligent background updates
+```svelte
+const query = createQuery({
+	queryKey: ['capabilities'],
+	queryFn: fetchCapabilities,
+	staleTime: 5 * 60 * 1000, // 5 minutes
+	refetchOnWindowFocus: true, // Refresh when user returns
+	refetchInterval: 30 * 1000, // Poll every 30 seconds
+});
+```
+
+### 4. Error Handling Complexity
+**Before:** Error state management everywhere
+```svelte
+let error = $state(null);
+
+try {
+	// API call
+} catch (err) {
+	error = err.message;
+	// Handle error UI
+}
+```
+
+**After:** Centralized error handling
+```svelte
+const query = createQuery({
+	queryKey: ['capabilities'],
+	queryFn: fetchCapabilities,
+	retry: 3, // Automatic retry
+	retryDelay: attemptIndex => Math.min(1000 * 2 ** attemptIndex, 30000),
+});
+
+// Error handling is built-in
+{#if $query.error}
+	<ErrorBoundary error={$query.error} />
+{/if}
+```
+
+### 5. Duplicate Request Prevention
+**Before:** Multiple components trigger same API call
+```svelte
+// Component A
+onMount(() => fetch('/api/capabilities'));
+
+// Component B (same page)
+onMount(() => fetch('/api/capabilities')); // Duplicate!
+```
+
+**After:** Automatic request deduplication
+```svelte
+// Both components use same query key
+const query = createQuery({
+	queryKey: ['capabilities'], // Same key = shared request
+	queryFn: fetchCapabilities
+});
+// Only one network request, shared result
+```
+
+## Real-world Implementation
+
+### Setting Up TanStack Query in SvelteKit
+
+```typescript
+// src/lib/query-client.ts
+import { QueryClient } from '@tanstack/svelte-query';
+
+export const queryClient = new QueryClient({
+	defaultOptions: {
+		queries: {
+			staleTime: 5 * 60 * 1000, // 5 minutes
+			retry: 3,
+			refetchOnWindowFocus: true,
+		},
+	},
+});
+```
+
+```svelte
+<!-- src/app.html or layout -->
+<script lang="ts">
+	import { QueryClientProvider } from '@tanstack/svelte-query';
+	import { queryClient } from '$lib/query-client';
+</script>
+
+<QueryClientProvider client={queryClient}>
+	<slot />
+</QueryClientProvider>
+```
+
+### Enhanced Capability Browser
+
+```svelte
+<!-- src/lib/components/capability-browser.svelte -->
+<script lang="ts">
+	import { createQuery } from '@tanstack/svelte-query';
+	import { page } from '$app/stores';
+	
+	// Reactive query based on URL parameters
+	$: categoryFilter = $page.url.searchParams.get('category');
+	$: searchTerm = $page.url.searchParams.get('search') || '';
+	
+	const capabilitiesQuery = createQuery({
+		queryKey: ['capabilities', categoryFilter, searchTerm],
+		queryFn: async () => {
+			const params = new URLSearchParams();
+			if (categoryFilter) params.set('category', categoryFilter);
+			if (searchTerm) params.set('search', searchTerm);
+			
+			const response = await fetch(`/api/capabilities?${params}`);
+			return response.json();
+		},
+		placeholderData: (previousData) => previousData, // Keep showing old data while loading
+	});
+	
+	// Prefetch related data
+	const categoriesQuery = createQuery({
+		queryKey: ['categories'],
+		queryFn: () => fetch('/api/categories').then(res => res.json()),
+		staleTime: 10 * 60 * 1000, // Categories change less frequently
+	});
+</script>
+
+{#if $capabilitiesQuery.isLoading && !$capabilitiesQuery.data}
+	<CapabilitySkeleton />
+{:else if $capabilitiesQuery.error}
+	<div class="error">
+		Failed to load capabilities
+		<button onclick={() => $capabilitiesQuery.refetch()}>Retry</button>
+	</div>
+{:else}
+	<div class="capabilities-grid">
+		{#each $capabilitiesQuery.data as capability}
+			<CapabilityCard {capability} />
+		{/each}
+	</div>
+{/if}
+```
+
+## Performance Benefits
+
+1. **Automatic Caching**: Eliminate redundant API calls
+2. **Background Updates**: Keep data fresh without user interaction
+3. **Optimistic Updates**: Instant UI feedback
+4. **Request Deduplication**: Single request for multiple components
+5. **Intelligent Refetching**: Only fetch when necessary
+6. **Offline Support**: Cached data available offline
+
+Reactive queries transform data management from a complex, error-prone manual process into a declarative, automated system that handles edge cases, performance optimization, and user experience improvements automatically.
