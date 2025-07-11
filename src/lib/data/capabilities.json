@@ -7,150 +7,61 @@
 		"color": "bg-midnight-blue-50 border-midnight-blue-200 hover:bg-midnight-blue-100",
 		"categories": [
 			{
-				"id": "customer-market",
-				"name": "Customer & Market",
-				"description": "Customer-facing capabilities and market engagement",
-				"capabilities": [
+				"id": "institutional-securities-sales-trading",
+				"name": "Institutional Securities - Sales & Trading",
+				"description": "Capabilities supporting institutional securities, sales, and trading operations.",
+				"subcategories": [
 					{
-						"id": "customer-management",
-						"name": "Customer Management",
-						"definition": "Capability to acquire, retain, and manage customer relationships throughout their lifecycle, ensuring optimal customer experience and business value creation.",
-						"description": "Customer Management encompasses all processes, technologies, and strategies used to interact with customers across all touchpoints. This capability enables organizations to understand customer needs, deliver personalized experiences, and build long-term relationships that drive business growth.",
-						"examples": [
-							"Customer Relationship Management (CRM) systems",
-							"Customer onboarding processes",
-							"Loyalty and rewards programs",
-							"Customer service and support",
-							"Customer segmentation and targeting",
-							"Customer feedback management"
-						],
-						"benefits": [
-							"Improved customer satisfaction and loyalty",
-							"Increased customer lifetime value",
-							"Better customer insights and analytics",
-							"Enhanced customer experience",
-							"Reduced customer acquisition costs",
-							"Improved customer retention rates"
-						],
-						"keyComponents": [
-							"Customer data management",
-							"Interaction tracking",
-							"Service delivery",
-							"Feedback collection",
-							"Relationship analytics"
-						],
-						"technologies": [
-							"Salesforce CRM",
-							"Microsoft Dynamics 365",
-							"HubSpot",
-							"Oracle CX Cloud",
-							"SAP Customer Experience"
-						],
-						"maturityLevels": [
-							{ "level": "Basic", "description": "Manual customer tracking, limited integration" },
-							{ "level": "Developing", "description": "CRM system in place, some automation" },
-							{ "level": "Defined", "description": "Integrated customer processes, analytics" },
-							{ "level": "Managed", "description": "Advanced analytics, personalization" },
-							{ "level": "Optimized", "description": "AI-driven insights, predictive analytics" }
-						]
-					}
-				]
-			},
-			{
-				"id": "financial-management",
-				"name": "Financial Management",
-				"description": "Financial planning, budgeting, and reporting capabilities",
-				"capabilities": [
-					{
-						"id": "financial-management",
-						"name": "Financial Management",
-						"definition": "Capability to manage financial planning, budgeting, and reporting across the organization",
-						"description": "Financial Management encompasses the processes, tools, and strategies used to plan, manage, and report on an organization's financial resources. This capability ensures financial transparency, regulatory compliance, and supports strategic decision-making through accurate financial insights.",
-						"examples": [
-							"Budget planning and forecasting",
-							"Financial reporting and analysis",
-							"Cost management and control",
-							"Accounts payable and receivable",
-							"Asset and investment management",
-							"Regulatory financial compliance"
-						],
-						"benefits": [
-							"Improved financial transparency",
-							"Accurate financial reporting",
-							"Enhanced cost control",
-							"Regulatory compliance",
-							"Informed strategic decisions",
-							"Optimized resource allocation"
-						],
-						"keyComponents": [
-							"General ledger and accounting systems",
-							"Budgeting and forecasting tools",
-							"Financial reporting platforms",
-							"Cost management processes",
-							"Audit and compliance mechanisms"
-						],
-						"technologies": [
-							"SAP S/4HANA Finance",
-							"Oracle Financials Cloud",
-							"Microsoft Dynamics 365 Finance",
-							"Workday Financial Management",
-							"Adaptive Insights"
-						],
-						"maturityLevels": [
-							{ "level": "Basic", "description": "Manual financial processes, spreadsheets" },
-							{ "level": "Developing", "description": "Core financial systems in place" },
+						"id": "cash-equities",
+						"name": "Cash Equities",
+						"description": "Capabilities for cash equities trading and related services.",
+						"capabilities": [
 							{
-								"level": "Defined",
-								"description": "Integrated financial management and reporting"
+								"id": "client-management-services",
+								"name": "Client Management Services",
+								"definition": "Services and processes for managing institutional client relationships, onboarding, and support."
 							},
-							{ "level": "Managed", "description": "Advanced analytics and cost optimization" },
 							{
-								"level": "Optimized",
-								"description": "Real-time financial insights, predictive planning"
+								"id": "sales-distribution",
+								"name": "Sales & Distribution",
+								"definition": "Activities related to the distribution and sale of cash equity products to institutional clients."
+							},
+							{
+								"id": "modelling-research-activities",
+								"name": "Modelling & Research Activities",
+								"definition": "Research, analytics, and quantitative modeling to support trading and investment decisions."
+							},
+							{
+								"id": "data-analytics",
+								"name": "Data & Analytics",
+								"definition": "Data management, analytics, and reporting for trading, client, and market insights."
+							},
+							{
+								"id": "front-office-risk",
+								"name": "Front Office Risk",
+								"definition": "Risk management activities performed by the front office, including real-time risk assessment and controls."
+							},
+							{
+								"id": "transaction-processing-services",
+								"name": "Transaction Processing Services",
+								"definition": "Processing, clearing, and settlement of cash equity transactions."
+							},
+							{
+								"id": "firm-risk-cross-divisional-governance",
+								"name": "Firm Risk & Cross Divisional Governance",
+								"definition": "Oversight, governance, and risk management across divisions and at the firm level."
+							},
+							{
+								"id": "operations",
+								"name": "Operations",
+								"definition": "Operational support for trade lifecycle, reconciliations, and exception management."
+							},
+							{
+								"id": "finance",
+								"name": "Finance",
+								"definition": "Financial management, reporting, and control for cash equities trading."
 							}
 						]
-					}
-				]
-			},
-			{
-				"id": "operations",
-				"name": "Operations",
-				"description": "Core operational capabilities and resource management",
-				"capabilities": [
-					{
-						"id": "supply-chain",
-						"name": "Supply Chain Management",
-						"definition": "End-to-end management of goods and services from suppliers to customers",
-						"examples": ["Procurement", "Inventory management", "Logistics"],
-						"benefits": ["Cost reduction", "Efficiency", "Risk mitigation"]
-					},
-					{
-						"id": "human-resources",
-						"name": "Human Resources",
-						"definition": "Management of workforce planning, talent acquisition, and employee development",
-						"examples": ["Recruitment", "Performance management", "Training"],
-						"benefits": ["Talent retention", "Productivity", "Compliance"]
-					},
-					{
-						"id": "risk-management",
-						"name": "Risk Management",
-						"definition": "Identification, assessment, and mitigation of business risks",
-						"examples": ["Risk assessment", "Compliance monitoring", "Business continuity"],
-						"benefits": ["Risk reduction", "Regulatory compliance", "Business resilience"]
-					}
-				]
-			},
-			{
-				"id": "innovation",
-				"name": "Innovation",
-				"description": "Product development and innovation capabilities",
-				"capabilities": [
-					{
-						"id": "product-development",
-						"name": "Product Development",
-						"definition": "Innovation and development of new products and services",
-						"examples": ["R&D processes", "Product lifecycle", "Innovation labs"],
-						"benefits": ["Market competitiveness", "Revenue growth", "Innovation"]
 					}
 				]
 			}
@@ -182,7 +93,7 @@
 									"Finance and accounting management",
 									"Procurement and supplier management",
 									"Inventory and warehouse management",
-									"Order processing and fulfillment",
+									"Order processing and fulfilment",
 									"Human resources management",
 									"Project and resource planning"
 								],
