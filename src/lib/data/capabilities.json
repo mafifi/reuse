@@ -19,7 +19,50 @@
 							{
 								"id": "client-management-services",
 								"name": "Client Management Services",
-								"definition": "Services and processes for managing institutional client relationships, onboarding, and support."
+								"definition": "Services and processes for managing institutional client relationships, onboarding, and support.",
+								"examples": [
+									"Customer Relationship Management (CRM) systems",
+									"Customer onboarding processes",
+									"Loyalty and rewards programs",
+									"Customer service and support",
+									"Customer segmentation and targeting",
+									"Customer feedback management"
+								],
+								"benefits": [
+									"Improved customer satisfaction and loyalty",
+									"Increased customer lifetime value",
+									"Better customer insights and analytics",
+									"Enhanced customer experience",
+									"Reduced customer acquisition costs",
+									"Improved customer retention rates"
+								],
+								"keyComponents": [
+									"Customer data management",
+									"Interaction tracking",
+									"Service delivery",
+									"Feedback collection",
+									"Relationship analytics"
+								],
+								"technologies": [
+									"Salesforce CRM",
+									"Microsoft Dynamics 365",
+									"HubSpot",
+									"Oracle CX Cloud",
+									"SAP Customer Experience"
+								],
+								"maturityLevels": [
+									{
+										"level": "Basic",
+										"description": "Manual customer tracking, limited integration"
+									},
+									{ "level": "Developing", "description": "CRM system in place, some automation" },
+									{ "level": "Defined", "description": "Integrated customer processes, analytics" },
+									{ "level": "Managed", "description": "Advanced analytics, personalization" },
+									{
+										"level": "Optimized",
+										"description": "AI-driven insights, predictive analytics"
+									}
+								]
 							},
 							{
 								"id": "sales-distribution",
