@@ -20,6 +20,7 @@
 								"id": "client-management-services",
 								"name": "Client Management Services",
 								"definition": "Services and processes for managing institutional client relationships, onboarding, and support.",
+								"description": "Client Management Services are essential for maintaining strong relationships with institutional clients. These services include CRM systems, onboarding processes, customer service, and feedback management.",
 								"examples": [
 									"Customer Relationship Management (CRM) systems",
 									"Customer onboarding processes",
