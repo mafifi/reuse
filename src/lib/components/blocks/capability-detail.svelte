@@ -3,7 +3,7 @@
 	import { Badge } from '$lib/components/ui/badge';
 	import { Button } from '$lib/components/ui/button';
 	import { ArrowLeft, CheckCircle, Target, Lightbulb } from '@lucide/svelte';
-	import capabilities from '$lib/data/capabilities.json';
+	import capabilities from '$lib/data/capabilities';
 	import CapabilityMarkdown from '$lib/components/ui/capability-markdown.svelte';
 
 	let { capabilityId } = $props();

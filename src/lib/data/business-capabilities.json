@@ -1,0 +1,114 @@
+{
+	"id": "business",
+	"name": "Business Architecture",
+	"description": "Business capabilities, processes, and organizational structures",
+	"icon": "Building2",
+	"color": "bg-midnight-blue-50 border-midnight-blue-200 hover:bg-midnight-blue-100",
+	"categories": [
+		{
+			"id": "institutional-securities-sales-trading",
+			"name": "Institutional Securities - Sales & Trading",
+			"description": "Capabilities supporting institutional securities, sales, and trading operations.",
+			"subcategories": [
+				{
+					"id": "cash-equities",
+					"name": "Cash Equities",
+					"description": "Capabilities for cash equities trading and related services.",
+					"capabilities": [
+						{
+							"id": "client-management-services",
+							"name": "Client Management Services",
+							"definition": "Services and processes for managing institutional client relationships, onboarding, and support.",
+							"description": "Client Management Services are essential for maintaining strong relationships with institutional clients. These services include CRM systems, onboarding processes, customer service, and feedback management.",
+							"examples": [
+								"Customer Relationship Management (CRM) systems",
+								"Customer onboarding processes",
+								"Loyalty and rewards programs",
+								"Customer service and support",
+								"Customer segmentation and targeting",
+								"Customer feedback management"
+							],
+							"benefits": [
+								"Improved customer satisfaction and loyalty",
+								"Increased customer lifetime value",
+								"Better customer insights and analytics",
+								"Enhanced customer experience",
+								"Reduced customer acquisition costs",
+								"Improved customer retention rates"
+							],
+							"keyComponents": [
+								"Customer data management",
+								"Interaction tracking",
+								"Service delivery",
+								"Feedback collection",
+								"Relationship analytics"
+							],
+							"technologies": [
+								"Salesforce CRM",
+								"Microsoft Dynamics 365",
+								"HubSpot",
+								"Oracle CX Cloud",
+								"SAP Customer Experience"
+							],
+							"maturityLevels": {
+								"plan": { 
+									"available": true, 
+									"description": "Client relationship frameworks, institutional CRM selection guides, and customer engagement patterns available" 
+								},
+								"build": { 
+									"available": true, 
+									"description": "Institutional CRM platforms, client onboarding systems, and relationship management tools available" 
+								},
+								"operate": { 
+									"available": true, 
+									"description": "Managed client relationship services, CRM-as-a-service platforms, and client analytics solutions available" 
+								},
+								"score": 3
+							}
+						},
+						{
+							"id": "sales-distribution",
+							"name": "Sales & Distribution",
+							"definition": "Activities related to the distribution and sale of cash equity products to institutional clients."
+						},
+						{
+							"id": "modelling-research-activities",
+							"name": "Modelling & Research Activities",
+							"definition": "Research, analytics, and quantitative modeling to support trading and investment decisions."
+						},
+						{
+							"id": "data-analytics",
+							"name": "Data & Analytics",
+							"definition": "Data management, analytics, and reporting for trading, client, and market insights."
+						},
+						{
+							"id": "front-office-risk",
+							"name": "Front Office Risk",
+							"definition": "Risk management activities performed by the front office, including real-time risk assessment and controls."
+						},
+						{
+							"id": "transaction-processing-services",
+							"name": "Transaction Processing Services",
+							"definition": "Processing, clearing, and settlement of cash equity transactions."
+						},
+						{
+							"id": "firm-risk-cross-divisional-governance",
+							"name": "Firm Risk & Cross Divisional Governance",
+							"definition": "Oversight, governance, and risk management across divisions and at the firm level."
+						},
+						{
+							"id": "operations",
+							"name": "Operations",
+							"definition": "Operational support for trade lifecycle, reconciliations, and exception management."
+						},
+						{
+							"id": "finance",
+							"name": "Finance",
+							"definition": "Financial management, reporting, and control for cash equities trading."
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,336 @@
+{
+	"id": "infrastructure",
+	"name": "Infrastructure Architecture",
+	"description": "Physical and virtual infrastructure supporting business operations",
+	"icon": "Server",
+	"color": "bg-mariner-50 border-mariner-200 hover:bg-mariner-100",
+	"categories": [
+		{
+			"id": "application",
+			"name": "Application",
+			"description": "Application development and operations infrastructure",
+			"subcategories": [
+				{
+					"id": "application-development",
+					"name": "Application Development",
+					"description": "Tools and processes for developing applications",
+					"capabilities": [
+						{
+							"id": "development-tools",
+							"name": "Development Tools",
+							"definition": "Integrated environments and platforms that provide comprehensive toolsets for writing, building, testing, and debugging software applications",
+							"description": "Development tools form the foundation of software engineering by providing developers with integrated environments for code creation, compilation, testing, and deployment. These platforms streamline development workflows, enforce coding standards, and integrate with version control systems to ensure consistent, high-quality software delivery across development teams.",
+							"examples": [
+								"Visual Studio Code for cross-platform development",
+								"IntelliJ IDEA for Java enterprise applications",
+								"Jenkins for automated build pipelines",
+								"GitLab CI/CD for integrated development workflows",
+								"Docker for containerized development environments",
+								"Kubernetes for local cluster development"
+							],
+							"benefits": [
+								"Accelerated development cycles through automated workflows",
+								"Improved code quality via integrated testing and analysis",
+								"Enhanced developer productivity with intelligent code assistance",
+								"Consistent build processes across development environments",
+								"Reduced debugging time through advanced diagnostic tools",
+								"Streamlined collaboration via integrated version control"
+							],
+							"keyComponents": [
+								"Integrated development environments",
+								"Code editors and debuggers",
+								"Build automation systems",
+								"Testing frameworks",
+								"Version control integration"
+							],
+							"technologies": [
+								"Visual Studio Code",
+								"IntelliJ IDEA",
+								"Jenkins",
+								"GitLab CI/CD",
+								"Docker"
+							],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Development workflow patterns, toolchain architecture guides, and CI/CD pipeline templates available"
+								},
+								"build": {
+									"available": true,
+									"description": "IDE platforms, build tools, testing frameworks, and development environment configurations available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed development platforms, cloud-based IDEs, and DevOps-as-a-service solutions available"
+								},
+								"score": 3
+							}
+						},
+						{
+							"id": "code-analysis",
+							"name": "Code Analysis",
+							"definition": "Automated tools and platforms that perform static and dynamic analysis of source code to identify quality issues, security vulnerabilities, and compliance violations",
+							"description": "Code analysis tools provide comprehensive evaluation of software code through automated scanning, testing, and review processes. These platforms integrate into development workflows to detect bugs, security flaws, and policy violations early in the development lifecycle, ensuring higher software quality and reduced security risks before deployment.",
+							"examples": [
+								"SonarQube for comprehensive code quality analysis",
+								"Checkmarx for static application security testing",
+								"Veracode for dynamic security vulnerability scanning",
+								"ESLint for JavaScript code quality enforcement",
+								"Prisma Cloud for infrastructure-as-code security scanning",
+								"CodeClimate for automated code review and quality metrics"
+							],
+							"benefits": [
+								"Early detection of defects reducing downstream costs",
+								"Improved code quality through automated standards enforcement",
+								"Enhanced security posture via vulnerability identification",
+								"Reduced technical debt through continuous quality monitoring",
+								"Accelerated code reviews through automated analysis",
+								"Improved compliance with coding standards and regulations"
+							],
+							"keyComponents": [
+								"Static analysis engines",
+								"Dynamic analysis tools",
+								"Code quality metrics",
+								"Security vulnerability scanning",
+								"Policy compliance checking"
+							],
+							"technologies": [
+								"SonarQube",
+								"Checkmarx",
+								"Veracode",
+								"ESLint",
+								"Prisma Cloud"
+							],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Code quality frameworks, security scanning methodologies, and static analysis patterns available"
+								},
+								"build": {
+									"available": true,
+									"description": "Static analysis tools, security scanners, and code quality platforms available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed code analysis services, cloud-based security scanning, and automated quality gates available"
+								},
+								"score": 3
+							}
+						},
+						{
+							"id": "infrastructure-as-code",
+							"name": "Infrastructure as Code",
+							"definition": "Methodology and tools for managing and provisioning computing infrastructure through machine-readable definition files rather than manual configuration processes",
+							"description": "Infrastructure as Code (IaC) enables organizations to define, deploy, and manage infrastructure resources using declarative or imperative code-based approaches. This practice brings software development principles like version control, testing, and automation to infrastructure management, ensuring consistent, repeatable, and scalable infrastructure deployments across environments.",
+							"examples": [
+								"Terraform for multi-cloud infrastructure provisioning",
+								"AWS CloudFormation for AWS-native resource management",
+								"Ansible for configuration management and orchestration",
+								"Pulumi for cloud-native infrastructure using familiar programming languages",
+								"Chef for automated server configuration and compliance",
+								"Azure Resource Manager templates for Azure infrastructure deployment"
+							],
+							"benefits": [
+								"Faster infrastructure provisioning through automated deployment",
+								"Reduced configuration drift via consistent code-based definitions",
+								"Enhanced version control and change tracking for infrastructure",
+								"Improved consistency and reusability across environments",
+								"Decreased manual errors through automated provisioning processes",
+								"Simplified disaster recovery with reproducible infrastructure"
+							],
+							"keyComponents": [
+								"Infrastructure definition languages",
+								"State management systems",
+								"Resource provisioning engines",
+								"Configuration management tools",
+								"Pipeline integration frameworks"
+							],
+							"technologies": [
+								"Terraform",
+								"Ansible",
+								"Chef",
+								"Pulumi",
+								"AWS CloudFormation"
+							],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Infrastructure as Code methodologies, Terraform patterns, and cloud architecture templates available"
+								},
+								"build": {
+									"available": true,
+									"description": "IaC tools (Terraform, Ansible), configuration management platforms, and infrastructure automation frameworks available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed infrastructure services, cloud provisioning platforms, and infrastructure automation solutions available"
+								},
+								"score": 3
+							}
+						}
+					]
+				},
+				{
+					"id": "application-support-operations",
+					"name": "Application Support & Operations",
+					"description": "Tools for deploying, monitoring, and operating applications",
+					"capabilities": [
+						{
+							"id": "packaging-distribution",
+							"name": "Packaging & Distribution",
+							"definition": "Systems and processes for storing, versioning, and distributing software build artifacts, libraries, and packages across development and production environments",
+							"description": "Packaging and distribution capabilities provide centralized management of software artifacts including compiled applications, libraries, container images, and dependencies. These systems ensure secure storage, version control, and efficient distribution of software components across development pipelines and deployment environments, supporting both development workflows and production releases.",
+							"examples": [
+								"JFrog Artifactory for enterprise artifact management",
+								"Sonatype Nexus Repository for open source and proprietary packages",
+								"Docker Registry for container image storage and distribution",
+								"AWS Elastic Container Registry for cloud-native container management",
+								"Azure Container Registry for Microsoft ecosystem integration",
+								"GitHub Package Registry for integrated source code and package management"
+							],
+							"benefits": [
+								"Improved build consistency through centralized artifact management",
+								"Enhanced security via artifact scanning and access controls",
+								"Faster deployment cycles through optimized distribution networks",
+								"Simplified dependency management with version control",
+								"Reduced storage costs through deduplication and compression",
+								"Better compliance tracking with audit trails and provenance"
+							],
+							"keyComponents": [
+								"Artifact repositories",
+								"Package management systems",
+								"Version control mechanisms",
+								"Distribution networks",
+								"Security scanning integration"
+							],
+							"technologies": [
+								"JFrog Artifactory",
+								"Nexus Repository",
+								"Docker Registry",
+								"AWS ECR",
+								"Azure Container Registry"
+							],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Artifact management strategies, package distribution patterns, and repository architecture guides available"
+								},
+								"build": {
+									"available": true,
+									"description": "Artifact repositories, package managers, and container registries available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed artifact services, cloud repositories, and automated distribution platforms available"
+								},
+								"score": 3
+							}
+						},
+						{
+							"id": "release-automation",
+							"name": "Release Automation",
+							"definition": "Automated systems and workflows that manage application deployment, release orchestration, and environment promotion without manual intervention",
+							"description": "Release automation capabilities streamline the deployment process by automating application releases across multiple environments through defined pipelines and workflows. These systems support GitOps methodologies, blue-green deployments, and canary releases, ensuring consistent, reliable, and repeatable application deployments with built-in rollback capabilities and environment management.",
+							"examples": [
+								"ArgoCD for Kubernetes-native GitOps deployments",
+								"Flux for automated cluster state management",
+								"Spinnaker for multi-cloud continuous delivery",
+								"Octopus Deploy for .NET and Windows application releases",
+								"Jenkins X for cloud-native CI/CD pipelines",
+								"GitHub Actions for integrated source-to-deployment workflows"
+							],
+							"benefits": [
+								"Accelerated release cycles through automated deployment pipelines",
+								"Reduced manual intervention and human error in deployments",
+								"Enhanced deployment reliability with consistent automated processes",
+								"Simplified rollback procedures with version control integration",
+								"Improved visibility into deployment status and environment health",
+								"Better compliance through automated deployment approvals and auditing"
+							],
+							"keyComponents": [
+								"Deployment pipelines",
+								"Environment orchestration",
+								"Release management workflows",
+								"Rollback mechanisms",
+								"Configuration management"
+							],
+							"technologies": [
+								"ArgoCD",
+								"Flux",
+								"Spinnaker",
+								"Octopus Deploy",
+								"Jenkins X"
+							],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Deployment automation patterns, GitOps methodologies, and release management frameworks available"
+								},
+								"build": {
+									"available": true,
+									"description": "Deployment tools, CI/CD platforms, and release automation systems available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed deployment services, cloud CI/CD platforms, and automated release solutions available"
+								},
+								"score": 3
+							}
+						},
+						{
+							"id": "monitoring-observability",
+							"name": "Monitoring & Observability",
+							"definition": "Comprehensive platforms and practices for collecting, analyzing, and visualizing system telemetry data including metrics, logs, and traces to ensure application and infrastructure health",
+							"description": "Monitoring and observability capabilities provide deep insights into system behavior through comprehensive telemetry collection, real-time alerting, and advanced analytics. These platforms enable proactive issue detection, rapid incident response, and performance optimization by correlating data from applications, infrastructure, and user experiences to maintain high system reliability and performance.",
+							"examples": [
+								"Grafana for unified dashboard visualization and alerting",
+								"Prometheus for time-series metrics collection and monitoring",
+								"New Relic for full-stack application performance monitoring",
+								"Dynatrace for AI-powered observability and root cause analysis",
+								"PagerDuty for incident management and escalation workflows",
+								"Jaeger for distributed tracing and microservices observability"
+							],
+							"benefits": [
+								"Faster incident detection and response through real-time alerting",
+								"Increased system reliability via proactive monitoring and analysis",
+								"Enhanced root cause analysis with correlated telemetry data",
+								"Improved operational transparency across development and operations teams",
+								"Reduced mean time to resolution for system issues",
+								"Better capacity planning through performance trends and analytics"
+							],
+							"keyComponents": [
+								"Metrics collection systems",
+								"Log aggregation platforms",
+								"Distributed tracing tools",
+								"Alerting and notification systems",
+								"Visualization and dashboarding"
+							],
+							"technologies": [
+								"Grafana",
+								"Prometheus",
+								"New Relic",
+								"Dynatrace",
+								"PagerDuty"
+							],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Observability architecture patterns, monitoring strategies, and SRE frameworks available"
+								},
+								"build": {
+									"available": true,
+									"description": "Monitoring tools, observability platforms, and alerting systems available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed monitoring services, cloud observability platforms, and SRE-as-a-service solutions available"
+								},
+								"score": 3
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

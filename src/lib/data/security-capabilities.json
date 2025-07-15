@@ -1,0 +1,554 @@
+{
+		"id": "security",
+		"name": "Security Architecture",
+		"description": "Security controls, policies, and technologies protecting the enterprise",
+		"icon": "Shield",
+		"color": "bg-golf-50 border-golf-200 hover:bg-golf-100",
+		"categories": [
+			{
+				"id": "identity-access",
+				"name": "Identity & Access",
+				"description": "Identity and access management solutions",
+				"capabilities": [
+					{
+						"id": "identity-access-management",
+						"name": "Identity & Access Management",
+						"definition": "The capability to manage digital identities and control access to systems, applications, and resources",
+						"description": "Identity & Access Management (IAM) provides centralized authentication, authorization, and user lifecycle management. It ensures that the right users have appropriate access to the right resources at the right time, while maintaining security and compliance requirements.",
+						"examples": [
+							"Single sign-on (SSO) implementation",
+							"Multi-factor authentication (MFA)",
+							"Role-based access control (RBAC)",
+							"User provisioning and deprovisioning",
+							"Identity federation and trust",
+							"Access governance and reviews"
+						],
+						"benefits": [
+							"Enhanced security through centralized access control",
+							"Improved user experience with SSO",
+							"Reduced administrative overhead",
+							"Better compliance and audit capabilities",
+							"Streamlined user lifecycle management",
+							"Reduced risk of unauthorized access"
+						],
+						"keyComponents": [
+							"Identity providers and directories",
+							"Authentication mechanisms",
+							"Authorization policies",
+							"User provisioning systems",
+							"Access governance tools"
+						],
+						"technologies": [
+							"Active Directory",
+							"Okta",
+							"Azure Active Directory",
+							"AWS IAM",
+							"Ping Identity"
+						],
+						"maturityLevels": {
+							"plan": {
+								"available": true,
+								"description": "Identity and access management frameworks, zero-trust architecture guides, and authentication patterns available"
+							},
+							"build": {
+								"available": true,
+								"description": "IAM platforms (Okta, Active Directory), identity providers, and access control systems available"
+							},
+							"operate": {
+								"available": true,
+								"description": "Managed identity services, cloud IAM platforms, and identity governance solutions available"
+							},
+							"score": 3
+						}
+					}
+				]
+			},
+			{
+				"id": "threat-protection",
+				"name": "Threat Protection",
+				"description": "Threat detection and prevention capabilities",
+				"capabilities": [
+					{
+						"id": "endpoint-protection",
+						"name": "Endpoint Protection",
+						"definition": "The capability to secure end-user devices and endpoints from malware, threats, and unauthorized access",
+						"description": "Endpoint Protection provides comprehensive security for laptops, desktops, mobile devices, and servers through real-time threat detection, prevention, and response capabilities. It protects against malware, ransomware, and advanced persistent threats while maintaining device performance and user productivity.",
+						"examples": [
+							"Antivirus and anti-malware protection",
+							"Behavioral threat detection",
+							"Ransomware prevention",
+							"Device compliance monitoring",
+							"Endpoint detection and response (EDR)",
+							"Mobile device management (MDM)"
+						],
+						"benefits": [
+							"Comprehensive malware protection",
+							"Real-time threat detection and response",
+							"Enhanced device security posture",
+							"Reduced security incident impact",
+							"Improved compliance with security policies",
+							"Centralized endpoint management"
+						],
+						"keyComponents": [
+							"Endpoint agents and sensors",
+							"Threat intelligence feeds",
+							"Behavioral analysis engines",
+							"Centralized management console",
+							"Incident response capabilities"
+						],
+						"technologies": [
+							"CrowdStrike Falcon",
+							"Microsoft Defender",
+							"Symantec Endpoint Protection",
+							"Carbon Black",
+							"SentinelOne"
+						],
+						"maturityLevels": {
+							"plan": {
+								"available": true,
+								"description": "Endpoint security strategies, threat detection frameworks, and security architecture patterns available"
+							},
+							"build": {
+								"available": true,
+								"description": "Endpoint protection platforms, EDR tools, and security monitoring systems available"
+							},
+							"operate": {
+								"available": true,
+								"description": "Managed endpoint security services, cloud security platforms, and SOC-as-a-service solutions available"
+							},
+							"score": 3
+						}
+					},
+					{
+						"id": "network-security",
+						"name": "Network Security",
+						"definition": "The capability to protect network infrastructure and communications from unauthorized access and threats",
+						"description": "Network Security provides comprehensive protection for network infrastructure through firewalls, intrusion detection/prevention systems, and secure communication channels. It controls network access, monitors traffic, and prevents unauthorized activities while maintaining network performance and availability.",
+						"examples": [
+							"Firewall deployment and management",
+							"Intrusion detection and prevention (IDS/IPS)",
+							"Virtual private network (VPN) implementation",
+							"Network access control (NAC)",
+							"Network segmentation and microsegmentation",
+							"Distributed denial-of-service (DDoS) protection"
+						],
+						"benefits": [
+							"Enhanced network perimeter protection",
+							"Controlled access to network resources",
+							"Real-time threat detection and prevention",
+							"Secure remote connectivity",
+							"Compliance with security standards",
+							"Reduced risk of network breaches"
+						],
+						"keyComponents": [
+							"Firewalls and security appliances",
+							"Intrusion detection systems",
+							"Network monitoring tools",
+							"VPN infrastructure",
+							"Security policy enforcement"
+						],
+						"technologies": [
+							"Cisco ASA",
+							"Palo Alto Networks",
+							"Fortinet FortiGate",
+							"Check Point",
+							"pfSense"
+						],
+						"maturityLevels": {
+							"plan": {
+								"available": true,
+								"description": "Network security architectures, segmentation strategies, and firewall design patterns available"
+							},
+							"build": {
+								"available": true,
+								"description": "Network security appliances, intrusion detection systems, and security monitoring tools available"
+							},
+							"operate": {
+								"available": true,
+								"description": "Managed network security services, cloud firewalls, and network security monitoring solutions available"
+							},
+							"score": 3
+						}
+					},
+					{
+						"id": "security-monitoring",
+						"name": "Security Monitoring",
+						"definition": "The capability to continuously monitor, analyze, and respond to security events across the enterprise",
+						"description": "Security Monitoring provides 24/7 surveillance of security events through centralized logging, correlation, and analysis. It enables rapid threat detection, incident response, and compliance monitoring by aggregating security data from across the organization's infrastructure and applications.",
+						"examples": [
+							"Security information and event management (SIEM)",
+							"Security operations center (SOC) operations",
+							"Log aggregation and analysis",
+							"Threat hunting and investigation",
+							"Security incident response",
+							"Compliance reporting and auditing"
+						],
+						"benefits": [
+							"Real-time threat detection and alerting",
+							"Centralized security event visibility",
+							"Faster incident response times",
+							"Enhanced compliance monitoring",
+							"Proactive threat hunting capabilities",
+							"Reduced security incident impact"
+						],
+						"keyComponents": [
+							"Log collection and aggregation",
+							"Event correlation engines",
+							"Security analytics platforms",
+							"Incident response workflows",
+							"Compliance reporting tools"
+						],
+						"technologies": [
+							"Splunk",
+							"IBM QRadar",
+							"Microsoft Sentinel",
+							"Elastic Security",
+							"LogRhythm"
+						],
+						"maturityLevels": {
+							"plan": {
+								"available": true,
+								"description": "Security monitoring frameworks, SIEM architecture patterns, and incident response strategies available"
+							},
+							"build": {
+								"available": true,
+								"description": "SIEM platforms (Splunk, QRadar), security analytics tools, and threat intelligence systems available"
+							},
+							"operate": {
+								"available": true,
+								"description": "Managed SIEM services, cloud security monitoring platforms, and SOC-as-a-service solutions available"
+							},
+							"score": 3
+						}
+					}
+				]
+			},
+			{
+				"id": "data-security",
+				"name": "Data Security",
+				"description": "Data protection and vulnerability management",
+				"capabilities": [
+					{
+						"id": "data-protection",
+						"name": "Data Protection",
+						"definition": "The capability to safeguard sensitive data from unauthorized access, disclosure, and modification",
+						"description": "Data Protection provides comprehensive security for sensitive information through encryption, access controls, data loss prevention, and privacy-preserving techniques. It ensures data confidentiality, integrity, and availability while maintaining compliance with regulatory requirements.",
+						"examples": [
+							"Data encryption at rest and in transit",
+							"Data loss prevention (DLP) implementation",
+							"Data masking and anonymization",
+							"Access controls and permissions",
+							"Data classification and labeling",
+							"Privacy-preserving analytics"
+						],
+						"benefits": [
+							"Enhanced data confidentiality",
+							"Improved privacy compliance",
+							"Reduced risk of data breaches",
+							"Protection of intellectual property",
+							"Regulatory compliance adherence",
+							"Maintained customer trust"
+						],
+						"keyComponents": [
+							"Encryption systems",
+							"Key management infrastructure",
+							"DLP policies and enforcement",
+							"Access control mechanisms",
+							"Data classification tools"
+						],
+						"technologies": [
+							"Symantec DLP",
+							"Microsoft Information Protection",
+							"Forcepoint DLP",
+							"Vera Suite",
+							"Varonis"
+						],
+						"maturityLevels": {
+							"plan": {
+								"available": true,
+								"description": "Data protection strategies, encryption frameworks, and privacy compliance guides available"
+							},
+							"build": {
+								"available": true,
+								"description": "Data loss prevention tools, encryption software, and data classification systems available"
+							},
+							"operate": {
+								"available": true,
+								"description": "Managed data protection services, cloud encryption platforms, and data security monitoring solutions available"
+							},
+							"score": 3
+						}
+					},
+					{
+						"id": "vulnerability-management",
+						"name": "Vulnerability Management",
+						"definition": "The capability to systematically identify, assess, and remediate security vulnerabilities across the organization",
+						"description": "Vulnerability Management provides a comprehensive approach to discovering, analyzing, and addressing security weaknesses in systems, applications, and infrastructure. It enables proactive security posture management through continuous scanning, risk assessment, and coordinated remediation efforts.",
+						"examples": [
+							"Vulnerability scanning and assessment",
+							"Security patch management",
+							"Penetration testing and validation",
+							"Risk prioritization and scoring",
+							"Remediation tracking and reporting",
+							"Compliance vulnerability assessments"
+						],
+						"benefits": [
+							"Proactive security risk reduction",
+							"Improved security posture",
+							"Enhanced compliance with standards",
+							"Reduced attack surface",
+							"Faster vulnerability remediation",
+							"Better security investment decisions"
+						],
+						"keyComponents": [
+							"Vulnerability scanners",
+							"Risk assessment frameworks",
+							"Patch management systems",
+							"Remediation workflows",
+							"Compliance reporting tools"
+						],
+						"technologies": [
+							"Nessus",
+							"Qualys VMDR",
+							"Rapid7 InsightVM",
+							"Greenbone",
+							"Microsoft Defender for Endpoint"
+						],
+						"maturityLevels": {
+							"plan": {
+								"available": true,
+								"description": "Vulnerability management frameworks, risk assessment methodologies, and patch management strategies available"
+							},
+							"build": {
+								"available": true,
+								"description": "Vulnerability scanners, patch management tools, and security assessment platforms available"
+							},
+							"operate": {
+								"available": true,
+								"description": "Managed vulnerability services, cloud security scanning platforms, and automated patch management solutions available"
+							},
+							"score": 3
+						}
+					}
+				]
+			},
+			{
+				"id": "application-security",
+				"name": "Application Security",
+				"description": "Security controls for applications and development processes",
+				"capabilities": [
+					{
+						"id": "secure-development",
+						"name": "Secure Development",
+						"definition": "The capability to integrate security controls and practices throughout the software development lifecycle",
+						"description": "Secure Development embeds security considerations into every phase of software development, from design through deployment. It includes secure coding practices, security testing, dependency management, and continuous security validation to prevent vulnerabilities from entering production systems.",
+						"examples": [
+							"Secure coding standards and guidelines",
+							"Static application security testing (SAST)",
+							"Dynamic application security testing (DAST)",
+							"Dependency vulnerability scanning",
+							"Security code reviews",
+							"Threat modeling and risk assessment"
+						],
+						"benefits": [
+							"Reduced security vulnerabilities in applications",
+							"Lower cost of vulnerability remediation",
+							"Improved secure coding practices",
+							"Enhanced application security posture",
+							"Better compliance with security standards",
+							"Faster secure software delivery"
+						],
+						"keyComponents": [
+							"Secure coding frameworks",
+							"Security testing tools",
+							"Code review processes",
+							"Threat modeling methodologies",
+							"Dependency management systems"
+						],
+						"technologies": [
+							"SonarQube",
+							"Checkmarx",
+							"Veracode",
+							"OWASP ZAP",
+							"Snyk"
+						],
+						"maturityLevels": {
+							"plan": {
+								"available": true,
+								"description": "Secure development frameworks, OWASP guidelines, and security-by-design principles available"
+							},
+							"build": {
+								"available": true,
+								"description": "Security testing tools, secure coding platforms, and vulnerability scanners available"
+							},
+							"operate": {
+								"available": true,
+								"description": "Managed application security services, cloud security testing platforms, and DevSecOps solutions available"
+							},
+							"score": 3
+						}
+					},
+					{
+						"id": "cloud-security",
+						"name": "Cloud Security",
+						"definition": "The capability to secure cloud infrastructure, services, and data across multi-cloud and hybrid environments",
+						"description": "Cloud Security provides comprehensive protection for cloud-based assets through identity management, configuration security, workload protection, and compliance monitoring. It ensures secure cloud adoption while maintaining visibility and control across distributed cloud environments.",
+						"examples": [
+							"Cloud security posture management (CSPM)",
+							"Cloud workload protection platforms (CWPP)",
+							"Container and Kubernetes security",
+							"Serverless security monitoring",
+							"Cloud access security brokers (CASB)",
+							"Multi-cloud security orchestration"
+						],
+						"benefits": [
+							"Enhanced cloud infrastructure security",
+							"Improved cloud compliance monitoring",
+							"Reduced cloud misconfigurations",
+							"Better visibility across cloud environments",
+							"Secure cloud workload protection",
+							"Streamlined multi-cloud security management"
+						],
+						"keyComponents": [
+							"Cloud security monitoring",
+							"Configuration management",
+							"Workload protection",
+							"Identity and access controls",
+							"Compliance frameworks"
+						],
+						"technologies": [
+							"AWS Security Hub",
+							"Azure Security Center",
+							"Google Cloud Security Command Center",
+							"Prisma Cloud",
+							"Aqua Security"
+						],
+						"maturityLevels": {
+							"plan": {
+								"available": true,
+								"description": "Cloud security frameworks, AWS/Azure security guides, and cloud architecture patterns available"
+							},
+							"build": {
+								"available": true,
+								"description": "Cloud security tools, CSPM platforms, and container security solutions available"
+							},
+							"operate": {
+								"available": true,
+								"description": "Managed cloud security services, cloud security platforms, and multi-cloud security solutions available"
+							},
+							"score": 3
+						}
+					}
+				]
+			},
+			{
+				"id": "security-governance",
+				"name": "Security Governance",
+				"description": "Security governance, training, and incident response capabilities",
+				"capabilities": [
+					{
+						"id": "security-training",
+						"name": "Security Training & Awareness",
+						"definition": "The capability to educate and train employees on security best practices, threats, and organizational security policies",
+						"description": "Security Training & Awareness builds a security-conscious culture through comprehensive education programs, simulated attacks, and continuous awareness campaigns. It empowers employees to recognize and respond to security threats while following established security protocols.",
+						"examples": [
+							"Security awareness training programs",
+							"Phishing simulation campaigns",
+							"Security policy training",
+							"Incident response training",
+							"Role-based security education",
+							"Security culture assessment"
+						],
+						"benefits": [
+							"Improved employee security awareness",
+							"Reduced human error security incidents",
+							"Enhanced security culture",
+							"Better incident response capabilities",
+							"Increased security policy compliance",
+							"Stronger human firewall"
+						],
+						"keyComponents": [
+							"Training content management",
+							"Simulation platforms",
+							"Assessment tools",
+							"Awareness campaigns",
+							"Progress tracking systems"
+						],
+						"technologies": [
+							"KnowBe4",
+							"Proofpoint Security Awareness",
+							"Mimecast Awareness Training",
+							"SANS Securing the Human",
+							"Terranova Security"
+						],
+						"maturityLevels": {
+							"plan": {
+								"available": true,
+								"description": "Security training frameworks, awareness program templates, and security culture guides available"
+							},
+							"build": {
+								"available": true,
+								"description": "Security training platforms, phishing simulation tools, and awareness campaign systems available"
+							},
+							"operate": {
+								"available": true,
+								"description": "Managed security training services, cloud-based awareness platforms, and training-as-a-service solutions available"
+							},
+							"score": 3
+						}
+					},
+					{
+						"id": "incident-response",
+						"name": "Incident Response",
+						"definition": "The capability to detect, respond to, and recover from security incidents in a coordinated and effective manner",
+						"description": "Incident Response provides structured processes and tools for handling security incidents from detection through recovery. It ensures rapid containment, thorough investigation, and coordinated response to minimize impact while maintaining evidence and enabling lessons learned.",
+						"examples": [
+							"Incident response plan development",
+							"Security incident detection and triage",
+							"Incident containment and eradication",
+							"Forensic investigation and analysis",
+							"Crisis communication and coordination",
+							"Post-incident review and improvement"
+						],
+						"benefits": [
+							"Faster incident detection and response",
+							"Reduced security incident impact",
+							"Improved incident coordination",
+							"Better forensic investigation capabilities",
+							"Enhanced recovery procedures",
+							"Continuous incident response improvement"
+						],
+						"keyComponents": [
+							"Incident response procedures",
+							"Communication protocols",
+							"Forensic tools",
+							"Coordination platforms",
+							"Recovery frameworks"
+						],
+						"technologies": [
+							"Splunk Phantom",
+							"IBM Resilient",
+							"Demisto (Cortex XSOAR)",
+							"ServiceNow Security Incident Response",
+							"TheHive"
+						],
+						"maturityLevels": {
+							"plan": {
+								"available": true,
+								"description": "Incident response frameworks, NIST guidelines, and response playbook templates available"
+							},
+							"build": {
+								"available": true,
+								"description": "Incident response platforms, SOAR tools, and forensic investigation systems available"
+							},
+							"operate": {
+								"available": true,
+								"description": "Managed incident response services, 24/7 SOC services, and incident response-as-a-service solutions available"
+							},
+							"score": 3
+						}
+					}
+				]
+			}
+		]
+	}

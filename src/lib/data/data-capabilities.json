@@ -1,0 +1,828 @@
+{
+	"id": "data",
+	"name": "Data Architecture",
+	"description": "Data assets, storage, and management across the organization",
+	"icon": "Database",
+	"color": "bg-purple-heart-50 border-purple-heart-200 hover:bg-purple-heart-100",
+	"categories": [
+		{
+			"id": "analytics-warehousing",
+			"name": "Analytics & Warehousing",
+			"description": "Data warehousing and analytics capabilities",
+			"capabilities": [
+				{
+					"id": "data-warehousing",
+					"name": "Data Warehousing",
+					"definition": "The capability to store and analyze large volumes of structured data in a centralized repository",
+					"description": "Data Warehousing provides a centralized repository for storing historical and current data from multiple sources, optimized for analytical queries and reporting. It enables organizations to perform complex analytics, generate insights, and support decision-making with high-performance data access.",
+					"examples": [
+						"Enterprise data warehouse implementation",
+						"Data mart creation for specific departments",
+						"Historical data analysis and reporting",
+						"OLAP cube development",
+						"Data warehouse automation",
+						"Multi-dimensional data modeling"
+					],
+					"benefits": [
+						"Centralized data storage and access",
+						"Optimized query performance",
+						"Historical data analysis capabilities",
+						"Consistent data definitions",
+						"Enhanced business intelligence",
+						"Scalable analytical workloads"
+					],
+					"keyComponents": [
+						"ETL/ELT processes",
+						"Data modeling and schemas",
+						"Query optimization",
+						"Data governance",
+						"Performance monitoring"
+					],
+					"technologies": [
+						"Snowflake",
+						"Amazon Redshift",
+						"Azure Synapse Analytics",
+						"Google BigQuery",
+						"Teradata"
+					],
+					"maturityLevels": {
+						"plan": {
+							"available": true,
+							"description": "Data warehousing methodologies, dimensional modeling guides, and ETL design patterns available"
+						},
+						"build": {
+							"available": true,
+							"description": "Data warehouse platforms (Snowflake, Redshift), ETL tools, and data modeling software available"
+						},
+						"operate": {
+							"available": true,
+							"description": "Managed data warehouse services, cloud analytics platforms, and data pipeline solutions available"
+						},
+						"score": 3
+					}
+				},
+				{
+					"id": "real-time-analytics",
+					"name": "Real-time Analytics",
+					"definition": "The capability to process and analyze data as it arrives for immediate insights and actions",
+					"description": "Real-time Analytics enables organizations to process streaming data and generate insights with minimal latency. It supports real-time decision making, fraud detection, monitoring, and immediate response to business events as they occur.",
+					"examples": [
+						"Stream processing of IoT sensor data",
+						"Real-time fraud detection",
+						"Live dashboards and monitoring",
+						"Event-driven alerts and notifications",
+						"Real-time personalization",
+						"Operational intelligence and metrics"
+					],
+					"benefits": [
+						"Immediate insights and responses",
+						"Faster decision-making cycles",
+						"Improved operational efficiency",
+						"Enhanced customer experience",
+						"Proactive issue detection",
+						"Real-time competitive advantage"
+					],
+					"keyComponents": [
+						"Stream processing engines",
+						"Event ingestion systems",
+						"Real-time data stores",
+						"Analytics and visualization",
+						"Alert and notification systems"
+					],
+					"technologies": [
+						"Apache Kafka",
+						"Azure Stream Analytics",
+						"Amazon Kinesis",
+						"Apache Flink",
+						"Confluent Platform"
+					],
+					"maturityLevels": {
+						"plan": {
+							"available": true,
+							"description": "Real-time analytics patterns, streaming architecture guides, and event processing frameworks available"
+						},
+						"build": {
+							"available": true,
+							"description": "Stream processing platforms (Apache Kafka, Kinesis), real-time analytics tools, and event-driven architectures available"
+						},
+						"operate": {
+							"available": true,
+							"description": "Managed streaming services, real-time analytics platforms, and event-driven cloud solutions available"
+						},
+						"score": 3
+					}
+				},
+				{
+					"id": "data-pipelines-etl",
+					"name": "Data Pipelines & ETL",
+					"definition": "The capability to extract, transform, and load data from various sources into target systems through automated pipelines",
+					"description": "Data Pipelines & ETL provide systematic approaches for moving and transforming data between systems, enabling data integration, cleansing, and preparation for analytics. They support both batch and real-time processing while ensuring data quality and consistency.",
+					"examples": [
+						"Automated data extraction from multiple sources",
+						"Data transformation and cleansing operations",
+						"Incremental data loading strategies",
+						"Real-time data streaming pipelines",
+						"Data quality validation and monitoring",
+						"Error handling and data recovery processes"
+					],
+					"benefits": [
+						"Automated data integration",
+						"Improved data quality and consistency",
+						"Reduced manual data processing",
+						"Scalable data movement",
+						"Enhanced data reliability",
+						"Faster data availability for analytics"
+					],
+					"keyComponents": [
+						"Data extraction tools",
+						"Transformation engines",
+						"Loading mechanisms",
+						"Pipeline orchestration",
+						"Monitoring and alerting"
+					],
+					"technologies": ["Apache Airflow", "Talend", "Informatica", "dbt", "Apache NiFi"],
+					"maturityLevels": {
+						"plan": {
+							"available": true,
+							"description": "ETL architecture patterns and data pipeline design templates"
+						},
+						"build": {
+							"available": true,
+							"description": "Apache Airflow DAG templates, dbt transformation libraries"
+						},
+						"operate": {
+							"available": true,
+							"description": "Managed pipeline platforms (AWS Glue, Azure Data Factory)"
+						},
+						"score": 3
+					}
+				},
+				{
+					"id": "data-streaming",
+					"name": "Data Streaming",
+					"definition": "The capability to process continuous flows of data in real-time as it is generated",
+					"description": "Data Streaming enables organizations to capture, process, and analyze data as it flows through systems in real-time. It supports event-driven architectures, real-time analytics, and immediate response to business events while handling high-volume, high-velocity data streams.",
+					"examples": [
+						"Real-time event stream processing",
+						"Continuous data ingestion from IoT devices",
+						"Live data transformation and enrichment",
+						"Stream-based analytics and aggregations",
+						"Real-time fraud detection",
+						"Event-driven microservices communication"
+					],
+					"benefits": [
+						"Real-time data processing capabilities",
+						"Immediate insights and responses",
+						"Scalable high-volume data handling",
+						"Enhanced event-driven architectures",
+						"Reduced data latency",
+						"Better customer experience through real-time features"
+					],
+					"keyComponents": [
+						"Stream processing engines",
+						"Message brokers",
+						"Stream analytics",
+						"Event sourcing",
+						"Real-time monitoring"
+					],
+					"technologies": [
+						"Apache Kafka",
+						"Apache Pulsar",
+						"Amazon Kinesis",
+						"Apache Flink",
+						"Confluent Platform"
+					],
+					"maturityLevels": {
+						"plan": {
+							"available": true,
+							"description": "Event streaming architecture patterns and Kafka deployment guides"
+						},
+						"build": {
+							"available": true,
+							"description": "Stream processing libraries, Kafka client SDKs, and Flink templates"
+						},
+						"operate": {
+							"available": true,
+							"description": "Managed streaming platforms (Amazon Kinesis, Confluent Cloud)"
+						},
+						"score": 3
+					}
+				},
+				{
+					"id": "data-science-platforms",
+					"name": "Data Science Platforms",
+					"definition": "Capability to provide integrated environments for data science workflows, including data preparation, model development, training, and deployment with collaborative tools.",
+					"description": "Data Science Platforms provide comprehensive environments for data scientists and analysts to perform end-to-end data science workflows. This capability includes data exploration, feature engineering, model development, training, validation, and deployment, along with collaboration tools and version control for data science projects.",
+					"examples": [
+						"Jupyter notebook environments",
+						"Machine learning model development",
+						"Data visualization and exploration",
+						"Feature engineering pipelines",
+						"Model training and validation",
+						"Automated model deployment"
+					],
+					"benefits": [
+						"Integrated data science workflows",
+						"Collaborative development environment",
+						"Accelerated model development",
+						"Reproducible research and experiments",
+						"Streamlined model deployment",
+						"Enhanced data exploration capabilities"
+					],
+					"keyComponents": [
+						"Notebook environments",
+						"ML model development tools",
+						"Data visualization frameworks",
+						"Version control systems",
+						"Compute resource management"
+					],
+					"technologies": [
+						"Jupyter Hub",
+						"Databricks",
+						"AWS SageMaker",
+						"Google AI Platform",
+						"Azure Machine Learning"
+					],
+					"maturityLevels": {
+						"plan": {
+							"available": true,
+							"description": "Data science methodology templates and ML architecture patterns"
+						},
+						"build": {
+							"available": true,
+							"description": "Jupyter notebook templates, ML pipeline libraries, and model frameworks"
+						},
+						"operate": {
+							"available": true,
+							"description": "Managed ML platforms (AWS SageMaker, Azure ML, Databricks)"
+						},
+						"score": 3
+					}
+				}
+			]
+		},
+		{
+			"id": "data-management",
+			"name": "Data Management",
+			"description": "Core data management and governance capabilities",
+			"capabilities": [
+				{
+					"id": "master-data-management",
+					"name": "Master Data Management",
+					"definition": "The capability to create and maintain a unified, consistent view of critical business data across all systems",
+					"description": "Master Data Management (MDM) provides a single, authoritative source of truth for critical business entities such as customers, products, suppliers, and employees. It ensures data consistency, quality, and governance across all enterprise systems and applications.",
+					"examples": [
+						"Customer master data consolidation",
+						"Product information management",
+						"Supplier and vendor data management",
+						"Employee master data governance",
+						"Reference data management",
+						"Data quality monitoring and improvement"
+					],
+					"benefits": [
+						"Improved data consistency across systems",
+						"Single source of truth for business entities",
+						"Enhanced data quality and accuracy",
+						"Better regulatory compliance",
+						"Reduced data integration complexity",
+						"Improved business decision making"
+					],
+					"keyComponents": [
+						"Data integration and consolidation",
+						"Data quality management",
+						"Data governance workflows",
+						"Master data repositories",
+						"Data stewardship processes"
+					],
+					"technologies": [
+						"Informatica MDM",
+						"IBM InfoSphere MDM",
+						"Talend MDM",
+						"Stibo Systems",
+						"Oracle MDM"
+					],
+					"maturityLevels": {
+						"plan": {
+							"available": true,
+							"description": "Master data management frameworks, data governance models, and data quality strategies available"
+						},
+						"build": {
+							"available": true,
+							"description": "MDM platforms (Informatica, Talend), data quality tools, and integration software available"
+						},
+						"operate": {
+							"available": true,
+							"description": "Managed MDM services, cloud data quality platforms, and data stewardship solutions available"
+						},
+						"score": 3
+					}
+				},
+				{
+					"id": "data-governance",
+					"name": "Data Governance",
+					"definition": "The capability to establish and maintain frameworks for managing data availability, usability, integrity, and security",
+					"description": "Data Governance provides policies, processes, and standards for managing data as a strategic asset. It ensures data quality, compliance with regulations, and proper data stewardship across the organization while enabling secure and efficient data access for authorized users.",
+					"examples": [
+						"Data quality standards and monitoring",
+						"Data classification and cataloging",
+						"Data access controls and permissions",
+						"Data retention and archiving policies",
+						"Data privacy and compliance management",
+						"Data stewardship and ownership"
+					],
+					"benefits": [
+						"Improved data quality and consistency",
+						"Enhanced regulatory compliance",
+						"Better risk management and control",
+						"Increased data trustworthiness",
+						"Efficient data discovery and access",
+						"Reduced data-related operational costs"
+					],
+					"keyComponents": [
+						"Data governance policies",
+						"Data quality frameworks",
+						"Data cataloging and metadata",
+						"Access control mechanisms",
+						"Compliance monitoring"
+					],
+					"technologies": [
+						"Collibra",
+						"Alation",
+						"Apache Atlas",
+						"Informatica Axon",
+						"Microsoft Purview"
+					],
+					"maturityLevels": {
+						"plan": {
+							"available": true,
+							"description": "Data governance frameworks, data stewardship models, and compliance strategies available"
+						},
+						"build": {
+							"available": true,
+							"description": "Data governance platforms, cataloging tools, and data lineage software available"
+						},
+						"operate": {
+							"available": true,
+							"description": "Managed data governance services, automated compliance platforms, and data stewardship solutions available"
+						},
+						"score": 3
+					}
+				},
+				{
+					"id": "data-cataloging",
+					"name": "Data Cataloging",
+					"definition": "The capability to discover, document, and organize data assets to enable efficient data discovery and understanding",
+					"description": "Data Cataloging provides comprehensive metadata management and data discovery capabilities, enabling organizations to understand what data they have, where it resides, and how it can be used. It supports data lineage tracking, impact analysis, and self-service data discovery.",
+					"examples": [
+						"Automated data asset discovery",
+						"Metadata management and documentation",
+						"Data lineage and impact analysis",
+						"Search and discovery interfaces",
+						"Data relationship mapping",
+						"Business glossary and data dictionary"
+					],
+					"benefits": [
+						"Improved data discoverability",
+						"Enhanced data understanding",
+						"Faster time to insights",
+						"Better data governance",
+						"Reduced data redundancy",
+						"Increased data reusability"
+					],
+					"keyComponents": [
+						"Metadata repository",
+						"Data discovery engines",
+						"Lineage tracking systems",
+						"Search interfaces",
+						"Collaboration tools"
+					],
+					"technologies": [
+						"Apache Atlas",
+						"Alation",
+						"Collibra",
+						"DataHub",
+						"AWS Glue Data Catalog"
+					],
+					"maturityLevels": {
+						"plan": {
+							"available": true,
+							"description": "Data catalog architecture patterns and metadata management frameworks"
+						},
+						"build": {
+							"available": true,
+							"description": "Apache Atlas templates, DataHub deployment guides, and catalog SDKs"
+						},
+						"operate": {
+							"available": true,
+							"description": "Managed data catalog services (AWS Glue Catalog, Alation Cloud)"
+						},
+						"score": 3
+					}
+				},
+				{
+					"id": "data-quality-management",
+					"name": "Data Quality Management",
+					"definition": "The capability to monitor, measure, and improve the accuracy, completeness, and reliability of data across the organization",
+					"description": "Data Quality Management provides systematic approaches to assess and enhance data quality through profiling, cleansing, validation, and monitoring. It ensures data meets business requirements and maintains high standards for accuracy, consistency, and usability.",
+					"examples": [
+						"Data profiling and quality assessment",
+						"Automated data validation rules",
+						"Data cleansing and standardization",
+						"Duplicate detection and resolution",
+						"Data quality scorecards and metrics",
+						"Continuous data quality monitoring"
+					],
+					"benefits": [
+						"Improved data accuracy and reliability",
+						"Enhanced decision-making confidence",
+						"Reduced operational errors",
+						"Better compliance with regulations",
+						"Increased data trustworthiness",
+						"Lower data management costs"
+					],
+					"keyComponents": [
+						"Data profiling tools",
+						"Quality rule engines",
+						"Data cleansing processes",
+						"Quality monitoring systems",
+						"Issue resolution workflows"
+					],
+					"technologies": [
+						"Informatica Data Quality",
+						"Talend Data Quality",
+						"IBM InfoSphere QualityStage",
+						"SAS Data Management",
+						"Great Expectations"
+					],
+					"maturityLevels": {
+						"plan": {
+							"available": true,
+							"description": "Data quality frameworks and validation rule templates"
+						},
+						"build": {
+							"available": true,
+							"description": "Great Expectations libraries, data profiling tools, and quality SDKs"
+						},
+						"operate": {
+							"available": true,
+							"description": "Managed data quality platforms (Informatica Cloud, Talend Cloud)"
+						},
+						"score": 3
+					}
+				},
+				{
+					"id": "metadata-management",
+					"name": "Metadata Management",
+					"definition": "Capability to collect, store, organize, and govern metadata across data assets, enabling better data discovery, understanding, and governance.",
+					"description": "Metadata Management provides systematic approaches to capture and manage metadata about data assets, including technical, business, and operational metadata. This capability enables data discovery, lineage tracking, impact analysis, and enhanced data governance through comprehensive metadata catalogs.",
+					"examples": [
+						"Data catalog and discovery platforms",
+						"Data lineage tracking and visualization",
+						"Business glossary management",
+						"Schema and data dictionary maintenance",
+						"Data asset documentation",
+						"Automated metadata extraction"
+					],
+					"benefits": [
+						"Enhanced data discovery and understanding",
+						"Improved data governance and compliance",
+						"Better impact analysis capabilities",
+						"Increased data transparency",
+						"Accelerated data onboarding",
+						"Reduced data redundancy"
+					],
+					"keyComponents": [
+						"Metadata repository",
+						"Data catalog systems",
+						"Lineage tracking tools",
+						"Business glossary",
+						"Automated metadata extraction"
+					],
+					"technologies": [
+						"Apache Atlas",
+						"Collibra",
+						"Alation",
+						"AWS Glue Data Catalog",
+						"Microsoft Purview"
+					],
+					"maturityLevels": {
+						"plan": {
+							"available": true,
+							"description": "Metadata governance frameworks and lineage mapping patterns"
+						},
+						"build": {
+							"available": true,
+							"description": "Apache Atlas APIs, metadata extraction tools, and governance SDKs"
+						},
+						"operate": {
+							"available": true,
+							"description": "Managed metadata platforms (Microsoft Purview, Collibra Cloud)"
+						},
+						"score": 3
+					}
+				},
+				{
+					"id": "data-mesh",
+					"name": "Data Mesh",
+					"definition": "Capability to implement decentralized data architecture where domain teams own and manage their data as products, with federated governance and self-serve infrastructure.",
+					"description": "Data Mesh represents a paradigm shift from centralized data management to a decentralized approach where domain teams treat data as products. This capability enables scalable data architecture through domain ownership, federated governance, and self-serve data infrastructure platforms.",
+					"examples": [
+						"Domain-oriented data product development",
+						"Federated computational governance",
+						"Self-serve data infrastructure platforms",
+						"Data product discovery and catalog",
+						"Cross-domain data sharing protocols",
+						"Automated data product lifecycle management"
+					],
+					"benefits": [
+						"Scalable decentralized data architecture",
+						"Improved data ownership and accountability",
+						"Faster data product development",
+						"Enhanced cross-domain collaboration",
+						"Reduced central bottlenecks",
+						"Better data product innovation"
+					],
+					"keyComponents": [
+						"Domain data products",
+						"Federated governance framework",
+						"Self-serve data platform",
+						"Data product registry",
+						"Cross-domain interoperability"
+					],
+					"technologies": ["Kubernetes", "Apache Kafka", "dbt", "Apache Airflow", "Starburst"],
+					"maturityLevels": {
+						"plan": {
+							"available": true,
+							"description": "Data mesh principles and domain-driven architecture patterns"
+						},
+						"build": {
+							"available": true,
+							"description": "Data product templates, federated governance frameworks, and platform SDKs"
+						},
+						"operate": {
+							"available": true,
+							"description": "Managed data platform services (Databricks, Snowflake) support data mesh patterns"
+						},
+						"score": 3
+					}
+				}
+			]
+		},
+		{
+			"id": "storage-recovery",
+			"name": "Storage & Recovery",
+			"description": "Data storage and recovery capabilities",
+			"capabilities": [
+				{
+					"id": "data-lake",
+					"name": "Data Lake",
+					"definition": "The capability to store vast amounts of raw data in native format for future processing and analysis",
+					"description": "Data Lake provides a centralized repository for storing structured, semi-structured, and unstructured data at scale. It enables organizations to store data first and define schemas later, supporting various analytics, machine learning, and data processing workloads cost-effectively.",
+					"examples": [
+						"Raw data ingestion from multiple sources",
+						"Structured and unstructured data storage",
+						"Data lake as a staging area for data warehouses",
+						"Big data analytics and processing",
+						"Machine learning model training data",
+						"Archive and compliance data storage"
+					],
+					"benefits": [
+						"Cost-effective storage of large data volumes",
+						"Flexible schema-on-read approach",
+						"Support for diverse data types",
+						"Scalable storage infrastructure",
+						"Enhanced big data analytics capabilities",
+						"Foundation for machine learning initiatives"
+					],
+					"keyComponents": [
+						"Scalable storage infrastructure",
+						"Data ingestion pipelines",
+						"Data cataloging and discovery",
+						"Access control and security",
+						"Data processing frameworks"
+					],
+					"technologies": [
+						"Azure Data Lake Storage",
+						"Amazon S3",
+						"Hadoop HDFS",
+						"Google Cloud Storage",
+						"MinIO"
+					],
+					"maturityLevels": {
+						"plan": {
+							"available": true,
+							"description": "Data lake architecture patterns, big data strategies, and data ingestion frameworks available"
+						},
+						"build": {
+							"available": true,
+							"description": "Data lake platforms (Hadoop, Spark), object storage systems, and data processing frameworks available"
+						},
+						"operate": {
+							"available": true,
+							"description": "Managed data lake services, cloud storage platforms, and big data analytics solutions available"
+						},
+						"score": 3
+					}
+				},
+				{
+					"id": "backup-recovery",
+					"name": "Backup & Recovery",
+					"definition": "The capability to protect and restore critical business data in case of system failures, disasters, or data corruption",
+					"description": "Backup & Recovery provides comprehensive data protection strategies including automated backups, disaster recovery planning, and rapid restoration capabilities. It ensures business continuity by protecting against data loss and enabling quick recovery from various failure scenarios.",
+					"examples": [
+						"Automated database backups",
+						"Disaster recovery site implementation",
+						"Point-in-time recovery capabilities",
+						"Cross-region data replication",
+						"Backup testing and validation",
+						"Recovery time objective (RTO) optimization"
+					],
+					"benefits": [
+						"Protection against data loss",
+						"Ensured business continuity",
+						"Rapid disaster recovery",
+						"Compliance with retention policies",
+						"Reduced downtime and costs",
+						"Enhanced data resilience"
+					],
+					"keyComponents": [
+						"Backup scheduling and automation",
+						"Data replication systems",
+						"Recovery procedures",
+						"Backup validation and testing",
+						"Disaster recovery planning"
+					],
+					"technologies": [
+						"Veeam Backup & Replication",
+						"Commvault",
+						"Azure Backup",
+						"AWS Backup",
+						"Veritas NetBackup"
+					],
+					"maturityLevels": {
+						"plan": {
+							"available": true,
+							"description": "Backup and recovery strategies, disaster recovery planning, and business continuity frameworks available"
+						},
+						"build": {
+							"available": true,
+							"description": "Backup software, disaster recovery tools, and data replication systems available"
+						},
+						"operate": {
+							"available": true,
+							"description": "Managed backup services, cloud disaster recovery platforms, and business continuity solutions available"
+						},
+						"score": 3
+					}
+				},
+				{
+					"id": "time-series-databases",
+					"name": "Time Series Databases",
+					"definition": "Capability to efficiently store, query, and analyze time-stamped data with optimized performance for temporal queries, real-time analytics, and high-frequency data ingestion.",
+					"description": "Time Series Databases provide specialized storage and query capabilities for time-stamped data, enabling efficient handling of metrics, sensor data, logs, and events. This capability supports high-throughput ingestion, automatic data compression, time-based partitioning, and advanced analytical functions for temporal data patterns.",
+					"examples": [
+						"IoT sensor data collection",
+						"Application performance metrics",
+						"Financial market data storage",
+						"System monitoring and alerting",
+						"Real-time analytics dashboards",
+						"Predictive maintenance systems"
+					],
+					"benefits": [
+						"Optimized temporal query performance",
+						"Automatic data compression and retention",
+						"High-throughput data ingestion",
+						"Built-in time-based analytics",
+						"Efficient storage of timestamped data",
+						"Real-time monitoring capabilities"
+					],
+					"keyComponents": [
+						"Time-based data partitioning",
+						"Compression algorithms",
+						"Query optimization engines",
+						"Data retention policies",
+						"Real-time ingestion pipelines"
+					],
+					"technologies": [
+						"InfluxDB",
+						"TimescaleDB",
+						"Amazon Timestream",
+						"Apache Druid",
+						"Prometheus"
+					],
+					"maturityLevels": {
+						"plan": {
+							"available": true,
+							"description": "Reference architectures and patterns for time-series data modeling"
+						},
+						"build": {
+							"available": true,
+							"description": "Time-series libraries, InfluxDB/TimescaleDB deployment templates"
+						},
+						"operate": {
+							"available": true,
+							"description": "Managed time-series platforms (AWS Timestream, InfluxDB Cloud)"
+						},
+						"score": 3
+					}
+				},
+				{
+					"id": "graph-databases",
+					"name": "Graph Databases",
+					"definition": "Capability to store, query, and analyze highly connected data using graph structures with nodes, edges, and properties, optimized for traversal and relationship queries.",
+					"description": "Graph Databases provide specialized storage and query capabilities for data with complex relationships and connections. This capability enables efficient traversal of relationships, pattern matching, and analysis of network structures, making it ideal for social networks, recommendation engines, fraud detection, and knowledge graphs.",
+					"examples": [
+						"Social network analysis",
+						"Recommendation systems",
+						"Fraud detection networks",
+						"Knowledge graph construction",
+						"Supply chain optimization",
+						"Identity and access management"
+					],
+					"benefits": [
+						"Efficient relationship traversal",
+						"Intuitive data modeling for connected data",
+						"High-performance graph queries",
+						"Scalable relationship analysis",
+						"Pattern detection and matching",
+						"Real-time graph analytics"
+					],
+					"keyComponents": [
+						"Graph data models",
+						"Traversal algorithms",
+						"Query optimization engines",
+						"Index structures",
+						"Graph analytics functions"
+					],
+					"technologies": [
+						"Neo4j",
+						"Amazon Neptune",
+						"ArangoDB",
+						"Azure Cosmos DB (Gremlin)",
+						"TigerGraph"
+					],
+					"maturityLevels": {
+						"plan": {
+							"available": true,
+							"description": "Graph data modeling patterns and Neo4j/Neptune architecture guides"
+						},
+						"build": {
+							"available": true,
+							"description": "Graph database client libraries and traversal query templates"
+						},
+						"operate": {
+							"available": true,
+							"description": "Managed graph database services (Amazon Neptune, Neo4j AuraDB)"
+						},
+						"score": 3
+					}
+				},
+				{
+					"id": "vector-databases",
+					"name": "Vector Databases",
+					"definition": "Capability to store, index, and query high-dimensional vector embeddings for similarity search, enabling efficient semantic search and AI/ML applications.",
+					"description": "Vector Databases provide specialized storage and query capabilities for high-dimensional vector data, typically generated from machine learning models. This capability supports efficient similarity search, semantic search, and vector-based analytics, making it essential for AI applications like recommendation systems, image search, and natural language processing.",
+					"examples": [
+						"Semantic search applications",
+						"Image and video similarity search",
+						"Recommendation engines",
+						"Natural language processing",
+						"Computer vision applications",
+						"Retrieval-augmented generation (RAG)"
+					],
+					"benefits": [
+						"High-performance similarity search",
+						"Scalable vector storage and indexing",
+						"Efficient nearest neighbor queries",
+						"Support for multiple distance metrics",
+						"Real-time vector analytics",
+						"Integration with ML pipelines"
+					],
+					"keyComponents": [
+						"Vector indexing algorithms",
+						"Similarity search engines",
+						"Distance metric calculations",
+						"Vector compression techniques",
+						"Query optimization systems"
+					],
+					"technologies": ["Pinecone", "Weaviate", "Milvus", "Chroma", "Qdrant"],
+					"maturityLevels": {
+						"plan": {
+							"available": true,
+							"description": "Vector embedding patterns and similarity search architecture guidance"
+						},
+						"build": {
+							"available": true,
+							"description": "Vector database client SDKs and embedding generation libraries"
+						},
+						"operate": {
+							"available": true,
+							"description": "Managed vector database platforms (Pinecone, Weaviate Cloud)"
+						},
+						"score": 3
+					}
+				}
+			]
+		}
+	]
+}
