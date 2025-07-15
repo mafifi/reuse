@@ -51,19 +51,21 @@
 									"Oracle CX Cloud",
 									"SAP Customer Experience"
 								],
-								"maturityLevels": [
-									{
-										"level": "Basic",
-										"description": "Manual customer tracking, limited integration"
+								"maturityLevels": {
+									"plan": { 
+										"available": true, 
+										"description": "Client relationship frameworks, institutional CRM selection guides, and customer engagement patterns available" 
 									},
-									{ "level": "Developing", "description": "CRM system in place, some automation" },
-									{ "level": "Defined", "description": "Integrated customer processes, analytics" },
-									{ "level": "Managed", "description": "Advanced analytics, personalization" },
-									{
-										"level": "Optimized",
-										"description": "AI-driven insights, predictive analytics"
-									}
-								]
+									"build": { 
+										"available": true, 
+										"description": "Institutional CRM platforms, client onboarding systems, and relationship management tools available" 
+									},
+									"operate": { 
+										"available": true, 
+										"description": "Managed client relationship services, CRM-as-a-service platforms, and client analytics solutions available" 
+									},
+									"score": 3
+								}
 							},
 							{
 								"id": "sales-distribution",
@@ -2711,6 +2713,224 @@
 							"operate": {
 								"available": true,
 								"description": "Managed vulnerability services, cloud security scanning platforms, and automated patch management solutions available"
+							},
+							"score": 3
+						}
+					}
+				]
+			},
+			{
+				"id": "application-security",
+				"name": "Application Security",
+				"description": "Security controls for applications and development processes",
+				"capabilities": [
+					{
+						"id": "secure-development",
+						"name": "Secure Development",
+						"definition": "The capability to integrate security controls and practices throughout the software development lifecycle",
+						"description": "Secure Development embeds security considerations into every phase of software development, from design through deployment. It includes secure coding practices, security testing, dependency management, and continuous security validation to prevent vulnerabilities from entering production systems.",
+						"examples": [
+							"Secure coding standards and guidelines",
+							"Static application security testing (SAST)",
+							"Dynamic application security testing (DAST)",
+							"Dependency vulnerability scanning",
+							"Security code reviews",
+							"Threat modeling and risk assessment"
+						],
+						"benefits": [
+							"Reduced security vulnerabilities in applications",
+							"Lower cost of vulnerability remediation",
+							"Improved secure coding practices",
+							"Enhanced application security posture",
+							"Better compliance with security standards",
+							"Faster secure software delivery"
+						],
+						"keyComponents": [
+							"Secure coding frameworks",
+							"Security testing tools",
+							"Code review processes",
+							"Threat modeling methodologies",
+							"Dependency management systems"
+						],
+						"technologies": [
+							"SonarQube",
+							"Checkmarx",
+							"Veracode",
+							"OWASP ZAP",
+							"Snyk"
+						],
+						"maturityLevels": {
+							"plan": {
+								"available": true,
+								"description": "Secure development frameworks, OWASP guidelines, and security-by-design principles available"
+							},
+							"build": {
+								"available": true,
+								"description": "Security testing tools, secure coding platforms, and vulnerability scanners available"
+							},
+							"operate": {
+								"available": true,
+								"description": "Managed application security services, cloud security testing platforms, and DevSecOps solutions available"
+							},
+							"score": 3
+						}
+					},
+					{
+						"id": "cloud-security",
+						"name": "Cloud Security",
+						"definition": "The capability to secure cloud infrastructure, services, and data across multi-cloud and hybrid environments",
+						"description": "Cloud Security provides comprehensive protection for cloud-based assets through identity management, configuration security, workload protection, and compliance monitoring. It ensures secure cloud adoption while maintaining visibility and control across distributed cloud environments.",
+						"examples": [
+							"Cloud security posture management (CSPM)",
+							"Cloud workload protection platforms (CWPP)",
+							"Container and Kubernetes security",
+							"Serverless security monitoring",
+							"Cloud access security brokers (CASB)",
+							"Multi-cloud security orchestration"
+						],
+						"benefits": [
+							"Enhanced cloud infrastructure security",
+							"Improved cloud compliance monitoring",
+							"Reduced cloud misconfigurations",
+							"Better visibility across cloud environments",
+							"Secure cloud workload protection",
+							"Streamlined multi-cloud security management"
+						],
+						"keyComponents": [
+							"Cloud security monitoring",
+							"Configuration management",
+							"Workload protection",
+							"Identity and access controls",
+							"Compliance frameworks"
+						],
+						"technologies": [
+							"AWS Security Hub",
+							"Azure Security Center",
+							"Google Cloud Security Command Center",
+							"Prisma Cloud",
+							"Aqua Security"
+						],
+						"maturityLevels": {
+							"plan": {
+								"available": true,
+								"description": "Cloud security frameworks, AWS/Azure security guides, and cloud architecture patterns available"
+							},
+							"build": {
+								"available": true,
+								"description": "Cloud security tools, CSPM platforms, and container security solutions available"
+							},
+							"operate": {
+								"available": true,
+								"description": "Managed cloud security services, cloud security platforms, and multi-cloud security solutions available"
+							},
+							"score": 3
+						}
+					}
+				]
+			},
+			{
+				"id": "security-governance",
+				"name": "Security Governance",
+				"description": "Security governance, training, and incident response capabilities",
+				"capabilities": [
+					{
+						"id": "security-training",
+						"name": "Security Training & Awareness",
+						"definition": "The capability to educate and train employees on security best practices, threats, and organizational security policies",
+						"description": "Security Training & Awareness builds a security-conscious culture through comprehensive education programs, simulated attacks, and continuous awareness campaigns. It empowers employees to recognize and respond to security threats while following established security protocols.",
+						"examples": [
+							"Security awareness training programs",
+							"Phishing simulation campaigns",
+							"Security policy training",
+							"Incident response training",
+							"Role-based security education",
+							"Security culture assessment"
+						],
+						"benefits": [
+							"Improved employee security awareness",
+							"Reduced human error security incidents",
+							"Enhanced security culture",
+							"Better incident response capabilities",
+							"Increased security policy compliance",
+							"Stronger human firewall"
+						],
+						"keyComponents": [
+							"Training content management",
+							"Simulation platforms",
+							"Assessment tools",
+							"Awareness campaigns",
+							"Progress tracking systems"
+						],
+						"technologies": [
+							"KnowBe4",
+							"Proofpoint Security Awareness",
+							"Mimecast Awareness Training",
+							"SANS Securing the Human",
+							"Terranova Security"
+						],
+						"maturityLevels": {
+							"plan": {
+								"available": true,
+								"description": "Security training frameworks, awareness program templates, and security culture guides available"
+							},
+							"build": {
+								"available": true,
+								"description": "Security training platforms, phishing simulation tools, and awareness campaign systems available"
+							},
+							"operate": {
+								"available": true,
+								"description": "Managed security training services, cloud-based awareness platforms, and training-as-a-service solutions available"
+							},
+							"score": 3
+						}
+					},
+					{
+						"id": "incident-response",
+						"name": "Incident Response",
+						"definition": "The capability to detect, respond to, and recover from security incidents in a coordinated and effective manner",
+						"description": "Incident Response provides structured processes and tools for handling security incidents from detection through recovery. It ensures rapid containment, thorough investigation, and coordinated response to minimize impact while maintaining evidence and enabling lessons learned.",
+						"examples": [
+							"Incident response plan development",
+							"Security incident detection and triage",
+							"Incident containment and eradication",
+							"Forensic investigation and analysis",
+							"Crisis communication and coordination",
+							"Post-incident review and improvement"
+						],
+						"benefits": [
+							"Faster incident detection and response",
+							"Reduced security incident impact",
+							"Improved incident coordination",
+							"Better forensic investigation capabilities",
+							"Enhanced recovery procedures",
+							"Continuous incident response improvement"
+						],
+						"keyComponents": [
+							"Incident response procedures",
+							"Communication protocols",
+							"Forensic tools",
+							"Coordination platforms",
+							"Recovery frameworks"
+						],
+						"technologies": [
+							"Splunk Phantom",
+							"IBM Resilient",
+							"Demisto (Cortex XSOAR)",
+							"ServiceNow Security Incident Response",
+							"TheHive"
+						],
+						"maturityLevels": {
+							"plan": {
+								"available": true,
+								"description": "Incident response frameworks, NIST guidelines, and response playbook templates available"
+							},
+							"build": {
+								"available": true,
+								"description": "Incident response platforms, SOAR tools, and forensic investigation systems available"
+							},
+							"operate": {
+								"available": true,
+								"description": "Managed incident response services, 24/7 SOC services, and incident response-as-a-service solutions available"
 							},
 							"score": 3
 						}
