@@ -168,22 +168,94 @@
 								</Card.Header>
 								<Card.Content>
 									<div class="space-y-4">
-										{#each capability.maturityLevels || [] as level, index}
-											<div
-												id={index.toString()}
-												class="flex items-start gap-4 rounded-lg border p-4"
-											>
+										{#if capability.maturityLevels.plan}
+											<div class="flex items-start gap-4 rounded-lg border p-4">
 												<div
 													class="bg-midnight-blue-100 text-midnight-blue-700 flex h-8 w-8 items-center justify-center rounded-full text-sm font-semibold"
 												>
-													{index + 1}
+													P
 												</div>
-												<div>
-													<h4 class="text-primary mb-1 font-semibold">{level.level}</h4>
-													<p class="text-muted-foreground text-sm">{level.description}</p>
+												<div class="flex-1">
+													<div class="mb-1 flex items-center gap-2">
+														<h4 class="text-primary font-semibold">Plan</h4>
+														{#if capability.maturityLevels.plan.available}
+															<Badge variant="secondary" class="bg-green-100 text-xs text-green-800"
+																>Available</Badge
+															>
+														{:else}
+															<Badge variant="secondary" class="bg-red-100 text-xs text-red-800"
+																>Not Available</Badge
+															>
+														{/if}
+													</div>
+													<p class="text-muted-foreground text-sm">
+														{capability.maturityLevels.plan.description}
+													</p>
 												</div>
 											</div>
-										{/each}
+										{/if}
+										{#if capability.maturityLevels.build}
+											<div class="flex items-start gap-4 rounded-lg border p-4">
+												<div
+													class="bg-midnight-blue-100 text-midnight-blue-700 flex h-8 w-8 items-center justify-center rounded-full text-sm font-semibold"
+												>
+													B
+												</div>
+												<div class="flex-1">
+													<div class="mb-1 flex items-center gap-2">
+														<h4 class="text-primary font-semibold">Build</h4>
+														{#if capability.maturityLevels.build.available}
+															<Badge variant="secondary" class="bg-green-100 text-xs text-green-800"
+																>Available</Badge
+															>
+														{:else}
+															<Badge variant="secondary" class="bg-red-100 text-xs text-red-800"
+																>Not Available</Badge
+															>
+														{/if}
+													</div>
+													<p class="text-muted-foreground text-sm">
+														{capability.maturityLevels.build.description}
+													</p>
+												</div>
+											</div>
+										{/if}
+										{#if capability.maturityLevels.operate}
+											<div class="flex items-start gap-4 rounded-lg border p-4">
+												<div
+													class="bg-midnight-blue-100 text-midnight-blue-700 flex h-8 w-8 items-center justify-center rounded-full text-sm font-semibold"
+												>
+													O
+												</div>
+												<div class="flex-1">
+													<div class="mb-1 flex items-center gap-2">
+														<h4 class="text-primary font-semibold">Operate</h4>
+														{#if capability.maturityLevels.operate.available}
+															<Badge variant="secondary" class="bg-green-100 text-xs text-green-800"
+																>Available</Badge
+															>
+														{:else}
+															<Badge variant="secondary" class="bg-red-100 text-xs text-red-800"
+																>Not Available</Badge
+															>
+														{/if}
+													</div>
+													<p class="text-muted-foreground text-sm">
+														{capability.maturityLevels.operate.description}
+													</p>
+												</div>
+											</div>
+										{/if}
+										{#if capability.maturityLevels.score}
+											<div class="mt-4 rounded-lg bg-slate-50 p-4">
+												<div class="flex items-center justify-between">
+													<span class="text-sm font-medium">Overall Possible Score</span>
+													<Badge variant="outline" class="px-3 py-1 text-lg"
+														>{capability.maturityLevels.score}</Badge
+													>
+												</div>
+											</div>
+										{/if}
 									</div>
 								</Card.Content>
 							</Card.Root>
