@@ -930,13 +930,43 @@
 								"id": "aggregator-pattern",
 								"name": "Aggregator Pattern",
 								"definition": "The capability to combine messages or events from multiple sources into a single, unified message.",
-								"description": "Used when multiple sources contribute partial data that needs to be correlated and emitted as a complete message.",
+								"description": "The Aggregator Pattern is used when multiple sources contribute partial data that must be correlated and combined into a single, complete message. Implementing this pattern requires stateful processing to track and store incoming messages until all required parts are received. Correlation logic is essential to determine which messages belong together, often using unique identifiers or keys. A completeness condition defines when enough data has arrived to trigger aggregation—this could be based on a count, a timeout, or the presence of specific elements. Finally, an aggregation algorithm combines the collected messages into a unified result, which is then emitted downstream. This pattern is critical for scenarios such as order fulfillment, batch processing, or any workflow where data from multiple events must be merged before further processing.",
 								"examples": [
+									"Aggregation of messages derived from the Splitter pattern."
+								],
+								"benefits": [
+									"Data completeness by merging partial information from multiple sources",
+									"Flexible timing through configurable completeness conditions (count, timeout, etc.)",
+									"Improved coordination of distributed or asynchronous processes",
+									"Increased reliability by ensuring only complete messages are processed downstream",
+									"Enhanced error handling and recovery for missing or delayed data",
+									"Better auditability and traceability of how final messages are constructed"
+								],
+								"keyComponents": [
+									"Correlation Strategy",
+									"Completeness Condition",
+									"Aggregation Algorithm"
+								],
+								"technologies": [
 									"Apache Camel Aggregator",
 									"AWS Step Functions Join",
 									"Spring Integration Aggregator"
 								],
-								"benefits": ["Data completeness", "Flexible timing", "Improved coordination"]
+								"maturityLevels": {
+									"plan": {
+										"available": true,
+										"description": "Aggregation patterns, correlation strategies, and completeness conditions available"
+									},
+									"build": {
+										"available": true,
+										"description": "Aggregation libraries, correlation algorithms, and integration frameworks available"
+									},
+									"operate": {
+										"available": true,
+										"description": "Managed aggregation services, cloud-native integration platforms available"
+									},
+									"score": 3
+								}
 							},
 							{
 								"id": "splitter-pattern",
