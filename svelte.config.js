@@ -1,5 +1,5 @@
 import { mdsvex } from 'mdsvex';
-import mdsvexConfig from './mdsvex.config.js';
+import rehypeMermaid from 'rehype-mermaid';
 import adapter from '@sveltejs/adapter-cloudflare';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
@@ -7,7 +7,12 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 const config = {
 	// Consult https://svelte.dev/docs/kit/integrations
 	// for more information about preprocessors
-	preprocess: [vitePreprocess(), mdsvex(mdsvexConfig)],
+	preprocess: [
+		vitePreprocess(),
+		mdsvex({
+			rehypePlugins: [rehypeMermaid]
+		})
+	],
 	kit: { adapter: adapter() },
 	extensions: ['.svelte', '.svx']
 };

@@ -15,7 +15,7 @@
 		<div class="relative flex h-16 justify-between">
 			<div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
 				<div class="flex shrink-0 items-center">
-					<img class="h-8 w-auto" src="./favicon.svg" alt="Architecture Overview" />
+					<img class="h-8 w-auto" src="/favicon.svg" alt="Architecture Overview" />
 				</div>
 				<div class="hidden sm:ml-6 sm:flex sm:space-x-8">
 					<a

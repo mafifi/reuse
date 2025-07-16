@@ -35,8 +35,10 @@
 			</Card.Description>
 		</Card.Header>
 		<Card.Content>
-			<div class="prose prose-slate max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-code:text-foreground prose-pre:bg-transparent prose-pre:p-0">
-				<svelte:component this={MarkdownComponent} />
+			<div
+				class="prose prose-slate prose-headings:text-foreground prose-p:text-muted-foreground prose-code:text-foreground prose-pre:bg-transparent prose-pre:p-0 max-w-none"
+			>
+				<MarkdownComponent />
 			</div>
 		</Card.Content>
 	</Card.Root>
