@@ -954,13 +954,40 @@
 								"id": "resequencer-pattern",
 								"name": "Resequencer Pattern",
 								"definition": "The capability to reorder messages into a defined sequence before forwarding to the next component.",
-								"description": "Critical for maintaining order when messages arrive out of sequence due to retries, async processing, or distributed systems.",
+								"description": "The capability to reorder messages into a defined sequence before forwarding to the next component. The resequencer pattern is essential in distributed or asynchronous systems where messages may arrive out of order due to network delays, retries, or parallel processing. By buffering and reordering messages based on sequence numbers or timestamps, the resequencer ensures that downstream systems receive data in the correct order, preserving data integrity and enabling predictable processing. This pattern is commonly used in financial transactions, event processing, and any scenario where the order of operations is critical.",
 								"examples": [
+									"Batch Resequencer",
+									"Stream Resequencer"
+								],
+								"benefits": ["Data integrity", "Order preservation", "Predictable outcomes"],
+								"keyComponents": [
+									"Message queues",
+									"State management",
+									"Ordering algorithms"
+								],
+								"technologies": [
 									"Apache Camel Resequencer",
 									"Custom Kafka Consumers",
 									"JMS Ordering Filters"
 								],
-								"benefits": ["Data integrity", "Order preservation", "Predictable outcomes"]
+								"maturityLevels": {
+									"plan": {
+										"available": true,
+										"description": "Messaging patterns, integration design principles, and event-driven architecture guides available"
+									},
+									"build": {
+										"available": true,
+										"description": "Messaging frameworks (Apache Camel, Spring Integration), event brokers, and integration libraries available"
+									},
+									"operate": {
+										"available": true,
+										"description": "Managed messaging services, cloud integration platforms, and event streaming solutions available"
+								
+								
+								
+									},
+									"score": 3
+								}
 							}
 						]
 					},
