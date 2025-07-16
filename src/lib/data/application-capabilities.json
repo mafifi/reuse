@@ -768,26 +768,100 @@
 								"name": "Workflow Orchestration",
 								"definition": "The ability to model, execute, and monitor multi-step business processes in an automated and maintainable way.",
 								"description": "Workflow orchestration tools allow developers and operations teams to encode business logic as a sequence of tasks or state machines. These tools support retry logic, timeouts, parallelism, and integration across APIs or microservices.",
-								"examples": ["Camunda", "Temporal", "Apache Airflow", "AWS Step Functions"],
+								"examples": [
+									"Multi-step data processing workflows",
+									"Order fulfillment automation",
+									"Customer onboarding processes",
+									"Financial transaction processing",
+									"Document approval workflows"
+								],
 								"benefits": [
-									"Improved maintainability",
-									"Separation of business logic",
+									"Improved process maintainability",
+									"Clear separation of business logic",
 									"Observable state transitions",
-									"Simplified long-running processes"
-								]
+									"Simplified long-running processes",
+									"Enhanced error handling and recovery"
+								],
+								"keyComponents": [
+									"Workflow engine",
+									"Process definition language",
+									"Task orchestration layer",
+									"State management",
+									"Monitoring and observability"
+								],
+								"technologies": [
+									"Camunda",
+									"Temporal",
+									"Apache Airflow",
+									"AWS Step Functions",
+									"Zeebe",
+									"Conductor"
+								],
+								"maturityLevels": {
+									"plan": {
+										"available": true,
+										"description": "Workflow design patterns, orchestration frameworks, and process modeling templates available"
+									},
+									"build": {
+										"available": true,
+										"description": "Workflow engines, orchestration platforms, and process automation tools available"
+									},
+									"operate": {
+										"available": true,
+										"description": "Managed workflow services, cloud orchestration platforms, and process-as-a-service solutions available"
+									},
+									"score": 3
+								}
 							},
 							{
 								"id": "business-rules-engine",
 								"name": "Business Rules Engine",
 								"definition": "The ability to manage and execute rule-based logic separately from application code.",
 								"description": "Business rules engines allow non-developers or analysts to define policies, thresholds, or conditional behaviors through declarative logic. These rules are maintained outside the application codebase and can be updated independently.",
-								"examples": ["Drools", "Red Hat Decision Manager", "FICO Blaze Advisor"],
+								"examples": [
+									"Pricing calculation rules",
+									"Fraud detection policies",
+									"Loan approval criteria",
+									"Compliance validation rules",
+									"Customer eligibility assessments"
+								],
 								"benefits": [
 									"Faster time-to-change",
-									"Separation of concerns",
-									"Better auditability",
-									"Business-user ownership of logic"
-								]
+									"Clear separation of concerns",
+									"Enhanced auditability",
+									"Business-user ownership of logic",
+									"Reduced development cycles"
+								],
+								"keyComponents": [
+									"Rules engine runtime",
+									"Rule definition language",
+									"Decision tables",
+									"Rule repository",
+									"Testing framework"
+								],
+								"technologies": [
+									"Drools",
+									"Red Hat Decision Manager",
+									"FICO Blaze Advisor",
+									"IBM ODM",
+									"Microsoft Rules Engine",
+									"Apache Spark MLlib"
+								],
+								"maturityLevels": {
+									"plan": {
+										"available": true,
+										"description": "Business rules patterns, decision modeling frameworks, and rule governance templates available"
+									},
+									"build": {
+										"available": true,
+										"description": "Rules engines, decision management platforms, and rule authoring tools available"
+									},
+									"operate": {
+										"available": true,
+										"description": "Managed rules services, cloud decision platforms, and rules-as-a-service solutions available"
+									},
+									"score": 3
+								}
 							}
 						]
 					}
@@ -808,26 +882,100 @@
 								"name": "Modular Frontend Frameworks",
 								"definition": "The ability to compose frontends from independently developed and deployable micro frontends or components.",
 								"description": "Modular frontend frameworks allow teams to build applications that are split across multiple domains or teams, while maintaining a cohesive user experience. Each module can be deployed independently and upgraded without affecting the entire frontend.",
-								"examples": ["Module Federation", "Single-SPA", "Bit"],
+								"examples": [
+									"Multi-team dashboard applications",
+									"E-commerce platforms with independent storefronts",
+									"Banking applications with modular features",
+									"Enterprise portals with departmental sections",
+									"Content management systems with plugin UIs"
+								],
 								"benefits": [
-									"Improved scalability",
-									"Team autonomy",
-									"Simplified upgrades",
-									"Better ownership boundaries"
-								]
+									"Improved development scalability",
+									"Enhanced team autonomy",
+									"Simplified application upgrades",
+									"Better ownership boundaries",
+									"Reduced deployment risks"
+								],
+								"keyComponents": [
+									"Module federation runtime",
+									"Component registry",
+									"Shared dependency management",
+									"Cross-module communication",
+									"Testing infrastructure"
+								],
+								"technologies": [
+									"Module Federation",
+									"Single-SPA",
+									"Bit",
+									"Nx",
+									"Lerna",
+									"Piral"
+								],
+								"maturityLevels": {
+									"plan": {
+										"available": true,
+										"description": "Micro frontend patterns, modular architecture guides, and component design systems available"
+									},
+									"build": {
+										"available": true,
+										"description": "Module federation tools, component libraries, and micro frontend frameworks available"
+									},
+									"operate": {
+										"available": true,
+										"description": "Managed micro frontend platforms, component hosting services, and modular deployment solutions available"
+									},
+									"score": 3
+								}
 							},
 							{
 								"id": "plugin-frameworks",
 								"name": "Plugin Frameworks",
-								"definition": "The capability to dynamically extend an application’s features through independently developed modules or plugins.",
+								"definition": "The capability to dynamically extend an application's features through independently developed modules or plugins.",
 								"description": "Plugin frameworks provide an interface through which third parties or internal developers can add new functionality without modifying the core codebase. Common in extensible apps such as editors, platforms, and developer tools.",
-								"examples": ["VS Code Extensions", "Grafana Plugins", "Jenkins Plugins"],
+								"examples": [
+									"IDE extension marketplaces",
+									"CMS plugin ecosystems",
+									"Developer tool integrations",
+									"Platform customization modules",
+									"Third-party feature additions"
+								],
 								"benefits": [
-									"Rapid extensibility",
-									"Community contribution",
-									"Ecosystem growth",
-									"Reduced core complexity"
-								]
+									"Rapid application extensibility",
+									"Enhanced community contribution",
+									"Accelerated ecosystem growth",
+									"Reduced core application complexity",
+									"Improved time-to-market"
+								],
+								"keyComponents": [
+									"Plugin runtime engine",
+									"Extension API framework",
+									"Plugin registry system",
+									"Security sandboxing",
+									"Version compatibility manager"
+								],
+								"technologies": [
+									"VS Code Extensions API",
+									"Grafana Plugin SDK",
+									"Jenkins Plugin Framework",
+									"WordPress Plugin Architecture",
+									"Figma Plugin API",
+									"Chrome Extension Platform"
+								],
+								"maturityLevels": {
+									"plan": {
+										"available": true,
+										"description": "Plugin architecture patterns, extensibility frameworks, and API design guides available"
+									},
+									"build": {
+										"available": true,
+										"description": "Plugin development SDKs, extension frameworks, and runtime platforms available"
+									},
+									"operate": {
+										"available": true,
+										"description": "Managed plugin marketplaces, extension hosting services, and plugin lifecycle management available"
+									},
+									"score": 3
+								}
 							}
 						]
 					},
@@ -841,13 +989,50 @@
 								"name": "State Management",
 								"definition": "The capability to manage, share, and persist application state across components, views, or services.",
 								"description": "State management libraries provide centralized or scoped approaches to handle dynamic data such as user inputs, responses, or derived values. These are especially important in reactive and SPAs where data must flow between UI layers and services.",
-								"examples": ["Redux", "Zustand", "RxJS", "Svelte Stores"],
+								"examples": [
+									"Global application state coordination",
+									"User session management",
+									"Form data persistence",
+									"Real-time data synchronization",
+									"Component state sharing"
+								],
 								"benefits": [
-									"Predictable behavior",
-									"Debuggability",
-									"Improved consistency",
-									"Scalable frontend architecture"
-								]
+									"Predictable application behavior",
+									"Enhanced debugging capabilities",
+									"Improved data consistency",
+									"Scalable frontend architecture",
+									"Reduced prop drilling"
+								],
+								"keyComponents": [
+									"State store",
+									"Action dispatchers",
+									"State selectors",
+									"Persistence layer",
+									"Developer tools"
+								],
+								"technologies": [
+									"Redux",
+									"Zustand",
+									"RxJS",
+									"Svelte Stores",
+									"MobX",
+									"Recoil"
+								],
+								"maturityLevels": {
+									"plan": {
+										"available": true,
+										"description": "State management patterns, architectural guides, and best practices available"
+									},
+									"build": {
+										"available": true,
+										"description": "State management libraries, development tools, and testing frameworks available"
+									},
+									"operate": {
+										"available": true,
+										"description": "State persistence services, real-time synchronization platforms, and monitoring tools available"
+									},
+									"score": 3
+								}
 							}
 						]
 					},
@@ -861,13 +1046,50 @@
 								"name": "Form Builders",
 								"definition": "The capability to build and render dynamic, schema-driven forms at runtime.",
 								"description": "Form builders enable developers or non-technical users to create and manage forms for data entry, validation, and submission. They support dynamic schemas, conditional logic, and integrations with backend APIs.",
-								"examples": ["Form.io", "React Hook Form", "Superforms"],
+								"examples": [
+									"Dynamic survey creation",
+									"Application form generation",
+									"Data collection interfaces",
+									"Configuration wizards",
+									"Multi-step workflows"
+								],
 								"benefits": [
 									"Faster form creation",
-									"Lower maintenance",
-									"Reusability",
-									"Better UX for complex input flows"
-								]
+									"Lower maintenance overhead",
+									"Enhanced component reusability",
+									"Better UX for complex input flows",
+									"Reduced development time"
+								],
+								"keyComponents": [
+									"Form schema engine",
+									"Validation framework",
+									"UI component library",
+									"Conditional logic processor",
+									"Data submission handler"
+								],
+								"technologies": [
+									"Form.io",
+									"React Hook Form",
+									"Superforms",
+									"Formik",
+									"Final Form",
+									"JSONForms"
+								],
+								"maturityLevels": {
+									"plan": {
+										"available": true,
+										"description": "Form design patterns, validation strategies, and UX guidelines available"
+									},
+									"build": {
+										"available": true,
+										"description": "Form building libraries, validation frameworks, and UI component systems available"
+									},
+									"operate": {
+										"available": true,
+										"description": "Form hosting services, data collection platforms, and submission processing solutions available"
+									},
+									"score": 3
+								}
 							}
 						]
 					}
@@ -889,35 +1111,149 @@
 								"definition": "The capability to direct messages to the correct processing component or service based on content or metadata.",
 								"description": "This includes routing patterns such as Content-Based Router, Routing Slip, and Recipient List that guide message delivery dynamically based on message properties.",
 								"examples": [
-									"Apache Camel Routing Slip",
-									"Spring Integration Routers",
-									"MuleSoft Flow Routers"
+									"Content-based message filtering",
+									"Dynamic destination selection",
+									"Multi-step routing workflows",
+									"Load balancing across services",
+									"Priority-based message delivery"
 								],
 								"benefits": [
-									"Improved decoupling",
-									"Dynamic workflows",
-									"Supports complex process flows"
-								]
+									"Improved system decoupling",
+									"Enhanced dynamic workflows",
+									"Support for complex process flows",
+									"Better load distribution",
+									"Increased routing flexibility"
+								],
+								"keyComponents": [
+									"Routing engine",
+									"Content analyzers",
+									"Destination registry",
+									"Rule management",
+									"Monitoring dashboard"
+								],
+								"technologies": [
+									"Apache Camel",
+									"Spring Integration",
+									"MuleSoft Anypoint",
+									"Azure Logic Apps",
+									"AWS Step Functions",
+									"IBM Integration Bus"
+								],
+								"maturityLevels": {
+									"plan": {
+										"available": true,
+										"description": "Message routing patterns, integration architectures, and flow design templates available"
+									},
+									"build": {
+										"available": true,
+										"description": "Routing engines, integration platforms, and message processing frameworks available"
+									},
+									"operate": {
+										"available": true,
+										"description": "Managed integration services, cloud routing platforms, and message broker solutions available"
+									},
+									"score": 3
+								}
 							},
 							{
 								"id": "message-transformation",
 								"name": "Message Transformation",
 								"definition": "The capability to modify or translate messages between formats, protocols, or structures as they move between systems.",
-								"description": "This includes Content Enricher, Message Translator, and Canonical Data Model patterns used to harmonize data between services.",
+								"description": "This includes Content Enricher, Message Translator, and Canonical Data Model patterns used to harmonize data between services. These transformation capabilities support real-time data mapping, format conversion, content validation, and message enrichment to ensure seamless interoperability between heterogeneous systems and maintain data consistency across service boundaries.",
 								"examples": [
-									"Apache Camel Transformer",
-									"MuleSoft DataWeave",
-									"Spring Integration Transformers"
+									"Data format conversion",
+									"Protocol translation",
+									"Message enrichment",
+									"Schema transformation",
+									"Content filtering and mapping"
 								],
-								"benefits": ["Interoperability", "Improved data consistency", "Reduced coupling"]
+								"benefits": [
+									"Enhanced system interoperability",
+									"Improved data consistency",
+									"Reduced system coupling",
+									"Better data quality",
+									"Simplified integration"
+								],
+								"keyComponents": [
+									"Transformation engine",
+									"Mapping definitions",
+									"Content enrichers",
+									"Format converters",
+									"Validation rules"
+								],
+								"technologies": [
+									"Apache Camel",
+									"MuleSoft DataWeave",
+									"Spring Integration",
+									"XSLT",
+									"JSONPath",
+									"FreeMarker"
+								],
+								"maturityLevels": {
+									"plan": {
+										"available": true,
+										"description": "Message transformation patterns, data mapping strategies, and integration templates available"
+									},
+									"build": {
+										"available": true,
+										"description": "Transformation engines, mapping tools, and data conversion frameworks available"
+									},
+									"operate": {
+										"available": true,
+										"description": "Managed transformation services, cloud data conversion platforms, and ETL solutions available"
+									},
+									"score": 3
+								}
 							},
 							{
 								"id": "messaging-endpoints",
 								"name": "Messaging Endpoints",
 								"definition": "The capability to connect services or applications via reusable, reliable messaging interfaces.",
-								"description": "Includes endpoint patterns such as Inbound/Outbound Channel Adapters and Durable Subscribers that abstract communication protocols.",
-								"examples": ["Kafka Consumers", "RabbitMQ Adapters", "JMS Queues"],
-								"benefits": ["Reliable delivery", "Protocol abstraction", "Scalability"]
+								"description": "Includes endpoint patterns such as Inbound/Outbound Channel Adapters and Durable Subscribers that abstract communication protocols. These endpoints provide reliable, scalable connectivity between systems, support multiple messaging protocols, handle connection pooling and error recovery, and enable loose coupling between distributed services through standardized interfaces.",
+								"examples": [
+									"Message queue consumers",
+									"Event stream subscribers",
+									"API gateway endpoints",
+									"Service bus adapters",
+									"Webhook receivers"
+								],
+								"benefits": [
+									"Reliable message delivery",
+									"Enhanced protocol abstraction",
+									"Improved system scalability",
+									"Better fault tolerance",
+									"Simplified connectivity"
+								],
+								"keyComponents": [
+									"Endpoint adapters",
+									"Connection pooling",
+									"Message handlers",
+									"Error handling",
+									"Monitoring agents"
+								],
+								"technologies": [
+									"Apache Kafka",
+									"RabbitMQ",
+									"JMS",
+									"Azure Service Bus",
+									"AWS SQS",
+									"Google Pub/Sub"
+								],
+								"maturityLevels": {
+									"plan": {
+										"available": true,
+										"description": "Messaging endpoint patterns, connectivity architectures, and integration blueprints available"
+									},
+									"build": {
+										"available": true,
+										"description": "Message brokers, endpoint adapters, and connectivity frameworks available"
+									},
+									"operate": {
+										"available": true,
+										"description": "Managed messaging services, cloud message brokers, and endpoint hosting solutions available"
+									},
+									"score": 3
+								}
 							}
 						]
 					},
@@ -1063,32 +1399,150 @@
 								"name": "Event Stream Processing",
 								"definition": "The capability to continuously capture, analyze, and respond to events as they occur in real time.",
 								"description": "Supports near real-time applications by enabling transformation, filtering, enrichment, and routing of event data as it flows through the system. Often implemented using stream processing engines.",
-								"examples": ["Apache Flink", "Kafka Streams", "Kinesis Data Analytics"],
-								"benefits": ["Real-time responsiveness", "Operational agility", "Reduced latency"]
+								"examples": [
+									"Real-time fraud detection",
+									"Live data aggregation",
+									"Streaming analytics",
+									"Event-driven notifications",
+									"Continuous data enrichment"
+								],
+								"benefits": [
+									"Enhanced real-time responsiveness",
+									"Improved operational agility",
+									"Reduced processing latency",
+									"Better decision making",
+									"Scalable event processing"
+								],
+								"keyComponents": [
+									"Stream processing engine",
+									"Event ingestion layer",
+									"Processing operators",
+									"State management",
+									"Output sinks"
+								],
+								"technologies": [
+									"Apache Flink",
+									"Kafka Streams",
+									"Kinesis Data Analytics",
+									"Apache Storm",
+									"Spark Streaming",
+									"Azure Stream Analytics"
+								],
+								"maturityLevels": {
+									"plan": {
+										"available": true,
+										"description": "Stream processing patterns, event architecture designs, and real-time processing frameworks available"
+									},
+									"build": {
+										"available": true,
+										"description": "Stream processing engines, event processing libraries, and real-time analytics platforms available"
+									},
+									"operate": {
+										"available": true,
+										"description": "Managed stream processing services, cloud analytics platforms, and real-time data processing solutions available"
+									},
+									"score": 3
+								}
 							},
 							{
 								"id": "event-replay-retention",
 								"name": "Event Replay & Retention",
 								"definition": "The capability to store and replay historical events to reprocess, debug, or audit application behavior.",
 								"description": "Useful in event-sourced systems or for restoring state by replaying a durable log of past events. Enables recovery, compliance, and new service onboarding with historical data.",
-								"examples": ["Kafka Log Compaction", "EventStoreDB", "AWS EventBridge Archive"],
+								"examples": [
+									"Event sourcing replay",
+									"System state restoration",
+									"Audit trail reconstruction",
+									"Historical data reprocessing",
+									"Compliance reporting"
+								],
 								"benefits": [
-									"Improved auditability",
-									"Failure recovery",
-									"Support for late consumers"
-								]
+									"Improved system auditability",
+									"Enhanced failure recovery",
+									"Support for late consumers",
+									"Better compliance capabilities",
+									"Simplified debugging"
+								],
+								"keyComponents": [
+									"Event store",
+									"Retention policies",
+									"Replay engine",
+									"Snapshot management",
+									"Archive systems"
+								],
+								"technologies": [
+									"Kafka Log Compaction",
+									"EventStoreDB",
+									"AWS EventBridge Archive",
+									"Azure Event Hubs Capture",
+									"Apache Pulsar",
+									"MongoDB Change Streams"
+								],
+								"maturityLevels": {
+									"plan": {
+										"available": true,
+										"description": "Event sourcing patterns, retention strategies, and replay architecture designs available"
+									},
+									"build": {
+										"available": true,
+										"description": "Event stores, replay engines, and retention management tools available"
+									},
+									"operate": {
+										"available": true,
+										"description": "Managed event storage services, cloud archiving solutions, and replay-as-a-service platforms available"
+									},
+									"score": 3
+								}
 							},
 							{
 								"id": "event-contracts-schemas",
 								"name": "Event Contracts & Schemas",
 								"definition": "The capability to define, manage, and evolve structured formats and agreements for event payloads.",
 								"description": "Supports safe evolution and interoperability in distributed systems by providing versioned schemas and validation. Encourages reuse and reduces tight coupling between publishers and consumers.",
-								"examples": ["AsyncAPI", "Apache Avro", "Confluent Schema Registry"],
+								"examples": [
+									"Event schema definitions",
+									"Contract-first API design",
+									"Schema evolution management",
+									"Event payload validation",
+									"Cross-team API agreements"
+								],
 								"benefits": [
-									"Loose coupling",
-									"Backward/forward compatibility",
-									"Improved developer coordination"
-								]
+									"Enhanced loose coupling",
+									"Improved backward/forward compatibility",
+									"Better developer coordination",
+									"Reduced integration errors",
+									"Accelerated development cycles"
+								],
+								"keyComponents": [
+									"Schema registry",
+									"Contract definitions",
+									"Validation engines",
+									"Version management",
+									"Documentation generators"
+								],
+								"technologies": [
+									"AsyncAPI",
+									"Apache Avro",
+									"Confluent Schema Registry",
+									"JSON Schema",
+									"Protocol Buffers",
+									"OpenAPI Specification"
+								],
+								"maturityLevels": {
+									"plan": {
+										"available": true,
+										"description": "Event contract patterns, schema design principles, and API governance frameworks available"
+									},
+									"build": {
+										"available": true,
+										"description": "Schema registries, contract testing tools, and validation frameworks available"
+									},
+									"operate": {
+										"available": true,
+										"description": "Managed schema services, contract governance platforms, and API lifecycle management solutions available"
+									},
+									"score": 3
+								}
 							}
 						]
 					}

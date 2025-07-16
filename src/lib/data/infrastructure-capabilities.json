@@ -346,13 +346,22 @@
 								"id": "ai-ml-automation",
 								"name": "AI, ML & Automation",
 								"definition": "Technologies that enable intelligent decision-making and process automation",
-								"description": "This capability supports automation of tasks and insights generation using artificial intelligence and machine learning technologies.",
-								"examples": ["Azure OpenAI", "SageMaker", "DataRobot", "ChatGPT", "AutoML"],
+								"description": "AI, ML & Automation capabilities provide intelligent systems for automated decision-making, predictive analytics, and process optimization. These technologies enable organizations to leverage artificial intelligence and machine learning to automate complex tasks, generate insights from data, and enhance operational efficiency across various business processes.",
+								"examples": [
+									"Automated customer service chatbots",
+									"Predictive maintenance for equipment",
+									"Intelligent document processing",
+									"Fraud detection and prevention",
+									"Recommendation systems for personalization",
+									"Automated code generation and testing"
+								],
 								"benefits": [
-									"Faster insight generation",
-									"Improved productivity",
-									"Automated repetitive tasks",
-									"Enhanced user experience"
+									"Accelerated insight generation from data",
+									"Enhanced operational productivity",
+									"Automated repetitive task execution",
+									"Improved user experience through personalization",
+									"Reduced operational costs through automation",
+									"Better decision-making through predictive analytics"
 								],
 								"keyComponents": [
 									"Machine learning platforms",
@@ -396,12 +405,21 @@
 								"name": "Document Store",
 								"definition": "Non-relational databases optimized for semi-structured document storage",
 								"description": "Document stores are designed to store, retrieve, and manage data in document-oriented formats such as JSON or BSON, enabling flexibility in schema and performance for content-heavy applications.",
-								"examples": ["MongoDB", "CouchDB", "RavenDB"],
+								"examples": [
+									"Content management system document storage",
+									"Product catalog with varying attributes",
+									"User profile and preferences storage",
+									"Real-time analytics data collection",
+									"Mobile application data synchronization",
+									"IoT sensor data aggregation"
+								],
 								"benefits": [
-									"Schema flexibility",
-									"High scalability",
-									"Optimized for content-rich apps",
-									"Efficient query of nested data"
+									"Enhanced schema flexibility for evolving data",
+									"Improved scalability for high-volume applications",
+									"Optimized performance for content-rich applications",
+									"Efficient querying of nested data structures",
+									"Reduced development time with flexible schemas",
+									"Better support for agile development practices"
 								],
 								"keyComponents": [
 									"Document storage engines",
@@ -438,12 +456,21 @@
 								"name": "OLTP & Capture",
 								"definition": "Databases and systems optimized for online transaction processing",
 								"description": "OLTP systems support high-throughput transactional workloads with rapid reads and writes, ensuring data integrity and fast response times for business-critical applications.",
-								"examples": ["Microsoft SQL Server", "IBM DB2", "Sybase ASE", "Oracle Database"],
+								"examples": [
+									"E-commerce order processing systems",
+									"Banking transaction management",
+									"Inventory tracking and updates",
+									"Customer relationship management",
+									"Financial trading systems",
+									"Real-time booking and reservation systems"
+								],
 								"benefits": [
-									"High availability",
-									"Transactional consistency",
-									"Low-latency performance",
-									"Supports core business operations"
+									"Enhanced system availability and reliability",
+									"Improved transactional consistency and integrity",
+									"Optimized low-latency performance for operations",
+									"Better support for core business operations",
+									"Increased throughput for concurrent users",
+									"Reduced downtime through robust architecture"
 								],
 								"keyComponents": [
 									"Transaction processing engines",
@@ -748,13 +775,22 @@
 								"id": "web-hosting",
 								"name": "Web Hosting",
 								"definition": "Serving web applications and content over the internet",
-								"description": "Web hosting platforms enable the deployment and operation of web-based applications, APIs, and static content to end users.",
-								"examples": ["Apache HTTP Server", "Nginx", "Tomcat", "IIS"],
+								"description": "Web hosting platforms enable the deployment and operation of web-based applications, APIs, and static content to end users. These platforms provide the infrastructure and services necessary for websites and applications to be accessible over the internet, including server management, domain hosting, SSL certificates, and content delivery networks for optimal performance and reliability.",
+								"examples": [
+									"E-commerce website hosting",
+									"Enterprise web application deployment",
+									"API gateway and microservices hosting",
+									"Content management system hosting",
+									"Static website and blog hosting",
+									"Multi-tenant SaaS platform hosting"
+								],
 								"benefits": [
-									"Reliable web service delivery",
-									"Scalability",
-									"Flexible deployment options",
-									"Supports diverse workloads"
+									"Enhanced reliable web service delivery",
+									"Improved scalability for traffic growth",
+									"Flexible deployment options for various workloads",
+									"Better support for diverse application types",
+									"Reduced infrastructure management overhead",
+									"Optimized performance through content delivery"
 								],
 								"keyComponents": [
 									"Web server engines",
@@ -790,13 +826,22 @@
 								"id": "workload-scheduling",
 								"name": "Workload Scheduling",
 								"definition": "Scheduling and automation of batch jobs and background processes",
-								"description": "Workload schedulers coordinate and manage the execution of jobs based on dependencies and timing rules, ensuring resource efficiency and job completion.",
-								"examples": ["Autosys", "Control-M", "Apache Airflow", "Tivoli Workload Scheduler"],
+								"description": "Workload schedulers coordinate and manage the execution of jobs based on dependencies and timing rules, ensuring resource efficiency and job completion. These systems automate complex batch processing workflows, handle job dependencies, monitor execution status, and provide failover mechanisms to ensure critical business processes run reliably and on schedule.",
+								"examples": [
+									"Nightly data processing and ETL jobs",
+									"Automated backup and maintenance tasks",
+									"Financial reporting and batch calculations",
+									"Machine learning model training pipelines",
+									"System monitoring and cleanup processes",
+									"Multi-step business process automation"
+								],
 								"benefits": [
-									"Reliable batch processing",
-									"Optimized resource usage",
-									"Job dependency handling",
-									"Reduced manual intervention"
+									"Enhanced reliable batch processing execution",
+									"Improved resource usage optimization",
+									"Better job dependency handling and coordination",
+									"Reduced manual intervention and human errors",
+									"Increased operational efficiency through automation",
+									"Better compliance through scheduled audit processes"
 								],
 								"keyComponents": [
 									"Job scheduling engines",
@@ -846,13 +891,22 @@
 								"id": "archive",
 								"name": "Archive",
 								"definition": "Long-term storage of data for compliance and retrieval",
-								"description": "Archiving solutions preserve historical data that must be retained for legal, regulatory, or business purposes while ensuring secure and efficient retrieval.",
-								"examples": ["IBM Content Manager OnDemand", "Archive360", "Commvault Archive"],
+								"description": "Archiving solutions preserve historical data that must be retained for legal, regulatory, or business purposes while ensuring secure and efficient retrieval. These systems provide automated data lifecycle management, compression and deduplication capabilities, secure long-term storage, and sophisticated search and retrieval mechanisms to support compliance requirements and business continuity.",
+								"examples": [
+									"Email and document archiving for compliance",
+									"Financial records retention for auditing",
+									"Healthcare patient data long-term storage",
+									"Legal document preservation and e-discovery",
+									"Corporate knowledge management archiving",
+									"Government records retention systems"
+								],
 								"benefits": [
-									"Regulatory compliance",
-									"Long-term data retention",
-									"Reduced storage costs",
-									"Secure access to historical data"
+									"Enhanced regulatory compliance capabilities",
+									"Improved long-term data retention management",
+									"Reduced primary storage costs through tiering",
+									"Better secure access to historical data",
+									"Increased legal protection through proper retention",
+									"Optimized storage efficiency with compression"
 								],
 								"keyComponents": [
 									"Long-term storage systems",
@@ -888,18 +942,22 @@
 								"id": "backup",
 								"name": "Backup",
 								"definition": "Replication of data for recovery and protection",
-								"description": "Backup systems safeguard critical data by creating copies stored separately to enable recovery in the event of failure, corruption, or disaster.",
+								"description": "Backup systems safeguard critical data by creating copies stored separately to enable recovery in the event of failure, corruption, or disaster. These solutions provide automated backup scheduling, incremental and differential backup strategies, data deduplication, encryption, and comprehensive recovery testing to ensure business continuity and data protection.",
 								"examples": [
-									"Veeam",
-									"Cohesity",
-									"Virtual Tape Libraries",
-									"Immutable Backup Solutions"
+									"Automated daily database backups",
+									"Virtual machine snapshot and replication",
+									"Cloud-based backup and sync services",
+									"Ransomware-resistant immutable backups",
+									"Cross-site disaster recovery replication",
+									"Incremental backup for large datasets"
 								],
 								"benefits": [
-									"Business continuity",
-									"Data protection",
-									"Disaster recovery",
-									"Operational resilience"
+									"Enhanced business continuity assurance",
+									"Improved data protection and integrity",
+									"Better disaster recovery capabilities",
+									"Increased operational resilience",
+									"Reduced data loss risk through automation",
+									"Faster recovery times with efficient restoration"
 								],
 								"keyComponents": [
 									"Backup scheduling systems",
@@ -949,13 +1007,22 @@
 								"id": "logical-compute",
 								"name": "Logical Compute",
 								"definition": "Abstracted compute environments for running applications without managing servers",
-								"description": "Logical compute refers to serverless or function-based compute environments that abstract infrastructure management, allowing developers to focus on application logic.",
-								"examples": ["AWS Lambda", "Azure Functions", "Google Cloud Functions"],
+								"description": "Logical compute refers to serverless or function-based compute environments that abstract infrastructure management, allowing developers to focus on application logic. These platforms provide automatic scaling, pay-per-execution pricing, event-driven execution models, and integrated monitoring while eliminating server provisioning and maintenance concerns.",
+								"examples": [
+									"API gateway backend processing",
+									"Event-driven data processing pipelines",
+									"Image and video processing workflows",
+									"Real-time notification systems",
+									"Microservices business logic execution",
+									"IoT sensor data processing functions"
+								],
 								"benefits": [
-									"Simplified operations",
-									"Scalable compute on demand",
-									"Cost efficiency",
-									"Faster deployment cycles"
+									"Simplified operational management",
+									"Enhanced scalable compute on demand",
+									"Improved cost efficiency with pay-per-use",
+									"Faster deployment cycles and iteration",
+									"Reduced infrastructure maintenance overhead",
+									"Better resource utilization through auto-scaling"
 								],
 								"keyComponents": [
 									"Serverless runtime environments",
@@ -999,12 +1066,21 @@
 								"name": "Mainframe",
 								"definition": "Large-scale computing platforms supporting critical enterprise applications",
 								"description": "Mainframes run batch and transaction processing workloads with high reliability, scalability, and security. They are essential for industries like banking and insurance.",
-								"examples": ["IBM z/OS", "CICS", "COBOL Batch Jobs"],
+								"examples": [
+									"Banking transaction processing systems",
+									"Insurance policy management platforms",
+									"Government benefits processing systems",
+									"Large-scale batch processing jobs",
+									"Financial services core banking systems",
+									"Healthcare claims processing platforms"
+								],
 								"benefits": [
-									"Extreme reliability",
-									"High-throughput processing",
-									"Secure data handling",
-									"Support for legacy systems"
+									"Enhanced extreme reliability and uptime",
+									"Improved high-throughput processing capabilities",
+									"Better secure data handling and protection",
+									"Continued support for legacy systems",
+									"Reduced operational risk through proven stability",
+									"Optimized resource utilization for large workloads"
 								],
 								"keyComponents": [
 									"High-availability hardware",
@@ -1049,16 +1125,20 @@
 								"definition": "Physical and virtual machines hosting applications and services",
 								"description": "Servers provide the compute resources required to run enterprise workloads. They may be physical machines, virtualized environments, or part of hybrid infrastructure.",
 								"examples": [
-									"Dell PowerEdge servers",
-									"VMware vSphere",
-									"Hyper-V",
-									"Bare metal provisioning"
+									"Enterprise application hosting servers",
+									"Database server clusters for high availability",
+									"Web server farms for load distribution",
+									"Virtual machine infrastructure for development",
+									"Dedicated servers for security-sensitive workloads",
+									"Hybrid cloud compute environments"
 								],
 								"benefits": [
-									"Scalable compute infrastructure",
-									"Support for diverse workloads",
-									"Dedicated hosting environments",
-									"High availability options"
+									"Enhanced scalable compute infrastructure",
+									"Better support for diverse workloads",
+									"Improved dedicated hosting environments",
+									"Increased high availability options",
+									"Reduced hardware maintenance complexity",
+									"Optimized resource allocation through virtualization"
 								],
 								"keyComponents": [
 									"Physical server hardware",
@@ -1108,13 +1188,22 @@
 								"id": "it-management",
 								"name": "IT Management",
 								"definition": "Tools and practices for managing IT assets, incidents, and services",
-								"description": "IT management tools support ITSM practices such as service requests, change management, and incident resolution, enhancing operational efficiency and user support.",
-								"examples": ["ServiceNow", "BMC Remedy", "Freshservice", "Ivanti"],
+								"description": "IT management tools support ITSM practices such as service requests, change management, and incident resolution, enhancing operational efficiency and user support. These platforms provide comprehensive service catalog management, automated workflow routing, SLA monitoring, asset lifecycle tracking, and integrated knowledge management to streamline IT operations and improve service delivery."
+								"examples": [
+									"IT service desk ticket management",
+									"Change management workflow automation",
+									"Asset lifecycle tracking and management",
+									"Incident response and resolution processes",
+									"Service level agreement monitoring",
+									"IT governance and compliance reporting"
+								],
 								"benefits": [
-									"Improved IT operations",
-									"Enhanced service quality",
-									"Faster issue resolution",
-									"Governed change processes"
+									"Improved IT operational efficiency",
+									"Enhanced service quality and user satisfaction",
+									"Faster issue resolution and response times",
+									"Better governed change processes",
+									"Reduced operational costs through automation",
+									"Increased compliance through standardized processes"
 								],
 								"keyComponents": [
 									"Service desk platforms",
