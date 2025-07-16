@@ -942,13 +942,45 @@
 								"id": "splitter-pattern",
 								"name": "Splitter Pattern",
 								"definition": "The ability to break a single composite message into multiple sub-messages for parallel or independent processing.",
-								"description": "Useful for breaking down payloads into units of work that can be handled individually, e.g., batch records.",
+								"description": "The Splitter Pattern is used to break down a single composite message or payload into multiple sub-messages, each of which can be processed independently or in parallel. This is especially useful for handling batch records, large files, or grouped data that must be distributed across different processing components. The pattern often involves assigning sequence numbers or correlation identifiers to each sub-message to enable later reconciliation, aggregation, or reassembly. Splitters are commonly used in integration flows where individual records need to be validated, transformed, or routed separately, while still maintaining the ability to reference common elements or reconstruct the original message if needed.",
 								"examples": [
+									"Iterating Splitters (Iterator or Sequencer)",
+									"Static Splitters"
+								],
+								"benefits": [
+								"Parallelism for faster processing of large payloads",
+								"Granular control over individual message handling",
+								"Simplified processing logic by breaking down complex data",
+								"Easier error isolation and retry of failed sub-messages",
+								"Supports reconciliation and reassembly of original messages",
+								"Flexibility to reference common elements across sub-messages"
+								],
+								"keyComponents": [
+									"Splitter component",
+									"Message correlation identifiers",
+									"Reassembly logic (if needed)",
+									"Error handling and retry mechanisms"
+								],
+								"technologies": [
 									"Apache Camel Splitter",
 									"Spring Integration Splitter",
 									"AWS Lambda Event Processing"
 								],
-								"benefits": ["Parallelism", "Granular control", "Simplified processing logic"]
+								"maturityLevels": {
+									"plan": {
+										"available": true,
+										"description": "Splitter patterns, message correlation strategies, and reassembly techniques available"
+									},
+									"build": {
+										"available": true,
+										"description": "Splitter components (Apache Camel, Spring Integration), message correlation libraries available"
+									},
+									"operate": {
+										"available": true,
+										"description": "Managed splitter services, cloud event processing platforms available"
+									},
+									"score": 3
+								}
 							},
 							{
 								"id": "resequencer-pattern",
