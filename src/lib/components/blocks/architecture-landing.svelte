@@ -5,7 +5,7 @@
 	import { Separator } from '$lib/components/ui/separator';
 	import { Building2, Layers, Database, Server, Shield, ChevronRight } from '@lucide/svelte';
 	import CapabilityCard from './capability-card.svelte';
-	import architectureLayers from '$lib/data/capabilities';
+	import architectureLayers from '$lib/data';
 
 	const iconMap = {
 		Building2: Building2,

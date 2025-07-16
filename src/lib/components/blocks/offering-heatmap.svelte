@@ -1,5 +1,5 @@
 <script lang="ts">
-	import capabilities from '$lib/data/capabilities';
+	import capabilities from '$lib/data';
 	import offerings from '$lib/data/offerings.json';
 	import * as Card from '$lib/components/ui/card';
 	import * as HoverCard from '$lib/components/ui/hover-card';
