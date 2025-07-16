@@ -63,6 +63,7 @@
 		"wrangler": "^4.23.0"
 	},
 	"dependencies": {
-		"@testing-library/svelte": "^5.2.8"
+		"@testing-library/svelte": "^5.2.8",
+		"rehype-mermaid": "^3.0.0"
 	}
 }

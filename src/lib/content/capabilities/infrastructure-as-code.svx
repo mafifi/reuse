@@ -4,6 +4,30 @@
 
 This guide provides practical examples for implementing Infrastructure as Code (IaC) using modern tools like Terraform, Ansible, and cloud-native solutions.
 
+```mermaid
+graph LR
+    A[Infrastructure as Code] --> B[Plan Phase]
+    A --> C[Build Phase]
+    A --> D[Operate Phase]
+    
+    B --> B1[Terraform Templates]
+    B --> B2[Architecture Blueprints]
+    B --> B3[Best Practices]
+    
+    C --> C1[Terraform CLI]
+    C --> C2[Ansible Playbooks]
+    C --> C3[CloudFormation]
+    
+    D --> D1[Terraform Cloud]
+    D --> D2[AWS CloudFormation]
+    D --> D3[Azure Resource Manager]
+    
+    style A fill:#0891b2,stroke:#374151,color:#fff
+    style B fill:#0891b2,stroke:#374151,color:#fff
+    style C fill:#6366f1,stroke:#374151,color:#fff
+    style D fill:#ec4899,stroke:#374151,color:#fff
+```
+
 ## Terraform Implementation
 
 ### AWS Infrastructure Setup

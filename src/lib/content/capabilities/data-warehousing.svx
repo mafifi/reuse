@@ -4,6 +4,30 @@
 
 This guide provides practical examples for implementing data warehousing capabilities with modern cloud platforms and tools.
 
+```mermaid
+flowchart TD
+    A[Plan] --> B[Build] --> C[Operate]
+    A --> D[Architecture Patterns]
+    B --> E[Implementation Tools]
+    C --> F[Managed Services]
+    
+    D --> D1[Data Modeling]
+    D --> D2[ETL Design]
+    D --> D3[Schema Design]
+    
+    E --> E1[dbt Core]
+    E --> E2[Apache Airflow]
+    E --> E3[Snowflake]
+    
+    F --> F1[Cloud Data Warehouses]
+    F --> F2[Managed ETL Services]
+    F --> F3[Analytics Platforms]
+    
+    style A fill:#0891b2,stroke:#374151,color:#fff
+    style B fill:#6366f1,stroke:#374151,color:#fff
+    style C fill:#ec4899,stroke:#374151,color:#fff
+```
+
 ## Cloud Data Warehouse Setup
 
 ### Snowflake Implementation

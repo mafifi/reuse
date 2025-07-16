@@ -1188,7 +1188,7 @@
 								"id": "it-management",
 								"name": "IT Management",
 								"definition": "Tools and practices for managing IT assets, incidents, and services",
-								"description": "IT management tools support ITSM practices such as service requests, change management, and incident resolution, enhancing operational efficiency and user support. These platforms provide comprehensive service catalog management, automated workflow routing, SLA monitoring, asset lifecycle tracking, and integrated knowledge management to streamline IT operations and improve service delivery."
+								"description": "IT management tools support ITSM practices such as service requests, change management, and incident resolution, enhancing operational efficiency and user support. These platforms provide comprehensive service catalog management, automated workflow routing, SLA monitoring, asset lifecycle tracking, and integrated knowledge management to streamline IT operations and improve service delivery.",
 								"examples": [
 									"IT service desk ticket management",
 									"Change management workflow automation",
