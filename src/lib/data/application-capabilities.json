@@ -1,1552 +1,1532 @@
 {
-		"id": "application",
-		"name": "Application Architecture",
-		"description": "Software applications and their interactions within the enterprise",
-		"icon": "Layers",
-		"color": "bg-watercourse-50 border-watercourse-200 hover:bg-watercourse-100",
-		"categories": [
-			{
-				"id": "application-engineering",
-				"name": "Application Engineering",
-				"description": "Core business applications and engineering tools for application functionality and logic",
-				"subcategories": [
-					{
-						"id": "enterprise-applications",
-						"name": "Enterprise Applications",
-						"description": "Core business applications and systems",
-						"capabilities": [
-							{
-								"id": "enterprise-resource-planning",
-								"name": "Enterprise Resource Planning",
-								"definition": "Integrated software platform managing core business processes",
-								"description": "Enterprise Resource Planning (ERP) provides a unified suite of applications that streamline and automate critical business processes such as finance, procurement, supply chain, and human resources. ERP enables consistent data sharing, process efficiency, and real-time insights across the enterprise.",
-								"examples": [
-									"Finance and accounting management",
-									"Procurement and supplier management",
-									"Inventory and warehouse management",
-									"Order processing and fulfilment",
-									"Human resources management",
-									"Project and resource planning"
-								],
-								"benefits": [
-									"End-to-end process integration",
-									"Improved operational efficiency",
-									"Real-time business insights",
-									"Data consistency across departments",
-									"Scalability for growth",
-									"Regulatory compliance support"
-								],
-								"keyComponents": [
-									"Core business process modules",
-									"Data integration layer",
-									"Reporting and analytics tools",
-									"Security and access controls",
-									"Workflow automation"
-								],
-								"technologies": [
-									"SAP S/4HANA",
-									"Oracle ERP Cloud",
-									"Microsoft Dynamics 365 Finance & Operations",
-									"Infor CloudSuite",
-									"Workday",
-									"Netsuite ERP"
-								],
-								"maturityLevels": {
-									"plan": {
-										"available": true,
-										"description": "ERP selection frameworks, business process modeling templates, and implementation roadmaps available"
-									},
-									"build": {
-										"available": true,
-										"description": "ERP platforms (SAP S/4HANA, Oracle ERP Cloud), integration tools, and customization frameworks available"
-									},
-									"operate": {
-										"available": true,
-										"description": "Managed ERP services, cloud ERP platforms, and enterprise support services available"
-									},
-									"score": 3
-								}
-							},
-							{
-								"id": "customer-relationship-management",
-								"name": "Customer Relationship Management",
-								"definition": "The capability to manage customer interactions and relationships through integrated technology platforms",
-								"description": "Customer Relationship Management (CRM) provides centralized platforms for tracking customer interactions, managing sales pipelines, and coordinating marketing efforts. CRM systems enable organizations to maintain consistent customer experiences across touchpoints while providing analytics and automation capabilities.",
-								"examples": [
-									"Sales pipeline management",
-									"Customer interaction tracking",
-									"Marketing campaign automation",
-									"Service case management",
-									"Customer segmentation and targeting",
-									"Lead scoring and qualification"
-								],
-								"benefits": [
-									"Improved customer relationship quality",
-									"Increased sales conversion rates",
-									"Enhanced customer service efficiency",
-									"Better cross-team coordination",
-									"Data-driven customer insights",
-									"Automated sales and marketing processes"
-								],
-								"keyComponents": [
-									"Contact and account management",
-									"Sales pipeline tracking",
-									"Marketing automation",
-									"Customer service integration",
-									"Analytics and reporting"
-								],
-								"technologies": [
-									"Salesforce CRM",
-									"HubSpot",
-									"Microsoft Dynamics 365",
-									"Pipedrive",
-									"Zoho CRM"
-								],
-								"maturityLevels": {
-									"plan": {
-										"available": true,
-										"description": "CRM strategy frameworks, sales process design templates, and customer journey mapping guides available"
-									},
-									"build": {
-										"available": true,
-										"description": "CRM platforms (Salesforce, HubSpot), integration APIs, and customization tools available"
-									},
-									"operate": {
-										"available": true,
-										"description": "Managed CRM services, sales automation platforms, and customer analytics solutions available"
-									},
-									"score": 3
-								}
-							},
-							{
-								"id": "business-intelligence",
-								"name": "Business Intelligence",
-								"definition": "Analytics and reporting capabilities for data-driven decision making",
-								"description": "Business Intelligence (BI) enables organizations to transform raw data into actionable insights through reporting, dashboards, and interactive analytics. BI helps stakeholders monitor performance, identify trends, and make informed strategic decisions.",
-								"examples": [
-									"Executive dashboards",
-									"Self-service reporting",
-									"Ad-hoc data analysis",
-									"Performance scorecards",
-									"Predictive analytics",
-									"Data visualization"
-								],
-								"benefits": [
-									"Improved decision making",
-									"Data-driven culture",
-									"Faster insight generation",
-									"Enhanced operational visibility",
-									"Early risk identification",
-									"Competitive advantage"
-								],
-								"keyComponents": [
-									"Data extraction and transformation",
-									"Data warehouse or data marts",
-									"Visualization tools",
-									"Self-service analytics",
-									"Governance and security controls"
-								],
-								"technologies": [
-									"Tableau",
-									"Microsoft Power BI",
-									"Qlik Sense",
-									"Looker",
-									"SAP BusinessObjects",
-									"Domo"
-								],
-								"maturityLevels": {
-									"plan": {
-										"available": true,
-										"description": "BI strategy frameworks, dashboard design templates, and analytics methodology guides available"
-									},
-									"build": {
-										"available": true,
-										"description": "BI platforms (Tableau, Power BI), data connectors, and visualization libraries available"
-									},
-									"operate": {
-										"available": true,
-										"description": "Managed BI services, cloud analytics platforms, and data visualization solutions available"
-									},
-									"score": 3
-								}
-							},
-							{
-								"id": "api-management",
-								"name": "API Management",
-								"definition": "The capability to design, deploy, secure, and manage APIs across the enterprise",
-								"description": "API Management provides comprehensive lifecycle management for Application Programming Interfaces (APIs), including design, security, monitoring, and governance. It enables organizations to expose internal services, integrate with partners, and build API-driven architectures while maintaining security and performance.",
-								"examples": [
-									"API gateway implementation",
-									"API security and authentication",
-									"API documentation and developer portals",
-									"API versioning and lifecycle management",
-									"API analytics and monitoring",
-									"Rate limiting and throttling"
-								],
-								"benefits": [
-									"Accelerated integration and development",
-									"Enhanced API security and governance",
-									"Improved developer experience",
-									"Better API performance monitoring",
-									"Standardized API design patterns",
-									"Reduced integration complexity"
-								],
-								"keyComponents": [
-									"API gateway",
-									"Developer portal",
-									"API security layer",
-									"Analytics and monitoring",
-									"API lifecycle management"
-								],
-								"technologies": [
-									"Kong",
-									"Apigee",
-									"Azure API Management",
-									"AWS API Gateway",
-									"MuleSoft Anypoint"
-								],
-								"maturityLevels": {
-									"plan": {
-										"available": true,
-										"description": "API design patterns, governance frameworks, and REST/GraphQL best practices available"
-									},
-									"build": {
-										"available": true,
-										"description": "API gateways (Kong, Apigee), development frameworks, and testing tools available"
-									},
-									"operate": {
-										"available": true,
-										"description": "Managed API services, cloud API platforms, and enterprise API management solutions available"
-									},
-									"score": 3
-								}
-							},
-							{
-								"id": "microservices-architecture",
-								"name": "Microservices Architecture",
-								"definition": "The capability to design, build, and operate applications as a collection of loosely coupled, independently deployable services",
-								"description": "Microservices Architecture enables organizations to decompose complex applications into smaller, manageable services that can be developed, deployed, and scaled independently. It supports rapid development cycles, technology diversity, and organizational scaling while improving system resilience and maintainability.",
-								"examples": [
-									"Service decomposition and domain modeling",
-									"Inter-service communication patterns",
-									"Independent service deployment",
-									"Distributed data management",
-									"Service discovery and registration",
-									"Circuit breaker and resilience patterns"
-								],
-								"benefits": [
-									"Improved development team autonomy",
-									"Enhanced system scalability",
-									"Faster deployment cycles",
-									"Better fault isolation",
-									"Technology diversity and flexibility",
-									"Improved system maintainability"
-								],
-								"keyComponents": [
-									"Service boundaries and APIs",
-									"Service discovery mechanisms",
-									"Inter-service communication",
-									"Distributed data management",
-									"Service monitoring and observability"
-								],
-								"technologies": ["Spring Boot", "Netflix OSS", "Istio", "Consul", "Eureka"],
-								"maturityLevels": {
-									"plan": {
-										"available": true,
-										"description": "Microservices patterns, domain-driven design frameworks, and service decomposition guides available"
-									},
-									"build": {
-										"available": true,
-										"description": "Container platforms (Docker, Kubernetes), service mesh tools, and microservices frameworks available"
-									},
-									"operate": {
-										"available": true,
-										"description": "Managed container services, cloud-native platforms, and service mesh solutions available"
-									},
-									"score": 3
-								}
-							},
-							{
-								"id": "container-orchestration",
-								"name": "Container Orchestration",
-								"definition": "The capability to automate the deployment, scaling, and management of containerized applications",
-								"description": "Container Orchestration provides automated management of containerized applications across clusters of hosts. It handles deployment, scaling, networking, and health monitoring of containers, enabling organizations to run applications reliably at scale while simplifying operations and resource management.",
-								"examples": [
-									"Automated container deployment",
-									"Service discovery and load balancing",
-									"Auto-scaling based on demand",
-									"Rolling updates and rollbacks",
-									"Health monitoring and self-healing",
-									"Resource allocation and optimization"
-								],
-								"benefits": [
-									"Simplified container management",
-									"Improved application scalability",
-									"Enhanced system reliability",
-									"Reduced operational overhead",
-									"Better resource utilization",
-									"Faster deployment cycles"
-								],
-								"keyComponents": [
-									"Container runtime",
-									"Cluster management",
-									"Service discovery",
-									"Load balancing",
-									"Health monitoring"
-								],
-								"technologies": ["Kubernetes", "Docker Swarm", "OpenShift", "Nomad", "Amazon ECS"],
-								"maturityLevels": {
-									"plan": {
-										"available": true,
-										"description": "Container orchestration patterns, Kubernetes architecture guides, and deployment strategies available"
-									},
-									"build": {
-										"available": true,
-										"description": "Container platforms (Docker, Kubernetes), orchestration tools, and CI/CD pipelines available"
-									},
-									"operate": {
-										"available": true,
-										"description": "Managed Kubernetes services (EKS, GKE, AKS), container-as-a-service platforms available"
-									},
-									"score": 3
-								}
-							},
-							{
-								"id": "mobile-development-frameworks",
-								"name": "Mobile Development Frameworks",
-								"definition": "The capability to develop and deploy mobile applications across multiple platforms using unified frameworks",
-								"description": "Mobile Development Frameworks enable organizations to create mobile applications for iOS, Android, and other platforms using shared codebases and development practices. They provide cross-platform compatibility, native performance, and streamlined development workflows while reducing time-to-market and maintenance overhead.",
-								"examples": [
-									"Cross-platform mobile app development",
-									"Native mobile app development",
-									"Progressive web app (PWA) development",
-									"Mobile app testing and deployment",
-									"App store publishing and distribution",
-									"Mobile app performance optimization"
-								],
-								"benefits": [
-									"Reduced development time and costs",
-									"Consistent user experience across platforms",
-									"Shared codebase maintenance",
-									"Faster time-to-market",
-									"Improved developer productivity",
-									"Enhanced mobile app quality"
-								],
-								"keyComponents": [
-									"Cross-platform development tools",
-									"Native platform integrations",
-									"UI/UX component libraries",
-									"Testing and debugging tools",
-									"App deployment pipelines"
-								],
-								"technologies": ["React Native", "Flutter", "Xamarin", "Ionic", "Swift/Kotlin"],
-								"maturityLevels": {
-									"plan": {
-										"available": true,
-										"description": "Mobile app architecture patterns, cross-platform development guides, and UI/UX frameworks available"
-									},
-									"build": {
-										"available": true,
-										"description": "Mobile frameworks (React Native, Flutter), development tools, and testing platforms available"
-									},
-									"operate": {
-										"available": true,
-										"description": "App store deployment services, mobile backend platforms, and device testing clouds available"
-									},
-									"score": 3
-								}
-							},
-							{
-								"id": "web-frontend-frameworks",
-								"name": "Web Frontend Frameworks",
-								"definition": "The capability to build modern, interactive web user interfaces using component-based frameworks",
-								"description": "Web Frontend Frameworks provide structured approaches to building dynamic, responsive web applications with reusable components, state management, and modern development tools. They enable rapid development of sophisticated user interfaces while maintaining code quality and performance.",
-								"examples": [
-									"Component-based UI development",
-									"Single-page application (SPA) development",
-									"Progressive web app (PWA) implementation",
-									"Server-side rendering (SSR)",
-									"State management and data flow",
-									"Responsive design and mobile optimization"
-								],
-								"benefits": [
-									"Faster frontend development",
-									"Improved code reusability",
-									"Enhanced user experience",
-									"Better maintainability",
-									"Modern development practices",
-									"Optimized performance"
-								],
-								"keyComponents": [
-									"Component libraries",
-									"State management systems",
-									"Build and bundling tools",
-									"Development servers",
-									"Testing frameworks"
-								],
-								"technologies": ["React", "Vue.js", "Angular", "Svelte", "Next.js"],
-								"maturityLevels": {
-									"plan": {
-										"available": true,
-										"description": "Frontend architecture patterns, component design systems, and modern web development guides available"
-									},
-									"build": {
-										"available": true,
-										"description": "Frontend frameworks (React, Vue, Angular), build tools, and component libraries available"
-									},
-									"operate": {
-										"available": true,
-										"description": "Frontend hosting platforms, CDN services, and web performance optimization tools available"
-									},
-									"score": 3
-								}
-							},
-							{
-								"id": "authentication-implementation",
-								"name": "Authentication Implementation",
-								"definition": "The capability to implement secure authentication and authorization flows within applications",
-								"description": "Authentication Implementation provides developers with the tools and patterns to integrate secure login, authentication, and authorization mechanisms into applications. It covers OAuth flows, JWT handling, session management, and SSO integration while maintaining security best practices and user experience.",
-								"examples": [
-									"OAuth 2.0 and OpenID Connect flows",
-									"JWT token management and validation",
-									"Session-based authentication",
-									"Multi-factor authentication (MFA) integration",
-									"Single sign-on (SSO) implementation",
-									"Social login integration"
-								],
-								"benefits": [
-									"Secure user authentication",
-									"Simplified login experience",
-									"Reduced authentication complexity",
-									"Standardized security practices",
-									"Better user experience",
-									"Reduced development time"
-								],
-								"keyComponents": [
-									"Authentication libraries",
-									"Token management",
-									"Session handling",
-									"Authorization middleware",
-									"Security validation"
-								],
-								"technologies": [
-									"Auth0",
-									"Firebase Auth",
-									"NextAuth.js",
-									"Passport.js",
-									"Keycloak"
-								],
-								"maturityLevels": {
-									"plan": {
-										"available": true,
-										"description": "Authentication patterns, security frameworks, and identity management guides available"
-									},
-									"build": {
-										"available": true,
-										"description": "Auth libraries (Auth0, Firebase Auth), identity providers, and security frameworks available"
-									},
-									"operate": {
-										"available": true,
-										"description": "Managed identity services, SSO platforms, and authentication-as-a-service solutions available"
-									},
-									"score": 3
-								}
-							},
-							{
-								"id": "application-performance-monitoring",
-								"name": "Application Performance Monitoring",
-								"definition": "The capability to monitor, analyze, and optimize application performance and user experience",
-								"description": "Application Performance Monitoring (APM) provides real-time visibility into application behavior, performance metrics, and user experience. It enables developers and operations teams to identify bottlenecks, troubleshoot issues, and optimize application performance across the entire technology stack.",
-								"examples": [
-									"Real-time performance monitoring",
-									"Application dependency mapping",
-									"Error tracking and debugging",
-									"User experience monitoring",
-									"Database query performance analysis",
-									"Code-level performance profiling"
-								],
-								"benefits": [
-									"Faster issue identification and resolution",
-									"Improved application performance",
-									"Enhanced user experience",
-									"Proactive performance optimization",
-									"Reduced mean time to resolution",
-									"Better resource utilization"
-								],
-								"keyComponents": [
-									"Performance monitoring agents",
-									"Real-time analytics engine",
-									"Alerting and notification systems",
-									"Performance dashboards",
-									"Root cause analysis tools"
-								],
-								"technologies": ["New Relic", "Datadog", "AppDynamics", "Dynatrace", "Elastic APM"],
-								"maturityLevels": {
-									"plan": {
-										"available": true,
-										"description": "APM strategy frameworks, monitoring patterns, and observability guides available"
-									},
-									"build": {
-										"available": true,
-										"description": "APM tools (New Relic, Datadog), monitoring libraries, and instrumentation frameworks available"
-									},
-									"operate": {
-										"available": true,
-										"description": "Managed APM services, cloud monitoring platforms, and performance analytics solutions available"
-									},
-									"score": 3
-								}
-							},
-							{
-								"id": "testing-frameworks",
-								"name": "Testing Frameworks",
-								"definition": "The capability to implement automated testing strategies for applications across unit, integration, and end-to-end levels",
-								"description": "Testing Frameworks provide structured approaches to validate application functionality, performance, and quality through automated testing. They enable continuous validation of code changes, regression detection, and confidence in application releases while reducing manual testing effort.",
-								"examples": [
-									"Unit testing implementation",
-									"Integration testing automation",
-									"End-to-end testing scenarios",
-									"Performance and load testing",
-									"Test-driven development (TDD)",
-									"Behavior-driven development (BDD)"
-								],
-								"benefits": [
-									"Improved software quality",
-									"Faster defect detection",
-									"Reduced manual testing effort",
-									"Increased deployment confidence",
-									"Better code maintainability",
-									"Faster development cycles"
-								],
-								"keyComponents": [
-									"Test execution engines",
-									"Test data management",
-									"Assertion libraries",
-									"Test reporting tools",
-									"Continuous integration integration"
-								],
-								"technologies": ["Jest", "Cypress", "Playwright", "JUnit", "Selenium"],
-								"maturityLevels": {
-									"plan": {
-										"available": true,
-										"description": "Testing strategies, QA frameworks, and test automation patterns available"
-									},
-									"build": {
-										"available": true,
-										"description": "Testing frameworks (Jest, Cypress), automation tools, and CI/CD integration available"
-									},
-									"operate": {
-										"available": true,
-										"description": "Managed testing services, cloud testing platforms, and QA automation solutions available"
-									},
-									"score": 3
-								}
-							},
-							{
-								"id": "real-time-communication",
-								"name": "Real-time Communication",
-								"definition": "The capability to enable bidirectional, real-time communication between clients and servers in web applications",
-								"description": "Real-time Communication provides the infrastructure and protocols for instant data exchange between clients and servers, enabling features like live chat, real-time notifications, collaborative editing, and live updates. It supports modern user expectations for responsive, interactive web applications.",
-								"examples": [
-									"WebSocket connections for live data",
-									"Server-sent events for updates",
-									"Real-time chat and messaging",
-									"Live collaborative editing",
-									"Real-time notifications",
-									"Live data visualization and dashboards"
-								],
-								"benefits": [
-									"Enhanced user engagement",
-									"Improved application responsiveness",
-									"Better collaborative features",
-									"Reduced server polling overhead",
-									"Modern user experience",
-									"Efficient data synchronization"
-								],
-								"keyComponents": [
-									"WebSocket servers",
-									"Message brokers",
-									"Client-side real-time libraries",
-									"Connection management",
-									"Message routing and delivery"
-								],
-								"technologies": [
-									"Socket.io",
-									"WebSockets",
-									"Server-Sent Events",
-									"WebRTC",
-									"Pusher"
-								],
-								"maturityLevels": {
-									"plan": {
-										"available": true,
-										"description": "Real-time architecture patterns, WebSocket design guides, and event-driven system blueprints available"
-									},
-									"build": {
-										"available": true,
-										"description": "Real-time frameworks (Socket.io, WebRTC), messaging systems, and streaming platforms available"
-									},
-									"operate": {
-										"available": true,
-										"description": "Managed real-time services, cloud messaging platforms, and streaming analytics solutions available"
-									},
-									"score": 3
-								}
+	"id": "application",
+	"name": "Application Architecture",
+	"description": "Software applications and their interactions within the enterprise",
+	"icon": "Layers",
+	"color": "bg-watercourse-50 border-watercourse-200 hover:bg-watercourse-100",
+	"categories": [
+		{
+			"id": "application-engineering",
+			"name": "Application Engineering",
+			"description": "Core business applications and engineering tools for application functionality and logic",
+			"subcategories": [
+				{
+					"id": "business-applications",
+					"name": "Business Applications",
+					"description": "Tools for managing and automating business processes and workflows",
+					"capabilities": [
+						{
+							"id": "enterprise-resource-planning",
+							"name": "Enterprise Resource Planning",
+							"definition": "Integrated software platform managing core business processes",
+							"description": "Enterprise Resource Planning (ERP) provides a unified suite of applications that streamline and automate critical business processes such as finance, procurement, supply chain, and human resources. ERP enables consistent data sharing, process efficiency, and real-time insights across the enterprise.",
+							"examples": [
+								"Finance and accounting management",
+								"Procurement and supplier management",
+								"Inventory and warehouse management",
+								"Order processing and fulfilment",
+								"Human resources management",
+								"Project and resource planning"
+							],
+							"benefits": [
+								"End-to-end process integration",
+								"Improved operational efficiency",
+								"Real-time business insights",
+								"Data consistency across departments",
+								"Scalability for growth",
+								"Regulatory compliance support"
+							],
+							"keyComponents": [
+								"Core business process modules",
+								"Data integration layer",
+								"Reporting and analytics tools",
+								"Security and access controls",
+								"Workflow automation"
+							],
+							"technologies": [
+								"SAP S/4HANA",
+								"Oracle ERP Cloud",
+								"Microsoft Dynamics 365 Finance & Operations",
+								"Infor CloudSuite",
+								"Workday",
+								"Netsuite ERP"
+							],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "ERP selection frameworks, business process modeling templates, and implementation roadmaps available"
+								},
+								"build": {
+									"available": true,
+									"description": "ERP platforms (SAP S/4HANA, Oracle ERP Cloud), integration tools, and customization frameworks available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed ERP services, cloud ERP platforms, and enterprise support services available"
+								},
+								"score": 3
 							}
-						]
-					},
-					{
-						"id": "collaboration-content",
-						"name": "Collaboration & Content",
-						"description": "Tools for team collaboration and content management",
-						"capabilities": [
-							{
-								"id": "collaboration-tools",
-								"name": "Collaboration Tools",
-								"definition": "Platforms enabling team communication and collaboration",
-								"description": "Collaboration Tools facilitate effective communication, information sharing, and teamwork within and across organizations. These tools enhance productivity, especially in distributed or hybrid work environments.",
-								"examples": [
-									"Team messaging platforms",
-									"Video conferencing",
-									"Document collaboration",
-									"Project management boards",
-									"Knowledge sharing portals",
-									"Virtual whiteboards"
-								],
-								"benefits": [
-									"Improved team productivity",
-									"Enhanced communication",
-									"Seamless remote collaboration",
-									"Knowledge retention",
-									"Faster decision making",
-									"Cross-functional alignment"
-								],
-								"keyComponents": [
-									"Messaging and chat",
-									"File sharing",
-									"Video and voice conferencing",
-									"Project tracking",
-									"Integration with business tools"
-								],
-								"technologies": [
-									"Microsoft Teams",
-									"Slack",
-									"Zoom",
-									"Google Workspace",
-									"SharePoint",
-									"Asana"
-								],
-								"maturityLevels": {
-									"plan": {
-										"available": true,
-										"description": "Collaboration strategy frameworks, digital workplace design patterns, and team productivity guides available"
-									},
-									"build": {
-										"available": true,
-										"description": "Collaboration platforms (Slack, Teams), workflow tools, and integration APIs available"
-									},
-									"operate": {
-										"available": true,
-										"description": "Managed collaboration services, enterprise communication platforms, and digital workplace solutions available"
-									},
-									"score": 3
-								}
-							},
-							{
-								"id": "content-management",
-								"name": "Content Management",
-								"definition": "Systems for creating, managing, and publishing digital content",
-								"description": "Content Management enables organizations to efficiently create, organize, store, and distribute digital content across channels. It ensures content consistency, brand integrity, and supports marketing and operational needs.",
-								"examples": [
-									"Website content management",
-									"Document repositories",
-									"Digital asset management",
-									"Knowledge bases",
-									"Intranet portals",
-									"Multilingual content management"
-								],
-								"benefits": [
-									"Streamlined content creation",
-									"Consistent branding",
-									"Improved content discoverability",
-									"Faster content updates",
-									"Enhanced collaboration",
-									"Regulatory compliance"
-								],
-								"keyComponents": [
-									"Content repository",
-									"Authoring and editing tools",
-									"Publishing workflows",
-									"Search and retrieval",
-									"Access control"
-								],
-								"technologies": [
-									"SharePoint",
-									"Drupal",
-									"WordPress",
-									"Sitecore",
-									"Adobe Experience Manager",
-									"Confluence"
-								],
-								"maturityLevels": {
-									"plan": {
-										"available": true,
-										"description": "Content strategy frameworks, information architecture guides, and content lifecycle management patterns available"
-									},
-									"build": {
-										"available": true,
-										"description": "CMS platforms (WordPress, Drupal), headless CMS solutions, and content APIs available"
-									},
-									"operate": {
-										"available": true,
-										"description": "Managed CMS services, content delivery networks, and digital asset management solutions available"
-									},
-									"score": 3
-								}
-							},
-							{
-								"id": "integration-platform",
-								"name": "Integration Platform",
-								"definition": "Middleware connecting disparate systems and applications",
-								"description": "An Integration Platform enables seamless data and process flow between different applications, systems, and services. It reduces complexity, improves agility, and supports both real-time and batch integrations across the enterprise.",
-								"examples": [
-									"API-based integrations",
-									"Data synchronization between systems",
-									"Event-driven architectures",
-									"Legacy system integration",
-									"Third-party service connectors",
-									"B2B partner integrations"
-								],
-								"benefits": [
-									"System interoperability",
-									"Faster time-to-market",
-									"Data consistency",
-									"Reduced integration complexity",
-									"Improved scalability",
-									"Enhanced business agility"
-								],
-								"keyComponents": [
-									"API Gateway",
-									"Integration workflows",
-									"Data mapping and transformation",
-									"Monitoring and error handling",
-									"Security and access control"
-								],
-								"technologies": [
-									"MuleSoft Anypoint",
-									"Dell Boomi",
-									"Azure Logic Apps",
-									"Apache Camel",
-									"SnapLogic",
-									"WSO2"
-								],
-								"maturityLevels": {
-									"plan": {
-										"available": true,
-										"description": "Integration architecture patterns, ESB design guides, and API-led connectivity frameworks available"
-									},
-									"build": {
-										"available": true,
-										"description": "Integration platforms (MuleSoft, Dell Boomi), middleware solutions, and connector libraries available"
-									},
-									"operate": {
-										"available": true,
-										"description": "Managed integration services, cloud iPaaS platforms, and enterprise service bus solutions available"
-									},
-									"score": 3
-								}
+						},
+						{
+							"id": "customer-relationship-management",
+							"name": "Customer Relationship Management",
+							"definition": "The capability to manage customer interactions and relationships through integrated technology platforms",
+							"description": "Customer Relationship Management (CRM) provides centralized platforms for tracking customer interactions, managing sales pipelines, and coordinating marketing efforts. CRM systems enable organizations to maintain consistent customer experiences across touchpoints while providing analytics and automation capabilities.",
+							"examples": [
+								"Sales pipeline management",
+								"Customer interaction tracking",
+								"Marketing campaign automation",
+								"Service case management",
+								"Customer segmentation and targeting",
+								"Lead scoring and qualification"
+							],
+							"benefits": [
+								"Improved customer relationship quality",
+								"Increased sales conversion rates",
+								"Enhanced customer service efficiency",
+								"Better cross-team coordination",
+								"Data-driven customer insights",
+								"Automated sales and marketing processes"
+							],
+							"keyComponents": [
+								"Contact and account management",
+								"Sales pipeline tracking",
+								"Marketing automation",
+								"Customer service integration",
+								"Analytics and reporting"
+							],
+							"technologies": [
+								"Salesforce CRM",
+								"HubSpot",
+								"Microsoft Dynamics 365",
+								"Pipedrive",
+								"Zoho CRM"
+							],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "CRM strategy frameworks, sales process design templates, and customer journey mapping guides available"
+								},
+								"build": {
+									"available": true,
+									"description": "CRM platforms (Salesforce, HubSpot), integration APIs, and customization tools available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed CRM services, sales automation platforms, and customer analytics solutions available"
+								},
+								"score": 3
 							}
-						]
-					},
-					{
-						"id": "orchestration-logic",
-						"name": "Orchestration & Logic",
-						"description": "Tools for modeling, executing, and monitoring business processes",
-						"capabilities": [
-							{
-								"id": "workflow-orchestration",
-								"name": "Workflow Orchestration",
-								"definition": "The ability to model, execute, and monitor multi-step business processes in an automated and maintainable way.",
-								"description": "Workflow orchestration tools allow developers and operations teams to encode business logic as a sequence of tasks or state machines. These tools support retry logic, timeouts, parallelism, and integration across APIs or microservices.",
-								"examples": [
-									"Multi-step data processing workflows",
-									"Order fulfillment automation",
-									"Customer onboarding processes",
-									"Financial transaction processing",
-									"Document approval workflows"
-								],
-								"benefits": [
-									"Improved process maintainability",
-									"Clear separation of business logic",
-									"Observable state transitions",
-									"Simplified long-running processes",
-									"Enhanced error handling and recovery"
-								],
-								"keyComponents": [
-									"Workflow engine",
-									"Process definition language",
-									"Task orchestration layer",
-									"State management",
-									"Monitoring and observability"
-								],
-								"technologies": [
-									"Camunda",
-									"Temporal",
-									"Apache Airflow",
-									"AWS Step Functions",
-									"Zeebe",
-									"Conductor"
-								],
-								"maturityLevels": {
-									"plan": {
-										"available": true,
-										"description": "Workflow design patterns, orchestration frameworks, and process modeling templates available"
-									},
-									"build": {
-										"available": true,
-										"description": "Workflow engines, orchestration platforms, and process automation tools available"
-									},
-									"operate": {
-										"available": true,
-										"description": "Managed workflow services, cloud orchestration platforms, and process-as-a-service solutions available"
-									},
-									"score": 3
-								}
-							},
-							{
-								"id": "business-rules-engine",
-								"name": "Business Rules Engine",
-								"definition": "The ability to manage and execute rule-based logic separately from application code.",
-								"description": "Business rules engines allow non-developers or analysts to define policies, thresholds, or conditional behaviors through declarative logic. These rules are maintained outside the application codebase and can be updated independently.",
-								"examples": [
-									"Pricing calculation rules",
-									"Fraud detection policies",
-									"Loan approval criteria",
-									"Compliance validation rules",
-									"Customer eligibility assessments"
-								],
-								"benefits": [
-									"Faster time-to-change",
-									"Clear separation of concerns",
-									"Enhanced auditability",
-									"Business-user ownership of logic",
-									"Reduced development cycles"
-								],
-								"keyComponents": [
-									"Rules engine runtime",
-									"Rule definition language",
-									"Decision tables",
-									"Rule repository",
-									"Testing framework"
-								],
-								"technologies": [
-									"Drools",
-									"Red Hat Decision Manager",
-									"FICO Blaze Advisor",
-									"IBM ODM",
-									"Microsoft Rules Engine",
-									"Apache Spark MLlib"
-								],
-								"maturityLevels": {
-									"plan": {
-										"available": true,
-										"description": "Business rules patterns, decision modeling frameworks, and rule governance templates available"
-									},
-									"build": {
-										"available": true,
-										"description": "Rules engines, decision management platforms, and rule authoring tools available"
-									},
-									"operate": {
-										"available": true,
-										"description": "Managed rules services, cloud decision platforms, and rules-as-a-service solutions available"
-									},
-									"score": 3
-								}
+						},
+						{
+							"id": "business-intelligence",
+							"name": "Business Intelligence",
+							"definition": "Analytics and reporting capabilities for data-driven decision making",
+							"description": "Business Intelligence (BI) enables organizations to transform raw data into actionable insights through reporting, dashboards, and interactive analytics. BI helps stakeholders monitor performance, identify trends, and make informed strategic decisions.",
+							"examples": [
+								"Executive dashboards",
+								"Self-service reporting",
+								"Ad-hoc data analysis",
+								"Performance scorecards",
+								"Predictive analytics",
+								"Data visualization"
+							],
+							"benefits": [
+								"Improved decision making",
+								"Data-driven culture",
+								"Faster insight generation",
+								"Enhanced operational visibility",
+								"Early risk identification",
+								"Competitive advantage"
+							],
+							"keyComponents": [
+								"Data extraction and transformation",
+								"Data warehouse or data marts",
+								"Visualization tools",
+								"Self-service analytics",
+								"Governance and security controls"
+							],
+							"technologies": [
+								"Tableau",
+								"Microsoft Power BI",
+								"Qlik Sense",
+								"Looker",
+								"SAP BusinessObjects",
+								"Domo"
+							],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "BI strategy frameworks, dashboard design templates, and analytics methodology guides available"
+								},
+								"build": {
+									"available": true,
+									"description": "BI platforms (Tableau, Power BI), data connectors, and visualization libraries available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed BI services, cloud analytics platforms, and data visualization solutions available"
+								},
+								"score": 3
 							}
-						]
-					}
-				]
-			},
-			{
-				"id": "application-interaction",
-				"name": "Application Interaction",
-				"description": "Tools for user interaction, UI behavior, user session handling, and presentation orchestration",
-				"subcategories": [
-					{
-						"id": "application-composition",
-						"name": "Application Composition",
-						"description": "Tools for building and composing applications from independent components",
-						"capabilities": [
-							{
-								"id": "modular-frontend-frameworks",
-								"name": "Modular Frontend Frameworks",
-								"definition": "The ability to compose frontends from independently developed and deployable micro frontends or components.",
-								"description": "Modular frontend frameworks allow teams to build applications that are split across multiple domains or teams, while maintaining a cohesive user experience. Each module can be deployed independently and upgraded without affecting the entire frontend.",
-								"examples": [
-									"Multi-team dashboard applications",
-									"E-commerce platforms with independent storefronts",
-									"Banking applications with modular features",
-									"Enterprise portals with departmental sections",
-									"Content management systems with plugin UIs"
-								],
-								"benefits": [
-									"Improved development scalability",
-									"Enhanced team autonomy",
-									"Simplified application upgrades",
-									"Better ownership boundaries",
-									"Reduced deployment risks"
-								],
-								"keyComponents": [
-									"Module federation runtime",
-									"Component registry",
-									"Shared dependency management",
-									"Cross-module communication",
-									"Testing infrastructure"
-								],
-								"technologies": [
-									"Module Federation",
-									"Single-SPA",
-									"Bit",
-									"Nx",
-									"Lerna",
-									"Piral"
-								],
-								"maturityLevels": {
-									"plan": {
-										"available": true,
-										"description": "Micro frontend patterns, modular architecture guides, and component design systems available"
-									},
-									"build": {
-										"available": true,
-										"description": "Module federation tools, component libraries, and micro frontend frameworks available"
-									},
-									"operate": {
-										"available": true,
-										"description": "Managed micro frontend platforms, component hosting services, and modular deployment solutions available"
-									},
-									"score": 3
-								}
-							},
-							{
-								"id": "plugin-frameworks",
-								"name": "Plugin Frameworks",
-								"definition": "The capability to dynamically extend an application's features through independently developed modules or plugins.",
-								"description": "Plugin frameworks provide an interface through which third parties or internal developers can add new functionality without modifying the core codebase. Common in extensible apps such as editors, platforms, and developer tools.",
-								"examples": [
-									"IDE extension marketplaces",
-									"CMS plugin ecosystems",
-									"Developer tool integrations",
-									"Platform customization modules",
-									"Third-party feature additions"
-								],
-								"benefits": [
-									"Rapid application extensibility",
-									"Enhanced community contribution",
-									"Accelerated ecosystem growth",
-									"Reduced core application complexity",
-									"Improved time-to-market"
-								],
-								"keyComponents": [
-									"Plugin runtime engine",
-									"Extension API framework",
-									"Plugin registry system",
-									"Security sandboxing",
-									"Version compatibility manager"
-								],
-								"technologies": [
-									"VS Code Extensions API",
-									"Grafana Plugin SDK",
-									"Jenkins Plugin Framework",
-									"WordPress Plugin Architecture",
-									"Figma Plugin API",
-									"Chrome Extension Platform"
-								],
-								"maturityLevels": {
-									"plan": {
-										"available": true,
-										"description": "Plugin architecture patterns, extensibility frameworks, and API design guides available"
-									},
-									"build": {
-										"available": true,
-										"description": "Plugin development SDKs, extension frameworks, and runtime platforms available"
-									},
-									"operate": {
-										"available": true,
-										"description": "Managed plugin marketplaces, extension hosting services, and plugin lifecycle management available"
-									},
-									"score": 3
-								}
+						},
+						{
+							"id": "collaboration-tools",
+							"name": "Collaboration Tools",
+							"definition": "Platforms enabling team communication and collaboration",
+							"description": "Collaboration Tools facilitate effective communication, information sharing, and teamwork within and across organizations. These tools enhance productivity, especially in distributed or hybrid work environments.",
+							"examples": [
+								"Team messaging platforms",
+								"Video conferencing",
+								"Document collaboration",
+								"Project management boards",
+								"Knowledge sharing portals",
+								"Virtual whiteboards"
+							],
+							"benefits": [
+								"Improved team productivity",
+								"Enhanced communication",
+								"Seamless remote collaboration",
+								"Knowledge retention",
+								"Faster decision making",
+								"Cross-functional alignment"
+							],
+							"keyComponents": [
+								"Messaging and chat",
+								"File sharing",
+								"Video and voice conferencing",
+								"Project tracking",
+								"Integration with business tools"
+							],
+							"technologies": [
+								"Microsoft Teams",
+								"Slack",
+								"Zoom",
+								"Google Workspace",
+								"SharePoint",
+								"Asana"
+							],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Collaboration strategy frameworks, digital workplace design patterns, and team productivity guides available"
+								},
+								"build": {
+									"available": true,
+									"description": "Collaboration platforms (Slack, Teams), workflow tools, and integration APIs available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed collaboration services, enterprise communication platforms, and digital workplace solutions available"
+								},
+								"score": 3
 							}
-						]
-					},
-					{
-						"id": "state-navigation",
-						"name": "State & Navigation",
-						"description": "Tools for managing and navigating application state",
-						"capabilities": [
-							{
-								"id": "state-management",
-								"name": "State Management",
-								"definition": "The capability to manage, share, and persist application state across components, views, or services.",
-								"description": "State management libraries provide centralized or scoped approaches to handle dynamic data such as user inputs, responses, or derived values. These are especially important in reactive and SPAs where data must flow between UI layers and services.",
-								"examples": [
-									"Global application state coordination",
-									"User session management",
-									"Form data persistence",
-									"Real-time data synchronization",
-									"Component state sharing"
-								],
-								"benefits": [
-									"Predictable application behavior",
-									"Enhanced debugging capabilities",
-									"Improved data consistency",
-									"Scalable frontend architecture",
-									"Reduced prop drilling"
-								],
-								"keyComponents": [
-									"State store",
-									"Action dispatchers",
-									"State selectors",
-									"Persistence layer",
-									"Developer tools"
-								],
-								"technologies": [
-									"Redux",
-									"Zustand",
-									"RxJS",
-									"Svelte Stores",
-									"MobX",
-									"Recoil"
-								],
-								"maturityLevels": {
-									"plan": {
-										"available": true,
-										"description": "State management patterns, architectural guides, and best practices available"
-									},
-									"build": {
-										"available": true,
-										"description": "State management libraries, development tools, and testing frameworks available"
-									},
-									"operate": {
-										"available": true,
-										"description": "State persistence services, real-time synchronization platforms, and monitoring tools available"
-									},
-									"score": 3
-								}
+						}
+					]
+				},
+				{
+					"id": "development-platforms",
+					"name": "Development Platforms",
+					"description": "Tools for building and deploying applications",
+					"capabilities": [
+						{
+							"id": "api-management",
+							"name": "API Management",
+							"definition": "The capability to design, deploy, secure, and manage APIs across the enterprise",
+							"description": "API Management provides comprehensive lifecycle management for Application Programming Interfaces (APIs), including design, security, monitoring, and governance. It enables organizations to expose internal services, integrate with partners, and build API-driven architectures while maintaining security and performance.",
+							"examples": [
+								"API gateway implementation",
+								"API security and authentication",
+								"API documentation and developer portals",
+								"API versioning and lifecycle management",
+								"API analytics and monitoring",
+								"Rate limiting and throttling"
+							],
+							"benefits": [
+								"Accelerated integration and development",
+								"Enhanced API security and governance",
+								"Improved developer experience",
+								"Better API performance monitoring",
+								"Standardized API design patterns",
+								"Reduced integration complexity"
+							],
+							"keyComponents": [
+								"API gateway",
+								"Developer portal",
+								"API security layer",
+								"Analytics and monitoring",
+								"API lifecycle management"
+							],
+							"technologies": [
+								"Kong",
+								"Apigee",
+								"Azure API Management",
+								"AWS API Gateway",
+								"MuleSoft Anypoint"
+							],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "API design patterns, governance frameworks, and REST/GraphQL best practices available"
+								},
+								"build": {
+									"available": true,
+									"description": "API gateways (Kong, Apigee), development frameworks, and testing tools available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed API services, cloud API platforms, and enterprise API management solutions available"
+								},
+								"score": 3
 							}
-						]
-					},
-					{
-						"id": "form-content-systems",
-						"name": "Form & Content Systems",
-						"description": "Tools for building and managing forms and content systems",
-						"capabilities": [
-							{
-								"id": "form-builders",
-								"name": "Form Builders",
-								"definition": "The capability to build and render dynamic, schema-driven forms at runtime.",
-								"description": "Form builders enable developers or non-technical users to create and manage forms for data entry, validation, and submission. They support dynamic schemas, conditional logic, and integrations with backend APIs.",
-								"examples": [
-									"Dynamic survey creation",
-									"Application form generation",
-									"Data collection interfaces",
-									"Configuration wizards",
-									"Multi-step workflows"
-								],
-								"benefits": [
-									"Faster form creation",
-									"Lower maintenance overhead",
-									"Enhanced component reusability",
-									"Better UX for complex input flows",
-									"Reduced development time"
-								],
-								"keyComponents": [
-									"Form schema engine",
-									"Validation framework",
-									"UI component library",
-									"Conditional logic processor",
-									"Data submission handler"
-								],
-								"technologies": [
-									"Form.io",
-									"React Hook Form",
-									"Superforms",
-									"Formik",
-									"Final Form",
-									"JSONForms"
-								],
-								"maturityLevels": {
-									"plan": {
-										"available": true,
-										"description": "Form design patterns, validation strategies, and UX guidelines available"
-									},
-									"build": {
-										"available": true,
-										"description": "Form building libraries, validation frameworks, and UI component systems available"
-									},
-									"operate": {
-										"available": true,
-										"description": "Form hosting services, data collection platforms, and submission processing solutions available"
-									},
-									"score": 3
-								}
+						},
+						{
+							"id": "microservices-architecture",
+							"name": "Microservices Architecture",
+							"definition": "The capability to design, build, and operate applications as a collection of loosely coupled, independently deployable services",
+							"description": "Microservices Architecture enables organizations to decompose complex applications into smaller, manageable services that can be developed, deployed, and scaled independently. It supports rapid development cycles, technology diversity, and organizational scaling while improving system resilience and maintainability.",
+							"examples": [
+								"Service decomposition and domain modeling",
+								"Inter-service communication patterns",
+								"Independent service deployment",
+								"Distributed data management",
+								"Service discovery and registration",
+								"Circuit breaker and resilience patterns"
+							],
+							"benefits": [
+								"Improved development team autonomy",
+								"Enhanced system scalability",
+								"Faster deployment cycles",
+								"Better fault isolation",
+								"Technology diversity and flexibility",
+								"Improved system maintainability"
+							],
+							"keyComponents": [
+								"Service boundaries and APIs",
+								"Service discovery mechanisms",
+								"Inter-service communication",
+								"Distributed data management",
+								"Service monitoring and observability"
+							],
+							"technologies": ["Spring Boot", "Netflix OSS", "Istio", "Consul", "Eureka"],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Microservices patterns, domain-driven design frameworks, and service decomposition guides available"
+								},
+								"build": {
+									"available": true,
+									"description": "Container platforms (Docker, Kubernetes), service mesh tools, and microservices frameworks available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed container services, cloud-native platforms, and service mesh solutions available"
+								},
+								"score": 3
 							}
-						]
-					}
-				]
-			},
-			{
-				"id": "application-integration",
-				"name": "Application Integration",
-				"description": "Integration and collaboration tools for applications",
-				"subcategories": [
-					{
-						"id": "messaging-patterns",
-						"name": "Messaging Patterns",
-						"description": "Tools for managing and orchestrating integration flows",
-						"capabilities": [
-							{
-								"id": "message-routing",
-								"name": "Message Routing",
-								"definition": "The capability to direct messages to the correct processing component or service based on content or metadata.",
-								"description": "This includes routing patterns such as Content-Based Router, Routing Slip, and Recipient List that guide message delivery dynamically based on message properties.",
-								"examples": [
-									"Content-based message filtering",
-									"Dynamic destination selection",
-									"Multi-step routing workflows",
-									"Load balancing across services",
-									"Priority-based message delivery"
-								],
-								"benefits": [
-									"Improved system decoupling",
-									"Enhanced dynamic workflows",
-									"Support for complex process flows",
-									"Better load distribution",
-									"Increased routing flexibility"
-								],
-								"keyComponents": [
-									"Routing engine",
-									"Content analyzers",
-									"Destination registry",
-									"Rule management",
-									"Monitoring dashboard"
-								],
-								"technologies": [
-									"Apache Camel",
-									"Spring Integration",
-									"MuleSoft Anypoint",
-									"Azure Logic Apps",
-									"AWS Step Functions",
-									"IBM Integration Bus"
-								],
-								"maturityLevels": {
-									"plan": {
-										"available": true,
-										"description": "Message routing patterns, integration architectures, and flow design templates available"
-									},
-									"build": {
-										"available": true,
-										"description": "Routing engines, integration platforms, and message processing frameworks available"
-									},
-									"operate": {
-										"available": true,
-										"description": "Managed integration services, cloud routing platforms, and message broker solutions available"
-									},
-									"score": 3
-								}
-							},
-							{
-								"id": "message-transformation",
-								"name": "Message Transformation",
-								"definition": "The capability to modify or translate messages between formats, protocols, or structures as they move between systems.",
-								"description": "This includes Content Enricher, Message Translator, and Canonical Data Model patterns used to harmonize data between services. These transformation capabilities support real-time data mapping, format conversion, content validation, and message enrichment to ensure seamless interoperability between heterogeneous systems and maintain data consistency across service boundaries.",
-								"examples": [
-									"Data format conversion",
-									"Protocol translation",
-									"Message enrichment",
-									"Schema transformation",
-									"Content filtering and mapping"
-								],
-								"benefits": [
-									"Enhanced system interoperability",
-									"Improved data consistency",
-									"Reduced system coupling",
-									"Better data quality",
-									"Simplified integration"
-								],
-								"keyComponents": [
-									"Transformation engine",
-									"Mapping definitions",
-									"Content enrichers",
-									"Format converters",
-									"Validation rules"
-								],
-								"technologies": [
-									"Apache Camel",
-									"MuleSoft DataWeave",
-									"Spring Integration",
-									"XSLT",
-									"JSONPath",
-									"FreeMarker"
-								],
-								"maturityLevels": {
-									"plan": {
-										"available": true,
-										"description": "Message transformation patterns, data mapping strategies, and integration templates available"
-									},
-									"build": {
-										"available": true,
-										"description": "Transformation engines, mapping tools, and data conversion frameworks available"
-									},
-									"operate": {
-										"available": true,
-										"description": "Managed transformation services, cloud data conversion platforms, and ETL solutions available"
-									},
-									"score": 3
-								}
-							},
-							{
-								"id": "messaging-endpoints",
-								"name": "Messaging Endpoints",
-								"definition": "The capability to connect services or applications via reusable, reliable messaging interfaces.",
-								"description": "Includes endpoint patterns such as Inbound/Outbound Channel Adapters and Durable Subscribers that abstract communication protocols. These endpoints provide reliable, scalable connectivity between systems, support multiple messaging protocols, handle connection pooling and error recovery, and enable loose coupling between distributed services through standardized interfaces.",
-								"examples": [
-									"Message queue consumers",
-									"Event stream subscribers",
-									"API gateway endpoints",
-									"Service bus adapters",
-									"Webhook receivers"
-								],
-								"benefits": [
-									"Reliable message delivery",
-									"Enhanced protocol abstraction",
-									"Improved system scalability",
-									"Better fault tolerance",
-									"Simplified connectivity"
-								],
-								"keyComponents": [
-									"Endpoint adapters",
-									"Connection pooling",
-									"Message handlers",
-									"Error handling",
-									"Monitoring agents"
-								],
-								"technologies": [
-									"Apache Kafka",
-									"RabbitMQ",
-									"JMS",
-									"Azure Service Bus",
-									"AWS SQS",
-									"Google Pub/Sub"
-								],
-								"maturityLevels": {
-									"plan": {
-										"available": true,
-										"description": "Messaging endpoint patterns, connectivity architectures, and integration blueprints available"
-									},
-									"build": {
-										"available": true,
-										"description": "Message brokers, endpoint adapters, and connectivity frameworks available"
-									},
-									"operate": {
-										"available": true,
-										"description": "Managed messaging services, cloud message brokers, and endpoint hosting solutions available"
-									},
-									"score": 3
-								}
+						},
+						{
+							"id": "container-orchestration",
+							"name": "Container Orchestration",
+							"definition": "The capability to automate the deployment, scaling, and management of containerized applications",
+							"description": "Container Orchestration provides automated management of containerized applications across clusters of hosts. It handles deployment, scaling, networking, and health monitoring of containers, enabling organizations to run applications reliably at scale while simplifying operations and resource management.",
+							"examples": [
+								"Automated container deployment",
+								"Service discovery and load balancing",
+								"Auto-scaling based on demand",
+								"Rolling updates and rollbacks",
+								"Health monitoring and self-healing",
+								"Resource allocation and optimization"
+							],
+							"benefits": [
+								"Simplified container management",
+								"Improved application scalability",
+								"Enhanced system reliability",
+								"Reduced operational overhead",
+								"Better resource utilization",
+								"Faster deployment cycles"
+							],
+							"keyComponents": [
+								"Container runtime",
+								"Cluster management",
+								"Service discovery",
+								"Load balancing",
+								"Health monitoring"
+							],
+							"technologies": ["Kubernetes", "Docker Swarm", "OpenShift", "Nomad", "Amazon ECS"],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Container orchestration patterns, Kubernetes architecture guides, and deployment strategies available"
+								},
+								"build": {
+									"available": true,
+									"description": "Container platforms (Docker, Kubernetes), orchestration tools, and CI/CD pipelines available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed Kubernetes services (EKS, GKE, AKS), container-as-a-service platforms available"
+								},
+								"score": 3
 							}
-						]
-					},
-					{
-						"id": "integration-control-flow",
-						"name": "Integration Control Flow",
-						"description": "Tools for managing and orchestrating integration flows",
-						"capabilities": [
-							{
-								"id": "aggregator-pattern",
-								"name": "Aggregator Pattern",
-								"definition": "The capability to combine messages or events from multiple sources into a single, unified message.",
-								"description": "The Aggregator Pattern is used when multiple sources contribute partial data that must be correlated and combined into a single, complete message. Implementing this pattern requires stateful processing to track and store incoming messages until all required parts are received. Correlation logic is essential to determine which messages belong together, often using unique identifiers or keys. A completeness condition defines when enough data has arrived to trigger aggregation—this could be based on a count, a timeout, or the presence of specific elements. Finally, an aggregation algorithm combines the collected messages into a unified result, which is then emitted downstream. This pattern is critical for scenarios such as order fulfillment, batch processing, or any workflow where data from multiple events must be merged before further processing.",
-								"examples": [
-									"Aggregation of messages derived from the Splitter pattern."
-								],
-								"benefits": [
-									"Data completeness by merging partial information from multiple sources",
-									"Flexible timing through configurable completeness conditions (count, timeout, etc.)",
-									"Improved coordination of distributed or asynchronous processes",
-									"Increased reliability by ensuring only complete messages are processed downstream",
-									"Enhanced error handling and recovery for missing or delayed data",
-									"Better auditability and traceability of how final messages are constructed"
-								],
-								"keyComponents": [
-									"Correlation Strategy",
-									"Completeness Condition",
-									"Aggregation Algorithm"
-								],
-								"technologies": [
-									"Apache Camel Aggregator",
-									"AWS Step Functions Join",
-									"Spring Integration Aggregator"
-								],
-								"maturityLevels": {
-									"plan": {
-										"available": true,
-										"description": "Aggregation patterns, correlation strategies, and completeness conditions available"
-									},
-									"build": {
-										"available": true,
-										"description": "Aggregation libraries, correlation algorithms, and integration frameworks available"
-									},
-									"operate": {
-										"available": true,
-										"description": "Managed aggregation services, cloud-native integration platforms available"
-									},
-									"score": 3
-								}
-							},
-							{
-								"id": "splitter-pattern",
-								"name": "Splitter Pattern",
-								"definition": "The ability to break a single composite message into multiple sub-messages for parallel or independent processing.",
-								"description": "The Splitter Pattern is used to break down a single composite message or payload into multiple sub-messages, each of which can be processed independently or in parallel. This is especially useful for handling batch records, large files, or grouped data that must be distributed across different processing components. The pattern often involves assigning sequence numbers or correlation identifiers to each sub-message to enable later reconciliation, aggregation, or reassembly. Splitters are commonly used in integration flows where individual records need to be validated, transformed, or routed separately, while still maintaining the ability to reference common elements or reconstruct the original message if needed.",
-								"examples": [
-									"Iterating Splitters (Iterator or Sequencer)",
-									"Static Splitters"
-								],
-								"benefits": [
+						},
+						{
+							"id": "mobile-development-frameworks",
+							"name": "Mobile Development Frameworks",
+							"definition": "The capability to develop and deploy mobile applications across multiple platforms using unified frameworks",
+							"description": "Mobile Development Frameworks enable organizations to create mobile applications for iOS, Android, and other platforms using shared codebases and development practices. They provide cross-platform compatibility, native performance, and streamlined development workflows while reducing time-to-market and maintenance overhead.",
+							"examples": [
+								"Cross-platform mobile app development",
+								"Native mobile app development",
+								"Progressive web app (PWA) development",
+								"Mobile app testing and deployment",
+								"App store publishing and distribution",
+								"Mobile app performance optimization"
+							],
+							"benefits": [
+								"Reduced development time and costs",
+								"Consistent user experience across platforms",
+								"Shared codebase maintenance",
+								"Faster time-to-market",
+								"Improved developer productivity",
+								"Enhanced mobile app quality"
+							],
+							"keyComponents": [
+								"Cross-platform development tools",
+								"Native platform integrations",
+								"UI/UX component libraries",
+								"Testing and debugging tools",
+								"App deployment pipelines"
+							],
+							"technologies": ["React Native", "Flutter", "Xamarin", "Ionic", "Swift/Kotlin"],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Mobile app architecture patterns, cross-platform development guides, and UI/UX frameworks available"
+								},
+								"build": {
+									"available": true,
+									"description": "Mobile frameworks (React Native, Flutter), development tools, and testing platforms available"
+								},
+								"operate": {
+									"available": true,
+									"description": "App store deployment services, mobile backend platforms, and device testing clouds available"
+								},
+								"score": 3
+							}
+						}
+					]
+				},
+				{
+					"id": "frontend-user-experience",
+					"name": "Frontend User Experience",
+					"description": "Tools for building and managing user interfaces",
+					"capabilities": [
+						{
+							"id": "web-frontend-frameworks",
+							"name": "Web Frontend Frameworks",
+							"definition": "The capability to build modern, interactive web user interfaces using component-based frameworks",
+							"description": "Web Frontend Frameworks provide structured approaches to building dynamic, responsive web applications with reusable components, state management, and modern development tools. They enable rapid development of sophisticated user interfaces while maintaining code quality and performance.",
+							"examples": [
+								"Component-based UI development",
+								"Single-page application (SPA) development",
+								"Progressive web app (PWA) implementation",
+								"Server-side rendering (SSR)",
+								"State management and data flow",
+								"Responsive design and mobile optimization"
+							],
+							"benefits": [
+								"Faster frontend development",
+								"Improved code reusability",
+								"Enhanced user experience",
+								"Better maintainability",
+								"Modern development practices",
+								"Optimized performance"
+							],
+							"keyComponents": [
+								"Component libraries",
+								"State management systems",
+								"Build and bundling tools",
+								"Development servers",
+								"Testing frameworks"
+							],
+							"technologies": ["React", "Vue.js", "Angular", "Svelte", "Next.js"],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Frontend architecture patterns, component design systems, and modern web development guides available"
+								},
+								"build": {
+									"available": true,
+									"description": "Frontend frameworks (React, Vue, Angular), build tools, and component libraries available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Frontend hosting platforms, CDN services, and web performance optimization tools available"
+								},
+								"score": 3
+							}
+						},
+						{
+							"id": "authentication-implementation",
+							"name": "Authentication Implementation",
+							"definition": "The capability to implement secure authentication and authorization flows within applications",
+							"description": "Authentication Implementation provides developers with the tools and patterns to integrate secure login, authentication, and authorization mechanisms into applications. It covers OAuth flows, JWT handling, session management, and SSO integration while maintaining security best practices and user experience.",
+							"examples": [
+								"OAuth 2.0 and OpenID Connect flows",
+								"JWT token management and validation",
+								"Session-based authentication",
+								"Multi-factor authentication (MFA) integration",
+								"Single sign-on (SSO) implementation",
+								"Social login integration"
+							],
+							"benefits": [
+								"Secure user authentication",
+								"Simplified login experience",
+								"Reduced authentication complexity",
+								"Standardized security practices",
+								"Better user experience",
+								"Reduced development time"
+							],
+							"keyComponents": [
+								"Authentication libraries",
+								"Token management",
+								"Session handling",
+								"Authorization middleware",
+								"Security validation"
+							],
+							"technologies": ["Auth0", "Firebase Auth", "NextAuth.js", "Passport.js", "Keycloak"],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Authentication patterns, security frameworks, and identity management guides available"
+								},
+								"build": {
+									"available": true,
+									"description": "Auth libraries (Auth0, Firebase Auth), identity providers, and security frameworks available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed identity services, SSO platforms, and authentication-as-a-service solutions available"
+								},
+								"score": 3
+							}
+						},
+						{
+							"id": "real-time-communication",
+							"name": "Real-time Communication",
+							"definition": "The capability to enable bidirectional, real-time communication between clients and servers in web applications",
+							"description": "Real-time Communication provides the infrastructure and protocols for instant data exchange between clients and servers, enabling features like live chat, real-time notifications, collaborative editing, and live updates. It supports modern user expectations for responsive, interactive web applications.",
+							"examples": [
+								"WebSocket connections for live data",
+								"Server-sent events for updates",
+								"Real-time chat and messaging",
+								"Live collaborative editing",
+								"Real-time notifications",
+								"Live data visualization and dashboards"
+							],
+							"benefits": [
+								"Enhanced user engagement",
+								"Improved application responsiveness",
+								"Better collaborative features",
+								"Reduced server polling overhead",
+								"Modern user experience",
+								"Efficient data synchronization"
+							],
+							"keyComponents": [
+								"WebSocket servers",
+								"Message brokers",
+								"Client-side real-time libraries",
+								"Connection management",
+								"Message routing and delivery"
+							],
+							"technologies": ["Socket.io", "WebSockets", "Server-Sent Events", "WebRTC", "Pusher"],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Real-time architecture patterns, WebSocket design guides, and event-driven system blueprints available"
+								},
+								"build": {
+									"available": true,
+									"description": "Real-time frameworks (Socket.io, WebRTC), messaging systems, and streaming platforms available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed real-time services, cloud messaging platforms, and streaming analytics solutions available"
+								},
+								"score": 3
+							}
+						}
+					]
+				},
+				{
+					"id": "quality-performance",
+					"name": "Quality & Performance",
+					"description": "Tools for managing and optimizing application performance and scalability",
+					"capabilities": [
+						{
+							"id": "application-performance-monitoring",
+							"name": "Application Performance Monitoring",
+							"definition": "The capability to monitor, analyze, and optimize application performance and user experience",
+							"description": "Application Performance Monitoring (APM) provides real-time visibility into application behavior, performance metrics, and user experience. It enables developers and operations teams to identify bottlenecks, troubleshoot issues, and optimize application performance across the entire technology stack.",
+							"examples": [
+								"Real-time performance monitoring",
+								"Application dependency mapping",
+								"Error tracking and debugging",
+								"User experience monitoring",
+								"Database query performance analysis",
+								"Code-level performance profiling"
+							],
+							"benefits": [
+								"Faster issue identification and resolution",
+								"Improved application performance",
+								"Enhanced user experience",
+								"Proactive performance optimization",
+								"Reduced mean time to resolution",
+								"Better resource utilization"
+							],
+							"keyComponents": [
+								"Performance monitoring agents",
+								"Real-time analytics engine",
+								"Alerting and notification systems",
+								"Performance dashboards",
+								"Root cause analysis tools"
+							],
+							"technologies": ["New Relic", "Datadog", "AppDynamics", "Dynatrace", "Elastic APM"],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "APM strategy frameworks, monitoring patterns, and observability guides available"
+								},
+								"build": {
+									"available": true,
+									"description": "APM tools (New Relic, Datadog), monitoring libraries, and instrumentation frameworks available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed APM services, cloud monitoring platforms, and performance analytics solutions available"
+								},
+								"score": 3
+							}
+						},
+						{
+							"id": "testing-frameworks",
+							"name": "Testing Frameworks",
+							"definition": "The capability to implement automated testing strategies for applications across unit, integration, and end-to-end levels",
+							"description": "Testing Frameworks provide structured approaches to validate application functionality, performance, and quality through automated testing. They enable continuous validation of code changes, regression detection, and confidence in application releases while reducing manual testing effort.",
+							"examples": [
+								"Unit testing implementation",
+								"Integration testing automation",
+								"End-to-end testing scenarios",
+								"Performance and load testing",
+								"Test-driven development (TDD)",
+								"Behavior-driven development (BDD)"
+							],
+							"benefits": [
+								"Improved software quality",
+								"Faster defect detection",
+								"Reduced manual testing effort",
+								"Increased deployment confidence",
+								"Better code maintainability",
+								"Faster development cycles"
+							],
+							"keyComponents": [
+								"Test execution engines",
+								"Test data management",
+								"Assertion libraries",
+								"Test reporting tools",
+								"Continuous integration integration"
+							],
+							"technologies": ["Jest", "Cypress", "Playwright", "JUnit", "Selenium"],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Testing strategies, QA frameworks, and test automation patterns available"
+								},
+								"build": {
+									"available": true,
+									"description": "Testing frameworks (Jest, Cypress), automation tools, and CI/CD integration available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed testing services, cloud testing platforms, and QA automation solutions available"
+								},
+								"score": 3
+							}
+						},
+						{
+							"id": "content-management",
+							"name": "Content Management",
+							"definition": "Systems for creating, managing, and publishing digital content",
+							"description": "Content Management enables organizations to efficiently create, organize, store, and distribute digital content across channels. It ensures content consistency, brand integrity, and supports marketing and operational needs.",
+							"examples": [
+								"Website content management",
+								"Document repositories",
+								"Digital asset management",
+								"Knowledge bases",
+								"Intranet portals",
+								"Multilingual content management"
+							],
+							"benefits": [
+								"Streamlined content creation",
+								"Consistent branding",
+								"Improved content discoverability",
+								"Faster content updates",
+								"Enhanced collaboration",
+								"Regulatory compliance"
+							],
+							"keyComponents": [
+								"Content repository",
+								"Authoring and editing tools",
+								"Publishing workflows",
+								"Search and retrieval",
+								"Access control"
+							],
+							"technologies": [
+								"SharePoint",
+								"Drupal",
+								"WordPress",
+								"Sitecore",
+								"Adobe Experience Manager",
+								"Confluence"
+							],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Content strategy frameworks, information architecture guides, and content lifecycle management patterns available"
+								},
+								"build": {
+									"available": true,
+									"description": "CMS platforms (WordPress, Drupal), headless CMS solutions, and content APIs available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed CMS services, content delivery networks, and digital asset management solutions available"
+								},
+								"score": 3
+							}
+						}
+					]
+				},
+				{
+					"id": "collaboration-content",
+					"name": "Collaboration & Content",
+					"description": "Tools for team collaboration and content management",
+					"capabilities": [
+						{
+							"id": "integration-platform",
+							"name": "Integration Platform",
+							"definition": "Middleware connecting disparate systems and applications",
+							"description": "An Integration Platform enables seamless data and process flow between different applications, systems, and services. It reduces complexity, improves agility, and supports both real-time and batch integrations across the enterprise.",
+							"examples": [
+								"API-based integrations",
+								"Data synchronization between systems",
+								"Event-driven architectures",
+								"Legacy system integration",
+								"Third-party service connectors",
+								"B2B partner integrations"
+							],
+							"benefits": [
+								"System interoperability",
+								"Faster time-to-market",
+								"Data consistency",
+								"Reduced integration complexity",
+								"Improved scalability",
+								"Enhanced business agility"
+							],
+							"keyComponents": [
+								"API Gateway",
+								"Integration workflows",
+								"Data mapping and transformation",
+								"Monitoring and error handling",
+								"Security and access control"
+							],
+							"technologies": [
+								"MuleSoft Anypoint",
+								"Dell Boomi",
+								"Azure Logic Apps",
+								"Apache Camel",
+								"SnapLogic",
+								"WSO2"
+							],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Integration architecture patterns, ESB design guides, and API-led connectivity frameworks available"
+								},
+								"build": {
+									"available": true,
+									"description": "Integration platforms (MuleSoft, Dell Boomi), middleware solutions, and connector libraries available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed integration services, cloud iPaaS platforms, and enterprise service bus solutions available"
+								},
+								"score": 3
+							}
+						}
+					]
+				},
+				{
+					"id": "orchestration-logic",
+					"name": "Orchestration & Logic",
+					"description": "Tools for modeling, executing, and monitoring business processes",
+					"capabilities": [
+						{
+							"id": "workflow-orchestration",
+							"name": "Workflow Orchestration",
+							"definition": "The ability to model, execute, and monitor multi-step business processes in an automated and maintainable way.",
+							"description": "Workflow orchestration tools allow developers and operations teams to encode business logic as a sequence of tasks or state machines. These tools support retry logic, timeouts, parallelism, and integration across APIs or microservices.",
+							"examples": [
+								"Multi-step data processing workflows",
+								"Order fulfillment automation",
+								"Customer onboarding processes",
+								"Financial transaction processing",
+								"Document approval workflows"
+							],
+							"benefits": [
+								"Improved process maintainability",
+								"Clear separation of business logic",
+								"Observable state transitions",
+								"Simplified long-running processes",
+								"Enhanced error handling and recovery"
+							],
+							"keyComponents": [
+								"Workflow engine",
+								"Process definition language",
+								"Task orchestration layer",
+								"State management",
+								"Monitoring and observability"
+							],
+							"technologies": [
+								"Camunda",
+								"Temporal",
+								"Apache Airflow",
+								"AWS Step Functions",
+								"Zeebe",
+								"Conductor"
+							],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Workflow design patterns, orchestration frameworks, and process modeling templates available"
+								},
+								"build": {
+									"available": true,
+									"description": "Workflow engines, orchestration platforms, and process automation tools available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed workflow services, cloud orchestration platforms, and process-as-a-service solutions available"
+								},
+								"score": 3
+							}
+						},
+						{
+							"id": "business-rules-engine",
+							"name": "Business Rules Engine",
+							"definition": "The ability to manage and execute rule-based logic separately from application code.",
+							"description": "Business rules engines allow non-developers or analysts to define policies, thresholds, or conditional behaviors through declarative logic. These rules are maintained outside the application codebase and can be updated independently.",
+							"examples": [
+								"Pricing calculation rules",
+								"Fraud detection policies",
+								"Loan approval criteria",
+								"Compliance validation rules",
+								"Customer eligibility assessments"
+							],
+							"benefits": [
+								"Faster time-to-change",
+								"Clear separation of concerns",
+								"Enhanced auditability",
+								"Business-user ownership of logic",
+								"Reduced development cycles"
+							],
+							"keyComponents": [
+								"Rules engine runtime",
+								"Rule definition language",
+								"Decision tables",
+								"Rule repository",
+								"Testing framework"
+							],
+							"technologies": [
+								"Drools",
+								"Red Hat Decision Manager",
+								"FICO Blaze Advisor",
+								"IBM ODM",
+								"Microsoft Rules Engine",
+								"Apache Spark MLlib"
+							],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Business rules patterns, decision modeling frameworks, and rule governance templates available"
+								},
+								"build": {
+									"available": true,
+									"description": "Rules engines, decision management platforms, and rule authoring tools available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed rules services, cloud decision platforms, and rules-as-a-service solutions available"
+								},
+								"score": 3
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "application-interaction",
+			"name": "Application Interaction",
+			"description": "Tools for user interaction, UI behavior, user session handling, and presentation orchestration",
+			"subcategories": [
+				{
+					"id": "application-composition",
+					"name": "Application Composition",
+					"description": "Tools for building and composing applications from independent components",
+					"capabilities": [
+						{
+							"id": "modular-frontend-frameworks",
+							"name": "Modular Frontend Frameworks",
+							"definition": "The ability to compose frontends from independently developed and deployable micro frontends or components.",
+							"description": "Modular frontend frameworks allow teams to build applications that are split across multiple domains or teams, while maintaining a cohesive user experience. Each module can be deployed independently and upgraded without affecting the entire frontend.",
+							"examples": [
+								"Multi-team dashboard applications",
+								"E-commerce platforms with independent storefronts",
+								"Banking applications with modular features",
+								"Enterprise portals with departmental sections",
+								"Content management systems with plugin UIs"
+							],
+							"benefits": [
+								"Improved development scalability",
+								"Enhanced team autonomy",
+								"Simplified application upgrades",
+								"Better ownership boundaries",
+								"Reduced deployment risks"
+							],
+							"keyComponents": [
+								"Module federation runtime",
+								"Component registry",
+								"Shared dependency management",
+								"Cross-module communication",
+								"Testing infrastructure"
+							],
+							"technologies": ["Module Federation", "Single-SPA", "Bit", "Nx", "Lerna", "Piral"],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Micro frontend patterns, modular architecture guides, and component design systems available"
+								},
+								"build": {
+									"available": true,
+									"description": "Module federation tools, component libraries, and micro frontend frameworks available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed micro frontend platforms, component hosting services, and modular deployment solutions available"
+								},
+								"score": 3
+							}
+						},
+						{
+							"id": "plugin-frameworks",
+							"name": "Plugin Frameworks",
+							"definition": "The capability to dynamically extend an application's features through independently developed modules or plugins.",
+							"description": "Plugin frameworks provide an interface through which third parties or internal developers can add new functionality without modifying the core codebase. Common in extensible apps such as editors, platforms, and developer tools.",
+							"examples": [
+								"IDE extension marketplaces",
+								"CMS plugin ecosystems",
+								"Developer tool integrations",
+								"Platform customization modules",
+								"Third-party feature additions"
+							],
+							"benefits": [
+								"Rapid application extensibility",
+								"Enhanced community contribution",
+								"Accelerated ecosystem growth",
+								"Reduced core application complexity",
+								"Improved time-to-market"
+							],
+							"keyComponents": [
+								"Plugin runtime engine",
+								"Extension API framework",
+								"Plugin registry system",
+								"Security sandboxing",
+								"Version compatibility manager"
+							],
+							"technologies": [
+								"VS Code Extensions API",
+								"Grafana Plugin SDK",
+								"Jenkins Plugin Framework",
+								"WordPress Plugin Architecture",
+								"Figma Plugin API",
+								"Chrome Extension Platform"
+							],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Plugin architecture patterns, extensibility frameworks, and API design guides available"
+								},
+								"build": {
+									"available": true,
+									"description": "Plugin development SDKs, extension frameworks, and runtime platforms available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed plugin marketplaces, extension hosting services, and plugin lifecycle management available"
+								},
+								"score": 3
+							}
+						}
+					]
+				},
+				{
+					"id": "state-navigation",
+					"name": "State & Navigation",
+					"description": "Tools for managing and navigating application state",
+					"capabilities": [
+						{
+							"id": "state-management",
+							"name": "State Management",
+							"definition": "The capability to manage, share, and persist application state across components, views, or services.",
+							"description": "State management libraries provide centralized or scoped approaches to handle dynamic data such as user inputs, responses, or derived values. These are especially important in reactive and SPAs where data must flow between UI layers and services.",
+							"examples": [
+								"Global application state coordination",
+								"User session management",
+								"Form data persistence",
+								"Real-time data synchronization",
+								"Component state sharing"
+							],
+							"benefits": [
+								"Predictable application behavior",
+								"Enhanced debugging capabilities",
+								"Improved data consistency",
+								"Scalable frontend architecture",
+								"Reduced prop drilling"
+							],
+							"keyComponents": [
+								"State store",
+								"Action dispatchers",
+								"State selectors",
+								"Persistence layer",
+								"Developer tools"
+							],
+							"technologies": ["Redux", "Zustand", "RxJS", "Svelte Stores", "MobX", "Recoil"],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "State management patterns, architectural guides, and best practices available"
+								},
+								"build": {
+									"available": true,
+									"description": "State management libraries, development tools, and testing frameworks available"
+								},
+								"operate": {
+									"available": true,
+									"description": "State persistence services, real-time synchronization platforms, and monitoring tools available"
+								},
+								"score": 3
+							}
+						}
+					]
+				},
+				{
+					"id": "form-content-systems",
+					"name": "Form & Content Systems",
+					"description": "Tools for building and managing forms and content systems",
+					"capabilities": [
+						{
+							"id": "form-builders",
+							"name": "Form Builders",
+							"definition": "The capability to build and render dynamic, schema-driven forms at runtime.",
+							"description": "Form builders enable developers or non-technical users to create and manage forms for data entry, validation, and submission. They support dynamic schemas, conditional logic, and integrations with backend APIs.",
+							"examples": [
+								"Dynamic survey creation",
+								"Application form generation",
+								"Data collection interfaces",
+								"Configuration wizards",
+								"Multi-step workflows"
+							],
+							"benefits": [
+								"Faster form creation",
+								"Lower maintenance overhead",
+								"Enhanced component reusability",
+								"Better UX for complex input flows",
+								"Reduced development time"
+							],
+							"keyComponents": [
+								"Form schema engine",
+								"Validation framework",
+								"UI component library",
+								"Conditional logic processor",
+								"Data submission handler"
+							],
+							"technologies": [
+								"Form.io",
+								"React Hook Form",
+								"Superforms",
+								"Formik",
+								"Final Form",
+								"JSONForms"
+							],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Form design patterns, validation strategies, and UX guidelines available"
+								},
+								"build": {
+									"available": true,
+									"description": "Form building libraries, validation frameworks, and UI component systems available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Form hosting services, data collection platforms, and submission processing solutions available"
+								},
+								"score": 3
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "application-integration",
+			"name": "Application Integration",
+			"description": "Integration and collaboration tools for applications",
+			"subcategories": [
+				{
+					"id": "messaging-patterns",
+					"name": "Messaging Patterns",
+					"description": "Tools for managing and orchestrating integration flows",
+					"capabilities": [
+						{
+							"id": "message-routing",
+							"name": "Message Routing",
+							"definition": "The capability to direct messages to the correct processing component or service based on content or metadata.",
+							"description": "This includes routing patterns such as Content-Based Router, Routing Slip, and Recipient List that guide message delivery dynamically based on message properties.",
+							"examples": [
+								"Content-based message filtering",
+								"Dynamic destination selection",
+								"Multi-step routing workflows",
+								"Load balancing across services",
+								"Priority-based message delivery"
+							],
+							"benefits": [
+								"Improved system decoupling",
+								"Enhanced dynamic workflows",
+								"Support for complex process flows",
+								"Better load distribution",
+								"Increased routing flexibility"
+							],
+							"keyComponents": [
+								"Routing engine",
+								"Content analyzers",
+								"Destination registry",
+								"Rule management",
+								"Monitoring dashboard"
+							],
+							"technologies": [
+								"Apache Camel",
+								"Spring Integration",
+								"MuleSoft Anypoint",
+								"Azure Logic Apps",
+								"AWS Step Functions",
+								"IBM Integration Bus"
+							],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Message routing patterns, integration architectures, and flow design templates available"
+								},
+								"build": {
+									"available": true,
+									"description": "Routing engines, integration platforms, and message processing frameworks available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed integration services, cloud routing platforms, and message broker solutions available"
+								},
+								"score": 3
+							}
+						},
+						{
+							"id": "message-transformation",
+							"name": "Message Transformation",
+							"definition": "The capability to modify or translate messages between formats, protocols, or structures as they move between systems.",
+							"description": "This includes Content Enricher, Message Translator, and Canonical Data Model patterns used to harmonize data between services. These transformation capabilities support real-time data mapping, format conversion, content validation, and message enrichment to ensure seamless interoperability between heterogeneous systems and maintain data consistency across service boundaries.",
+							"examples": [
+								"Data format conversion",
+								"Protocol translation",
+								"Message enrichment",
+								"Schema transformation",
+								"Content filtering and mapping"
+							],
+							"benefits": [
+								"Enhanced system interoperability",
+								"Improved data consistency",
+								"Reduced system coupling",
+								"Better data quality",
+								"Simplified integration"
+							],
+							"keyComponents": [
+								"Transformation engine",
+								"Mapping definitions",
+								"Content enrichers",
+								"Format converters",
+								"Validation rules"
+							],
+							"technologies": [
+								"Apache Camel",
+								"MuleSoft DataWeave",
+								"Spring Integration",
+								"XSLT",
+								"JSONPath",
+								"FreeMarker"
+							],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Message transformation patterns, data mapping strategies, and integration templates available"
+								},
+								"build": {
+									"available": true,
+									"description": "Transformation engines, mapping tools, and data conversion frameworks available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed transformation services, cloud data conversion platforms, and ETL solutions available"
+								},
+								"score": 3
+							}
+						},
+						{
+							"id": "messaging-endpoints",
+							"name": "Messaging Endpoints",
+							"definition": "The capability to connect services or applications via reusable, reliable messaging interfaces.",
+							"description": "Includes endpoint patterns such as Inbound/Outbound Channel Adapters and Durable Subscribers that abstract communication protocols. These endpoints provide reliable, scalable connectivity between systems, support multiple messaging protocols, handle connection pooling and error recovery, and enable loose coupling between distributed services through standardized interfaces.",
+							"examples": [
+								"Message queue consumers",
+								"Event stream subscribers",
+								"API gateway endpoints",
+								"Service bus adapters",
+								"Webhook receivers"
+							],
+							"benefits": [
+								"Reliable message delivery",
+								"Enhanced protocol abstraction",
+								"Improved system scalability",
+								"Better fault tolerance",
+								"Simplified connectivity"
+							],
+							"keyComponents": [
+								"Endpoint adapters",
+								"Connection pooling",
+								"Message handlers",
+								"Error handling",
+								"Monitoring agents"
+							],
+							"technologies": [
+								"Apache Kafka",
+								"RabbitMQ",
+								"JMS",
+								"Azure Service Bus",
+								"AWS SQS",
+								"Google Pub/Sub"
+							],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Messaging endpoint patterns, connectivity architectures, and integration blueprints available"
+								},
+								"build": {
+									"available": true,
+									"description": "Message brokers, endpoint adapters, and connectivity frameworks available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed messaging services, cloud message brokers, and endpoint hosting solutions available"
+								},
+								"score": 3
+							}
+						}
+					]
+				},
+				{
+					"id": "integration-control-flow",
+					"name": "Integration Control Flow",
+					"description": "Tools for managing and orchestrating integration flows",
+					"capabilities": [
+						{
+							"id": "aggregator-pattern",
+							"name": "Aggregator Pattern",
+							"definition": "The capability to combine messages or events from multiple sources into a single, unified message.",
+							"description": "The Aggregator Pattern is used when multiple sources contribute partial data that must be correlated and combined into a single, complete message. Implementing this pattern requires stateful processing to track and store incoming messages until all required parts are received. Correlation logic is essential to determine which messages belong together, often using unique identifiers or keys. A completeness condition defines when enough data has arrived to trigger aggregation—this could be based on a count, a timeout, or the presence of specific elements. Finally, an aggregation algorithm combines the collected messages into a unified result, which is then emitted downstream. This pattern is critical for scenarios such as order fulfillment, batch processing, or any workflow where data from multiple events must be merged before further processing.",
+							"examples": ["Aggregation of messages derived from the Splitter pattern."],
+							"benefits": [
+								"Data completeness by merging partial information from multiple sources",
+								"Flexible timing through configurable completeness conditions (count, timeout, etc.)",
+								"Improved coordination of distributed or asynchronous processes",
+								"Increased reliability by ensuring only complete messages are processed downstream",
+								"Enhanced error handling and recovery for missing or delayed data",
+								"Better auditability and traceability of how final messages are constructed"
+							],
+							"keyComponents": [
+								"Correlation Strategy",
+								"Completeness Condition",
+								"Aggregation Algorithm"
+							],
+							"technologies": [
+								"Apache Camel Aggregator",
+								"AWS Step Functions Join",
+								"Spring Integration Aggregator"
+							],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Aggregation patterns, correlation strategies, and completeness conditions available"
+								},
+								"build": {
+									"available": true,
+									"description": "Aggregation libraries, correlation algorithms, and integration frameworks available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed aggregation services, cloud-native integration platforms available"
+								},
+								"score": 3
+							}
+						},
+						{
+							"id": "splitter-pattern",
+							"name": "Splitter Pattern",
+							"definition": "The ability to break a single composite message into multiple sub-messages for parallel or independent processing.",
+							"description": "The Splitter Pattern is used to break down a single composite message or payload into multiple sub-messages, each of which can be processed independently or in parallel. This is especially useful for handling batch records, large files, or grouped data that must be distributed across different processing components. The pattern often involves assigning sequence numbers or correlation identifiers to each sub-message to enable later reconciliation, aggregation, or reassembly. Splitters are commonly used in integration flows where individual records need to be validated, transformed, or routed separately, while still maintaining the ability to reference common elements or reconstruct the original message if needed.",
+							"examples": ["Iterating Splitters (Iterator or Sequencer)", "Static Splitters"],
+							"benefits": [
 								"Parallelism for faster processing of large payloads",
 								"Granular control over individual message handling",
 								"Simplified processing logic by breaking down complex data",
 								"Easier error isolation and retry of failed sub-messages",
 								"Supports reconciliation and reassembly of original messages",
 								"Flexibility to reference common elements across sub-messages"
-								],
-								"keyComponents": [
-									"Splitter component",
-									"Message correlation identifiers",
-									"Reassembly logic (if needed)",
-									"Error handling and retry mechanisms"
-								],
-								"technologies": [
-									"Apache Camel Splitter",
-									"Spring Integration Splitter",
-									"AWS Lambda Event Processing"
-								],
-								"maturityLevels": {
-									"plan": {
-										"available": true,
-										"description": "Splitter patterns, message correlation strategies, and reassembly techniques available"
-									},
-									"build": {
-										"available": true,
-										"description": "Splitter components (Apache Camel, Spring Integration), message correlation libraries available"
-									},
-									"operate": {
-										"available": true,
-										"description": "Managed splitter services, cloud event processing platforms available"
-									},
-									"score": 3
-								}
-							},
-							{
-								"id": "resequencer-pattern",
-								"name": "Resequencer Pattern",
-								"definition": "The capability to reorder messages into a defined sequence before forwarding to the next component.",
-								"description": "The capability to reorder messages into a defined sequence before forwarding to the next component. The resequencer pattern is essential in distributed or asynchronous systems where messages may arrive out of order due to network delays, retries, or parallel processing. By buffering and reordering messages based on sequence numbers or timestamps, the resequencer ensures that downstream systems receive data in the correct order, preserving data integrity and enabling predictable processing. This pattern is commonly used in financial transactions, event processing, and any scenario where the order of operations is critical.",
-								"examples": [
-									"Batch Resequencer",
-									"Stream Resequencer"
-								],
-								"benefits": ["Data integrity", "Order preservation", "Predictable outcomes"],
-								"keyComponents": [
-									"Message queues",
-									"State management",
-									"Ordering algorithms"
-								],
-								"technologies": [
-									"Apache Camel Resequencer",
-									"Custom Kafka Consumers",
-									"JMS Ordering Filters"
-								],
-								"maturityLevels": {
-									"plan": {
-										"available": true,
-										"description": "Messaging patterns, integration design principles, and event-driven architecture guides available"
-									},
-									"build": {
-										"available": true,
-										"description": "Messaging frameworks (Apache Camel, Spring Integration), event brokers, and integration libraries available"
-									},
-									"operate": {
-										"available": true,
-										"description": "Managed messaging services, cloud integration platforms, and event streaming solutions available"
-								
-								
-								
-									},
-									"score": 3
-								}
+							],
+							"keyComponents": [
+								"Splitter component",
+								"Message correlation identifiers",
+								"Reassembly logic (if needed)",
+								"Error handling and retry mechanisms"
+							],
+							"technologies": [
+								"Apache Camel Splitter",
+								"Spring Integration Splitter",
+								"AWS Lambda Event Processing"
+							],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Splitter patterns, message correlation strategies, and reassembly techniques available"
+								},
+								"build": {
+									"available": true,
+									"description": "Splitter components (Apache Camel, Spring Integration), message correlation libraries available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed splitter services, cloud event processing platforms available"
+								},
+								"score": 3
 							}
-						]
-					},
-					{
-						"id": "event-driven-architecture",
-						"name": "Event-Driven Architecture",
-						"description": "Tools for building event-driven architectures",
-						"capabilities": [
-							{
-								"id": "event-stream-processing",
-								"name": "Event Stream Processing",
-								"definition": "The capability to continuously capture, analyze, and respond to events as they occur in real time.",
-								"description": "Supports near real-time applications by enabling transformation, filtering, enrichment, and routing of event data as it flows through the system. Often implemented using stream processing engines.",
-								"examples": [
-									"Real-time fraud detection",
-									"Live data aggregation",
-									"Streaming analytics",
-									"Event-driven notifications",
-									"Continuous data enrichment"
-								],
-								"benefits": [
-									"Enhanced real-time responsiveness",
-									"Improved operational agility",
-									"Reduced processing latency",
-									"Better decision making",
-									"Scalable event processing"
-								],
-								"keyComponents": [
-									"Stream processing engine",
-									"Event ingestion layer",
-									"Processing operators",
-									"State management",
-									"Output sinks"
-								],
-								"technologies": [
-									"Apache Flink",
-									"Kafka Streams",
-									"Kinesis Data Analytics",
-									"Apache Storm",
-									"Spark Streaming",
-									"Azure Stream Analytics"
-								],
-								"maturityLevels": {
-									"plan": {
-										"available": true,
-										"description": "Stream processing patterns, event architecture designs, and real-time processing frameworks available"
-									},
-									"build": {
-										"available": true,
-										"description": "Stream processing engines, event processing libraries, and real-time analytics platforms available"
-									},
-									"operate": {
-										"available": true,
-										"description": "Managed stream processing services, cloud analytics platforms, and real-time data processing solutions available"
-									},
-									"score": 3
-								}
-							},
-							{
-								"id": "event-replay-retention",
-								"name": "Event Replay & Retention",
-								"definition": "The capability to store and replay historical events to reprocess, debug, or audit application behavior.",
-								"description": "Useful in event-sourced systems or for restoring state by replaying a durable log of past events. Enables recovery, compliance, and new service onboarding with historical data.",
-								"examples": [
-									"Event sourcing replay",
-									"System state restoration",
-									"Audit trail reconstruction",
-									"Historical data reprocessing",
-									"Compliance reporting"
-								],
-								"benefits": [
-									"Improved system auditability",
-									"Enhanced failure recovery",
-									"Support for late consumers",
-									"Better compliance capabilities",
-									"Simplified debugging"
-								],
-								"keyComponents": [
-									"Event store",
-									"Retention policies",
-									"Replay engine",
-									"Snapshot management",
-									"Archive systems"
-								],
-								"technologies": [
-									"Kafka Log Compaction",
-									"EventStoreDB",
-									"AWS EventBridge Archive",
-									"Azure Event Hubs Capture",
-									"Apache Pulsar",
-									"MongoDB Change Streams"
-								],
-								"maturityLevels": {
-									"plan": {
-										"available": true,
-										"description": "Event sourcing patterns, retention strategies, and replay architecture designs available"
-									},
-									"build": {
-										"available": true,
-										"description": "Event stores, replay engines, and retention management tools available"
-									},
-									"operate": {
-										"available": true,
-										"description": "Managed event storage services, cloud archiving solutions, and replay-as-a-service platforms available"
-									},
-									"score": 3
-								}
-							},
-							{
-								"id": "event-contracts-schemas",
-								"name": "Event Contracts & Schemas",
-								"definition": "The capability to define, manage, and evolve structured formats and agreements for event payloads.",
-								"description": "Supports safe evolution and interoperability in distributed systems by providing versioned schemas and validation. Encourages reuse and reduces tight coupling between publishers and consumers.",
-								"examples": [
-									"Event schema definitions",
-									"Contract-first API design",
-									"Schema evolution management",
-									"Event payload validation",
-									"Cross-team API agreements"
-								],
-								"benefits": [
-									"Enhanced loose coupling",
-									"Improved backward/forward compatibility",
-									"Better developer coordination",
-									"Reduced integration errors",
-									"Accelerated development cycles"
-								],
-								"keyComponents": [
-									"Schema registry",
-									"Contract definitions",
-									"Validation engines",
-									"Version management",
-									"Documentation generators"
-								],
-								"technologies": [
-									"AsyncAPI",
-									"Apache Avro",
-									"Confluent Schema Registry",
-									"JSON Schema",
-									"Protocol Buffers",
-									"OpenAPI Specification"
-								],
-								"maturityLevels": {
-									"plan": {
-										"available": true,
-										"description": "Event contract patterns, schema design principles, and API governance frameworks available"
-									},
-									"build": {
-										"available": true,
-										"description": "Schema registries, contract testing tools, and validation frameworks available"
-									},
-									"operate": {
-										"available": true,
-										"description": "Managed schema services, contract governance platforms, and API lifecycle management solutions available"
-									},
-									"score": 3
-								}
+						},
+						{
+							"id": "resequencer-pattern",
+							"name": "Resequencer Pattern",
+							"definition": "The capability to reorder messages into a defined sequence before forwarding to the next component.",
+							"description": "The capability to reorder messages into a defined sequence before forwarding to the next component. The resequencer pattern is essential in distributed or asynchronous systems where messages may arrive out of order due to network delays, retries, or parallel processing. By buffering and reordering messages based on sequence numbers or timestamps, the resequencer ensures that downstream systems receive data in the correct order, preserving data integrity and enabling predictable processing. This pattern is commonly used in financial transactions, event processing, and any scenario where the order of operations is critical.",
+							"examples": ["Batch Resequencer", "Stream Resequencer"],
+							"benefits": ["Data integrity", "Order preservation", "Predictable outcomes"],
+							"keyComponents": ["Message queues", "State management", "Ordering algorithms"],
+							"technologies": [
+								"Apache Camel Resequencer",
+								"Custom Kafka Consumers",
+								"JMS Ordering Filters"
+							],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Messaging patterns, integration design principles, and event-driven architecture guides available"
+								},
+								"build": {
+									"available": true,
+									"description": "Messaging frameworks (Apache Camel, Spring Integration), event brokers, and integration libraries available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed messaging services, cloud integration platforms, and event streaming solutions available"
+								},
+								"score": 3
 							}
-						]
-					}
-				]
-			}
-		]
-	}
+						}
+					]
+				},
+				{
+					"id": "event-driven-architecture",
+					"name": "Event-Driven Architecture",
+					"description": "Tools for building event-driven architectures",
+					"capabilities": [
+						{
+							"id": "event-stream-processing",
+							"name": "Event Stream Processing",
+							"definition": "The capability to continuously capture, analyze, and respond to events as they occur in real time.",
+							"description": "Supports near real-time applications by enabling transformation, filtering, enrichment, and routing of event data as it flows through the system. Often implemented using stream processing engines.",
+							"examples": [
+								"Real-time fraud detection",
+								"Live data aggregation",
+								"Streaming analytics",
+								"Event-driven notifications",
+								"Continuous data enrichment"
+							],
+							"benefits": [
+								"Enhanced real-time responsiveness",
+								"Improved operational agility",
+								"Reduced processing latency",
+								"Better decision making",
+								"Scalable event processing"
+							],
+							"keyComponents": [
+								"Stream processing engine",
+								"Event ingestion layer",
+								"Processing operators",
+								"State management",
+								"Output sinks"
+							],
+							"technologies": [
+								"Apache Flink",
+								"Kafka Streams",
+								"Kinesis Data Analytics",
+								"Apache Storm",
+								"Spark Streaming",
+								"Azure Stream Analytics"
+							],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Stream processing patterns, event architecture designs, and real-time processing frameworks available"
+								},
+								"build": {
+									"available": true,
+									"description": "Stream processing engines, event processing libraries, and real-time analytics platforms available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed stream processing services, cloud analytics platforms, and real-time data processing solutions available"
+								},
+								"score": 3
+							}
+						},
+						{
+							"id": "event-replay-retention",
+							"name": "Event Replay & Retention",
+							"definition": "The capability to store and replay historical events to reprocess, debug, or audit application behavior.",
+							"description": "Useful in event-sourced systems or for restoring state by replaying a durable log of past events. Enables recovery, compliance, and new service onboarding with historical data.",
+							"examples": [
+								"Event sourcing replay",
+								"System state restoration",
+								"Audit trail reconstruction",
+								"Historical data reprocessing",
+								"Compliance reporting"
+							],
+							"benefits": [
+								"Improved system auditability",
+								"Enhanced failure recovery",
+								"Support for late consumers",
+								"Better compliance capabilities",
+								"Simplified debugging"
+							],
+							"keyComponents": [
+								"Event store",
+								"Retention policies",
+								"Replay engine",
+								"Snapshot management",
+								"Archive systems"
+							],
+							"technologies": [
+								"Kafka Log Compaction",
+								"EventStoreDB",
+								"AWS EventBridge Archive",
+								"Azure Event Hubs Capture",
+								"Apache Pulsar",
+								"MongoDB Change Streams"
+							],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Event sourcing patterns, retention strategies, and replay architecture designs available"
+								},
+								"build": {
+									"available": true,
+									"description": "Event stores, replay engines, and retention management tools available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed event storage services, cloud archiving solutions, and replay-as-a-service platforms available"
+								},
+								"score": 3
+							}
+						},
+						{
+							"id": "event-contracts-schemas",
+							"name": "Event Contracts & Schemas",
+							"definition": "The capability to define, manage, and evolve structured formats and agreements for event payloads.",
+							"description": "Supports safe evolution and interoperability in distributed systems by providing versioned schemas and validation. Encourages reuse and reduces tight coupling between publishers and consumers.",
+							"examples": [
+								"Event schema definitions",
+								"Contract-first API design",
+								"Schema evolution management",
+								"Event payload validation",
+								"Cross-team API agreements"
+							],
+							"benefits": [
+								"Enhanced loose coupling",
+								"Improved backward/forward compatibility",
+								"Better developer coordination",
+								"Reduced integration errors",
+								"Accelerated development cycles"
+							],
+							"keyComponents": [
+								"Schema registry",
+								"Contract definitions",
+								"Validation engines",
+								"Version management",
+								"Documentation generators"
+							],
+							"technologies": [
+								"AsyncAPI",
+								"Apache Avro",
+								"Confluent Schema Registry",
+								"JSON Schema",
+								"Protocol Buffers",
+								"OpenAPI Specification"
+							],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Event contract patterns, schema design principles, and API governance frameworks available"
+								},
+								"build": {
+									"available": true,
+									"description": "Schema registries, contract testing tools, and validation frameworks available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed schema services, contract governance platforms, and API lifecycle management solutions available"
+								},
+								"score": 3
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
