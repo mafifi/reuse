@@ -1,98 +1,22 @@
 <script lang="ts">
-	import capabilities from '$lib/data';
-	import offerings from '$lib/data/offerings.json';
 	import * as Card from '$lib/components/ui/card';
 	import * as HoverCard from '$lib/components/ui/hover-card';
 	import { Button } from '$lib/components/ui/button';
 	import { ArrowLeft } from '@lucide/svelte';
 	import { cn } from '$lib/utils';
-	let { offeringId } = $props();
+	import type { OfferingHeatmapViewModel } from './offering-heatmap-viewmodel.svelte';
+	import { comparisonStore } from '$lib/stores/comparison';
 
-	let offering = $derived(offerings.offerings.find((offering) => offering.id === offeringId));
+	let { viewModel, showSelectionControls = false } = $props<{
+		viewModel: OfferingHeatmapViewModel;
+		showSelectionControls?: boolean;
+	}>();
 
-	// Calculate summary statistics
-	let totalCapabilities = $derived(() => {
-		let count = 0;
-		for (const layer of capabilities) {
-			for (const category of layer.categories) {
-				if (category.subcategories) {
-					for (const subcategory of category.subcategories) {
-						count += subcategory.capabilities.length;
-					}
-				} else {
-					count += category.capabilities.length;
-				}
-			}
-		}
-		return count;
-	});
-
-	let assessedCapabilities = $derived(() => {
-		return offering?.capabilities.length || 0;
-	});
-
-	let completionPercentage = $derived(() => {
-		return Math.round((assessedCapabilities() / totalCapabilities()) * 100);
-	});
-
-	let levelDistribution = $derived(() => {
-		const distribution = { level1: 0, level2: 0, level3: 0 };
-		offering?.capabilities.forEach((cap) => {
-			if (cap.level === 1) distribution.level1++;
-			else if (cap.level === 2) distribution.level2++;
-			else if (cap.level === 3) distribution.level3++;
-		});
-		return distribution;
-	});
-
-	function getFillColor(layer: string, level: number | undefined) {
-		let layerColor: string[] = [];
-		switch (layer) {
-			case 'business':
-				layerColor = [
-					'bg-transparent',
-					'bg-midnight-blue-950/30',
-					'bg-midnight-blue-950/60',
-					'bg-midnight-blue-950'
-				];
-				break;
-			case 'application':
-				layerColor = [
-					'bg-transparent',
-					'bg-watercourse-950/30',
-					'bg-watercourse-950/60',
-					'bg-watercourse-950'
-				];
-				break;
-			case 'data':
-				layerColor = [
-					'bg-transparent',
-					'bg-purple-heart-950/30',
-					'bg-purple-heart-950/60',
-					'bg-purple-heart-950'
-				];
-				break;
-			case 'infrastructure':
-				layerColor = ['bg-transparent', 'bg-mariner-950/30', 'bg-mariner-950/60', 'bg-mariner-950'];
-				break;
-			case 'security':
-				layerColor = ['bg-transparent', 'bg-golf-950/30', 'bg-golf-950/60', 'bg-golf-950'];
-				break;
-		}
-		switch (level) {
-			case undefined:
-				return 'bg-transparent';
-			case 1:
-				return `${layerColor[1]}`;
-			case 2:
-				return `${layerColor[2]}`;
-			case 3:
-				return `${layerColor[3]}`;
-		}
-	}
+	// Check if this specific offering is selected
+	let isSelected = $derived($comparisonStore.some(s => s.id === viewModel.offeringId));
 </script>
 
-{#if !offering}
+{#if !viewModel.offering}
 	<div
 		class="flex min-h-screen items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100"
 	>
@@ -108,16 +32,31 @@
 		</Card.Root>
 	</div>
 {:else}
-	<Card.Root>
+	<Card.Root class={cn('relative', isSelected && 'ring-2 ring-blue-500')}>
 		<Card.Header>
-			<Card.Title class="text-primary text-2xl font-bold">{offering.name}</Card.Title>
-			<Card.Description>{offering.description}</Card.Description>
+			<div class="flex items-start justify-between">
+				<div class="flex-1">
+					<Card.Title class="text-primary text-2xl font-bold">{viewModel.offering.name}</Card.Title>
+					<Card.Description>{viewModel.offering.description}</Card.Description>
+				</div>
+				{#if showSelectionControls}
+					<div class="ml-4 flex-shrink-0">
+						<Button
+							variant={isSelected ? 'default' : 'outline'}
+							size="sm"
+							onclick={viewModel.toggleSelection}
+						>
+							{isSelected ? 'Selected' : 'Select'}
+						</Button>
+					</div>
+				{/if}
+			</div>
 
 			<!-- Simple Legend -->
 			<div class="mt-4 p-3">
 				<div class="flex justify-end">
 					<div class="text-muted-foreground text-xs">
-						{assessedCapabilities()}/{totalCapabilities()} ({completionPercentage()}%)
+						{viewModel.assessedCapabilities}/{viewModel.totalCapabilities} ({viewModel.completionPercentage}%)
 					</div>
 				</div>
 			</div>
@@ -125,7 +64,7 @@
 		<Card.Content>
 			<!-- Bento grid layout for architecture layers -->
 			<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-				{#each capabilities as layer}
+				{#each viewModel.layers as layer}
 					<Card.Root class={`${layer.color} p-3`}>
 						<div class="mb-3">
 							<h3 class="text-primary text-sm font-medium">{layer.name}</h3>
@@ -136,11 +75,11 @@
 								{#if category.subcategories}
 									{#each category.subcategories as subcategory}
 										{#each subcategory.capabilities as capability}
-											{@const fillColor = getFillColor(
+											{@const fillColor = viewModel.getFillColor(
 												layer.id,
-												offering.capabilities.find((c) => c.id === capability.id)?.level
+												viewModel.offering.capabilities.find((c) => c.id === capability.id)?.level
 											)}
-											{@const assessmentLevel = offering.capabilities.find(
+											{@const assessmentLevel = viewModel.offering.capabilities.find(
 												(c) => c.id === capability.id
 											)?.level}
 											<HoverCard.Root>
@@ -170,11 +109,11 @@
 									{/each}
 								{:else}
 									{#each category.capabilities as capability}
-										{@const fillColor = getFillColor(
+										{@const fillColor = viewModel.getFillColor(
 											layer.id,
-											offering.capabilities.find((c) => c.id === capability.id)?.level
+											viewModel.offering.capabilities.find((c) => c.id === capability.id)?.level
 										)}
-										{@const assessmentLevel = offering.capabilities.find(
+										{@const assessmentLevel = viewModel.offering.capabilities.find(
 											(c) => c.id === capability.id
 										)?.level}
 										<HoverCard.Root>
