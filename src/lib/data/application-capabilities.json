@@ -230,61 +230,10 @@
 					"description": "Tools for building and deploying applications",
 					"capabilities": [
 						{
-							"id": "api-management",
-							"name": "API Management",
-							"definition": "The capability to design, deploy, secure, and manage APIs across the enterprise",
-							"description": "API Management provides comprehensive lifecycle management for Application Programming Interfaces (APIs), including design, security, monitoring, and governance. It enables organizations to expose internal services, integrate with partners, and build API-driven architectures while maintaining security and performance.",
-							"examples": [
-								"API gateway implementation",
-								"API security and authentication",
-								"API documentation and developer portals",
-								"API versioning and lifecycle management",
-								"API analytics and monitoring",
-								"Rate limiting and throttling"
-							],
-							"benefits": [
-								"Accelerated integration and development",
-								"Enhanced API security and governance",
-								"Improved developer experience",
-								"Better API performance monitoring",
-								"Standardized API design patterns",
-								"Reduced integration complexity"
-							],
-							"keyComponents": [
-								"API gateway",
-								"Developer portal",
-								"API security layer",
-								"Analytics and monitoring",
-								"API lifecycle management"
-							],
-							"technologies": [
-								"Kong",
-								"Apigee",
-								"Azure API Management",
-								"AWS API Gateway",
-								"MuleSoft Anypoint"
-							],
-							"maturityLevels": {
-								"plan": {
-									"available": true,
-									"description": "API design patterns, governance frameworks, and REST/GraphQL best practices available"
-								},
-								"build": {
-									"available": true,
-									"description": "API gateways (Kong, Apigee), development frameworks, and testing tools available"
-								},
-								"operate": {
-									"available": true,
-									"description": "Managed API services, cloud API platforms, and enterprise API management solutions available"
-								},
-								"score": 3
-							}
-						},
-						{
-							"id": "microservices-architecture",
-							"name": "Microservices Architecture",
+							"id": "microservices",
+							"name": "Microservices",
 							"definition": "The capability to design, build, and operate applications as a collection of loosely coupled, independently deployable services",
-							"description": "Microservices Architecture enables organizations to decompose complex applications into smaller, manageable services that can be developed, deployed, and scaled independently. It supports rapid development cycles, technology diversity, and organizational scaling while improving system resilience and maintainability.",
+							"description": "Microservices enables organizations to decompose complex applications into smaller, manageable services that can be developed, deployed, and scaled independently. It supports rapid development cycles, technology diversity, and organizational scaling while improving system resilience and maintainability.",
 							"examples": [
 								"Service decomposition and domain modeling",
 								"Inter-service communication patterns",
@@ -508,51 +457,6 @@
 								"operate": {
 									"available": true,
 									"description": "Managed identity services, SSO platforms, and authentication-as-a-service solutions available"
-								},
-								"score": 3
-							}
-						},
-						{
-							"id": "real-time-communication",
-							"name": "Real-time Communication",
-							"definition": "The capability to enable bidirectional, real-time communication between clients and servers in web applications",
-							"description": "Real-time Communication provides the infrastructure and protocols for instant data exchange between clients and servers, enabling features like live chat, real-time notifications, collaborative editing, and live updates. It supports modern user expectations for responsive, interactive web applications.",
-							"examples": [
-								"WebSocket connections for live data",
-								"Server-sent events for updates",
-								"Real-time chat and messaging",
-								"Live collaborative editing",
-								"Real-time notifications",
-								"Live data visualization and dashboards"
-							],
-							"benefits": [
-								"Enhanced user engagement",
-								"Improved application responsiveness",
-								"Better collaborative features",
-								"Reduced server polling overhead",
-								"Modern user experience",
-								"Efficient data synchronization"
-							],
-							"keyComponents": [
-								"WebSocket servers",
-								"Message brokers",
-								"Client-side real-time libraries",
-								"Connection management",
-								"Message routing and delivery"
-							],
-							"technologies": ["Socket.io", "WebSockets", "Server-Sent Events", "WebRTC", "Pusher"],
-							"maturityLevels": {
-								"plan": {
-									"available": true,
-									"description": "Real-time architecture patterns, WebSocket design guides, and event-driven system blueprints available"
-								},
-								"build": {
-									"available": true,
-									"description": "Real-time frameworks (Socket.io, WebRTC), messaging systems, and streaming platforms available"
-								},
-								"operate": {
-									"available": true,
-									"description": "Managed real-time services, cloud messaging platforms, and streaming analytics solutions available"
 								},
 								"score": 3
 							}
@@ -1101,6 +1005,51 @@
 					"description": "Tools for managing and orchestrating integration flows",
 					"capabilities": [
 						{
+							"id": "real-time-communication",
+							"name": "Real-time Communication",
+							"definition": "The capability to enable bidirectional, real-time communication between clients and servers in web applications",
+							"description": "Real-time Communication provides the infrastructure and protocols for instant data exchange between clients and servers, enabling features like live chat, real-time notifications, collaborative editing, and live updates. It supports modern user expectations for responsive, interactive web applications.",
+							"examples": [
+								"WebSocket connections for live data",
+								"Server-sent events for updates",
+								"Real-time chat and messaging",
+								"Live collaborative editing",
+								"Real-time notifications",
+								"Live data visualization and dashboards"
+							],
+							"benefits": [
+								"Enhanced user engagement",
+								"Improved application responsiveness",
+								"Better collaborative features",
+								"Reduced server polling overhead",
+								"Modern user experience",
+								"Efficient data synchronization"
+							],
+							"keyComponents": [
+								"WebSocket servers",
+								"Message brokers",
+								"Client-side real-time libraries",
+								"Connection management",
+								"Message routing and delivery"
+							],
+							"technologies": ["Socket.io", "WebSockets", "Server-Sent Events", "WebRTC", "Pusher"],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "Real-time architecture patterns, WebSocket design guides, and event-driven system blueprints available"
+								},
+								"build": {
+									"available": true,
+									"description": "Real-time frameworks (Socket.io, WebRTC), messaging systems, and streaming platforms available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed real-time services, cloud messaging platforms, and streaming analytics solutions available"
+								},
+								"score": 3
+							}
+						},
+						{
 							"id": "message-routing",
 							"name": "Message Routing",
 							"definition": "The capability to direct messages to the correct processing component or service based on content or metadata.",
@@ -1257,6 +1206,57 @@
 					"name": "Integration Control Flow",
 					"description": "Tools for managing and orchestrating integration flows",
 					"capabilities": [
+						{
+							"id": "api-management",
+							"name": "API Management",
+							"definition": "The capability to design, deploy, secure, and manage APIs across the enterprise",
+							"description": "API Management provides comprehensive lifecycle management for Application Programming Interfaces (APIs), including design, security, monitoring, and governance. It enables organizations to expose internal services, integrate with partners, and build API-driven architectures while maintaining security and performance.",
+							"examples": [
+								"API gateway implementation",
+								"API security and authentication",
+								"API documentation and developer portals",
+								"API versioning and lifecycle management",
+								"API analytics and monitoring",
+								"Rate limiting and throttling"
+							],
+							"benefits": [
+								"Accelerated integration and development",
+								"Enhanced API security and governance",
+								"Improved developer experience",
+								"Better API performance monitoring",
+								"Standardized API design patterns",
+								"Reduced integration complexity"
+							],
+							"keyComponents": [
+								"API gateway",
+								"Developer portal",
+								"API security layer",
+								"Analytics and monitoring",
+								"API lifecycle management"
+							],
+							"technologies": [
+								"Kong",
+								"Apigee",
+								"Azure API Management",
+								"AWS API Gateway",
+								"MuleSoft Anypoint"
+							],
+							"maturityLevels": {
+								"plan": {
+									"available": true,
+									"description": "API design patterns, governance frameworks, and REST/GraphQL best practices available"
+								},
+								"build": {
+									"available": true,
+									"description": "API gateways (Kong, Apigee), development frameworks, and testing tools available"
+								},
+								"operate": {
+									"available": true,
+									"description": "Managed API services, cloud API platforms, and enterprise API management solutions available"
+								},
+								"score": 3
+							}
+						},
 						{
 							"id": "aggregator-pattern",
 							"name": "Aggregator Pattern",

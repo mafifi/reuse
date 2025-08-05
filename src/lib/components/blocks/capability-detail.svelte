@@ -111,12 +111,12 @@
 							</Card.Content>
 						</Card.Root>
 
-						<!-- Examples -->
+						<!-- What used to be Examples & Benefits, combined into a single Features section -->
 						<Card.Root>
 							<Card.Header>
 								<Card.Title class="flex items-center gap-2">
 									<Lightbulb class="h-5 w-5" />
-									Examples & Use Cases
+									Features
 								</Card.Title>
 							</Card.Header>
 							<Card.Content>
@@ -130,20 +130,6 @@
 											<span class="text-primary">{example}</span>
 										</div>
 									{/each}
-								</div>
-							</Card.Content>
-						</Card.Root>
-
-						<!-- Benefits -->
-						<Card.Root>
-							<Card.Header>
-								<Card.Title class="flex items-center gap-2">
-									<CheckCircle class="h-5 w-5" />
-									Key Benefits
-								</Card.Title>
-							</Card.Header>
-							<Card.Content>
-								<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
 									{#each capability.benefits || [] as benefit, index}
 										<div
 											id={index.toString()}
